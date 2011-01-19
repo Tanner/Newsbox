@@ -26,7 +26,7 @@ public class Topic {
 			if (topWords.contains(word))
 			{
 				Word thisWord = topWords.get(topWords.indexOf(word));
-				thisWord.setOccurances(thisWord.getOccurances() + 1);
+				thisWord.setOccurances(thisWord.getOccurances() + word.getOccurances());
 			} else {
 				topWords.add(word);
 			}
@@ -61,7 +61,7 @@ public class Topic {
 		//System.out.println("Numerator: "+numerator+" Total Occurances: "+totalOccurances);
 		
 		double result = numerator / (totalOccurances / articles.size());
-		System.out.println("Result: "+result+" ("+(result > Main.MIN_PERCENTAGE_FOR_TOPIC_ADD)+")\n-----");
+		System.out.println("Result: "+result+" ("+((result > Main.MIN_PERCENTAGE_FOR_TOPIC_ADD) ? "passed" : "failed")+")\n-----");
 		return result;
 	}
 	
@@ -72,7 +72,7 @@ public class Topic {
 	
 	public String toString()
 	{
-		return "Topic \""+name+"\": "+articles.size();
+		return "Topic \""+name+"\": "+articles.size();//+"\nTopic Top Words: "+topWords+"\nArticles:\n"+articles+"\n\n";
 		//return "Topic \""+name+"\": "+articles+"\nTop Words: "+topWords;
 	}
 }

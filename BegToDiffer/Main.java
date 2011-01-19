@@ -37,13 +37,15 @@ public class Main {
 		
 		System.out.println("Narrowing down top words within articles...");
 		
-		System.out.println("Attempting to create topics...");
+		System.out.println("Attempting to create topics...\n\n\n");
 		for (Article article : articles)
 		{
 			if (topics.size() == 0)
 			{
 				Topic topic = new Topic(article.getTitle(), article);
 				topics.add(topic);
+				System.out.println("Creating new topic for "+article.getTitle());
+				System.out.println("*************");
 			} else {
 				boolean added = false;
 				for (int i = 0; i < topics.size(); i++)
