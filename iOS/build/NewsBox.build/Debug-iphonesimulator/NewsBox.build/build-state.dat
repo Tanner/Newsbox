@@ -1,0 +1,354 @@
+TNewsBox
+v7
+r0
+t316930091.856558
+cCheck dependencies
+cProcessInfoPlistFile /Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app/Info.plist NewsBox-Info.plist
+cCompileXIB /Users/ryanashcraft/Desktop/NewsBox/iPad/MainWindow_iPad.xib
+cCompileXIB /Users/ryanashcraft/Desktop/NewsBox/iPhone/MainWindow_iPhone.xib
+cCpResource build/Debug-iphonesimulator/NewsBox.app/Icon-57@2x.png Icon-57@2x.png
+cProcessPCH /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/NewsBox_Prefix-bnkmmbpvaouwzgfgjhsscbkwevcj/NewsBox_Prefix.pch.gch NewsBox_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cDataModelVersionCompile /Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app/NewsBox.momd /Users/ryanashcraft/Desktop/NewsBox/Shared/NewsBox.xcdatamodeld
+cCompileC build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/Objects-normal/i386/main.o /Users/ryanashcraft/Desktop/NewsBox/Shared/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/Objects-normal/i386/AppDelegate_iPad.o /Users/ryanashcraft/Desktop/NewsBox/iPad/AppDelegate_iPad.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/Objects-normal/i386/AppDelegate_Shared.o /Users/ryanashcraft/Desktop/NewsBox/Shared/AppDelegate_Shared.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/Objects-normal/i386/AppDelegate_iPhone.o /Users/ryanashcraft/Desktop/NewsBox/iPhone/AppDelegate_iPhone.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app/NewsBox normal i386
+cGenerateDSYMFile /Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app.dSYM /Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app/NewsBox
+cTouch /Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk
+c000000004CEAF1A90000000000000110
+t1290465705
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreData.framework/CoreData
+c000000004CC122A000000000001D6CE0
+t1287725728
+s1928416
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.h
+c000000004CC12294000000000000046B
+t1287725716
+s1131
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004CC12246000000000029B310
+t1287725638
+s2732816
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004CC1226D000000000029D5D0
+t1287725677
+s2741712
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004CC1225F0000000000001466
+t1287725663
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004CC1281F0000000000000AA1
+t1287727135
+s2721
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004CC12883000000000074D7B0
+t1287727235
+s7657392
+
+N/Users/ryanashcraft/Desktop/NewsBox/Icon-57@2x.png
+c000000004D33C04E00000000000029E7
+t1295237198
+s10727
+
+N/Users/ryanashcraft/Desktop/NewsBox/Icon.png
+c000000004D33788800000000000041A6
+t1295218824
+s16806
+
+N/Users/ryanashcraft/Desktop/NewsBox/NewsBox_Prefix.pch
+c000000004D33659400000000000000B7
+t1295213972
+s183
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/ryanashcraft/Desktop/NewsBox/Shared/AppDelegate_Shared.h
+c000000004D3365940000000000000362
+t1295213972
+s866
+i<UIKit/UIKit.h>
+i<CoreData/CoreData.h>
+
+N/Users/ryanashcraft/Desktop/NewsBox/Shared/AppDelegate_Shared.m
+c000000004D3365940000000000001763
+t1295213972
+s5987
+i"AppDelegate_Shared.h"
+
+N/Users/ryanashcraft/Desktop/NewsBox/Shared/NewsBox.xcdatamodeld
+c000000004D3365940000000000000088
+t1295213972
+s136
+
+N/Users/ryanashcraft/Desktop/NewsBox/Shared/main.m
+c000000004D3365940000000000000167
+t1295213972
+s359
+i<UIKit/UIKit.h>
+
+N/Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app
+t1295237291
+s340
+
+N/Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app.dSYM
+t1295214066
+s102
+
+N/Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app/Icon-57@2x.png
+t1295237262
+s10727
+
+N/Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app/Icon.png
+t1295218853
+s16806
+
+N/Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app/Info.plist
+t1295237291
+s992
+
+N/Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app/MainWindow_iPad.nib
+t1295214064
+s982
+
+N/Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app/MainWindow_iPhone.nib
+t1295214064
+s984
+
+N/Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app/NewsBox
+t1295214066
+s19816
+
+N/Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app/NewsBox.momd
+t1295214066
+s136
+
+N/Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app/PkgInfo
+t1295237291
+s8
+
+N/Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/Objects-normal/i386/AppDelegate_Shared.o
+t1295214066
+s59124
+
+N/Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/Objects-normal/i386/AppDelegate_iPad.o
+t1295214066
+s47324
+
+N/Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/Objects-normal/i386/AppDelegate_iPhone.o
+t1295214066
+s48460
+
+N/Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/Objects-normal/i386/NewsBox.LinkFileList
+c000000004D3365F00000000000000204
+t1295214064
+s516
+
+N/Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/Objects-normal/i386/main.o
+t1295214066
+s6312
+
+N/Users/ryanashcraft/Desktop/NewsBox/iPad/AppDelegate_iPad.h
+c000000004D3365940000000000000103
+t1295213972
+s259
+i<UIKit/UIKit.h>
+i"AppDelegate_Shared.h"
+
+N/Users/ryanashcraft/Desktop/NewsBox/iPad/AppDelegate_iPad.m
+c000000004D3365940000000000000720
+t1295213972
+s1824
+i"AppDelegate_iPad.h"
+
+N/Users/ryanashcraft/Desktop/NewsBox/iPad/MainWindow_iPad.xib
+c000000004D336594000000000000389D
+t1295213972
+s14493
+
+N/Users/ryanashcraft/Desktop/NewsBox/iPhone/AppDelegate_iPhone.h
+c000000004D3365940000000000000107
+t1295213972
+s263
+i<UIKit/UIKit.h>
+i"AppDelegate_Shared.h"
+
+N/Users/ryanashcraft/Desktop/NewsBox/iPhone/AppDelegate_iPhone.m
+c000000004D3365940000000000000ACB
+t1295213972
+s2763
+i"AppDelegate_iPhone.h"
+
+N/Users/ryanashcraft/Desktop/NewsBox/iPhone/MainWindow_iPhone.xib
+c000000004D3365940000000000003A8B
+t1295213972
+s14987
+
+N/var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/NewsBox_Prefix-bnkmmbpvaouwzgfgjhsscbkwevcj/NewsBox_Prefix.pch.gch
+t1295214065
+s15453392
+
+NNewsBox-Info.plist
+c000000004D33C0A90000000000000602
+t1295237289
+s1538
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies316930091#316930091#0(0"0(0#1#0"8608742048#0"0#
+
+CCompileC build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/Objects-normal/i386/AppDelegate_Shared.o /Users/ryanashcraft/Desktop/NewsBox/Shared/AppDelegate_Shared.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316906865.757734
+e316906866.137484
+r1
+xCompileC
+xbuild/NewsBox.build/Debug-iphonesimulator/NewsBox.build/Objects-normal/i386/AppDelegate_Shared.o
+x/Users/ryanashcraft/Desktop/NewsBox/Shared/AppDelegate_Shared.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@71"Compile /Users/ryanashcraft/Desktop/NewsBox/Shared/AppDelegate_Shared.m316906865#316906866#0(0"0(0#0#63"/Users/ryanashcraft/Desktop/NewsBox/Shared/AppDelegate_Shared.m8603533504#1916"    cd /Users/ryanashcraft/Desktop/NewsBox    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/NewsBox-generated-files.hmap -I/Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/NewsBox-own-target-headers.hmap -I/Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/NewsBox-all-target-headers.hmap -iquote /Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/NewsBox-project-headers.hmap -F/Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator -I/Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/DerivedSources/i386 -I/Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/NewsBox_Prefix-bnkmmbpvaouwzgfgjhsscbkwevcj/NewsBox_Prefix.pch -c /Users/ryanashcraft/Desktop/NewsBox/Shared/AppDelegate_Shared.m -o /Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/Objects-normal/i386/AppDelegate_Shared.o0#
+
+CCompileC build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/Objects-normal/i386/AppDelegate_iPad.o /Users/ryanashcraft/Desktop/NewsBox/iPad/AppDelegate_iPad.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316906865.756705
+e316906866.118798
+r1
+xCompileC
+xbuild/NewsBox.build/Debug-iphonesimulator/NewsBox.build/Objects-normal/i386/AppDelegate_iPad.o
+x/Users/ryanashcraft/Desktop/NewsBox/iPad/AppDelegate_iPad.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@67"Compile /Users/ryanashcraft/Desktop/NewsBox/iPad/AppDelegate_iPad.m316906865#316906866#0(0"0(0#0#59"/Users/ryanashcraft/Desktop/NewsBox/iPad/AppDelegate_iPad.m8604180736#1910"    cd /Users/ryanashcraft/Desktop/NewsBox    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/NewsBox-generated-files.hmap -I/Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/NewsBox-own-target-headers.hmap -I/Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/NewsBox-all-target-headers.hmap -iquote /Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/NewsBox-project-headers.hmap -F/Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator -I/Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/DerivedSources/i386 -I/Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/NewsBox_Prefix-bnkmmbpvaouwzgfgjhsscbkwevcj/NewsBox_Prefix.pch -c /Users/ryanashcraft/Desktop/NewsBox/iPad/AppDelegate_iPad.m -o /Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/Objects-normal/i386/AppDelegate_iPad.o0#
+
+CCompileC build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/Objects-normal/i386/AppDelegate_iPhone.o /Users/ryanashcraft/Desktop/NewsBox/iPhone/AppDelegate_iPhone.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316906866.105150
+e316906866.179492
+r1
+xCompileC
+xbuild/NewsBox.build/Debug-iphonesimulator/NewsBox.build/Objects-normal/i386/AppDelegate_iPhone.o
+x/Users/ryanashcraft/Desktop/NewsBox/iPhone/AppDelegate_iPhone.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@71"Compile /Users/ryanashcraft/Desktop/NewsBox/iPhone/AppDelegate_iPhone.m316906866#316906866#0(0"0(0#0#63"/Users/ryanashcraft/Desktop/NewsBox/iPhone/AppDelegate_iPhone.m8603834848#1916"    cd /Users/ryanashcraft/Desktop/NewsBox    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/NewsBox-generated-files.hmap -I/Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/NewsBox-own-target-headers.hmap -I/Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/NewsBox-all-target-headers.hmap -iquote /Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/NewsBox-project-headers.hmap -F/Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator -I/Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/DerivedSources/i386 -I/Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/NewsBox_Prefix-bnkmmbpvaouwzgfgjhsscbkwevcj/NewsBox_Prefix.pch -c /Users/ryanashcraft/Desktop/NewsBox/iPhone/AppDelegate_iPhone.m -o /Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/Objects-normal/i386/AppDelegate_iPhone.o0#
+
+CCompileC build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/Objects-normal/i386/main.o /Users/ryanashcraft/Desktop/NewsBox/Shared/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316906865.755467
+e316906866.105015
+r1
+xCompileC
+xbuild/NewsBox.build/Debug-iphonesimulator/NewsBox.build/Objects-normal/i386/main.o
+x/Users/ryanashcraft/Desktop/NewsBox/Shared/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@57"Compile /Users/ryanashcraft/Desktop/NewsBox/Shared/main.m316906865#316906866#0(0"0(0#0#49"/Users/ryanashcraft/Desktop/NewsBox/Shared/main.m8604677376#1888"    cd /Users/ryanashcraft/Desktop/NewsBox    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/NewsBox-generated-files.hmap -I/Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/NewsBox-own-target-headers.hmap -I/Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/NewsBox-all-target-headers.hmap -iquote /Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/NewsBox-project-headers.hmap -F/Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator -I/Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/DerivedSources/i386 -I/Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/NewsBox_Prefix-bnkmmbpvaouwzgfgjhsscbkwevcj/NewsBox_Prefix.pch -c /Users/ryanashcraft/Desktop/NewsBox/Shared/main.m -o /Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/Objects-normal/i386/main.o0#
+
+CCompileXIB /Users/ryanashcraft/Desktop/NewsBox/iPad/MainWindow_iPad.xib
+s316906864.121940
+e316906864.730552
+r1
+xCompileXIB
+x/Users/ryanashcraft/Desktop/NewsBox/iPad/MainWindow_iPad.xib
+lSLF07#2@35"CompileXIB iPad/MainWindow_iPad.xib316906864#316906864#0(0"0(0#0#60"/Users/ryanashcraft/Desktop/NewsBox/iPad/MainWindow_iPad.xib8604220672#576"    cd /Users/ryanashcraft/Desktop/NewsBox    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app/MainWindow_iPad.nib /Users/ryanashcraft/Desktop/NewsBox/iPad/MainWindow_iPad.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB /Users/ryanashcraft/Desktop/NewsBox/iPhone/MainWindow_iPhone.xib
+s316906864.141782
+e316906864.730732
+r1
+xCompileXIB
+x/Users/ryanashcraft/Desktop/NewsBox/iPhone/MainWindow_iPhone.xib
+lSLF07#2@39"CompileXIB iPhone/MainWindow_iPhone.xib316906864#316906864#0(0"0(0#0#64"/Users/ryanashcraft/Desktop/NewsBox/iPhone/MainWindow_iPhone.xib8604133664#582"    cd /Users/ryanashcraft/Desktop/NewsBox    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app/MainWindow_iPhone.nib /Users/ryanashcraft/Desktop/NewsBox/iPhone/MainWindow_iPhone.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCpResource build/Debug-iphonesimulator/NewsBox.app/Icon-57@2x.png Icon-57@2x.png
+s316930062.060654
+e316930062.101097
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/NewsBox.app/Icon-57@2x.png
+xIcon-57@2x.png
+lSLF07#2@19"Copy Icon-57@2x.png316930062#316930062#0(0"0(0#0#50"/Users/ryanashcraft/Desktop/NewsBox/Icon-57@2x.png8609968160#463"    cd /Users/ryanashcraft/Desktop/NewsBox    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/ryanashcraft/Desktop/NewsBox/Icon-57@2x.png /Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app0#
+
+CCpResource build/Debug-iphonesimulator/NewsBox.app/Icon.png Icon.png
+s316911653.536136
+e316911653.541595
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/NewsBox.app/Icon.png
+xIcon.png
+lSLF07#2@13"Copy Icon.png316911653#316911653#0(0"0(0#0#44"/Users/ryanashcraft/Desktop/NewsBox/Icon.png8603513856#457"    cd /Users/ryanashcraft/Desktop/NewsBox    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/ryanashcraft/Desktop/NewsBox/Icon.png /Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app0#
+
+CDataModelVersionCompile /Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app/NewsBox.momd /Users/ryanashcraft/Desktop/NewsBox/Shared/NewsBox.xcdatamodeld
+s316906865.754614
+e316906866.130612
+r1
+xDataModelVersionCompile
+x/Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app/NewsBox.momd
+x/Users/ryanashcraft/Desktop/NewsBox/Shared/NewsBox.xcdatamodeld
+lSLF07#2@104"DataModelVersionCompile build/Debug-iphonesimulator/NewsBox.app/NewsBox.momd Shared/NewsBox.xcdatamodeld316906865#316906866#0(0"0(0#0#63"/Users/ryanashcraft/Desktop/NewsBox/Shared/NewsBox.xcdatamodeld8604378272#384"    cd /Users/ryanashcraft/Desktop/NewsBox    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/momc -XD_MOMC_TARGET_VERSION=10.6 /Users/ryanashcraft/Desktop/NewsBox/Shared/NewsBox.xcdatamodeld /Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app/NewsBox.momd0#
+
+CGenerateDSYMFile /Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app.dSYM /Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app/NewsBox
+s316906866.712885
+e316906866.755708
+r1
+xGenerateDSYMFile
+x/Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app.dSYM
+x/Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app/NewsBox
+lSLF07#2@109"GenerateDSYMFile build/Debug-iphonesimulator/NewsBox.app.dSYM build/Debug-iphonesimulator/NewsBox.app/NewsBox316906866#316906866#0(0"0(0#0#83"/Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app/NewsBox8602279616#374"    cd /Users/ryanashcraft/Desktop/NewsBox    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app/NewsBox -o /Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app.dSYM0#
+
+CLd /Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app/NewsBox normal i386
+s316906866.179576
+e316906866.712773
+r1
+xLd
+x/Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app/NewsBox
+xnormal
+xi386
+lSLF07#2@88"Link /Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app/NewsBox316906866#316906866#0(0"0(0#0#0"8603851264#905"    cd /Users/ryanashcraft/Desktop/NewsBox    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -L/Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator -F/Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator -filelist /Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/Objects-normal/i386/NewsBox.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -framework CoreData -o /Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app/NewsBox0#
+
+CProcessInfoPlistFile /Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app/Info.plist NewsBox-Info.plist
+s316930091.848937
+e316930091.852536
+r1
+xProcessInfoPlistFile
+x/Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app/Info.plist
+xNewsBox-Info.plist
+lSLF07#2@26"Process NewsBox-Info.plist316930091#316930091#0(0"0(0#0#54"/Users/ryanashcraft/Desktop/NewsBox/NewsBox-Info.plist8610453984#470"    cd /Users/ryanashcraft/Desktop/NewsBox    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility NewsBox-Info.plist -genpkginfo /Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app/Info.plist0#
+
+CProcessPCH /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/NewsBox_Prefix-bnkmmbpvaouwzgfgjhsscbkwevcj/NewsBox_Prefix.pch.gch NewsBox_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s316906864.730873
+e316906865.754480
+r1
+xProcessPCH
+x/var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/NewsBox_Prefix-bnkmmbpvaouwzgfgjhsscbkwevcj/NewsBox_Prefix.pch.gch
+xNewsBox_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@29"Precompile NewsBox_Prefix.pch316906864#316906865#0(0"0(0#0#54"/Users/ryanashcraft/Desktop/NewsBox/NewsBox_Prefix.pch8604697440#1776"    cd /Users/ryanashcraft/Desktop/NewsBox    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/NewsBox-generated-files.hmap -I/Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/NewsBox-own-target-headers.hmap -I/Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/NewsBox-all-target-headers.hmap -iquote /Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/NewsBox-project-headers.hmap -F/Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator -I/Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/DerivedSources/i386 -I/Users/ryanashcraft/Desktop/NewsBox/build/NewsBox.build/Debug-iphonesimulator/NewsBox.build/DerivedSources -c /Users/ryanashcraft/Desktop/NewsBox/NewsBox_Prefix.pch -o /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/NewsBox_Prefix-bnkmmbpvaouwzgfgjhsscbkwevcj/NewsBox_Prefix.pch.gch0#
+
+CTouch /Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app
+s316930091.853653
+e316930091.856499
+r1
+xTouch
+x/Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app
+lSLF07#2@81"Touch /Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app316930091#316930091#0(0"0(0#0#0"8609121376#272"    cd /Users/ryanashcraft/Desktop/NewsBox    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/ryanashcraft/Desktop/NewsBox/build/Debug-iphonesimulator/NewsBox.app0#
+

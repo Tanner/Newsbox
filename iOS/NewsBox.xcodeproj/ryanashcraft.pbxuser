@@ -1,0 +1,78 @@
+// !$*UTF8*$!
+{
+	1D6058900D05DD3D006BFB54 /* NewsBox */ = {
+		activeExec = 0;
+		executables = (
+			EDC67FE612E39D1400B6FAF1 /* NewsBox */,
+		);
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = EDC67FE612E39D1400B6FAF1 /* NewsBox */;
+		activeSDKPreference = iphoneos4.2;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* NewsBox */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* NewsBox */,
+		);
+		codeSenseManager = EDC67FF112E39D1600B6FAF1 /* Code sense */;
+		executables = (
+			EDC67FE612E39D1400B6FAF1 /* NewsBox */,
+		);
+		perUserDictionary = {
+			PBXPerProjectTemplateStateSaveDate = 316934676;
+			PBXWorkspaceStateSaveDate = 316934676;
+		};
+		sourceControlManager = EDC67FF012E39D1600B6FAF1 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	8D1107310486CEB800E47090 /* NewsBox-Info.plist */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{840, 4}, {840, 1024}}";
+		};
+	};
+	EDC67FE612E39D1400B6FAF1 /* NewsBox */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = NewsBox;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	EDC67FF012E39D1600B6FAF1 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	EDC67FF112E39D1600B6FAF1 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+}

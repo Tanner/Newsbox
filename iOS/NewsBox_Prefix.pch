@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'NewsBox' target in the 'NewsBox' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+#endif
