@@ -41,8 +41,9 @@ public class Article {
 			if (topWords.contains(word))
 			{
 				Word thisWord = topWords.get(topWords.indexOf(word));
-				thisWord.setOccurances(thisWord.getOccurances() + 1);
+				thisWord.setValue(thisWord.getValue() + 1);
 			} else {
+				word.setValue(1);
 				topWords.add(word);
 			}
 		}
@@ -54,7 +55,7 @@ public class Article {
 			if (titleTopWords.contains(word))
 			{
 				Word thisWord = titleTopWords.get(titleTopWords.indexOf(word));
-				thisWord.setOccurances(thisWord.getOccurances() + 1);
+				thisWord.setValue(thisWord.getValue() + 1);
 			} else {
 				titleTopWords.add(word);
 			}
@@ -134,9 +135,9 @@ public class Article {
 			if (overallTopWords.contains(word))
 			{
 				Word thisWord = overallTopWords.get(overallTopWords.indexOf(word));
-				thisWord.setOccurances(thisWord.getOccurances() + (word.getOccurances() * Main.TITLE_TOP_WORD_MULT));
+				thisWord.setValue(thisWord.getValue() + (word.getValue() * Main.TITLE_TOP_WORD_MULT));
 			} else {
-				word.setOccurances(word.getOccurances() * Main.TITLE_TOP_WORD_MULT);
+				word.setValue(word.getValue() * Main.TITLE_TOP_WORD_MULT);
 				overallTopWords.add(word);
 			}
 		}

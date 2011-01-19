@@ -1,6 +1,6 @@
 public class Word implements Comparable {
 	private String word = "";
-	private int occurances = 1;
+	private int value = 0;
 	
 	public Word(String word)
 	{
@@ -10,20 +10,20 @@ public class Word implements Comparable {
 		this.word = word;
 	}
 	
-	public Word(String word, int occurances)
+	public Word(String word, int value)
 	{
 		this(word);
-		setOccurances(occurances);
+		setValue(value);
 	}
 	
-	public void setOccurances(int occurances)
+	public void setValue(int value)
 	{
-		this.occurances = occurances;
+		this.value = value;
 	}
 	
-	public int getOccurances()
+	public int getValue()
 	{
-		return occurances;
+		return value;
 	}
 	
 	public String getWord()
@@ -47,7 +47,7 @@ public class Word implements Comparable {
 	
 	public String toString()
 	{
-		return word+" ("+occurances+")";
+		return word+" ("+value+")";
 	}
 
 	public int compareTo(Object o)
@@ -56,10 +56,10 @@ public class Word implements Comparable {
 		if (o instanceof Word)
 		{
 			Word comparisonWord = (Word)o;
-			if (occurances < comparisonWord.occurances)
+			if (value < comparisonWord.value)
 			{
 				return 1;
-			} else if (occurances > comparisonWord.occurances) {
+			} else if (value > comparisonWord.value) {
 				return -1;
 			} else {
 				return 0;

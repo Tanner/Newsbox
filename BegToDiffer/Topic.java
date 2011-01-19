@@ -26,7 +26,7 @@ public class Topic {
 			if (topWords.contains(word))
 			{
 				Word thisWord = topWords.get(topWords.indexOf(word));
-				thisWord.setOccurances(thisWord.getOccurances() + word.getOccurances());
+				thisWord.setValue(thisWord.getValue() + word.getValue());
 			} else {
 				topWords.add(word);
 			}
@@ -46,7 +46,7 @@ public class Topic {
 		
 		for (Word word : topWords)
 		{
-			totalOccurances += word.getOccurances();
+			totalOccurances += word.getValue();
 		}
 		
 		for (int i = 0; (i < Main.NUM_TOP_WORDS_FOR_TOPICS && i < articleTopWords.size()); i++)
@@ -55,7 +55,7 @@ public class Topic {
 			if (topWords.contains(word))
 			{
 				Word thisWord = topWords.get(topWords.indexOf(word));
-				numerator += (thisWord.getOccurances() + word.getOccurances()) / 2;
+				numerator += (thisWord.getValue() + word.getValue()) / 2;
 			}
 		}
 		//System.out.println("Numerator: "+numerator+" Total Occurances: "+totalOccurances);
