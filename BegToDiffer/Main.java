@@ -13,6 +13,7 @@ import org.apache.lucene.queryParser.MultiFieldQueryParser;
 import org.apache.lucene.queryParser.ParseException;
 import org.apache.lucene.queryParser.QueryParser;
 import org.apache.lucene.search.*;
+import org.apache.lucene.search.similar.MoreLikeThisQuery;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.store.NIOFSDirectory;
@@ -61,8 +62,8 @@ public class Main {
 	    String querystr = scanner.nextLine();
 	    
 	    String[] fields = {"title", "body"};
-	    Query q = new MultiFieldQueryParser(Version.LUCENE_CURRENT, fields, analyzer).parse(querystr);
-
+	    Query q = new MoreLikeThisQuery(articles.get(0).getBody(), fields, analyzer);
+	    
 	    //Search
 	    int hitsPerPage = 10;
 	    IndexSearcher searcher = new IndexSearcher(index, true);
