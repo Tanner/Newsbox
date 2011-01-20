@@ -3,6 +3,19 @@ import java.util.ArrayList;
 import javax.xml.parsers.*;
 import org.w3c.dom.*;
 
+import org.apache.lucene.analysis.standard.StandardAnalyzer;
+import org.apache.lucene.document.Document;
+import org.apache.lucene.document.Field;
+import org.apache.lucene.index.IndexWriter;
+import org.apache.lucene.queryParser.ParseException;
+import org.apache.lucene.queryParser.QueryParser;
+import org.apache.lucene.search.*;
+import org.apache.lucene.store.Directory;
+import org.apache.lucene.store.RAMDirectory;
+import org.apache.lucene.util.Version;
+
+import java.io.IOException;
+
 /**
  * This is the main class. Yay!
  * 
@@ -100,7 +113,7 @@ public class Main {
 			//Start reading the file and prepare to parse it
 			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 			DocumentBuilder db = dbf.newDocumentBuilder();
-			Document doc = db.parse(file);
+			org.w3c.dom.Document doc = db.parse(file);
 			doc.getDocumentElement().normalize();
 			
 			NodeList nodes = doc.getElementsByTagName("article");
