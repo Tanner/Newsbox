@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Topic {
 	private String name;
@@ -26,7 +27,7 @@ public class Topic {
 			if (topWords.contains(word))
 			{
 				Word thisWord = topWords.get(topWords.indexOf(word));
-				thisWord.setOccurances(thisWord.getOccurances() + word.getOccurances());
+				thisWord.setValue(thisWord.getValue() + word.getValue());
 			} else {
 				topWords.add(word);
 			}
@@ -42,11 +43,12 @@ public class Topic {
 		
 		System.out.println("Topic: "+name+"\nArticle in Question: "+article.getTitle());
 		System.out.println("Article Top Words: "+articleTopWords);
+		Collections.sort(topWords);
 		System.out.println("Topic Top Words: "+topWords);
 		
 		for (Word word : topWords)
 		{
-			totalOccurances += word.getOccurances();
+			totalOccurances += word.getValue();
 		}
 		
 		for (int i = 0; (i < Main.NUM_TOP_WORDS_FOR_TOPICS && i < articleTopWords.size()); i++)
@@ -55,12 +57,11 @@ public class Topic {
 			if (topWords.contains(word))
 			{
 				Word thisWord = topWords.get(topWords.indexOf(word));
-				numerator += (thisWord.getOccurances() + word.getOccurances()) / 2;
+				numerator++;
 			}
 		}
-		//System.out.println("Numerator: "+numerator+" Total Occurances: "+totalOccurances);
 		
-		double result = numerator / (totalOccurances / articles.size());
+		double result = numerator / Main.NUM_TOP_WORDS_FOR_TOPICS;
 		System.out.println("Result: "+result+" ("+((result > Main.MIN_PERCENTAGE_FOR_TOPIC_ADD) ? "passed" : "failed")+")\n-----");
 		return result;
 	}

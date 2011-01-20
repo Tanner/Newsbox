@@ -24,6 +24,8 @@ public class Article {
 		this.author = author;
 		this.body = body;
 		this.like = like;
+		
+		analyze();
 	}
 	
 	public void analyze()
@@ -41,8 +43,9 @@ public class Article {
 			if (topWords.contains(word))
 			{
 				Word thisWord = topWords.get(topWords.indexOf(word));
-				thisWord.setOccurances(thisWord.getOccurances() + 1);
+				thisWord.setValue(thisWord.getValue() + 1);
 			} else {
+				word.setValue(1);
 				topWords.add(word);
 			}
 		}
@@ -54,14 +57,14 @@ public class Article {
 			if (titleTopWords.contains(word))
 			{
 				Word thisWord = titleTopWords.get(titleTopWords.indexOf(word));
-				thisWord.setOccurances(thisWord.getOccurances() + 1);
+				thisWord.setValue(thisWord.getValue() + 1);
 			} else {
+				word.setValue(1);
 				titleTopWords.add(word);
 			}
 		}
-		topWords.addAll(titleTopWords);
 		
-		removeInvalidWords(topWords);
+		removeInvalidWords(topWords);		
 		removeInvalidWords(titleTopWords);
 	}
 	
@@ -93,20 +96,15 @@ public class Article {
 			}
 		}
 		
-		for (int i = 0; i < words.size(); i++)
+		for (int i = words.size()-1; i >= 0; i--)
 		{
 			Word word = words.get(i);
+			
 			if (Pattern.matches("\\d?\\W?", word.getWord()) || word.getWord() == null || (word.getWord()).length() < 5)
 			{
 				words.remove(word);
 			}
 		}
-	}
-	
-	public ArrayList<Word> sortWordsByFrequency(ArrayList<Word> words)
-	{
-		Collections.sort(words);
-		return words;
 	}
 	
 	public Likability getLike()
@@ -116,12 +114,14 @@ public class Article {
 	
 	public ArrayList<Word> getTopWords()
 	{
-		return sortWordsByFrequency(topWords);
+		Collections.sort(topWords);
+		return topWords;
 	}
 	
 	public ArrayList<Word> getTitleTopWords()
 	{
-		return sortWordsByFrequency(titleTopWords);
+		Collections.sort(titleTopWords);
+		return titleTopWords;
 	}
 	
 	public ArrayList<Word> getOverallTopWords()
@@ -134,14 +134,15 @@ public class Article {
 			if (overallTopWords.contains(word))
 			{
 				Word thisWord = overallTopWords.get(overallTopWords.indexOf(word));
-				thisWord.setOccurances(thisWord.getOccurances() + (word.getOccurances() * Main.TITLE_TOP_WORD_MULT));
+				thisWord.setValue(thisWord.getValue() + (word.getValue() * Main.TITLE_TOP_WORD_MULT));
 			} else {
-				word.setOccurances(word.getOccurances() * Main.TITLE_TOP_WORD_MULT);
+				word.setValue(word.getValue() * Main.TITLE_TOP_WORD_MULT);
 				overallTopWords.add(word);
 			}
 		}
 		
-		return sortWordsByFrequency(overallTopWords);
+		Collections.sort(overallTopWords);
+		return overallTopWords;
 	}
 	
 	public String getTitle()

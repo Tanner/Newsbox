@@ -13,16 +13,12 @@ public class Main {
 	
 	public static final int NUM_TOP_WORDS_FOR_TOPICS = 10;
 	public static final int TITLE_TOP_WORD_MULT = 2;
-	public static final double MIN_PERCENTAGE_FOR_TOPIC_ADD = 0.15;
+	public static final double MIN_PERCENTAGE_FOR_TOPIC_ADD = 0.25;
 	
 	public static void main(String args[])
 	{
 		System.out.println("Getting articles...");
 		getArticles(new File("articles.xml"));
-		for (Article article : articles)
-		{
-			article.analyze();
-		}
 		
 		System.out.println("Creating a basis based on what data we have for liked and disliked articles...");
 		for (Article article : articles)
