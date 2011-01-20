@@ -3,5 +3,6 @@
 	<classpathentry kind="src" path=""/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="lucene-core-2.9.4.jar"/>
+	<classpathentry kind="lib" path="carrot2-core-3.4.2.jar"/>
 	<classpathentry kind="output" path=""/>
 </classpath>
