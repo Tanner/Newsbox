@@ -24,14 +24,61 @@ import java.io.IOException;
 public class Main {
 	private static ArrayList<Article> articles = new ArrayList<Article>();
 	
+	public static final int MAX_WORDS_FOR_TOPICS = 10;
+	public static final int TITLE_TOP_WORD_MULT = 2;
+	public static final double MIN_PERCENTAGE_FOR_TOPIC_ADD = 0.25;
+	
 	/**
 	 * The main method. This get executed first and always.
 	 * @param args Terms from the command line.
 	 */
-	public static void main(String args[])
+	public static void main(String args[]) throws IOException, ParseException
 	{
 		System.out.println("Getting articles...");
 		getArticles(new File("articles.xml"));
+		
+		StandardAnalyzer analyzer = new StandardAnalyzer(Version.LUCENE_CURRENT);
+		
+	    Directory index = new RAMDirectory();
+	    
+	    IndexWriter w = new IndexWriter(index, analyzer, true, IndexWriter.MaxFieldLength.UNLIMITED);
+	    
+	    for (Article article : articles)
+	    {
+	    	addArticle(w, article);
+	    }
+	    
+	    w.close();
+	    
+	    String querystr = "twitter";
+	    
+	    Query q = new QueryParser(Version.LUCENE_CURRENT, "body", analyzer).parse(querystr);
+
+	    //Search
+	    int hitsPerPage = 10;
+	    IndexSearcher searcher = new IndexSearcher(index, true);
+	    TopScoreDocCollector collector = TopScoreDocCollector.create(hitsPerPage, true);
+	    searcher.search(q, collector);
+	    ScoreDoc[] hits = collector.topDocs().scoreDocs;
+	    
+	    //Display Results
+	    System.out.println("Found " + hits.length + " hits.");
+	    for(int i=0;i<hits.length;++i) {
+	      int docId = hits[i].doc;
+	      Document d = searcher.doc(docId);
+	      System.out.println((i + 1) + ". " + d.get("title"));
+	    }
+
+	    searcher.close();
+	}
+	
+	private static void addArticle(IndexWriter w, Article article) throws IOException
+	{
+		Document doc = new Document();
+		doc.add(new Field("title", article.getTitle(), Field.Store.YES, Field.Index.ANALYZED));
+		doc.add(new Field("body", article.getBody(), Field.Store.YES, Field.Index.ANALYZED));
+		
+		w.addDocument(doc);
 	}
 	
 	/**

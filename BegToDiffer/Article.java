@@ -152,6 +152,15 @@ public class Article {
 	}
 	
 	/**
+	 * Get the body of the article.
+	 * @return Body of the article.
+	 */
+	public String getBody()
+	{
+		return body;
+	}
+	
+	/**
 	 * Get the top words of this article.
 	 * @return Top words (sorted).
 	 */
