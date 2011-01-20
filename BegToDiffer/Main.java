@@ -1,5 +1,7 @@
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Scanner;
+
 import javax.xml.parsers.*;
 import org.w3c.dom.*;
 
@@ -7,10 +9,13 @@ import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.index.IndexWriter;
+import org.apache.lucene.queryParser.MultiFieldQueryParser;
 import org.apache.lucene.queryParser.ParseException;
 import org.apache.lucene.queryParser.QueryParser;
 import org.apache.lucene.search.*;
 import org.apache.lucene.store.Directory;
+import org.apache.lucene.store.FSDirectory;
+import org.apache.lucene.store.NIOFSDirectory;
 import org.apache.lucene.store.RAMDirectory;
 import org.apache.lucene.util.Version;
 
@@ -39,7 +44,8 @@ public class Main {
 		
 		StandardAnalyzer analyzer = new StandardAnalyzer(Version.LUCENE_CURRENT);
 		
-	    Directory index = new RAMDirectory();
+	    //Directory index = new RAMDirectory();
+		Directory index = new NIOFSDirectory(new File("index/"));
 	    
 	    IndexWriter w = new IndexWriter(index, analyzer, true, IndexWriter.MaxFieldLength.UNLIMITED);
 	    
@@ -50,9 +56,12 @@ public class Main {
 	    
 	    w.close();
 	    
-	    String querystr = "twitter";
+	    Scanner scanner = new Scanner(System.in);
+	    System.out.print("Search Query: ");
+	    String querystr = scanner.nextLine();
 	    
-	    Query q = new QueryParser(Version.LUCENE_CURRENT, "body", analyzer).parse(querystr);
+	    String[] fields = {"title", "body"};
+	    Query q = new MultiFieldQueryParser(Version.LUCENE_CURRENT, fields, analyzer).parse(querystr);
 
 	    //Search
 	    int hitsPerPage = 10;
@@ -63,10 +72,11 @@ public class Main {
 	    
 	    //Display Results
 	    System.out.println("Found " + hits.length + " hits.");
-	    for(int i=0;i<hits.length;++i) {
-	      int docId = hits[i].doc;
-	      Document d = searcher.doc(docId);
-	      System.out.println((i + 1) + ". " + d.get("title"));
+	    for (int i = 0; i < hits.length; i++)
+	    {
+	    	int docId = hits[i].doc;
+	    	Document d = searcher.doc(docId);
+	    	System.out.println((i + 1) + ". " + d.get("title")+" (score: "+hits[i].score+")");
 	    }
 
 	    searcher.close();
