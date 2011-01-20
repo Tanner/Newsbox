@@ -23,15 +23,6 @@ import java.io.IOException;
  */
 public class Main {
 	private static ArrayList<Article> articles = new ArrayList<Article>();
-
-	private static ArrayList<Article> likedArticles = new ArrayList<Article>();
-	private static ArrayList<Article> dislikedArticles = new ArrayList<Article>();
-	
-	private static ArrayList<Topic> topics = new ArrayList<Topic>();
-	
-	public static final int MAX_WORDS_FOR_TOPICS = 10;
-	public static final int TITLE_TOP_WORD_MULT = 2;
-	public static final double MIN_PERCENTAGE_FOR_TOPIC_ADD = 0.25;
 	
 	/**
 	 * The main method. This get executed first and always.
@@ -41,65 +32,6 @@ public class Main {
 	{
 		System.out.println("Getting articles...");
 		getArticles(new File("articles.xml"));
-		
-		//If the article has the like characteristic, add it to the corresponding array list
-		System.out.println("Creating a basis based on what data we have for liked and disliked articles...");
-		for (Article article : articles)
-		{
-			if (article.getLike() == Likability.LIKE)
-			{
-				likedArticles.add(article);
-			} else if (article.getLike() == Likability.NOTLIKE) {
-				dislikedArticles.add(article);
-			}
-		}
-		
-		//Loop through all the articles trying to place them in topics
-		System.out.println("Attempting to create topics...\n\n\n");
-		for (Article article : articles)
-		{
-			//If there are no topics, take the first article and make a topic out of it.
-			if (topics.size() == 0)
-			{
-				Topic topic = new Topic(article.getTitle(), article);
-				topics.add(topic);
-				System.out.println("Creating new topic for "+article.getTitle());
-				System.out.println("*************");
-			} else {
-				/*
-				 * Otherwise if there are topics, loop through them checking the compatibility score against the min allowed.
-				 * 
-				 * If the score is above the min allowed, add it to the topic and move on in life.
-				 * If we can't get a score above the min in any topics, create a new one. Simple.
-				 */
-				boolean foundTopic = false;
-				for (int i = 0; i < topics.size(); i++)
-				{
-					Topic topic = topics.get(i);
-					double percentage = topic.getCandidatePercentage(article);
-					if (percentage >= MIN_PERCENTAGE_FOR_TOPIC_ADD)
-					{
-						topic.add(article);
-						foundTopic = true;
-						System.out.println("Added "+article.getTitle()+"\nTo Topic: "+topic.getName());
-						break;
-					}
-				}
-				if (!foundTopic)
-				{
-					Topic newTopic = new Topic(article.getTitle(), article);
-					topics.add(newTopic);
-					System.out.println("Creating new topic for "+article.getTitle());
-				}
-				System.out.println("*************");
-			}
-		}
-		
-		//And print out all the topics for funzies
-		for (Topic topic : topics)
-		{
-			System.out.println(topic);
-		}
 	}
 	
 	/**
