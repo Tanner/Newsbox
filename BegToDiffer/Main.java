@@ -11,12 +11,9 @@ import org.apache.lucene.document.Field;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.queryParser.MultiFieldQueryParser;
 import org.apache.lucene.queryParser.ParseException;
-import org.apache.lucene.queryParser.QueryParser;
 import org.apache.lucene.search.*;
 import org.apache.lucene.store.Directory;
-import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.store.NIOFSDirectory;
-import org.apache.lucene.store.RAMDirectory;
 import org.apache.lucene.util.Version;
 
 import java.io.IOException;
@@ -62,7 +59,7 @@ public class Main {
 	    
 	    String[] fields = {"title", "body"};
 	    Query q = new MultiFieldQueryParser(Version.LUCENE_CURRENT, fields, analyzer).parse(querystr);
-
+	    
 	    //Search
 	    int hitsPerPage = 10;
 	    IndexSearcher searcher = new IndexSearcher(index, true);
