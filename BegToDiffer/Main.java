@@ -79,6 +79,7 @@ public class Main {
 
 	    searcher.close();
 	    
+	    System.out.println(articles.get(0).getTitle());
 	    String[] text = AnalyzerUtil.getMostFrequentTerms(analyzer, articles.get(0).getBody() + articles.get(0).getTitle(), 0);
 	    for (int i = 0; i < text.length; i++)
 	    {
