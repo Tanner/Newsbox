@@ -9,6 +9,7 @@ import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.index.IndexWriter;
+import org.apache.lucene.index.memory.AnalyzerUtil;
 import org.apache.lucene.queryParser.MultiFieldQueryParser;
 import org.apache.lucene.queryParser.ParseException;
 import org.apache.lucene.search.*;
@@ -77,6 +78,12 @@ public class Main {
 	    }
 
 	    searcher.close();
+	    
+	    String[] text = AnalyzerUtil.getMostFrequentTerms(analyzer, articles.get(0).getBody() + articles.get(0).getTitle(), 0);
+	    for (int i = 0; i < text.length; i++)
+	    {
+	    	System.out.println(text[i]);
+	    }
 	}
 	
 	private static void addArticle(IndexWriter w, Article article) throws IOException
