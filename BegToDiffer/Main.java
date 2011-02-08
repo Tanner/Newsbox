@@ -1,6 +1,9 @@
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
+import java.util.Map;
+import java.util.HashMap;
 
 import javax.xml.parsers.*;
 import org.w3c.dom.*;
@@ -18,6 +21,15 @@ import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.store.NIOFSDirectory;
 import org.apache.lucene.store.RAMDirectory;
 import org.apache.lucene.util.Version;
+
+import org.carrot2.clustering.lingo.*;
+import org.carrot2.core.*;
+import org.carrot2.core.attribute.CommonAttributesDescriptor;
+import org.carrot2.source.lucene.LuceneDocumentSource;
+import org.carrot2.source.lucene.LuceneDocumentSourceDescriptor;
+import org.carrot2.source.lucene.SimpleFieldMapperDescriptor;
+
+import com.google.common.collect.Maps;
 
 import java.io.IOException;
 
@@ -56,7 +68,7 @@ public class Main {
 	    
 	    w.close();
 	    
-	    Scanner scanner = new Scanner(System.in);
+	    /*Scanner scanner = new Scanner(System.in);
 	    System.out.print("Search Query: ");
 	    String querystr = scanner.nextLine();
 	    
@@ -79,7 +91,31 @@ public class Main {
 	    	System.out.println((i + 1) + ". " + d.get("title")+" (score: "+hits[i].score+")");
 	    }
 
-	    searcher.close();
+	    searcher.close();*/
+	    
+	    //Carrot2
+	    final Controller controller = ControllerFactory.createPooling();
+	    
+	    final Map<String, Object> luceneGlobalAttributes = new HashMap<String, Object>();
+	    
+	    LuceneDocumentSourceDescriptor
+        .attributeBuilder(luceneGlobalAttributes)
+        .directory(FSDirectory.open(new File("index/")));
+	    
+	    SimpleFieldMapperDescriptor
+        .attributeBuilder(luceneGlobalAttributes)
+        .titleField("title")
+        .contentField("body")
+        .searchFields(Arrays.asList(new String [] {"title", "body"}));
+	    
+	    controller.init(new HashMap<String, Object>(), new ProcessingComponentConfiguration(LuceneDocumentSource.class, "lucene", luceneGlobalAttributes));
+	    
+	    final Map<String, Object> processingAttributes = Maps.newHashMap();;
+	    CommonAttributesDescriptor.attributeBuilder(processingAttributes);
+	    
+	    ProcessingResult process = controller.process(processingAttributes, "lucene", LingoClusteringAlgorithm.class.getName());
+  
+	    System.out.println(process);
 	}
 	
 	private static void addArticle(IndexWriter w, Article article) throws IOException
