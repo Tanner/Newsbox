@@ -28,10 +28,12 @@
 - (void)didLoadTableViewData;
 
 @property (nonatomic, assign) id<FeedTableViewControllerDelegate> delegate;
+@property (nonatomic, retain) EGORefreshTableHeaderView *_refreshHeaderView;
 
 @end
 
 
 @protocol FeedTableViewControllerDelegate
 - (void)refreshWithFeedType:(FeedType)type;
+- (void)showItem:(Feed *)anItem;
 @end

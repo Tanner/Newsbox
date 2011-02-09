@@ -22,7 +22,9 @@
 
 
 @synthesize delegate;
+@synthesize currentFeedType;
 @synthesize sid, auth;
+@synthesize authenticated;
 
 
 - (id)initWithDelegate:(id)aDelegate {
@@ -36,7 +38,7 @@
 
 - (void)authenticateWithGoogleUser:(NSString *)username andPassword:(NSString *)password {
 	fp = [[FeedParser alloc] init];
-
+	
 	NSURL *url = [NSURL URLWithString:@"https://www.google.com/accounts/ClientLogin"];;
 	ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
     [request setPostValue:[username stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding] forKey:@"Email"];
@@ -84,6 +86,7 @@
 	authString = [authString stringByReplacingOccurrencesOfString: @"Auth=" withString: @""];
 	self.auth = authString;
 	
+	authenticated = YES;
 	[delegate didLogin:YES];
 	
     return YES;

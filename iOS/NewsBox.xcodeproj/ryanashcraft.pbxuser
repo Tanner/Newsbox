@@ -8,16 +8,16 @@
 	};
 	2860E387111B897F00E27156 /* AppDelegate_iPhone.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1619, 315}}";
-			sepNavSelRange = "{346, 0}";
-			sepNavVisRange = "{0, 440}";
+			sepNavIntBoundsRect = "{{0, 0}, {950, 896}}";
+			sepNavSelRange = "{412, 0}";
+			sepNavVisRange = "{0, 539}";
 		};
 	};
 	2860E388111B897F00E27156 /* AppDelegate_iPhone.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1965, 1508}}";
-			sepNavSelRange = "{3006, 0}";
-			sepNavVisRange = "{756, 2842}";
+			sepNavIntBoundsRect = "{{0, 0}, {1965, 1846}}";
+			sepNavSelRange = "{413, 0}";
+			sepNavVisRange = "{240, 960}";
 			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
 		};
 	};
@@ -31,9 +31,9 @@
 	};
 	28EEC04A1118E28000187D67 /* AppDelegate_Shared.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {2371, 2379}}";
-			sepNavSelRange = "{283, 0}";
-			sepNavVisRange = "{0, 2056}";
+			sepNavIntBoundsRect = "{{0, 0}, {2371, 2405}}";
+			sepNavSelRange = "{596, 0}";
+			sepNavVisRange = "{0, 2091}";
 			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
 		};
 	};
@@ -52,8 +52,8 @@
 			ED2E91B81301D22B00983CC3 /* Newsbox */,
 		);
 		perUserDictionary = {
-			PBXPerProjectTemplateStateSaveDate = 318966569;
-			PBXWorkspaceStateSaveDate = 318966569;
+			PBXPerProjectTemplateStateSaveDate = 318980108;
+			PBXWorkspaceStateSaveDate = 318980108;
 		};
 		sourceControlManager = ED2E91C21301D23300983CC3 /* Source Control */;
 		userBuildSettings = {
@@ -112,17 +112,17 @@
 	};
 	ED2E91C41301D23600983CC3 /* FeedLoader.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {971, 1794}}";
-			sepNavSelRange = "{3842, 0}";
-			sepNavVisRange = "{2169, 1914}";
+			sepNavIntBoundsRect = "{{0, 0}, {971, 1833}}";
+			sepNavSelRange = "{3182, 70}";
+			sepNavVisRange = "{2190, 1972}";
 			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
 		};
 	};
 	ED2E91C51301D23600983CC3 /* FeedLoader.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {781, 848}}";
-			sepNavSelRange = "{433, 0}";
-			sepNavVisRange = "{0, 911}";
+			sepNavIntBoundsRect = "{{0, 0}, {781, 896}}";
+			sepNavSelRange = "{906, 0}";
+			sepNavVisRange = "{0, 1040}";
 			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
 		};
 	};
@@ -160,17 +160,17 @@
 	};
 	ED2E94F01302555D00983CC3 /* FeedsTableViewController_iPhone.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {781, 896}}";
-			sepNavSelRange = "{552, 0}";
-			sepNavVisRange = "{0, 853}";
-			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
+			sepNavIntBoundsRect = "{{0, 0}, {781, 848}}";
+			sepNavSelRange = "{812, 18}";
+			sepNavVisRange = "{0, 963}";
+			sepNavWindowFrame = "{{840, 4}, {840, 1024}}";
 		};
 	};
 	ED2E94F11302555D00983CC3 /* FeedsTableViewController_iPhone.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1619, 2860}}";
-			sepNavSelRange = "{5776, 0}";
-			sepNavVisRange = "{5310, 472}";
+			sepNavIntBoundsRect = "{{0, 0}, {1510, 2938}}";
+			sepNavSelRange = "{268, 0}";
+			sepNavVisRange = "{3, 1509}";
 			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
 		};
 	};
@@ -200,10 +200,26 @@
 	};
 	ED2E95C313025CA300983CC3 /* FeedParser.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1861, 1690}}";
-			sepNavSelRange = "{661, 0}";
-			sepNavVisRange = "{0, 2676}";
-			sepNavWindowFrame = "{{1680, -334}, {1920, 1200}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1412, 1755}}";
+			sepNavSelRange = "{1899, 0}";
+			sepNavVisRange = "{1203, 2559}";
+			sepNavWindowFrame = "{{840, 4}, {840, 1024}}";
+		};
+	};
+	ED639912130342810024D3ED /* ItemViewController_iPhone.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {781, 873}}";
+			sepNavSelRange = "{523, 0}";
+			sepNavVisRange = "{0, 530}";
+			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
+		};
+	};
+	ED639913130342810024D3ED /* ItemViewController_iPhone.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1020, 1482}}";
+			sepNavSelRange = "{738, 0}";
+			sepNavVisRange = "{35, 1759}";
+			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
 		};
 	};
 	ED71CFC513030B3600C3BE65 /* EGORefreshTableHeaderView.h */ = {

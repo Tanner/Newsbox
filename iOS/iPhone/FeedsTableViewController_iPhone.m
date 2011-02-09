@@ -14,6 +14,7 @@
 
 
 @synthesize delegate;
+@synthesize _refreshHeaderView;
 
 
 - (void)setFeeds:(NSArray *)aFeeds withType:(FeedType)type {
@@ -64,15 +65,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+	
 	if (_refreshHeaderView == nil) {
-		
 		EGORefreshTableHeaderView *view = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - self.tableView.bounds.size.height, self.view.frame.size.width, self.tableView.bounds.size.height)];
 		view.delegate = self;
 		[self.tableView addSubview:view];
 		_refreshHeaderView = view;
 		[view release];
-		
 	}
 	
 	//  update the last update date
@@ -87,11 +86,11 @@
 }
 
 
-/*
+
 - (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+    
 }
-*/
+
 /*
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
@@ -184,7 +183,7 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+	[delegate showItem:[feeds objectAtIndex:indexPath.row]];
 }
 
 

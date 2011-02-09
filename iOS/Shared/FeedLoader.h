@@ -22,6 +22,8 @@
 	NSString *auth;
 	
 	FeedParser *fp;
+	
+	BOOL authenticated;
 }
 
 - (id)initWithDelegate:(id)aDelegate;
@@ -30,8 +32,10 @@
 
 
 @property (nonatomic, assign) id<FeedLoaderDelegate> delegate;
+@property (nonatomic, assign) FeedType currentFeedType;
 @property (nonatomic, retain) NSString *sid;
 @property (nonatomic, retain) NSString *auth;
+@property (nonatomic, assign) BOOL authenticated;
 
 
 @end

@@ -50,6 +50,8 @@
 		ED2E94F41302555D00983CC3 /* FeedsTableViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED2E94F21302555D00983CC3 /* FeedsTableViewController_iPhone.xib */; };
 		ED2E95471302575C00983CC3 /* Feed.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2E95461302575C00983CC3 /* Feed.m */; };
 		ED2E95C413025CA300983CC3 /* FeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2E95C313025CA300983CC3 /* FeedParser.m */; };
+		ED639915130342810024D3ED /* ItemViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = ED639913130342810024D3ED /* ItemViewController_iPhone.m */; };
+		ED639916130342810024D3ED /* ItemViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED639914130342810024D3ED /* ItemViewController_iPhone.xib */; };
 		ED71CFD013030B3600C3BE65 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED71CFC613030B3600C3BE65 /* EGORefreshTableHeaderView.m */; };
 		ED71CFD113030B3600C3BE65 /* blackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = ED71CFC813030B3600C3BE65 /* blackArrow.png */; };
 		ED71CFD213030B3600C3BE65 /* blackArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED71CFC913030B3600C3BE65 /* blackArrow@2x.png */; };
@@ -145,6 +147,9 @@
 		ED2E95461302575C00983CC3 /* Feed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Feed.m; path = Shared/Feed.m; sourceTree = "<group>"; };
 		ED2E95C213025CA300983CC3 /* FeedParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FeedParser.h; path = Shared/FeedParser.h; sourceTree = "<group>"; };
 		ED2E95C313025CA300983CC3 /* FeedParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FeedParser.m; path = Shared/FeedParser.m; sourceTree = "<group>"; };
+		ED639912130342810024D3ED /* ItemViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemViewController_iPhone.h; sourceTree = "<group>"; };
+		ED639913130342810024D3ED /* ItemViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemViewController_iPhone.m; sourceTree = "<group>"; };
+		ED639914130342810024D3ED /* ItemViewController_iPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemViewController_iPhone.xib; sourceTree = "<group>"; };
 		ED71CFC513030B3600C3BE65 /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
 		ED71CFC613030B3600C3BE65 /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
 		ED71CFC813030B3600C3BE65 /* blackArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackArrow.png; sourceTree = "<group>"; };
@@ -199,6 +204,9 @@
 				ED2E94F01302555D00983CC3 /* FeedsTableViewController_iPhone.h */,
 				ED2E94F11302555D00983CC3 /* FeedsTableViewController_iPhone.m */,
 				ED2E94F21302555D00983CC3 /* FeedsTableViewController_iPhone.xib */,
+				ED639912130342810024D3ED /* ItemViewController_iPhone.h */,
+				ED639913130342810024D3ED /* ItemViewController_iPhone.m */,
+				ED639914130342810024D3ED /* ItemViewController_iPhone.xib */,
 			);
 			path = iPhone;
 			sourceTree = "<group>";
@@ -471,6 +479,7 @@
 				ED71CFD813030B3600C3BE65 /* whiteArrow@2x.png in Resources */,
 				ED71D1081303266E00C3BE65 /* Icon-57@2x.png in Resources */,
 				ED71D10A1303268D00C3BE65 /* Icon-57.png in Resources */,
+				ED639916130342810024D3ED /* ItemViewController_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +522,7 @@
 				ED2E95471302575C00983CC3 /* Feed.m in Sources */,
 				ED2E95C413025CA300983CC3 /* FeedParser.m in Sources */,
 				ED71CFD013030B3600C3BE65 /* EGORefreshTableHeaderView.m in Sources */,
+				ED639915130342810024D3ED /* ItemViewController_iPhone.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

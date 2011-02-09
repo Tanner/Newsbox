@@ -8,6 +8,7 @@
 
 #import "AppDelegate_iPhone.h"
 #import "FeedLoader.h"
+#import "Feed.h"
 
 
 @implementation AppDelegate_iPhone
@@ -26,6 +27,12 @@ NSString *const TEST_PASSWORD = @"FA1w0wxjRTHRyj";
 
 - (void)didGetFeeds:(NSArray *)feeds ofType:(FeedType)type {
 	[ftvc setFeeds:feeds withType:type];
+}
+
+
+- (void)showItem:(Feed *)anItem {
+	[ivc setItem:anItem];
+	[navController pushViewController:ivc animated:YES];
 }
 
 
@@ -48,6 +55,9 @@ NSString *const TEST_PASSWORD = @"FA1w0wxjRTHRyj";
 	ftvc = [[FeedsTableViewController_iPhone alloc] initWithNibName:@"FeedsTableViewController_iPhone" bundle:nil];
 	[ftvc setDelegate:self];
 	navController = [[UINavigationController alloc] initWithRootViewController:ftvc];
+	
+	ivc = [[ItemViewController_iPhone alloc] initWithNibName:@"ItemViewController_iPhone" bundle:nil];
+	[ivc setDelegate:self];
 		
 	[self.window addSubview:navController.view];
     [self.window makeKeyAndVisible];
@@ -86,7 +96,11 @@ NSString *const TEST_PASSWORD = @"FA1w0wxjRTHRyj";
     /*
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
-	[ftvc reloadTableViewDataSource];
+	if (![feedLoader authenticated]) {
+		[feedLoader authenticateWithGoogleUser:TEST_GOOGLE_USER andPassword:TEST_PASSWORD];
+	} else {
+		[feedLoader getFeedsOfType:[feedLoader currentFeedType]];
+	}
 }
 
 

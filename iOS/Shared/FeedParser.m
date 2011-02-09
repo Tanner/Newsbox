@@ -50,17 +50,19 @@
 	[errorAlert show];
 }
 
-- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict{			
+- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {			
 	[elementStack addObject:[elementName copy]];
-	
+
 	if ([elementName isEqualToString:@"entry"]) {
 		currentTitle = [[NSMutableString alloc] init];
 		currentDate = [[NSMutableString alloc] init];
 		currentSummary = [[NSMutableString alloc] init];
-		currentLink = [[NSMutableString alloc] init];
 		currentSource = [[NSMutableString alloc] init];
 	}
 	
+	else if (![self array:elementStack containsElement:@"source"] && [elementName isEqualToString:@"link"]) {
+		currentLink = [[NSString alloc] initWithString:[attributeDict valueForKey:@"href"]];
+	}
 }
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName{     
@@ -88,11 +90,9 @@
 	else {
 		if ([[elementStack lastObject] isEqualToString:@"title"]) {
 			[currentTitle appendString:string];
-		} else if ([[elementStack lastObject] isEqualToString:@"link"]) {
-			[currentLink appendString:string];
-		} else if ([[elementStack lastObject] isEqualToString:@"description"]) {
+		} else if ([[elementStack lastObject] isEqualToString:@"content"]) {
 			[currentSummary appendString:string];
-		} else if ([[elementStack lastObject] isEqualToString:@"pubDate"]) {
+		} else if ([[elementStack lastObject] isEqualToString:@"updated"]) {
 			[currentDate appendString:string];
 		}
 	}
