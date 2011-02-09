@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>NSManagedObjectModel_CurrentVersionName</key>
-	<string>NewsBox</string>
+	<string>Newsbox</string>
 	<key>NSManagedObjectModel_VersionHashes</key>
 	<dict>
-		<key>NewsBox</key>
+		<key>Newsbox</key>
 		<dict/>
 	</dict>
 </dict>

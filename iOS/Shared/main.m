@@ -1,8 +1,8 @@
 //
 //  main.m
-//  NewsBox
+//  Newsbox
 //
-//  Created by Ryan Ashcraft on 1/16/11.
+//  Created by Ryan Ashcraft on 2/8/11.
 //  Copyright 2011 Ashcraft Media. All rights reserved.
 //
 

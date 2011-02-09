@@ -1,44 +1,71 @@
 // !$*UTF8*$!
 {
-	1D6058900D05DD3D006BFB54 /* NewsBox */ = {
+	1D6058900D05DD3D006BFB54 /* Newsbox */ = {
 		activeExec = 0;
 		executables = (
-			EDC67FE612E39D1400B6FAF1 /* NewsBox */,
+			ED2E91B81301D22B00983CC3 /* Newsbox */,
 		);
+	};
+	2860E387111B897F00E27156 /* AppDelegate_iPhone.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1861, 1049}}";
+			sepNavSelRange = "{314, 0}";
+			sepNavVisRange = "{0, 407}";
+		};
+	};
+	2860E388111B897F00E27156 /* AppDelegate_iPhone.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1965, 1261}}";
+			sepNavSelRange = "{395, 0}";
+			sepNavVisRange = "{0, 2947}";
+			sepNavWindowFrame = "{{1680, -334}, {960, 1200}}";
+		};
+	};
+	28EEC0491118E28000187D67 /* AppDelegate_Shared.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {781, 896}}";
+			sepNavSelRange = "{353, 0}";
+			sepNavVisRange = "{0, 926}";
+			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
+		};
+	};
+	28EEC04A1118E28000187D67 /* AppDelegate_Shared.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2371, 2418}}";
+			sepNavSelRange = "{283, 0}";
+			sepNavVisRange = "{0, 2062}";
+			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
+		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
-		activeExecutable = EDC67FE612E39D1400B6FAF1 /* NewsBox */;
-		activeSDKPreference = iphoneos4.2;
-		activeTarget = 1D6058900D05DD3D006BFB54 /* NewsBox */;
+		activeExecutable = ED2E91B81301D22B00983CC3 /* Newsbox */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* Newsbox */;
 		addToTargets = (
-			1D6058900D05DD3D006BFB54 /* NewsBox */,
+			1D6058900D05DD3D006BFB54 /* Newsbox */,
 		);
-		codeSenseManager = EDC67FF112E39D1600B6FAF1 /* Code sense */;
+		breakpoints = (
+		);
+		codeSenseManager = ED2E91C31301D23300983CC3 /* Code sense */;
 		executables = (
-			EDC67FE612E39D1400B6FAF1 /* NewsBox */,
+			ED2E91B81301D22B00983CC3 /* Newsbox */,
 		);
 		perUserDictionary = {
-			PBXPerProjectTemplateStateSaveDate = 316934676;
-			PBXWorkspaceStateSaveDate = 316934676;
+			PBXPerProjectTemplateStateSaveDate = 318926898;
+			PBXWorkspaceStateSaveDate = 318926898;
 		};
-		sourceControlManager = EDC67FF012E39D1600B6FAF1 /* Source Control */;
+		sourceControlManager = ED2E91C21301D23300983CC3 /* Source Control */;
 		userBuildSettings = {
 		};
 	};
-	8D1107310486CEB800E47090 /* NewsBox-Info.plist */ = {
-		uiCtxt = {
-			sepNavWindowFrame = "{{840, 4}, {840, 1024}}";
-		};
-	};
-	EDC67FE612E39D1400B6FAF1 /* NewsBox */ = {
+	ED2E91B81301D22B00983CC3 /* Newsbox */ = {
 		isa = PBXExecutable;
 		activeArgIndices = (
 		);
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 0;
+		breakpointsEnabled = 1;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
@@ -54,14 +81,16 @@
 		executableSystemSymbolLevel = 0;
 		executableUserSymbolLevel = 0;
 		libgmallocEnabled = 0;
-		name = NewsBox;
+		name = Newsbox;
 		savedGlobals = {
 		};
 		showTypeColumn = 0;
 		sourceDirectories = (
 		);
+		variableFormatDictionary = {
+		};
 	};
-	EDC67FF012E39D1600B6FAF1 /* Source Control */ = {
+	ED2E91C21301D23300983CC3 /* Source Control */ = {
 		isa = PBXSourceControlManager;
 		fallbackIsa = XCSourceControlManager;
 		isSCMEnabled = 0;
@@ -71,8 +100,104 @@
 			};
 		};
 	};
-	EDC67FF112E39D1600B6FAF1 /* Code sense */ = {
+	ED2E91C31301D23300983CC3 /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
+	};
+	ED2E91C41301D23600983CC3 /* FeedLoader.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {985, 1716}}";
+			sepNavSelRange = "{2192, 0}";
+			sepNavVisRange = "{395, 2394}";
+			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
+		};
+	};
+	ED2E91C51301D23600983CC3 /* FeedLoader.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1621, 871}}";
+			sepNavSelRange = "{398, 0}";
+			sepNavVisRange = "{0, 871}";
+			sepNavWindowFrame = "{{840, 4}, {840, 1024}}";
+		};
+	};
+	ED2E91D01301D27800983CC3 /* ASIAuthenticationDialog.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {964, 873}}";
+			sepNavSelRange = "{633, 26}";
+			sepNavVisRange = "{0, 1107}";
+			sepNavWindowFrame = "{{15, 4}, {750, 1024}}";
+		};
+	};
+	ED2E91D91301D27800983CC3 /* ASIFormDataRequest.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1097, 1014}}";
+			sepNavSelRange = "{7, 18}";
+			sepNavVisRange = "{3, 2370}";
+			sepNavWindowFrame = "{{15, 4}, {750, 1024}}";
+		};
+	};
+	ED2E91DA1301D27800983CC3 /* ASIFormDataRequest.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1888, 4901}}";
+			sepNavSelRange = "{263, 33}";
+			sepNavVisRange = "{3, 1625}";
+			sepNavWindowFrame = "{{15, 4}, {750, 1024}}";
+		};
+	};
+	ED2E91DC1301D27800983CC3 /* ASIHTTPRequest.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2525, 60099}}";
+			sepNavSelRange = "{9979, 31}";
+			sepNavVisRange = "{162471, 2230}";
+			sepNavWindowFrame = "{{15, 4}, {750, 1024}}";
+		};
+	};
+	ED2E94F01302555D00983CC3 /* FeedsTableViewController_iPhone.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {781, 873}}";
+			sepNavSelRange = "{313, 0}";
+			sepNavVisRange = "{0, 320}";
+			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
+		};
+	};
+	ED2E94F11302555D00983CC3 /* FeedsTableViewController_iPhone.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1199, 1924}}";
+			sepNavSelRange = "{2105, 0}";
+			sepNavVisRange = "{1950, 625}";
+			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
+		};
+	};
+	ED2E95451302575C00983CC3 /* Feed.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {781, 896}}";
+			sepNavSelRange = "{443, 0}";
+			sepNavVisRange = "{0, 593}";
+			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
+		};
+	};
+	ED2E95461302575C00983CC3 /* Feed.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {781, 896}}";
+			sepNavSelRange = "{217, 0}";
+			sepNavVisRange = "{0, 226}";
+			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
+		};
+	};
+	ED2E95C213025CA300983CC3 /* FeedParser.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1861, 1072}}";
+			sepNavSelRange = "{289, 0}";
+			sepNavVisRange = "{0, 471}";
+			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
+		};
+	};
+	ED2E95C313025CA300983CC3 /* FeedParser.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1861, 1690}}";
+			sepNavSelRange = "{661, 0}";
+			sepNavVisRange = "{0, 2676}";
+			sepNavWindowFrame = "{{1680, -334}, {1920, 1200}}";
+		};
 	};
 }

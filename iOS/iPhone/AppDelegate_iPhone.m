@@ -1,23 +1,40 @@
 //
 //  AppDelegate_iPhone.m
-//  NewsBox
+//  Newsbox
 //
-//  Created by Ryan Ashcraft on 1/16/11.
+//  Created by Ryan Ashcraft on 2/8/11.
 //  Copyright 2011 Ashcraft Media. All rights reserved.
 //
 
 #import "AppDelegate_iPhone.h"
+#import "FeedLoader.h"
+
 
 @implementation AppDelegate_iPhone
+
+
+NSString *const TEST_GOOGLE_USER = @"newsbox.test@gmail.com";
+NSString *const TEST_PASSWORD = @"FA1w0wxjRTHRyj";
+
+
+- (void)didLogin:(BOOL)login {
+	if (login) {
+		[ftvc setFeeds:[feedLoader getFeeds:FeedTypeUnread]];
+	}
+}
 
 
 #pragma mark -
 #pragma mark Application lifecycle
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-    
-    // Override point for customization after application launch.
-    
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	feedLoader = [[FeedLoader alloc] initWithDelegate:self];
+	[feedLoader authenticateWithGoogleUser:TEST_GOOGLE_USER andPassword:TEST_PASSWORD];
+		
+	ftvc = [[FeedsTableViewController_iPhone alloc] initWithNibName:@"FeedsTableViewController_iPhone" bundle:nil];
+	navController = [[UINavigationController alloc] initWithRootViewController:ftvc];
+		
+	[self.window addSubview:navController.view];
     [self.window makeKeyAndVisible];
     
     return YES;
