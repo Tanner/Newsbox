@@ -1,15 +1,18 @@
 //
 //  AppDelegate_iPhone.h
-//  NewsBox
+//  Newsbox
 //
-//  Created by Ryan Ashcraft on 1/16/11.
+//  Created by Ryan Ashcraft on 2/8/11.
 //  Copyright 2011 Ashcraft Media. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate_Shared.h"
+#import "FeedsTableViewController_iPhone.h"
 
-@interface AppDelegate_iPhone : AppDelegate_Shared {
+@interface AppDelegate_iPhone : AppDelegate_Shared <FeedLoaderDelegate> {
+	FeedsTableViewController_iPhone *ftvc;
+	UINavigationController *navController;
 }
 
 

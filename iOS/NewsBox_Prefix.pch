@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'NewsBox' target in the 'NewsBox' project
+// Prefix header for all source files of the 'Newsbox' target in the 'Newsbox' project
 //
 
 #ifdef __OBJC__

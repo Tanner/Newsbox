@@ -1,8 +1,8 @@
 //
 //  AppDelegate_Shared.m
-//  NewsBox
+//  Newsbox
 //
-//  Created by Ryan Ashcraft on 1/16/11.
+//  Created by Ryan Ashcraft on 2/8/11.
 //  Copyright 2011 Ashcraft Media. All rights reserved.
 //
 
@@ -80,7 +80,7 @@
     if (managedObjectModel_ != nil) {
         return managedObjectModel_;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"NewsBox" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Newsbox" withExtension:@"momd"];
     managedObjectModel_ = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];    
     return managedObjectModel_;
 }
@@ -96,7 +96,7 @@
         return persistentStoreCoordinator_;
     }
     
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"NewsBox.sqlite"];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Newsbox.sqlite"];
     
     NSError *error = nil;
     persistentStoreCoordinator_ = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
