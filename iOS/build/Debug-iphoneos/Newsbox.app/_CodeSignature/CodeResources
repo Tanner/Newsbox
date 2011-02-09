@@ -8,6 +8,14 @@
 		<data>
 		KF8PWhf+GCEEabQqnWTnrDBuTs4=
 		</data>
+		<key>Icon-57.png</key>
+		<data>
+		EemlC/A3A09zSqExhF5fvdL88KA=
+		</data>
+		<key>Icon-57@2x.png</key>
+		<data>
+		4IEnzXbUppOZ4PkEwREDsE/izBA=
+		</data>
 		<key>MainWindow_iPad.nib</key>
 		<data>
 		jsr05ugjnfWskvvhr8sibQy4XKQ=
@@ -24,9 +32,41 @@
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
 		</data>
+		<key>blackArrow.png</key>
+		<data>
+		2ueRhEOz+psMa8MJhGU75kYwPMQ=
+		</data>
+		<key>blackArrow@2x.png</key>
+		<data>
+		dx9lZf/NiVwDmkhumqBUUK5d/mM=
+		</data>
+		<key>blueArrow.png</key>
+		<data>
+		zyyUZY4nz/toUTC8EEZA/40umuY=
+		</data>
+		<key>blueArrow@2x.png</key>
+		<data>
+		4dpCjCCeoWi+iNO4Qllrc8Y2bKE=
+		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
 		eP+rbMBWqWsW3sG/14jDDgAUfW4=
+		</data>
+		<key>grayArrow.png</key>
+		<data>
+		4ZY+unS0EHUO1jl9BBSvxIRjnlc=
+		</data>
+		<key>grayArrow@2x.png</key>
+		<data>
+		42oD4vvY3/z+gDFDjdfkdfYu7xY=
+		</data>
+		<key>whiteArrow.png</key>
+		<data>
+		Ls4Zx0UbLccnUnMxfhVOWAbopfc=
+		</data>
+		<key>whiteArrow@2x.png</key>
+		<data>
+		cIIkPpTrHVaKgxF/7vPShLNeZJI=
 		</data>
 	</dict>
 	<key>rules</key>

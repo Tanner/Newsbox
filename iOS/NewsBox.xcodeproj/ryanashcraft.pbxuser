@@ -8,17 +8,17 @@
 	};
 	2860E387111B897F00E27156 /* AppDelegate_iPhone.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1861, 1049}}";
-			sepNavSelRange = "{314, 0}";
-			sepNavVisRange = "{0, 407}";
+			sepNavIntBoundsRect = "{{0, 0}, {1619, 315}}";
+			sepNavSelRange = "{346, 0}";
+			sepNavVisRange = "{0, 440}";
 		};
 	};
 	2860E388111B897F00E27156 /* AppDelegate_iPhone.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1965, 1261}}";
-			sepNavSelRange = "{395, 0}";
-			sepNavVisRange = "{0, 2947}";
-			sepNavWindowFrame = "{{1680, -334}, {960, 1200}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1965, 1508}}";
+			sepNavSelRange = "{3006, 0}";
+			sepNavVisRange = "{756, 2842}";
+			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
 		};
 	};
 	28EEC0491118E28000187D67 /* AppDelegate_Shared.h */ = {
@@ -31,9 +31,9 @@
 	};
 	28EEC04A1118E28000187D67 /* AppDelegate_Shared.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {2371, 2418}}";
+			sepNavIntBoundsRect = "{{0, 0}, {2371, 2379}}";
 			sepNavSelRange = "{283, 0}";
-			sepNavVisRange = "{0, 2062}";
+			sepNavVisRange = "{0, 2056}";
 			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
 		};
 	};
@@ -52,11 +52,16 @@
 			ED2E91B81301D22B00983CC3 /* Newsbox */,
 		);
 		perUserDictionary = {
-			PBXPerProjectTemplateStateSaveDate = 318928082;
-			PBXWorkspaceStateSaveDate = 318928082;
+			PBXPerProjectTemplateStateSaveDate = 318966569;
+			PBXWorkspaceStateSaveDate = 318966569;
 		};
 		sourceControlManager = ED2E91C21301D23300983CC3 /* Source Control */;
 		userBuildSettings = {
+		};
+	};
+	8D1107310486CEB800E47090 /* Newsbox-Info.plist */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
 		};
 	};
 	ED2E91B81301D22B00983CC3 /* Newsbox */ = {
@@ -107,18 +112,18 @@
 	};
 	ED2E91C41301D23600983CC3 /* FeedLoader.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {985, 1716}}";
-			sepNavSelRange = "{2192, 0}";
-			sepNavVisRange = "{395, 2394}";
+			sepNavIntBoundsRect = "{{0, 0}, {971, 1794}}";
+			sepNavSelRange = "{3842, 0}";
+			sepNavVisRange = "{2169, 1914}";
 			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
 		};
 	};
 	ED2E91C51301D23600983CC3 /* FeedLoader.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1621, 871}}";
-			sepNavSelRange = "{398, 0}";
-			sepNavVisRange = "{0, 871}";
-			sepNavWindowFrame = "{{840, 4}, {840, 1024}}";
+			sepNavIntBoundsRect = "{{0, 0}, {781, 848}}";
+			sepNavSelRange = "{433, 0}";
+			sepNavVisRange = "{0, 911}";
+			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
 		};
 	};
 	ED2E91D01301D27800983CC3 /* ASIAuthenticationDialog.h */ = {
@@ -155,17 +160,17 @@
 	};
 	ED2E94F01302555D00983CC3 /* FeedsTableViewController_iPhone.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {781, 873}}";
-			sepNavSelRange = "{313, 0}";
-			sepNavVisRange = "{0, 320}";
+			sepNavIntBoundsRect = "{{0, 0}, {781, 896}}";
+			sepNavSelRange = "{552, 0}";
+			sepNavVisRange = "{0, 853}";
 			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
 		};
 	};
 	ED2E94F11302555D00983CC3 /* FeedsTableViewController_iPhone.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1048, 2158}}";
-			sepNavSelRange = "{3753, 0}";
-			sepNavVisRange = "{2364, 1864}";
+			sepNavIntBoundsRect = "{{0, 0}, {1619, 2860}}";
+			sepNavSelRange = "{5776, 0}";
+			sepNavVisRange = "{5310, 472}";
 			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
 		};
 	};
@@ -199,6 +204,41 @@
 			sepNavSelRange = "{661, 0}";
 			sepNavVisRange = "{0, 2676}";
 			sepNavWindowFrame = "{{1680, -334}, {1920, 1200}}";
+		};
+	};
+	ED71CFC513030B3600C3BE65 /* EGORefreshTableHeaderView.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {781, 896}}";
+			sepNavSelRange = "{1311, 0}";
+			sepNavVisRange = "{0, 2315}";
+		};
+	};
+	ED71CFC613030B3600C3BE65 /* EGORefreshTableHeaderView.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {978, 3159}}";
+			sepNavSelRange = "{4192, 0}";
+			sepNavVisRange = "{2813, 1849}";
+			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
+		};
+	};
+	ED71CFCA13030B3600C3BE65 /* blueArrow.png */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{15, 4}, {750, 1024}}";
+		};
+	};
+	ED71CFCB13030B3600C3BE65 /* blueArrow@2x.png */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{15, 4}, {750, 1024}}";
+		};
+	};
+	ED71CFCD13030B3600C3BE65 /* grayArrow@2x.png */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{15, 4}, {750, 1024}}";
+		};
+	};
+	ED71CFCE13030B3600C3BE65 /* whiteArrow.png */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{15, 4}, {750, 1024}}";
 		};
 	};
 }

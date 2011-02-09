@@ -1,13 +1,23 @@
 TNewsbox
 v7
 r0
-t318928263.894837
+t318974088.400189
 cCheck dependencies
 cCpResource build/Debug-iphoneos/Newsbox.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist
 cProcessInfoPlistFile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/Info.plist Newsbox-Info.plist
 cCompileXIB /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPad/MainWindow_iPad.xib
 cCompileXIB /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/MainWindow_iPhone.xib
 cCompileXIB /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/FeedsTableViewController_iPhone.xib
+cCopyPNGFile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/blackArrow.png External/EGOTableViewPullRefresh/Resources/blackArrow.png
+cCopyPNGFile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/blackArrow@2x.png External/EGOTableViewPullRefresh/Resources/blackArrow@2x.png
+cCopyPNGFile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/blueArrow.png External/EGOTableViewPullRefresh/Resources/blueArrow.png
+cCopyPNGFile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/blueArrow@2x.png External/EGOTableViewPullRefresh/Resources/blueArrow@2x.png
+cCopyPNGFile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/grayArrow.png External/EGOTableViewPullRefresh/Resources/grayArrow.png
+cCopyPNGFile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/grayArrow@2x.png External/EGOTableViewPullRefresh/Resources/grayArrow@2x.png
+cCopyPNGFile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/whiteArrow.png External/EGOTableViewPullRefresh/Resources/whiteArrow.png
+cCopyPNGFile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/whiteArrow@2x.png External/EGOTableViewPullRefresh/Resources/whiteArrow@2x.png
+cCopyPNGFile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/Icon-57@2x.png iPhone/Icon-57@2x.png
+cCopyPNGFile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/Icon-57.png iPhone/Icon-57.png
 cProcessPCH /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-fsrxrbrkwhnviecznrsowsimvyib/Newsbox_Prefix.pch.gch Newsbox_Prefix.pch normal armv6 objective-c com.apple.compilers.gcc.4_2
 cProcessPCH /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-dxftlpghhjqwezcofhgwavguzmlm/Newsbox_Prefix.pch.gch Newsbox_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
 cDataModelVersionCompile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/Newsbox.momd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/Newsbox.xcdatamodeld
@@ -41,6 +51,7 @@ cCompileC build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/
 cCompileC build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/FeedsTableViewController_iPhone.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/FeedsTableViewController_iPhone.m normal armv6 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/Feed.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/Feed.m normal armv6 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/FeedParser.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedParser.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/EGORefreshTableHeaderView.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Classes/View/EGORefreshTableHeaderView.m normal armv6 objective-c com.apple.compilers.gcc.4_2
 cLd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/Newsbox normal armv6
 cCompileC build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/main.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/main.m normal armv7 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/AppDelegate_iPad.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPad/AppDelegate_iPad.m normal armv7 objective-c com.apple.compilers.gcc.4_2
@@ -72,6 +83,7 @@ cCompileC build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/
 cCompileC build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/FeedsTableViewController_iPhone.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/FeedsTableViewController_iPhone.m normal armv7 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/Feed.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/Feed.m normal armv7 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/FeedParser.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedParser.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/EGORefreshTableHeaderView.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Classes/View/EGORefreshTableHeaderView.m normal armv7 objective-c com.apple.compilers.gcc.4_2
 cLd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/Newsbox normal armv7
 cCreateUniversalBinary /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/Newsbox normal "armv6 armv7"
 cGenerateDSYMFile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app.dSYM /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/Newsbox
@@ -149,6 +161,11 @@ N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Li
 c000000004CC1111C00000000000000C4
 t1287721244
 s196
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c000000004CC1127D0000000000267530
+t1287721597
+s2520368
 
 N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/Security.framework/Security
 c000000004CC10E3C00000000000CDE60
@@ -550,6 +567,59 @@ s2635
 i"ASIS3ServiceRequest.h"
 i"ASIS3Bucket.h"
 
+N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Classes/View/EGORefreshTableHeaderView.h
+c000000004CFCF82A000000000000090B
+t1291647018
+s2315
+i<UIKit/UIKit.h>
+i<QuartzCore/QuartzCore.h>
+
+N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Classes/View/EGORefreshTableHeaderView.m
+c000000004D52EDBD000000000000202F
+t1297280445
+s8239
+i"EGORefreshTableHeaderView.h"
+
+N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Resources/blackArrow.png
+c000000004CFCF82A00000000000010DC
+t1291647018
+s4316
+
+N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Resources/blackArrow@2x.png
+c000000004CFCF82A0000000000000650
+t1291647018
+s1616
+
+N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Resources/blueArrow.png
+c000000004CFCF82A000000000000118C
+t1291647018
+s4492
+
+N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Resources/blueArrow@2x.png
+c000000004CFCF82A00000000000005F9
+t1291647018
+s1529
+
+N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Resources/grayArrow.png
+c000000004CFCF82A000000000000077A
+t1291647018
+s1914
+
+N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Resources/grayArrow@2x.png
+c000000004CFCF82A000000000000083D
+t1291647018
+s2109
+
+N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Resources/whiteArrow.png
+c000000004CFCF82A0000000000001054
+t1291647018
+s4180
+
+N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Resources/whiteArrow@2x.png
+c000000004CFCF82A0000000000000621
+t1291647018
+s1569
+
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/Reachability/Reachability.h
 c000000004D4EAE400000000000001D0E
 t1297002048
@@ -604,18 +674,18 @@ s226
 i"Feed.h"
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedLoader.h
-c000000004D5233E00000000000000367
-t1297232864
-s871
+c000000004D52EB22000000000000038F
+t1297279778
+s911
 i<Foundation/Foundation.h>
 i"ASIHTTPRequestDelegate.h"
 i"Feed.h"
 i"FeedParser.h"
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedLoader.m
-c000000004D5233E90000000000000F1C
-t1297232873
-s3868
+c000000004D52EC530000000000000FF3
+t1297280083
+s4083
 i"FeedLoader.h"
 i"ASIHTTPRequest.h"
 i"ASIFormDataRequest.h"
@@ -645,20 +715,28 @@ s358
 i<UIKit/UIKit.h>
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app
-t1297235462
-s442
+t1297281287
+s782
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app.dSYM
-t1297235461
+t1297281287
 s102
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/FeedsTableViewController_iPhone.nib
 t1297235310
 s979
 
+N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/Icon-57.png
+t1297281275
+s9630
+
+N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/Icon-57@2x.png
+t1297281064
+s21563
+
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/Info.plist
-t1297235310
-s1095
+t1297280814
+s1122
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/MainWindow_iPad.nib
 t1297235310
@@ -669,27 +747,59 @@ t1297235310
 s984
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/Newsbox
-t1297235461
-s1039216
+t1297281287
+s1075248
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/Newsbox.momd
 t1297235312
 s136
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/PkgInfo
-t1297235310
+t1297280814
 s8
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/ResourceRules.plist
 t1297235310
 s485
 
+N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/blackArrow.png
+t1297273804
+s4012
+
+N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/blackArrow@2x.png
+t1297273804
+s1583
+
+N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/blueArrow.png
+t1297273804
+s4190
+
+N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/blueArrow@2x.png
+t1297273804
+s2096
+
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/embedded.mobileprovision
 t1297235318
 s7538
 
+N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/grayArrow.png
+t1297273804
+s2080
+
+N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/grayArrow@2x.png
+t1297273804
+s2134
+
+N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/whiteArrow.png
+t1297273804
+s4166
+
+N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/whiteArrow@2x.png
+t1297273804
+s2238
+
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox.xcent
-t1297235318
+t1297280814
 s420
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/ASIAuthenticationDialog.o
@@ -777,41 +887,45 @@ t1297235315
 s27016
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/AppDelegate_Shared.o
-t1297235314
-s59264
+t1297279778
+s59376
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/AppDelegate_iPad.o
-t1297235314
-s47760
+t1297279778
+s47872
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/AppDelegate_iPhone.o
-t1297235314
-s55036
+t1297281287
+s58204
+
+N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/EGORefreshTableHeaderView.o
+t1297280446
+s61544
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/Feed.o
 t1297235315
 s10556
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/FeedLoader.o
-t1297235313
-s31632
+t1297280087
+s32812
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/FeedParser.o
 t1297235315
 s60164
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/FeedsTableViewController_iPhone.o
-t1297235461
-s43744
+t1297281287
+s54264
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/Newsbox
-t1297235461
-s515720
+t1297281287
+s535592
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/Newsbox.LinkFileList
-c000000004D523D6E0000000000001006
-t1297235310
-s4102
+c000000004D52D3CB0000000000001096
+t1297273803
+s4246
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/Reachability.o
 t1297235314
@@ -906,41 +1020,45 @@ t1297235317
 s26688
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/AppDelegate_Shared.o
-t1297235315
-s59108
+t1297279779
+s59220
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/AppDelegate_iPad.o
-t1297235315
-s47700
+t1297279779
+s47812
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/AppDelegate_iPhone.o
-t1297235315
-s54936
+t1297281287
+s58064
+
+N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/EGORefreshTableHeaderView.o
+t1297280446
+s60432
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/Feed.o
 t1297235317
 s10452
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/FeedLoader.o
-t1297235315
-s31324
+t1297280087
+s32468
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/FeedParser.o
 t1297235317
 s59884
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/FeedsTableViewController_iPhone.o
-t1297235461
-s43624
+t1297281287
+s53888
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/Newsbox
-t1297235461
-s502540
+t1297281287
+s518012
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/Newsbox.LinkFileList
-c000000004D523D6E0000000000001006
-t1297235310
-s4102
+c000000004D52D3CB0000000000001096
+t1297273803
+s4246
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/Reachability.o
 t1297235316
@@ -969,36 +1087,49 @@ t1297193643
 s14493
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/AppDelegate_iPhone.h
-c000000004D5233610000000000000197
-t1297232737
-s407
+c000000004D52E6D500000000000001B8
+t1297278677
+s440
 i<UIKit/UIKit.h>
 i"AppDelegate_Shared.h"
 i"FeedsTableViewController_iPhone.h"
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/AppDelegate_iPhone.m
-c000000004D52373B0000000000000CF8
-t1297233723
-s3320
+c000000004D52F0FB0000000000000E2C
+t1297281275
+s3628
 i"AppDelegate_iPhone.h"
 i"FeedLoader.h"
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/FeedsTableViewController_iPhone.h
-c000000004D522DA00000000000000140
-t1297231264
-s320
+c000000004D52F1060000000000000355
+t1297281286
+s853
 i<UIKit/UIKit.h>
+i"EGORefreshTableHeaderView.h"
+i"Feed.h"
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/FeedsTableViewController_iPhone.m
-c000000004D523E040000000000001084
-t1297235460
-s4228
+c000000004D52F0F90000000000001696
+t1297281273
+s5782
 i"FeedsTableViewController_iPhone.h"
+i"Feed.h"
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/FeedsTableViewController_iPhone.xib
 c000000004D5220EF0000000000001D6D
 t1297228015
 s7533
+
+N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/Icon-57.png
+c000000004D52F05700000000000024CC
+t1297281111
+s9420
+
+N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/Icon-57@2x.png
+c000000004D52F0220000000000006772
+t1297281058
+s26482
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/MainWindow_iPhone.xib
 c000000004D519AAB0000000000003A8B
@@ -1019,21 +1150,21 @@ t1297235312
 s9983704
 
 NNewsbox-Info.plist
-c000000004D519AAB0000000000000569
-t1297193643
-s1385
+c000000004D52EF2E0000000000000590
+t1297280814
+s1424
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies318928263#318928263#0(0"0(0#1#0"8642634848#0"0#
+lSLF07#2@18"Check dependencies318974088#318974088#0(0"0(0#1#0"8668664512#0"0#
 
 CCodeSign /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app
-s318928261.804222
-e318928262.009852
+s318974087.571567
+e318974087.809189
 r1
 xCodeSign
 x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app
-lSLF07#2@41"CodeSign build/Debug-iphoneos/Newsbox.app318928261#318928262#0(0"0(0#0#78"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app8642293440#677"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv _CODESIGN_ALLOCATE_ /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate    /usr/bin/codesign -f -s "iPhone Developer: Ryan Ashcraft (4G66M54XX5)" --resource-rules=/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/ResourceRules.plist --entitlements /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox.xcent /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app0#
+lSLF07#2@41"CodeSign build/Debug-iphoneos/Newsbox.app318974087#318974087#0(0"0(0#0#78"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app8674439872#677"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv _CODESIGN_ALLOCATE_ /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate    /usr/bin/codesign -f -s "iPhone Developer: Ryan Ashcraft (4G66M54XX5)" --resource-rules=/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/ResourceRules.plist --entitlements /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox.xcent /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app0#
 
 CCompileC build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/ASIAuthenticationDialog.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIAuthenticationDialog.m normal armv6 objective-c com.apple.compilers.gcc.4_2
 s318928114.170996
@@ -1309,8 +1440,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@102"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3ServiceRequest.m318928115#318928115#0(0"0(0#0#94"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3ServiceRequest.m8609567904#1957"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources/armv6 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-fsrxrbrkwhnviecznrsowsimvyib/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3ServiceRequest.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/ASIS3ServiceRequest.o0#
 
 CCompileC build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/AppDelegate_Shared.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/AppDelegate_Shared.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s318928112.546568
-e318928114.172548
+s318972578.825991
+e318972578.962565
 r1
 xCompileC
 xbuild/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/AppDelegate_Shared.o
@@ -1319,11 +1450,11 @@ xnormal
 xarmv6
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@81"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/AppDelegate_Shared.m318928112#318928114#0(0"0(0#0#73"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/AppDelegate_Shared.m8604384544#1935"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources/armv6 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-fsrxrbrkwhnviecznrsowsimvyib/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/AppDelegate_Shared.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/AppDelegate_Shared.o0#
+lSLF07#2@81"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/AppDelegate_Shared.m318972578#318972578#0(0"0(0#0#73"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/AppDelegate_Shared.m8600073568#1935"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources/armv6 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-fsrxrbrkwhnviecznrsowsimvyib/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/AppDelegate_Shared.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/AppDelegate_Shared.o0#
 
 CCompileC build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/AppDelegate_iPad.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPad/AppDelegate_iPad.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s318928112.544249
-e318928114.170780
+s318972578.824698
+e318972578.922902
 r1
 xCompileC
 xbuild/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/AppDelegate_iPad.o
@@ -1332,11 +1463,11 @@ xnormal
 xarmv6
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@77"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPad/AppDelegate_iPad.m318928112#318928114#0(0"0(0#0#69"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPad/AppDelegate_iPad.m8610168576#1929"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources/armv6 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-fsrxrbrkwhnviecznrsowsimvyib/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPad/AppDelegate_iPad.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/AppDelegate_iPad.o0#
+lSLF07#2@77"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPad/AppDelegate_iPad.m318972578#318972578#0(0"0(0#0#69"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPad/AppDelegate_iPad.m8603391296#1929"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources/armv6 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-fsrxrbrkwhnviecznrsowsimvyib/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPad/AppDelegate_iPad.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/AppDelegate_iPad.o0#
 
 CCompileC build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/AppDelegate_iPhone.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/AppDelegate_iPhone.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s318928112.610927
-e318928114.172343
+s318974087.135829
+e318974087.293938
 r1
 xCompileC
 xbuild/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/AppDelegate_iPhone.o
@@ -1345,7 +1476,20 @@ xnormal
 xarmv6
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@81"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/AppDelegate_iPhone.m318928112#318928114#0(0"0(0#0#73"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/AppDelegate_iPhone.m8600492832#1935"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources/armv6 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-fsrxrbrkwhnviecznrsowsimvyib/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/AppDelegate_iPhone.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/AppDelegate_iPhone.o0#
+lSLF07#2@81"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/AppDelegate_iPhone.m318974087#318974087#0(0"0(0#0#73"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/AppDelegate_iPhone.m8668162176#1935"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources/armv6 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-fsrxrbrkwhnviecznrsowsimvyib/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/AppDelegate_iPhone.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/AppDelegate_iPhone.o0#
+
+CCompileC build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/EGORefreshTableHeaderView.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Classes/View/EGORefreshTableHeaderView.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s318973246.834873
+e318973246.959614
+r1
+xCompileC
+xbuild/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/EGORefreshTableHeaderView.o
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Classes/View/EGORefreshTableHeaderView.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@127"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Classes/View/EGORefreshTableHeaderView.m318973246#318973246#0(0"0(0#0#119"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Classes/View/EGORefreshTableHeaderView.m8650333952#1988"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources/armv6 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-fsrxrbrkwhnviecznrsowsimvyib/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Classes/View/EGORefreshTableHeaderView.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/EGORefreshTableHeaderView.o0#
 
 CCompileC build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/Feed.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/Feed.m normal armv6 objective-c com.apple.compilers.gcc.4_2
 s318928115.566830
@@ -1361,8 +1505,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@67"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/Feed.m318928115#318928115#0(0"0(0#0#59"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/Feed.m8614533024#1907"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources/armv6 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-fsrxrbrkwhnviecznrsowsimvyib/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/Feed.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/Feed.o0#
 
 CCompileC build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/FeedLoader.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedLoader.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s318928113.012031
-e318928113.261127
+s318972887.091986
+e318972887.184959
 r1
 xCompileC
 xbuild/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/FeedLoader.o
@@ -1371,7 +1515,7 @@ xnormal
 xarmv6
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@73"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedLoader.m318928113#318928113#0(0"0(0#0#65"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedLoader.m8605217824#1919"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources/armv6 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-fsrxrbrkwhnviecznrsowsimvyib/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedLoader.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/FeedLoader.o0#
+lSLF07#2@73"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedLoader.m318972887#318972887#0(0"0(0#0#65"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedLoader.m8644606560#1919"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources/armv6 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-fsrxrbrkwhnviecznrsowsimvyib/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedLoader.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/FeedLoader.o0#
 
 CCompileC build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/FeedParser.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedParser.m normal armv6 objective-c com.apple.compilers.gcc.4_2
 s318928115.595742
@@ -1387,8 +1531,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@73"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedParser.m318928115#318928115#0(0"0(0#0#65"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedParser.m8613941440#1919"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources/armv6 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-fsrxrbrkwhnviecznrsowsimvyib/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedParser.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/FeedParser.o0#
 
 CCompileC build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/FeedsTableViewController_iPhone.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/FeedsTableViewController_iPhone.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s318928261.504596
-e318928261.602008
+s318974087.139390
+e318974087.307962
 r1
 xCompileC
 xbuild/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/FeedsTableViewController_iPhone.o
@@ -1397,7 +1541,7 @@ xnormal
 xarmv6
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@94"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/FeedsTableViewController_iPhone.m318928261#318928261#0(0"0(0#0#86"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/FeedsTableViewController_iPhone.m7957653246668527616#1961"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources/armv6 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-fsrxrbrkwhnviecznrsowsimvyib/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/FeedsTableViewController_iPhone.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/FeedsTableViewController_iPhone.o0#
+lSLF07#2@94"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/FeedsTableViewController_iPhone.m318974087#318974087#0(0"0(0#0#86"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/FeedsTableViewController_iPhone.m8675673088#1961"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources/armv6 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-fsrxrbrkwhnviecznrsowsimvyib/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/FeedsTableViewController_iPhone.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/FeedsTableViewController_iPhone.o0#
 
 CCompileC build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/Reachability.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/Reachability/Reachability.m normal armv6 objective-c com.apple.compilers.gcc.4_2
 s318928113.261360
@@ -1699,8 +1843,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@102"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3ServiceRequest.m318928117#318928117#0(0"0(0#0#94"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3ServiceRequest.m8607591808#1957"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources/armv7 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-dxftlpghhjqwezcofhgwavguzmlm/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3ServiceRequest.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/ASIS3ServiceRequest.o0#
 
 CCompileC build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/AppDelegate_Shared.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/AppDelegate_Shared.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-s318928115.748643
-e318928115.902457
+s318972578.962707
+e318972579.127315
 r1
 xCompileC
 xbuild/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/AppDelegate_Shared.o
@@ -1709,11 +1853,11 @@ xnormal
 xarmv7
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@81"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/AppDelegate_Shared.m318928115#318928115#0(0"0(0#0#73"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/AppDelegate_Shared.m8604002912#1935"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources/armv7 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-dxftlpghhjqwezcofhgwavguzmlm/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/AppDelegate_Shared.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/AppDelegate_Shared.o0#
+lSLF07#2@81"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/AppDelegate_Shared.m318972578#318972579#0(0"0(0#0#73"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/AppDelegate_Shared.m8625187168#1935"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources/armv7 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-dxftlpghhjqwezcofhgwavguzmlm/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/AppDelegate_Shared.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/AppDelegate_Shared.o0#
 
 CCompileC build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/AppDelegate_iPad.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPad/AppDelegate_iPad.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-s318928115.671895
-e318928115.811829
+s318972578.926022
+e318972579.052658
 r1
 xCompileC
 xbuild/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/AppDelegate_iPad.o
@@ -1722,11 +1866,11 @@ xnormal
 xarmv7
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@77"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPad/AppDelegate_iPad.m318928115#318928115#0(0"0(0#0#69"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPad/AppDelegate_iPad.m8609053440#1929"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources/armv7 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-dxftlpghhjqwezcofhgwavguzmlm/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPad/AppDelegate_iPad.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/AppDelegate_iPad.o0#
+lSLF07#2@77"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPad/AppDelegate_iPad.m318972578#318972579#0(0"0(0#0#69"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPad/AppDelegate_iPad.m8626698816#1929"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources/armv7 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-dxftlpghhjqwezcofhgwavguzmlm/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPad/AppDelegate_iPad.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/AppDelegate_iPad.o0#
 
 CCompileC build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/AppDelegate_iPhone.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/AppDelegate_iPhone.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-s318928115.795409
-e318928115.928531
+s318974087.141270
+e318974087.343175
 r1
 xCompileC
 xbuild/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/AppDelegate_iPhone.o
@@ -1735,7 +1879,20 @@ xnormal
 xarmv7
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@81"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/AppDelegate_iPhone.m318928115#318928115#0(0"0(0#0#73"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/AppDelegate_iPhone.m8609822176#1935"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources/armv7 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-dxftlpghhjqwezcofhgwavguzmlm/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/AppDelegate_iPhone.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/AppDelegate_iPhone.o0#
+lSLF07#2@81"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/AppDelegate_iPhone.m318974087#318974087#0(0"0(0#0#73"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/AppDelegate_iPhone.m8675489696#1935"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources/armv7 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-dxftlpghhjqwezcofhgwavguzmlm/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/AppDelegate_iPhone.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/AppDelegate_iPhone.o0#
+
+CCompileC build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/EGORefreshTableHeaderView.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Classes/View/EGORefreshTableHeaderView.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s318973246.839832
+e318973246.958560
+r1
+xCompileC
+xbuild/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/EGORefreshTableHeaderView.o
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Classes/View/EGORefreshTableHeaderView.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@127"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Classes/View/EGORefreshTableHeaderView.m318973246#318973246#0(0"0(0#0#119"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Classes/View/EGORefreshTableHeaderView.m8650501280#1988"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources/armv7 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-dxftlpghhjqwezcofhgwavguzmlm/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Classes/View/EGORefreshTableHeaderView.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/EGORefreshTableHeaderView.o0#
 
 CCompileC build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/Feed.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/Feed.m normal armv7 objective-c com.apple.compilers.gcc.4_2
 s318928117.345834
@@ -1751,8 +1908,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@67"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/Feed.m318928117#318928117#0(0"0(0#0#59"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/Feed.m8603877280#1907"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources/armv7 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-dxftlpghhjqwezcofhgwavguzmlm/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/Feed.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/Feed.o0#
 
 CCompileC build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/FeedLoader.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedLoader.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-s318928115.811954
-e318928115.951955
+s318972887.096839
+e318972887.190416
 r1
 xCompileC
 xbuild/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/FeedLoader.o
@@ -1761,7 +1918,7 @@ xnormal
 xarmv7
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@73"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedLoader.m318928115#318928115#0(0"0(0#0#65"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedLoader.m8614624000#1919"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources/armv7 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-dxftlpghhjqwezcofhgwavguzmlm/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedLoader.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/FeedLoader.o0#
+lSLF07#2@73"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedLoader.m318972887#318972887#0(0"0(0#0#65"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedLoader.m8644938656#1919"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources/armv7 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-dxftlpghhjqwezcofhgwavguzmlm/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedLoader.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/FeedLoader.o0#
 
 CCompileC build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/FeedParser.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedParser.m normal armv7 objective-c com.apple.compilers.gcc.4_2
 s318928117.378693
@@ -1777,8 +1934,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@73"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedParser.m318928117#318928117#0(0"0(0#0#65"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedParser.m8613682080#1919"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources/armv7 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-dxftlpghhjqwezcofhgwavguzmlm/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedParser.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/FeedParser.o0#
 
 CCompileC build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/FeedsTableViewController_iPhone.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/FeedsTableViewController_iPhone.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-s318928261.552525
-e318928261.618324
+s318974087.162658
+e318974087.354295
 r1
 xCompileC
 xbuild/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/FeedsTableViewController_iPhone.o
@@ -1787,7 +1944,7 @@ xnormal
 xarmv7
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@94"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/FeedsTableViewController_iPhone.m318928261#318928261#0(0"0(0#0#86"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/FeedsTableViewController_iPhone.m8635580384#1961"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources/armv7 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-dxftlpghhjqwezcofhgwavguzmlm/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/FeedsTableViewController_iPhone.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/FeedsTableViewController_iPhone.o0#
+lSLF07#2@94"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/FeedsTableViewController_iPhone.m318974087#318974087#0(0"0(0#0#86"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/FeedsTableViewController_iPhone.m8672713280#1961"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources/armv7 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-dxftlpghhjqwezcofhgwavguzmlm/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/FeedsTableViewController_iPhone.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/FeedsTableViewController_iPhone.o0#
 
 CCompileC build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/Reachability.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/Reachability/Reachability.m normal armv7 objective-c com.apple.compilers.gcc.4_2
 s318928115.902602
@@ -1839,6 +1996,96 @@ xCompileXIB
 x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/MainWindow_iPhone.xib
 lSLF07#2@39"CompileXIB iPhone/MainWindow_iPhone.xib318928110#318928110#0(0"0(0#0#74"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/MainWindow_iPhone.xib8614458048#584"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/MainWindow_iPhone.nib /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/MainWindow_iPhone.xib --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk0#
 
+CCopyPNGFile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/Icon-57.png iPhone/Icon-57.png
+s318974075.835343
+e318974075.870839
+r1
+xCopyPNGFile
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/Icon-57.png
+xiPhone/Icon-57.png
+lSLF07#2@75"CopyPNGFile build/Debug-iphoneos/Newsbox.app/Icon-57.png iPhone/Icon-57.png318974075#318974075#0(0"0(0#0#64"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/Icon-57.png8672980672#590"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/Icon-57.png /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/Icon-57.png0#
+
+CCopyPNGFile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/Icon-57@2x.png iPhone/Icon-57@2x.png
+s318973864.283851
+e318973864.330907
+r1
+xCopyPNGFile
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/Icon-57@2x.png
+xiPhone/Icon-57@2x.png
+lSLF07#2@81"CopyPNGFile build/Debug-iphoneos/Newsbox.app/Icon-57@2x.png iPhone/Icon-57@2x.png318973864#318973864#0(0"0(0#0#67"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/Icon-57@2x.png8669214112#596"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/Icon-57@2x.png /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/Icon-57@2x.png0#
+
+CCopyPNGFile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/blackArrow.png External/EGOTableViewPullRefresh/Resources/blackArrow.png
+s318966604.004605
+e318966604.342423
+r1
+xCopyPNGFile
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/blackArrow.png
+xExternal/EGOTableViewPullRefresh/Resources/blackArrow.png
+lSLF07#2@117"CopyPNGFile build/Debug-iphoneos/Newsbox.app/blackArrow.png External/EGOTableViewPullRefresh/Resources/blackArrow.png318966604#318966604#0(0"0(0#0#103"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Resources/blackArrow.png23081149960552564#632"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Resources/blackArrow.png /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/blackArrow.png0#
+
+CCopyPNGFile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/blackArrow@2x.png External/EGOTableViewPullRefresh/Resources/blackArrow@2x.png
+s318966604.039349
+e318966604.349341
+r1
+xCopyPNGFile
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/blackArrow@2x.png
+xExternal/EGOTableViewPullRefresh/Resources/blackArrow@2x.png
+lSLF07#2@123"CopyPNGFile build/Debug-iphoneos/Newsbox.app/blackArrow@2x.png External/EGOTableViewPullRefresh/Resources/blackArrow@2x.png318966604#318966604#0(0"0(0#0#106"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Resources/blackArrow@2x.png8612691424#638"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Resources/blackArrow@2x.png /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/blackArrow@2x.png0#
+
+CCopyPNGFile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/blueArrow.png External/EGOTableViewPullRefresh/Resources/blueArrow.png
+s318966604.040475
+e318966604.342579
+r1
+xCopyPNGFile
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/blueArrow.png
+xExternal/EGOTableViewPullRefresh/Resources/blueArrow.png
+lSLF07#2@115"CopyPNGFile build/Debug-iphoneos/Newsbox.app/blueArrow.png External/EGOTableViewPullRefresh/Resources/blueArrow.png318966604#318966604#0(0"0(0#0#102"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Resources/blueArrow.png8612481120#630"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Resources/blueArrow.png /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/blueArrow.png0#
+
+CCopyPNGFile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/blueArrow@2x.png External/EGOTableViewPullRefresh/Resources/blueArrow@2x.png
+s318966604.041020
+e318966604.341318
+r1
+xCopyPNGFile
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/blueArrow@2x.png
+xExternal/EGOTableViewPullRefresh/Resources/blueArrow@2x.png
+lSLF07#2@121"CopyPNGFile build/Debug-iphoneos/Newsbox.app/blueArrow@2x.png External/EGOTableViewPullRefresh/Resources/blueArrow@2x.png318966604#318966604#0(0"0(0#0#105"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Resources/blueArrow@2x.png8612305184#636"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Resources/blueArrow@2x.png /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/blueArrow@2x.png0#
+
+CCopyPNGFile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/grayArrow.png External/EGOTableViewPullRefresh/Resources/grayArrow.png
+s318966604.341434
+e318966604.373212
+r1
+xCopyPNGFile
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/grayArrow.png
+xExternal/EGOTableViewPullRefresh/Resources/grayArrow.png
+lSLF07#2@115"CopyPNGFile build/Debug-iphoneos/Newsbox.app/grayArrow.png External/EGOTableViewPullRefresh/Resources/grayArrow.png318966604#318966604#0(0"0(0#0#102"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Resources/grayArrow.png8603392256#630"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Resources/grayArrow.png /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/grayArrow.png0#
+
+CCopyPNGFile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/grayArrow@2x.png External/EGOTableViewPullRefresh/Resources/grayArrow@2x.png
+s318966604.342658
+e318966604.377485
+r1
+xCopyPNGFile
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/grayArrow@2x.png
+xExternal/EGOTableViewPullRefresh/Resources/grayArrow@2x.png
+lSLF07#2@121"CopyPNGFile build/Debug-iphoneos/Newsbox.app/grayArrow@2x.png External/EGOTableViewPullRefresh/Resources/grayArrow@2x.png318966604#318966604#0(0"0(0#0#105"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Resources/grayArrow@2x.png8603303712#636"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Resources/grayArrow@2x.png /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/grayArrow@2x.png0#
+
+CCopyPNGFile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/whiteArrow.png External/EGOTableViewPullRefresh/Resources/whiteArrow.png
+s318966604.343531
+e318966604.375281
+r1
+xCopyPNGFile
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/whiteArrow.png
+xExternal/EGOTableViewPullRefresh/Resources/whiteArrow.png
+lSLF07#2@117"CopyPNGFile build/Debug-iphoneos/Newsbox.app/whiteArrow.png External/EGOTableViewPullRefresh/Resources/whiteArrow.png318966604#318966604#0(0"0(0#0#103"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Resources/whiteArrow.png8603170592#632"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Resources/whiteArrow.png /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/whiteArrow.png0#
+
+CCopyPNGFile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/whiteArrow@2x.png External/EGOTableViewPullRefresh/Resources/whiteArrow@2x.png
+s318966604.349496
+e318966604.383463
+r1
+xCopyPNGFile
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/whiteArrow@2x.png
+xExternal/EGOTableViewPullRefresh/Resources/whiteArrow@2x.png
+lSLF07#2@123"CopyPNGFile build/Debug-iphoneos/Newsbox.app/whiteArrow@2x.png External/EGOTableViewPullRefresh/Resources/whiteArrow@2x.png318966604#318966604#0(0"0(0#0#106"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Resources/whiteArrow@2x.png8603097088#638"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/EGOTableViewPullRefresh/Resources/whiteArrow@2x.png /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/whiteArrow@2x.png0#
+
 CCpResource build/Debug-iphoneos/Newsbox.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist
 s318928110.351523
 e318928110.395133
@@ -1849,14 +2096,14 @@ x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceR
 lSLF07#2@94"Copy /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist318928110#318928110#0(0"0(0#0#89"/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist8604317088#508"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app0#
 
 CCreateUniversalBinary /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/Newsbox normal "armv6 armv7"
-s318928261.711688
-e318928261.716146
+s318974087.471700
+e318974087.476692
 r1
 xCreateUniversalBinary
 x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/Newsbox
 xnormal
 xarmv6 armv7
-lSLF07#2@83"CreateUniversalBinary build/Debug-iphoneos/Newsbox.app/Newsbox normal "armv6 armv7"318928261#318928261#0(0"0(0#0#57"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/armv6 armv78621308224#546"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/lipo -create /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/Newsbox /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/Newsbox -output /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/Newsbox0#
+lSLF07#2@83"CreateUniversalBinary build/Debug-iphoneos/Newsbox.app/Newsbox normal "armv6 armv7"318974087#318974087#0(0"0(0#0#57"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/armv6 armv78672140672#546"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/lipo -create /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/Newsbox /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/Newsbox -output /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/Newsbox0#
 
 CDataModelVersionCompile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/Newsbox.momd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/Newsbox.xcdatamodeld
 s318928112.541799
@@ -1868,42 +2115,42 @@ x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/Newsbox.xcdatamodeld
 lSLF07#2@97"DataModelVersionCompile build/Debug-iphoneos/Newsbox.app/Newsbox.momd Shared/Newsbox.xcdatamodeld318928112#318928112#0(0"0(0#0#73"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/Newsbox.xcdatamodeld8613344288#371"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/momc /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/Newsbox.xcdatamodeld /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/Newsbox.momd0#
 
 CGenerateDSYMFile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app.dSYM /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/Newsbox
-s318928261.716233
-e318928261.801448
+s318974087.476779
+e318974087.569064
 r1
 xGenerateDSYMFile
 x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app.dSYM
 x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/Newsbox
-lSLF07#2@95"GenerateDSYMFile build/Debug-iphoneos/Newsbox.app.dSYM build/Debug-iphoneos/Newsbox.app/Newsbox318928261#318928261#0(0"0(0#0#86"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/Newsbox8631987968#383"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/Newsbox -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app.dSYM0#
+lSLF07#2@95"GenerateDSYMFile build/Debug-iphoneos/Newsbox.app.dSYM build/Debug-iphoneos/Newsbox.app/Newsbox318974087#318974087#0(0"0(0#0#86"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/Newsbox8676292800#383"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/Newsbox -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app.dSYM0#
 
 CLd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/Newsbox normal armv6
-s318928261.602109
-e318928261.696090
+s318974087.308095
+e318974087.427818
 r1
 xLd
 x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/Newsbox
 xnormal
 xarmv6
-lSLF07#2@128"Link /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/Newsbox318928261#318928261#0(0"0(0#0#0"8642908512#1125"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv IPHONEOS_DEPLOYMENT_TARGET 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -arch armv6 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -L/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -filelist /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/Newsbox.LinkFileList -dead_strip -miphoneos-version-min=4.2 -framework Foundation -framework UIKit -framework CoreGraphics -framework CoreData -framework SystemConfiguration -lz.1.2.3 -framework MobileCoreServices -framework CFNetwork -framework Security -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/Newsbox0#
+lSLF07#2@128"Link /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/Newsbox318974087#318974087#0(0"0(0#0#0"8673807552#1147"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv IPHONEOS_DEPLOYMENT_TARGET 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -arch armv6 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -L/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -filelist /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/Newsbox.LinkFileList -dead_strip -miphoneos-version-min=4.2 -framework Foundation -framework UIKit -framework CoreGraphics -framework CoreData -framework SystemConfiguration -lz.1.2.3 -framework MobileCoreServices -framework CFNetwork -framework Security -framework QuartzCore -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv6/Newsbox0#
 
 CLd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/Newsbox normal armv7
-s318928261.618479
-e318928261.711571
+s318974087.354415
+e318974087.471569
 r1
 xLd
 x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/Newsbox
 xnormal
 xarmv7
-lSLF07#2@128"Link /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/Newsbox318928261#318928261#0(0"0(0#0#0"8642751456#1125"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv IPHONEOS_DEPLOYMENT_TARGET 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -arch armv7 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -L/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -filelist /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/Newsbox.LinkFileList -dead_strip -miphoneos-version-min=4.2 -framework Foundation -framework UIKit -framework CoreGraphics -framework CoreData -framework SystemConfiguration -lz.1.2.3 -framework MobileCoreServices -framework CFNetwork -framework Security -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/Newsbox0#
+lSLF07#2@128"Link /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/Newsbox318974087#318974087#0(0"0(0#0#0"8672768672#1147"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv IPHONEOS_DEPLOYMENT_TARGET 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -arch armv7 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -L/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -filelist /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/Newsbox.LinkFileList -dead_strip -miphoneos-version-min=4.2 -framework Foundation -framework UIKit -framework CoreGraphics -framework CoreData -framework SystemConfiguration -lz.1.2.3 -framework MobileCoreServices -framework CFNetwork -framework Security -framework QuartzCore -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Objects-normal/armv7/Newsbox0#
 
 CProcessInfoPlistFile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/Info.plist Newsbox-Info.plist
-s318928110.352646
-e318928110.372857
+s318973614.759658
+e318973614.764271
 r1
 xProcessInfoPlistFile
 x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/Info.plist
 xNewsbox-Info.plist
-lSLF07#2@26"Process Newsbox-Info.plist318928110#318928110#0(0"0(0#0#64"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Newsbox-Info.plist8604135872#590"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility Newsbox-Info.plist -genpkginfo /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -resourcerulesfile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/ResourceRules.plist -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/Info.plist0#
+lSLF07#2@26"Process Newsbox-Info.plist318973614#318973614#0(0"0(0#0#64"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Newsbox-Info.plist8659361952#590"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility Newsbox-Info.plist -genpkginfo /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -resourcerulesfile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/ResourceRules.plist -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/Info.plist0#
 
 CProcessPCH /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-dxftlpghhjqwezcofhgwavguzmlm/Newsbox_Prefix.pch.gch Newsbox_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
 s318928110.784763
@@ -1941,19 +2188,19 @@ x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/
 lSLF07#2@199"ProcessProductPackaging "/Users/ryanashcraft/Library/MobileDevice/Provisioning Profiles/6009B4AB-F333-477F-9FE4-34B7FD1ADA55.mobileprovision" build/Debug-iphoneos/Newsbox.app/embedded.mobileprovision318928118#318928118#0(0"0(0#0#103"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/embedded.mobileprovision8605037888#444"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> "/Users/ryanashcraft/Library/MobileDevice/Provisioning Profiles/6009B4AB-F333-477F-9FE4-34B7FD1ADA55.mobileprovision" -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app/embedded.mobileprovision0#
 
 CProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox.xcent
-s318928118.453550
-e318928118.475265
+s318973614.774529
+e318973614.804263
 r1
 xProcessProductPackaging
 x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist
 x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox.xcent
-lSLF07#2@175"ProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox.xcent318928118#318928118#0(0"0(0#0#108"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox.xcent8607582048#446"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist -entitlements -format xml -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox.xcent0#
+lSLF07#2@175"ProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox.xcent318973614#318973614#0(0"0(0#0#108"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox.xcent8658461632#446"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist -entitlements -format xml -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphoneos/Newsbox.build/Newsbox.xcent0#
 
 CTouch /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app
-s318928261.801634
-e318928261.804088
+s318974087.569244
+e318974087.571435
 r1
 xTouch
 x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app
-lSLF07#2@84"Touch /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app318928261#318928261#0(0"0(0#0#0"8642448096#278"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app0#
+lSLF07#2@84"Touch /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app318974087#318974087#0(0"0(0#0#0"8674623008#278"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphoneos/Newsbox.app0#
 

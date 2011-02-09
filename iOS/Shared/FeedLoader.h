@@ -16,8 +16,7 @@
 
 @interface FeedLoader : NSObject <ASIHTTPRequestDelegate> {
 	id<FeedLoaderDelegate> delegate;
-	//NSString *gUsername;
-	//NSString *gPassword;
+	FeedType currentFeedType;
 		
 	NSString *sid;
 	NSString *auth;
@@ -27,7 +26,7 @@
 
 - (id)initWithDelegate:(id)aDelegate;
 - (void)authenticateWithGoogleUser:(NSString *)username andPassword:(NSString *)password;
-- (NSArray *)getFeeds:(FeedType)type;
+- (void)getFeedsOfType:(FeedType)type;
 
 
 @property (nonatomic, assign) id<FeedLoaderDelegate> delegate;
@@ -40,4 +39,5 @@
 
 @protocol FeedLoaderDelegate
 - (void)didLogin:(BOOL)login;
+- (void)didGetFeeds:(NSArray *)feeds ofType:(FeedType)type;
 @end

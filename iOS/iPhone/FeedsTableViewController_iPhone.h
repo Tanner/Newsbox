@@ -7,12 +7,31 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EGORefreshTableHeaderView.h"
+#import "Feed.h"
 
 
-@interface FeedsTableViewController_iPhone : UITableViewController {
+@protocol FeedTableViewControllerDelegate;
+
+@interface FeedsTableViewController_iPhone : UITableViewController <EGORefreshTableHeaderDelegate> {
+	id<FeedTableViewControllerDelegate> delegate;
+	
 	NSMutableArray *feeds;
+	FeedType currentFeedType;
+	EGORefreshTableHeaderView *_refreshHeaderView;
+	
+	BOOL _reloading;
 }
 
-- (void)setFeeds:(NSArray *)aFeeds;
+- (void)setFeeds:(NSArray *)aFeeds withType:(FeedType)type;
+- (void)reloadTableViewDataSource;
+- (void)didLoadTableViewData;
 
+@property (nonatomic, assign) id<FeedTableViewControllerDelegate> delegate;
+
+@end
+
+
+@protocol FeedTableViewControllerDelegate
+- (void)refreshWithFeedType:(FeedType)type;
 @end

@@ -10,7 +10,7 @@
 #import "AppDelegate_Shared.h"
 #import "FeedsTableViewController_iPhone.h"
 
-@interface AppDelegate_iPhone : AppDelegate_Shared <FeedLoaderDelegate> {
+@interface AppDelegate_iPhone : AppDelegate_Shared <FeedLoaderDelegate, FeedTableViewControllerDelegate> {
 	FeedsTableViewController_iPhone *ftvc;
 	UINavigationController *navController;
 }

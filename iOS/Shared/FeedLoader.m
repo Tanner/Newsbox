@@ -96,17 +96,23 @@
     //[self setLastError: error];
 }
 
-- (NSArray *)getFeeds:(FeedType)type {
-	NSMutableArray *feeds;
+- (void)getFeedsOfType:(FeedType)type {
+	currentFeedType = type;
 	
 	if (type == FeedTypeUnread) {
 		ASIHTTPRequest *request = [self requestForAPIEndpoint:@"http://www.google.com/reader/atom/user/-/state/com.google/reading-list"];
-		[request startSynchronous];
-		
-		feeds = [NSMutableArray arrayWithArray:[fp getFeedsFromXMLData:[[request responseString] dataUsingEncoding:NSUTF8StringEncoding]]];
+		[request setDelegate:self];
+		[request startAsynchronous];
 	}
-	
-	return feeds;
+}
+
+- (void)requestFinished:(ASIHTTPRequest *)request {
+	NSArray *feeds = [NSArray arrayWithArray:[fp getFeedsFromXMLData:[[request responseString] dataUsingEncoding:NSUTF8StringEncoding]]];
+	[delegate didGetFeeds:feeds ofType:currentFeedType];
+}
+
+- (void)requestFailed:(ASIHTTPRequest *)request {
+	NSLog(@"%@", @"failed to get feeds");
 }
 
 - (ASIHTTPRequest *)requestForAPIEndpoint:(NSString *)apiEndpoint {
