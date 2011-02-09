@@ -271,7 +271,7 @@
 									<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 									<array>
 										<array>
-											<integer>2</integer>
+											<integer>6</integer>
 											<integer>1</integer>
 											<integer>0</integer>
 										</array>
@@ -436,8 +436,8 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>ED3D8F431302741800EF6631</string>
-				<string>ED3D8F441302741800EF6631</string>
+				<string>ED2C2B93130274E1008AB6F4</string>
+				<string>ED2C2B94130274E1008AB6F4</string>
 				<string>1C9437FD063B20B00039CFAC</string>
 				<string>1C9437FE063B20B00039CFAC</string>
 				<string>1C9437FF063B20B00039CFAC</string>
@@ -474,6 +474,11 @@
 	<integer>0</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>ED2C2BA5130275B3008AB6F4</string>
+		<string>ED2C2BA6130275B3008AB6F4</string>
+		<string>ED2C2B9E130274E1008AB6F4</string>
+		<string>1C530D5B069F1CE1000CFCEE</string>
+		<string>1C530D54069F1CE1000CFCEE</string>
 		<string>1C530D52069F1CE1000CFCEE</string>
 		<string>/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Newsbox.xcodeproj</string>
 	</array>
@@ -692,7 +697,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D52069F1CE1000CFCEE</string>
-				<string>ED3D8F451302741800EF6631</string>
+				<string>ED2C2B95130274E1008AB6F4</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -736,8 +741,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {585, 340}}</string>
-											<string>{{585, 0}, {675, 340}}</string>
+											<string>{{0, 0}, {585, 349}}</string>
+											<string>{{585, 0}, {675, 349}}</string>
 										</array>
 									</dict>
 									<key>VerticalSplitView</key>
@@ -752,8 +757,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {1260, 340}}</string>
-											<string>{{0, 340}, {1260, 331}}</string>
+											<string>{{0, 0}, {1260, 349}}</string>
+											<string>{{0, 349}, {1260, 322}}</string>
 										</array>
 									</dict>
 								</dict>
@@ -786,7 +791,7 @@
 										<real>445</real>
 									</array>
 									<key>Frame</key>
-									<string>{{585, 0}, {675, 340}}</string>
+									<string>{{585, 0}, {675, 349}}</string>
 									<key>RubberWindowFrame</key>
 									<string>210 188 1260 712 0 0 1680 1028 </string>
 								</dict>
@@ -814,13 +819,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D54069F1CE1000CFCEE</string>
-				<string>EDEB23F91302735F00D2E236</string>
+				<string>ED2C2B96130274E1008AB6F4</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>EDEB23FA1302735F00D2E236</string>
-				<string>EDEB23FB1302735F00D2E236</string>
-				<string>EDEB23FC1302735F00D2E236</string>
-				<string>EDEB23FD1302735F00D2E236</string>
-				<string>EDEB23FE1302735F00D2E236</string>
+				<string>ED2C2B97130274E1008AB6F4</string>
+				<string>ED2C2B98130274E1008AB6F4</string>
+				<string>ED2C2B99130274E1008AB6F4</string>
+				<string>ED2C2B9A130274E1008AB6F4</string>
+				<string>ED2C2B9B130274E1008AB6F4</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -974,7 +979,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D5B069F1CE1000CFCEE</string>
-				<string>EDEB23FF1302735F00D2E236</string>
+				<string>ED2C2B9C130274E1008AB6F4</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>

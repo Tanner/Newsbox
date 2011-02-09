@@ -1,47 +1,47 @@
 TNewsbox
 v7
 r0
-t318927851.031819
+t318928097.211937
 cCheck dependencies
-cProcessInfoPlistFile /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/build/Debug-iphonesimulator/Newsbox.app/Info.plist Newsbox-Info.plist
-cCompileXIB /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/iPad/MainWindow_iPad.xib
-cCompileXIB /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/iPhone/MainWindow_iPhone.xib
-cCompileXIB /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/iPhone/FeedsTableViewController_iPhone.xib
-cProcessPCH /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bojkssyoeaplykhgoesfxflwrhct/Newsbox_Prefix.pch.gch Newsbox_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-cDataModelVersionCompile /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/build/Debug-iphonesimulator/Newsbox.app/Newsbox.momd /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/Shared/Newsbox.xcdatamodeld
-cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/main.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/Shared/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/AppDelegate_iPad.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/iPad/AppDelegate_iPad.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/AppDelegate_Shared.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/Shared/AppDelegate_Shared.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/AppDelegate_iPhone.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/iPhone/AppDelegate_iPhone.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/FeedLoader.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/Shared/FeedLoader.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/Reachability.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/Reachability/Reachability.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIAuthenticationDialog.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/ASIHTTPRequest/ASIAuthenticationDialog.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIDataCompressor.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/ASIHTTPRequest/ASIDataCompressor.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIDataDecompressor.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/ASIHTTPRequest/ASIDataDecompressor.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIDownloadCache.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/ASIHTTPRequest/ASIDownloadCache.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIFormDataRequest.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/ASIHTTPRequest/ASIFormDataRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIHTTPRequest.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/ASIHTTPRequest/ASIHTTPRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIInputStream.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/ASIHTTPRequest/ASIInputStream.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASINetworkQueue.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/ASIHTTPRequest/ASINetworkQueue.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesCDNRequest.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesCDNRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesContainer.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainer.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesContainerRequest.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesContainerXMLParserDelegate.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerXMLParserDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesObject.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesObject.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesObjectRequest.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesObjectRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesRequest.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3Bucket.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/ASIHTTPRequest/S3/ASIS3Bucket.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3BucketObject.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/ASIHTTPRequest/S3/ASIS3BucketObject.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3BucketRequest.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/ASIHTTPRequest/S3/ASIS3BucketRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3ObjectRequest.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/ASIHTTPRequest/S3/ASIS3ObjectRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3Request.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/ASIHTTPRequest/S3/ASIS3Request.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3ServiceRequest.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/ASIHTTPRequest/S3/ASIS3ServiceRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/FeedsTableViewController_iPhone.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/iPhone/FeedsTableViewController_iPhone.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/Feed.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/Shared/Feed.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/FeedParser.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/Shared/FeedParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cLd /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/build/Debug-iphonesimulator/Newsbox.app/Newsbox normal i386
-cGenerateDSYMFile /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/build/Debug-iphonesimulator/Newsbox.app.dSYM /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/build/Debug-iphonesimulator/Newsbox.app/Newsbox
-cTouch /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/build/Debug-iphonesimulator/Newsbox.app
+cProcessInfoPlistFile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/Newsbox.app/Info.plist Newsbox-Info.plist
+cCompileXIB /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPad/MainWindow_iPad.xib
+cCompileXIB /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/MainWindow_iPhone.xib
+cCompileXIB /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/FeedsTableViewController_iPhone.xib
+cProcessPCH /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bkghvlvuknfevdbzyyvpcgudmxvg/Newsbox_Prefix.pch.gch Newsbox_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cDataModelVersionCompile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/Newsbox.app/Newsbox.momd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/Newsbox.xcdatamodeld
+cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/main.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/AppDelegate_iPad.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPad/AppDelegate_iPad.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/AppDelegate_Shared.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/AppDelegate_Shared.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/AppDelegate_iPhone.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/AppDelegate_iPhone.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/FeedLoader.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedLoader.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/Reachability.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/Reachability/Reachability.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIAuthenticationDialog.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIAuthenticationDialog.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIDataCompressor.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIDataCompressor.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIDataDecompressor.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIDataDecompressor.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIDownloadCache.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIDownloadCache.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIFormDataRequest.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIFormDataRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIHTTPRequest.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIHTTPRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIInputStream.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIInputStream.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASINetworkQueue.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASINetworkQueue.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesCDNRequest.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesCDNRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesContainer.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainer.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesContainerRequest.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesContainerXMLParserDelegate.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerXMLParserDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesObject.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesObject.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesObjectRequest.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesObjectRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesRequest.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3Bucket.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3Bucket.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3BucketObject.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3BucketObject.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3BucketRequest.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3BucketRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3ObjectRequest.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3ObjectRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3Request.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3Request.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3ServiceRequest.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3ServiceRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/FeedsTableViewController_iPhone.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/FeedsTableViewController_iPhone.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/Feed.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/Feed.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/FeedParser.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/Newsbox.app/Newsbox normal i386
+cGenerateDSYMFile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/Newsbox.app.dSYM /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/Newsbox.app/Newsbox
+cTouch /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/Newsbox.app
 
 N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk
 c000000004CEAF1A90000000000000110
@@ -1031,11 +1031,11 @@ s358
 i<UIKit/UIKit.h>
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/Newsbox.app
-t1297235051
+t1297235297
 s306
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/Newsbox.app.dSYM
-t1297235051
+t1297235296
 s102
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/Newsbox.app/FeedsTableViewController_iPhone.nib
@@ -1055,7 +1055,7 @@ t1297234953
 s984
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/Newsbox.app/Newsbox
-t1297235050
+t1297235296
 s548316
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/Newsbox.app/Newsbox.momd
@@ -1071,128 +1071,128 @@ t1297194149
 s372
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIAuthenticationDialog.o
-t1297235049
+t1297235294
 s108308
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesCDNRequest.o
-t1297235050
+t1297235294
 s34092
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesContainer.o
-t1297235050
+t1297235294
 s17724
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesContainerRequest.o
-t1297235050
+t1297235294
 s33712
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesContainerXMLParserDelegate.o
-t1297235050
+t1297235294
 s24324
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesObject.o
-t1297235050
+t1297235294
 s16716
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesObjectRequest.o
-t1297235050
+t1297235295
 s57168
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesRequest.o
-t1297235050
+t1297235295
 s25356
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIDataCompressor.o
-t1297235049
+t1297235294
 s23420
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIDataDecompressor.o
-t1297235049
+t1297235294
 s23380
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIDownloadCache.o
-t1297235049
+t1297235294
 s61132
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIFormDataRequest.o
-t1297235049
+t1297235294
 s47644
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIHTTPRequest.o
-t1297235050
+t1297235295
 s503348
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIInputStream.o
-t1297235049
+t1297235294
 s29180
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASINetworkQueue.o
-t1297235050
+t1297235294
 s61448
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3Bucket.o
-t1297235050
+t1297235295
 s13252
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3BucketObject.o
-t1297235050
+t1297235295
 s30856
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3BucketRequest.o
-t1297235050
+t1297235295
 s45388
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3ObjectRequest.o
-t1297235050
+t1297235295
 s40024
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3Request.o
-t1297235050
+t1297235295
 s59736
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3ServiceRequest.o
-t1297235050
+t1297235295
 s27984
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/AppDelegate_Shared.o
-t1297235049
+t1297235294
 s59932
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/AppDelegate_iPad.o
-t1297235049
+t1297235294
 s48016
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/AppDelegate_iPhone.o
-t1297235049
+t1297235294
 s55568
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/Feed.o
-t1297235050
+t1297235295
 s10768
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/FeedLoader.o
-t1297235049
+t1297235294
 s32332
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/FeedParser.o
-t1297235050
+t1297235295
 s60884
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/FeedsTableViewController_iPhone.o
-t1297235050
+t1297235295
 s44496
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/Newsbox.LinkFileList
-c000000004D523C0900000000000010BA
-t1297234953
+c000000004D523D5D00000000000010BA
+t1297235293
 s4282
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/Reachability.o
-t1297235049
+t1297235294
 s33928
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/main.o
-t1297235049
+t1297235294
 s6332
 
 N/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPad/AppDelegate_iPad.h
@@ -3941,8 +3941,8 @@ t1297194150
 s15453392
 
 N/var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bkghvlvuknfevdbzyyvpcgudmxvg/Newsbox_Prefix.pch.gch
-t2
-s0
+t1297235294
+s15453392
 
 N/var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bojkssyoeaplykhgoesfxflwrhct/Newsbox_Prefix.pch.gch
 t1297235049
@@ -3975,13 +3975,23 @@ s1385
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies318927848#318927848#0(0"0(0#1#0"8638594464#0"0#
+lSLF07#2@18"Check dependencies318928093#318928093#0(0"0(0#1#0"8247620834010738688#0"0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIAuthenticationDialog.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/../Classes/ASIAuthenticationDialog.m normal i386 objective-c com.apple.compilers.gcc.4_2
 r0
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIAuthenticationDialog.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIAuthenticationDialog.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
+s318928094.309295
+e318928094.550328
+r1
+xCompileC
+xbuild/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIAuthenticationDialog.o
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIAuthenticationDialog.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@103"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIAuthenticationDialog.m318928094#318928094#0(0"0(0#0#95"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIAuthenticationDialog.m8603716096#2152"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bkghvlvuknfevdbzyyvpcgudmxvg/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIAuthenticationDialog.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIAuthenticationDialog.o0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIAuthenticationDialog.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/../Classes/ASIAuthenticationDialog.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s318927407.953666
@@ -4042,7 +4052,17 @@ CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal
 r0
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesCDNRequest.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesCDNRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
+s318928094.652816
+e318928094.774718
+r1
+xCompileC
+xbuild/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesCDNRequest.o
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesCDNRequest.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@114"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesCDNRequest.m318928094#318928094#0(0"0(0#0#106"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesCDNRequest.m8605116992#2163"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bkghvlvuknfevdbzyyvpcgudmxvg/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesCDNRequest.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesCDNRequest.o0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesCDNRequest.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/../Classes/CloudFiles/ASICloudFilesCDNRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s318927408.347914
@@ -4103,7 +4123,17 @@ CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal
 r0
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesContainer.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainer.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
+s318928094.679044
+e318928094.759781
+r1
+xCompileC
+xbuild/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesContainer.o
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainer.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@113"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainer.m318928094#318928094#0(0"0(0#0#105"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainer.m8609715840#2161"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bkghvlvuknfevdbzyyvpcgudmxvg/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainer.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesContainer.o0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesContainer.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/../Classes/CloudFiles/ASICloudFilesContainer.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s318927408.355423
@@ -4164,7 +4194,17 @@ CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal
 r0
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesContainerRequest.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
+s318928094.759927
+e318928094.912141
+r1
+xCompileC
+xbuild/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesContainerRequest.o
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerRequest.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@120"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerRequest.m318928094#318928094#0(0"0(0#0#112"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerRequest.m8605216256#2175"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bkghvlvuknfevdbzyyvpcgudmxvg/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerRequest.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesContainerRequest.o0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesContainerRequest.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/../Classes/CloudFiles/ASICloudFilesContainerRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s318927408.460964
@@ -4225,7 +4265,17 @@ CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal
 r0
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesContainerXMLParserDelegate.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerXMLParserDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
+s318928094.774876
+e318928094.930500
+r1
+xCompileC
+xbuild/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesContainerXMLParserDelegate.o
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerXMLParserDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@130"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerXMLParserDelegate.m318928094#318928094#0(0"0(0#0#122"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerXMLParserDelegate.m8604449888#2195"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bkghvlvuknfevdbzyyvpcgudmxvg/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesContainerXMLParserDelegate.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesContainerXMLParserDelegate.o0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesContainerXMLParserDelegate.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/../Classes/CloudFiles/ASICloudFilesContainerXMLParserDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s318927408.482909
@@ -4286,7 +4336,17 @@ CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal
 r0
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesObject.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesObject.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
+s318928094.872808
+e318928094.971327
+r1
+xCompileC
+xbuild/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesObject.o
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesObject.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@110"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesObject.m318928094#318928094#0(0"0(0#0#102"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesObject.m8604104800#2155"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bkghvlvuknfevdbzyyvpcgudmxvg/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesObject.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesObject.o0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesObject.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/../Classes/CloudFiles/ASICloudFilesObject.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s318927408.530063
@@ -4347,7 +4407,17 @@ CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal
 r0
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesObjectRequest.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesObjectRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
+s318928094.912269
+e318928095.090633
+r1
+xCompileC
+xbuild/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesObjectRequest.o
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesObjectRequest.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@117"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesObjectRequest.m318928094#318928095#0(0"0(0#0#109"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesObjectRequest.m8607498080#2169"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bkghvlvuknfevdbzyyvpcgudmxvg/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesObjectRequest.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesObjectRequest.o0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesObjectRequest.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/../Classes/CloudFiles/ASICloudFilesObjectRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s318927408.583351
@@ -4408,7 +4478,17 @@ CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal
 r0
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesRequest.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
+s318928094.930650
+e318928095.046121
+r1
+xCompileC
+xbuild/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesRequest.o
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesRequest.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@111"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesRequest.m318928094#318928095#0(0"0(0#0#103"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesRequest.m8607287200#2157"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bkghvlvuknfevdbzyyvpcgudmxvg/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/CloudFiles/ASICloudFilesRequest.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesRequest.o0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASICloudFilesRequest.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/../Classes/CloudFiles/ASICloudFilesRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s318927408.586268
@@ -4482,7 +4562,17 @@ CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal
 r0
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIDataCompressor.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIDataCompressor.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
+s318928094.336775
+e318928094.446383
+r1
+xCompileC
+xbuild/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIDataCompressor.o
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIDataCompressor.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@97"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIDataCompressor.m318928094#318928094#0(0"0(0#0#89"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIDataCompressor.m8609902272#2140"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bkghvlvuknfevdbzyyvpcgudmxvg/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIDataCompressor.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIDataCompressor.o0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIDataCompressor.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/../Classes/ASIDataCompressor.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s318927407.959216
@@ -4619,7 +4709,17 @@ CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal
 r0
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIDataDecompressor.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIDataDecompressor.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
+s318928094.386825
+e318928094.525119
+r1
+xCompileC
+xbuild/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIDataDecompressor.o
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIDataDecompressor.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@99"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIDataDecompressor.m318928094#318928094#0(0"0(0#0#91"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIDataDecompressor.m8609366496#2144"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bkghvlvuknfevdbzyyvpcgudmxvg/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIDataDecompressor.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIDataDecompressor.o0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIDataDecompressor.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/../Classes/ASIDataDecompressor.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s318927407.998982
@@ -4680,7 +4780,17 @@ CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal
 r0
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIDownloadCache.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIDownloadCache.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
+s318928094.446512
+e318928094.678863
+r1
+xCompileC
+xbuild/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIDownloadCache.o
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIDownloadCache.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@96"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIDownloadCache.m318928094#318928094#0(0"0(0#0#88"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIDownloadCache.m8607055360#2138"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bkghvlvuknfevdbzyyvpcgudmxvg/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIDownloadCache.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIDownloadCache.o0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIDownloadCache.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/../Classes/ASIDownloadCache.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s318927408.064922
@@ -4754,7 +4864,17 @@ CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal
 r0
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIFormDataRequest.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIFormDataRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
+s318928094.459585
+e318928094.621779
+r1
+xCompileC
+xbuild/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIFormDataRequest.o
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIFormDataRequest.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@98"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIFormDataRequest.m318928094#318928094#0(0"0(0#0#90"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIFormDataRequest.m8605593120#2142"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bkghvlvuknfevdbzyyvpcgudmxvg/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIFormDataRequest.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIFormDataRequest.o0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIFormDataRequest.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/../Classes/ASIFormDataRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s318927408.097292
@@ -4828,7 +4948,17 @@ CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal
 r0
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIHTTPRequest.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIHTTPRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
+s318928094.525258
+e318928096.022040
+r1
+xCompileC
+xbuild/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIHTTPRequest.o
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIHTTPRequest.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@94"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIHTTPRequest.m318928094#318928096#0(0"0(0#0#86"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIHTTPRequest.m8604226048#2134"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bkghvlvuknfevdbzyyvpcgudmxvg/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIHTTPRequest.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIHTTPRequest.o0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIHTTPRequest.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/../Classes/ASIHTTPRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s318927408.129815
@@ -4902,7 +5032,17 @@ CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal
 r0
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIInputStream.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIInputStream.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
+s318928094.550474
+e318928094.652682
+r1
+xCompileC
+xbuild/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIInputStream.o
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIInputStream.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@94"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIInputStream.m318928094#318928094#0(0"0(0#0#86"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIInputStream.m8600164704#2134"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bkghvlvuknfevdbzyyvpcgudmxvg/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASIInputStream.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIInputStream.o0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIInputStream.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/../Classes/ASIInputStream.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s318927408.216955
@@ -4963,7 +5103,17 @@ CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal
 r0
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASINetworkQueue.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASINetworkQueue.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
+s318928094.621923
+e318928094.872677
+r1
+xCompileC
+xbuild/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASINetworkQueue.o
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASINetworkQueue.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@95"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASINetworkQueue.m318928094#318928094#0(0"0(0#0#87"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASINetworkQueue.m8601762592#2136"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bkghvlvuknfevdbzyyvpcgudmxvg/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/ASINetworkQueue.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASINetworkQueue.o0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASINetworkQueue.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/../Classes/ASINetworkQueue.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s318927408.311123
@@ -5039,7 +5189,17 @@ CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal
 r0
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3Bucket.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3Bucket.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
+s318928094.971472
+e318928095.051873
+r1
+xCompileC
+xbuild/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3Bucket.o
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3Bucket.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@94"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3Bucket.m318928094#318928095#0(0"0(0#0#86"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3Bucket.m8607231616#2131"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bkghvlvuknfevdbzyyvpcgudmxvg/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3Bucket.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3Bucket.o0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3Bucket.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/../Classes/S3/ASIS3Bucket.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s318927408.623897
@@ -5100,7 +5260,17 @@ CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal
 r0
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3BucketObject.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3BucketObject.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
+s318928095.046361
+e318928095.160706
+r1
+xCompileC
+xbuild/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3BucketObject.o
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3BucketObject.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@100"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3BucketObject.m318928095#318928095#0(0"0(0#0#92"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3BucketObject.m8605029824#2143"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bkghvlvuknfevdbzyyvpcgudmxvg/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3BucketObject.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3BucketObject.o0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3BucketObject.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/../Classes/S3/ASIS3BucketObject.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s318927408.699484
@@ -5161,7 +5331,17 @@ CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal
 r0
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3BucketRequest.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3BucketRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
+s318928095.052009
+e318928095.213396
+r1
+xCompileC
+xbuild/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3BucketRequest.o
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3BucketRequest.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@101"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3BucketRequest.m318928095#318928095#0(0"0(0#0#93"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3BucketRequest.m8604525152#2145"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bkghvlvuknfevdbzyyvpcgudmxvg/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3BucketRequest.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3BucketRequest.o0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3BucketRequest.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/../Classes/S3/ASIS3BucketRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s318927408.707116
@@ -5222,7 +5402,17 @@ CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal
 r0
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3ObjectRequest.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3ObjectRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
+s318928095.090785
+e318928095.235164
+r1
+xCompileC
+xbuild/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3ObjectRequest.o
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3ObjectRequest.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@101"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3ObjectRequest.m318928095#318928095#0(0"0(0#0#93"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3ObjectRequest.m8609375904#2145"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bkghvlvuknfevdbzyyvpcgudmxvg/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3ObjectRequest.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3ObjectRequest.o0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3ObjectRequest.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/../Classes/S3/ASIS3ObjectRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s318927408.809941
@@ -5283,7 +5473,17 @@ CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal
 r0
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3Request.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3Request.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
+s318928095.160926
+e318928095.376403
+r1
+xCompileC
+xbuild/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3Request.o
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3Request.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@95"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3Request.m318928095#318928095#0(0"0(0#0#87"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3Request.m8607099488#2133"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bkghvlvuknfevdbzyyvpcgudmxvg/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3Request.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3Request.o0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3Request.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/../Classes/S3/ASIS3Request.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s318927408.851833
@@ -5357,7 +5557,17 @@ CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal
 r0
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3ServiceRequest.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3ServiceRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
+s318928095.213531
+e318928095.312811
+r1
+xCompileC
+xbuild/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3ServiceRequest.o
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3ServiceRequest.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@102"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3ServiceRequest.m318928095#318928095#0(0"0(0#0#94"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3ServiceRequest.m8604780992#2147"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bkghvlvuknfevdbzyyvpcgudmxvg/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/ASIHTTPRequest/S3/ASIS3ServiceRequest.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3ServiceRequest.o0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIS3ServiceRequest.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/../Classes/S3/ASIS3ServiceRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s318927408.890685
@@ -5454,7 +5664,17 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@82"Compile /Users/ryanashcraft/Desktop/Newsbox/Classes/Tests/ASIWebPageRequestTests.m318886817#318886817#0(0"0(0#0#74"/Users/ryanashcraft/Desktop/Newsbox/Classes/Tests/ASIWebPageRequestTests.m8628494496#2229"    cd /Users/ryanashcraft/Desktop/Newsbox    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Desktop/Newsbox/build/Debug-iphonesimulator -F/Users/ryanashcraft/Desktop/Newsbox/.. -F/Users/ryanashcraft/Desktop/Newsbox -I/Users/ryanashcraft/Desktop/Newsbox/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/libxml2/libxml -I/Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bgajyqgbporxlqgqgfxdbeefggvh/Newsbox_Prefix.pch -c /Users/ryanashcraft/Desktop/Newsbox/Classes/Tests/ASIWebPageRequestTests.m -o /Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ASIWebPageRequestTests.o0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/AppDelegate_Shared.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/AppDelegate_Shared.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
+s318928094.192284
+e318928094.336638
+r1
+xCompileC
+xbuild/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/AppDelegate_Shared.o
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/AppDelegate_Shared.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@81"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/AppDelegate_Shared.m318928094#318928094#0(0"0(0#0#73"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/AppDelegate_Shared.m8605616224#2125"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bkghvlvuknfevdbzyyvpcgudmxvg/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/AppDelegate_Shared.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/AppDelegate_Shared.o0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/AppDelegate_Shared.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/Shared/AppDelegate_Shared.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s318927849.447373
@@ -5483,7 +5703,17 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@71"Compile /Users/ryanashcraft/Desktop/Newsbox/Shared/AppDelegate_Shared.m318925664#318925664#0(0"0(0#0#63"/Users/ryanashcraft/Desktop/Newsbox/Shared/AppDelegate_Shared.m8607060320#2315"    cd /Users/ryanashcraft/Desktop/Newsbox    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Desktop/Newsbox/build/Debug-iphonesimulator -F/Users/ryanashcraft/Desktop/Newsbox/.. -F/Users/ryanashcraft/Desktop/Newsbox -F/Users/ryanashcraft/Desktop/Newsbox/../../Downloads/pokeb-asi-http-request-d9bac03/External/GHUnit -I/Users/ryanashcraft/Desktop/Newsbox/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/libxml2/libxml -I/Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-arxjgsojarmdvgfdsczbgeyuhofv/Newsbox_Prefix.pch -c /Users/ryanashcraft/Desktop/Newsbox/Shared/AppDelegate_Shared.m -o /Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/AppDelegate_Shared.o0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/AppDelegate_iPad.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPad/AppDelegate_iPad.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
+s318928094.191150
+e318928094.296658
+r1
+xCompileC
+xbuild/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/AppDelegate_iPad.o
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPad/AppDelegate_iPad.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@77"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPad/AppDelegate_iPad.m318928094#318928094#0(0"0(0#0#69"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPad/AppDelegate_iPad.m8607293216#2119"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bkghvlvuknfevdbzyyvpcgudmxvg/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPad/AppDelegate_iPad.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/AppDelegate_iPad.o0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/AppDelegate_iPad.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/iPad/AppDelegate_iPad.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s318927849.446562
@@ -5512,7 +5742,17 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@67"Compile /Users/ryanashcraft/Desktop/Newsbox/iPad/AppDelegate_iPad.m318925664#318925664#0(0"0(0#0#59"/Users/ryanashcraft/Desktop/Newsbox/iPad/AppDelegate_iPad.m8607268832#2309"    cd /Users/ryanashcraft/Desktop/Newsbox    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Desktop/Newsbox/build/Debug-iphonesimulator -F/Users/ryanashcraft/Desktop/Newsbox/.. -F/Users/ryanashcraft/Desktop/Newsbox -F/Users/ryanashcraft/Desktop/Newsbox/../../Downloads/pokeb-asi-http-request-d9bac03/External/GHUnit -I/Users/ryanashcraft/Desktop/Newsbox/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/libxml2/libxml -I/Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-arxjgsojarmdvgfdsczbgeyuhofv/Newsbox_Prefix.pch -c /Users/ryanashcraft/Desktop/Newsbox/iPad/AppDelegate_iPad.m -o /Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/AppDelegate_iPad.o0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/AppDelegate_iPhone.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/AppDelegate_iPhone.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
+s318928094.193361
+e318928094.309158
+r1
+xCompileC
+xbuild/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/AppDelegate_iPhone.o
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/AppDelegate_iPhone.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@81"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/AppDelegate_iPhone.m318928094#318928094#0(0"0(0#0#73"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/AppDelegate_iPhone.m8604680928#2125"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bkghvlvuknfevdbzyyvpcgudmxvg/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/AppDelegate_iPhone.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/AppDelegate_iPhone.o0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/AppDelegate_iPhone.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/iPhone/AppDelegate_iPhone.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s318927849.448211
@@ -5570,7 +5810,17 @@ CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal
 r0
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/Feed.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/Feed.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
+s318928095.312943
+e318928095.395140
+r1
+xCompileC
+xbuild/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/Feed.o
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/Feed.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@67"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/Feed.m318928095#318928095#0(0"0(0#0#59"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/Feed.m8603484000#2097"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bkghvlvuknfevdbzyyvpcgudmxvg/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/Feed.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/Feed.o0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/Feed.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/Feed.m normal i386 objective-c com.apple.compilers.gcc.4_2
 r0
@@ -5605,7 +5855,17 @@ CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal
 r0
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/FeedLoader.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedLoader.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
+s318928094.252467
+e318928094.386693
+r1
+xCompileC
+xbuild/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/FeedLoader.o
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedLoader.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@73"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedLoader.m318928094#318928094#0(0"0(0#0#65"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedLoader.m8603610560#2109"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bkghvlvuknfevdbzyyvpcgudmxvg/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedLoader.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/FeedLoader.o0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/FeedLoader.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/FeedLoader.m normal i386 objective-c com.apple.compilers.gcc.4_2
 r0
@@ -5640,7 +5900,17 @@ CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal
 r0
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/FeedParser.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
+s318928095.339545
+e318928095.445715
+r1
+xCompileC
+xbuild/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/FeedParser.o
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedParser.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@73"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedParser.m318928095#318928095#0(0"0(0#0#65"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedParser.m8609916480#2109"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bkghvlvuknfevdbzyyvpcgudmxvg/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/FeedParser.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/FeedParser.o0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/FeedParser.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/FeedParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
 r0
@@ -5672,7 +5942,17 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@56"Compile /Users/ryanashcraft/Desktop/Newsbox/FeedParser.m318924339#318924339#0(0"0(0#0#48"/Users/ryanashcraft/Desktop/Newsbox/FeedParser.m8637993344#2292"    cd /Users/ryanashcraft/Desktop/Newsbox    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Desktop/Newsbox/build/Debug-iphonesimulator -F/Users/ryanashcraft/Desktop/Newsbox/.. -F/Users/ryanashcraft/Desktop/Newsbox -F/Users/ryanashcraft/Desktop/Newsbox/../../Downloads/pokeb-asi-http-request-d9bac03/External/GHUnit -I/Users/ryanashcraft/Desktop/Newsbox/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/libxml2/libxml -I/Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-arxjgsojarmdvgfdsczbgeyuhofv/Newsbox_Prefix.pch -c /Users/ryanashcraft/Desktop/Newsbox/FeedParser.m -o /Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/FeedParser.o0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/FeedsTableViewController_iPhone.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/FeedsTableViewController_iPhone.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
+s318928095.235314
+e318928095.339400
+r1
+xCompileC
+xbuild/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/FeedsTableViewController_iPhone.o
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/FeedsTableViewController_iPhone.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@94"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/FeedsTableViewController_iPhone.m318928095#318928095#0(0"0(0#0#86"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/FeedsTableViewController_iPhone.m8604470944#2151"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bkghvlvuknfevdbzyyvpcgudmxvg/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/iPhone/FeedsTableViewController_iPhone.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/FeedsTableViewController_iPhone.o0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/FeedsTableViewController_iPhone.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/iPhone/FeedsTableViewController_iPhone.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s318927850.488132
@@ -5782,7 +6062,17 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@70"Compile /Users/ryanashcraft/Desktop/Newsbox/Classes/Tests/ProxyTests.m318886817#318886818#0(0"0(0#0#62"/Users/ryanashcraft/Desktop/Newsbox/Classes/Tests/ProxyTests.m8629067872#2205"    cd /Users/ryanashcraft/Desktop/Newsbox    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Desktop/Newsbox/build/Debug-iphonesimulator -F/Users/ryanashcraft/Desktop/Newsbox/.. -F/Users/ryanashcraft/Desktop/Newsbox -I/Users/ryanashcraft/Desktop/Newsbox/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/libxml2/libxml -I/Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bgajyqgbporxlqgqgfxdbeefggvh/Newsbox_Prefix.pch -c /Users/ryanashcraft/Desktop/Newsbox/Classes/Tests/ProxyTests.m -o /Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/ProxyTests.o0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/Reachability.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/Reachability/Reachability.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
+s318928094.296793
+e318928094.459437
+r1
+xCompileC
+xbuild/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/Reachability.o
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/Reachability/Reachability.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@90"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/Reachability/Reachability.m318928094#318928094#0(0"0(0#0#82"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/Reachability/Reachability.m8603393696#2128"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bkghvlvuknfevdbzyyvpcgudmxvg/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/External/Reachability/Reachability.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/Reachability.o0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/Reachability.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/External/Reachability/Reachability.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s318927849.552660
@@ -5849,7 +6139,17 @@ o/Users/ryanashcraft/Desktop/Newsbox/iPhone/TopicsTableViewController_iPhone.m:1
 lSLF07#2@85"Compile /Users/ryanashcraft/Desktop/Newsbox/iPhone/TopicsTableViewController_iPhone.m318920880#318920880#0(1779"/Users/ryanashcraft/Desktop/Newsbox/iPhone/TopicsTableViewController_iPhone.m:9:44: error: FeedsTableViewController_iPhone.h: No such file or directory/Users/ryanashcraft/Desktop/Newsbox/iPhone/TopicsTableViewController_iPhone.m:15: warning: cannot find interface declaration for 'FeedsTableViewController_iPhone'/Users/ryanashcraft/Desktop/Newsbox/iPhone/TopicsTableViewController_iPhone.m: In function '-[FeedsTableViewController_iPhone initWithFeeds:]':/Users/ryanashcraft/Desktop/Newsbox/iPhone/TopicsTableViewController_iPhone.m:16: warning: 'FeedsTableViewController_iPhone' may not respond to '-initWithStyle:'/Users/ryanashcraft/Desktop/Newsbox/iPhone/TopicsTableViewController_iPhone.m:16: warning: (Messages without a matching method signature/Users/ryanashcraft/Desktop/Newsbox/iPhone/TopicsTableViewController_iPhone.m:16: warning: will be assumed to return 'id' and accept/Users/ryanashcraft/Desktop/Newsbox/iPhone/TopicsTableViewController_iPhone.m:16: warning: '...' as arguments.)/Users/ryanashcraft/Desktop/Newsbox/iPhone/TopicsTableViewController_iPhone.m:17: error: request for member 'feeds' in something not a structure or union/Users/ryanashcraft/Desktop/Newsbox/iPhone/TopicsTableViewController_iPhone.m: In function '-[FeedsTableViewController_iPhone didReceiveMemoryWarning]':/Users/ryanashcraft/Desktop/Newsbox/iPhone/TopicsTableViewController_iPhone.m:156: error: no super class declared in @interface for 'FeedsTableViewController_iPhone'/Users/ryanashcraft/Desktop/Newsbox/iPhone/TopicsTableViewController_iPhone.m: In function '-[FeedsTableViewController_iPhone dealloc]':/Users/ryanashcraft/Desktop/Newsbox/iPhone/TopicsTableViewController_iPhone.m:168: error: no super class declared in @interface for 'FeedsTableViewController_iPhone'7(4@60"FeedsTableViewController_iPhone.h: No such file or directory318920880#0#152#0(6@77"/Users/ryanashcraft/Desktop/Newsbox/iPhone/TopicsTableViewController_iPhone.m318920867#9#0#9#0#28"*: No such file or directory0(22@71"Cannot find interface declaration for 'FeedsTableViewController_iPhone'318920880#152#163#0(6@77"/Users/ryanashcraft/Desktop/Newsbox/iPhone/TopicsTableViewController_iPhone.m318920867#15#0#15#0#0"0(22@70"'FeedsTableViewController_iPhone' may not respond to '-initWithStyle:'318920880#459#162#0(6@77"/Users/ryanashcraft/Desktop/Newsbox/iPhone/TopicsTableViewController_iPhone.m318920867#16#0#16#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)318920880#621#137#0(6@77"/Users/ryanashcraft/Desktop/Newsbox/iPhone/TopicsTableViewController_iPhone.m318920867#16#0#16#0#0"0(4@64"Request for member 'feeds' in something not a structure or union318920880#1003#154#0(6@77"/Users/ryanashcraft/Desktop/Newsbox/iPhone/TopicsTableViewController_iPhone.m318920867#17#0#17#0#0"0(4@75"No super class declared in @interface for 'FeedsTableViewController_iPhone'318920880#1310#166#0(6@77"/Users/ryanashcraft/Desktop/Newsbox/iPhone/TopicsTableViewController_iPhone.m318920867#156#0#156#0#0"0(4@75"No super class declared in @interface for 'FeedsTableViewController_iPhone'318920880#1613#166#0(6@77"/Users/ryanashcraft/Desktop/Newsbox/iPhone/TopicsTableViewController_iPhone.m318920867#168#0#168#0#0"0(0#0#77"/Users/ryanashcraft/Desktop/Newsbox/iPhone/TopicsTableViewController_iPhone.m8632105024#2343"    cd /Users/ryanashcraft/Desktop/Newsbox    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Desktop/Newsbox/build/Debug-iphonesimulator -F/Users/ryanashcraft/Desktop/Newsbox/.. -F/Users/ryanashcraft/Desktop/Newsbox -F/Users/ryanashcraft/Desktop/Newsbox/../../Downloads/pokeb-asi-http-request-d9bac03/External/GHUnit -I/Users/ryanashcraft/Desktop/Newsbox/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/libxml2/libxml -I/Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-arxjgsojarmdvgfdsczbgeyuhofv/Newsbox_Prefix.pch -c /Users/ryanashcraft/Desktop/Newsbox/iPhone/TopicsTableViewController_iPhone.m -o /Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/TopicsTableViewController_iPhone.o1#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/main.o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
+s318928094.189729
+e318928094.252339
+r1
+xCompileC
+xbuild/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/main.o
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@67"Compile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/main.m318928094#318928094#0(0"0(0#0#59"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/main.m8609143008#2097"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -include /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bkghvlvuknfevdbzyyvpcgudmxvg/Newsbox_Prefix.pch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Shared/main.m -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/main.o0#
 
 CCompileC build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/main.o /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/Shared/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s318927849.445557
@@ -5965,7 +6265,13 @@ x/Users/ryanashcraft/Desktop/Newsbox/Shared/Newsbox.xcdatamodeld
 lSLF07#2@104"DataModelVersionCompile build/Debug-iphonesimulator/Newsbox.app/Newsbox.momd Shared/Newsbox.xcdatamodeld318886950#318886950#0(0"0(0#0#63"/Users/ryanashcraft/Desktop/Newsbox/Shared/Newsbox.xcdatamodeld8636770688#384"    cd /Users/ryanashcraft/Desktop/Newsbox    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/momc -XD_MOMC_TARGET_VERSION=10.6 /Users/ryanashcraft/Desktop/Newsbox/Shared/Newsbox.xcdatamodeld /Users/ryanashcraft/Desktop/Newsbox/build/Debug-iphonesimulator/Newsbox.app/Newsbox.momd0#
 
 CGenerateDSYMFile /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/Newsbox.app.dSYM /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/Newsbox.app/Newsbox
-r0
+s318928096.549821
+e318928097.027968
+r1
+xGenerateDSYMFile
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/Newsbox.app.dSYM
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/Newsbox.app/Newsbox
+lSLF07#2@109"GenerateDSYMFile build/Debug-iphonesimulator/Newsbox.app.dSYM build/Debug-iphonesimulator/Newsbox.app/Newsbox318928096#318928097#0(0"0(0#0#93"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/Newsbox.app/Newsbox8605603360#404"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/Newsbox.app/Newsbox -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/Newsbox.app.dSYM0#
 
 CGenerateDSYMFile /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/build/Debug-iphonesimulator/Newsbox.app.dSYM /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/build/Debug-iphonesimulator/Newsbox.app/Newsbox
 s318927850.985659
@@ -5986,7 +6292,14 @@ x/Users/ryanashcraft/Desktop/Newsbox/build/Debug-iphonesimulator/Newsbox.app/New
 lSLF07#2@109"GenerateDSYMFile build/Debug-iphonesimulator/Newsbox.app.dSYM build/Debug-iphonesimulator/Newsbox.app/Newsbox318926835#318926835#0(0"0(0#0#83"/Users/ryanashcraft/Desktop/Newsbox/build/Debug-iphonesimulator/Newsbox.app/Newsbox8646337600#374"    cd /Users/ryanashcraft/Desktop/Newsbox    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/ryanashcraft/Desktop/Newsbox/build/Debug-iphonesimulator/Newsbox.app/Newsbox -o /Users/ryanashcraft/Desktop/Newsbox/build/Debug-iphonesimulator/Newsbox.app.dSYM0#
 
 CLd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/Newsbox.app/Newsbox normal i386
-r0
+s318928096.022190
+e318928096.549649
+r1
+xLd
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/Newsbox.app/Newsbox
+xnormal
+xi386
+lSLF07#2@98"Link /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/Newsbox.app/Newsbox318928096#318928096#0(0"0(0#0#0"8603685120#1166"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -L/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -filelist /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Objects-normal/i386/Newsbox.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -framework CoreData -framework SystemConfiguration -lz.1.2.3 -framework MobileCoreServices -framework CFNetwork -framework Security -o /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/Newsbox.app/Newsbox0#
 
 CLd /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/build/Debug-iphonesimulator/Newsbox.app/Newsbox normal i386
 s318927850.911806
@@ -6069,7 +6382,17 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@29"Precompile Newsbox_Prefix.pch318886950#318886950#0(0"0(0#0#54"/Users/ryanashcraft/Desktop/Newsbox/Newsbox_Prefix.pch8640535712#2074"    cd /Users/ryanashcraft/Desktop/Newsbox    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Desktop/Newsbox/build/Debug-iphonesimulator -F/Users/ryanashcraft/Desktop/Newsbox/.. -F/Users/ryanashcraft/Desktop/Newsbox -I/Users/ryanashcraft/Desktop/Newsbox/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/libxml2/libxml -I/Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -c /Users/ryanashcraft/Desktop/Newsbox/Newsbox_Prefix.pch -o /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bgajyqgbporxlqgqgfxdbeefggvh/Newsbox_Prefix.pch.gch0#
 
 CProcessPCH /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bkghvlvuknfevdbzyyvpcgudmxvg/Newsbox_Prefix.pch.gch Newsbox_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
+s318928093.603156
+e318928094.189533
+r1
+xProcessPCH
+x/var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bkghvlvuknfevdbzyyvpcgudmxvg/Newsbox_Prefix.pch.gch
+xNewsbox_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@29"Precompile Newsbox_Prefix.pch318928093#318928094#0(0"0(0#0#64"/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Newsbox_Prefix.pch7380954991548987392#1975"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/.. -F/Users/ryanashcraft/Apps/Projects/NewsBox/iOS -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/include -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Newsbox_Prefix.pch -o /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bkghvlvuknfevdbzyyvpcgudmxvg/Newsbox_Prefix.pch.gch0#
 
 CProcessPCH /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-bojkssyoeaplykhgoesfxflwrhct/Newsbox_Prefix.pch.gch Newsbox_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
 s318927848.857155
@@ -6140,7 +6463,12 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@29"Precompile Newsbox_Prefix.pch318886770#318886771#0(0"0(0#0#54"/Users/ryanashcraft/Desktop/Newsbox/Newsbox_Prefix.pch7883402135841765376#2036"    cd /Users/ryanashcraft/Desktop/Newsbox    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-generated-files.hmap -I/Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-own-target-headers.hmap -I/Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-all-target-headers.hmap -iquote /Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/Newsbox-project-headers.hmap -F/Users/ryanashcraft/Desktop/Newsbox/build/Debug-iphonesimulator -F/Users/ryanashcraft/Desktop/Newsbox/.. -I/Users/ryanashcraft/Desktop/Newsbox/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/libxml2 -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/libxml2/libxml -I/Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources/i386 -I/Users/ryanashcraft/Desktop/Newsbox/build/Newsbox.build/Debug-iphonesimulator/Newsbox.build/DerivedSources -c /Users/ryanashcraft/Desktop/Newsbox/Newsbox_Prefix.pch -o /var/folders/nz/nz9r5wlPFxuTilZ7XdzjW++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Newsbox_Prefix-fdvgwgxyxgmduldfqsfbyqwwioey/Newsbox_Prefix.pch.gch0#
 
 CTouch /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/Newsbox.app
-r0
+s318928097.028145
+e318928097.211844
+r1
+xTouch
+x/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/Newsbox.app
+lSLF07#2@91"Touch /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/Newsbox.app318928097#318928097#0(0"0(0#0#0"8602292480#292"    cd /Users/ryanashcraft/Apps/Projects/NewsBox/iOS    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/ryanashcraft/Apps/Projects/NewsBox/iOS/build/Debug-iphonesimulator/Newsbox.app0#
 
 CTouch /Users/ryanashcraft/Apps/Projects/Newsbox/iOS/build/Debug-iphonesimulator/Newsbox.app
 s318927851.029175
