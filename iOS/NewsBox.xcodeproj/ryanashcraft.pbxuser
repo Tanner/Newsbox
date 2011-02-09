@@ -51,8 +51,8 @@
 			ED2E91B81301D22B00983CC3 /* Newsbox */,
 		);
 		perUserDictionary = {
-			PBXPerProjectTemplateStateSaveDate = 318926898;
-			PBXWorkspaceStateSaveDate = 318926898;
+			PBXPerProjectTemplateStateSaveDate = 318927888;
+			PBXWorkspaceStateSaveDate = 318927888;
 		};
 		sourceControlManager = ED2E91C21301D23300983CC3 /* Source Control */;
 		userBuildSettings = {
@@ -162,9 +162,9 @@
 	};
 	ED2E94F11302555D00983CC3 /* FeedsTableViewController_iPhone.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1199, 1924}}";
-			sepNavSelRange = "{2105, 0}";
-			sepNavVisRange = "{1950, 625}";
+			sepNavIntBoundsRect = "{{0, 0}, {1048, 2158}}";
+			sepNavSelRange = "{3769, 0}";
+			sepNavVisRange = "{2435, 1809}";
 			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
 		};
 	};
