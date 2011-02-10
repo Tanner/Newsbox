@@ -73,14 +73,26 @@
 	NSScanner *scanner = [NSScanner scannerWithString:[anItem content]];
 	NSString *content = [anItem content];
 	NSString *tagText = nil;
-	// big image class
+	
+	// remove styling
 	while ([scanner isAtEnd] == NO) {
-		[scanner scanUpToString:@"<" intoString:nil];
+		[scanner scanUpToString:@"<img" intoString:nil];
 		[scanner scanUpToString:@">" intoString:&tagText];
-		if ([tagText rangeOfString:@"alt="].location != NSNotFound &&
-			[tagText rangeOfString:@"height=\"0\""].location == NSNotFound && [tagText rangeOfString:@"height=\"1\""].location == NSNotFound
-			&& [tagText rangeOfString:@"quantserve"].location == NSNotFound && [tagText rangeOfString:@"quantserve"].location == NSNotFound && [tagText rangeOfString:@"pheedo"].location == NSNotFound) {
+		
+		if ([tagText rangeOfString:@"height=\"0\""].location == NSNotFound && [tagText rangeOfString:@"height=\"1\""].location == NSNotFound
+			/*&& [tagText rangeOfString:@"quantserve"].location == NSNotFound && [tagText rangeOfString:@"quantserve"].location == NSNotFound && [tagText rangeOfString:@"pheedo"].location == NSNotFound*/) {
 			content = [content stringByReplacingOccurrencesOfString:tagText withString:[NSString stringWithFormat:@"%@ class=\"bigImage\"",tagText]];
+		}
+	}
+	
+	// big image class
+	[scanner setScanLocation:0];
+	while ([scanner isAtEnd] == NO) {
+		[scanner scanUpToString:@"style=\"" intoString:nil];
+		[scanner scanUpToString:@"\"" intoString:&tagText];
+		
+		if (tagText != nil) {
+			content = [content stringByReplacingOccurrencesOfString:tagText withString:@""];
 		}
 	}
 	
