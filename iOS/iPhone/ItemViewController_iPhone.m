@@ -63,10 +63,10 @@
 	
 	[html appendString:@"<body"];
 
-	[html appendFormat:@"<h1><a href=\"%@\">", [anItem contentLink]];
-	
-	[html appendString:[anItem title]];
-	[html appendString:@"</a></h1>"];
+	[html appendFormat:@"<div id=\"head\""];
+	[html appendFormat:@"<h1><a href=\"%@\">%@</a></h1>", [anItem contentLink], [anItem title]];
+	[html appendFormat:@"<p class=\"chronodata\">%@</p>", [anItem dateString]];
+	[html appendFormat:@"</div>"];
 	
 	[html appendString:@"<div>"];
 	

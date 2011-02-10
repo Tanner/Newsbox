@@ -338,8 +338,6 @@
 									<key>PBXSmartGroupTreeModuleOutlineStateExpansionKey</key>
 									<array>
 										<string>1C37FBAC04509CD000000102</string>
-										<string>ED6A679713046F05006F7838</string>
-										<string>ED6A679813046F05006F7838</string>
 										<string>1C37FAAC04509CD000000102</string>
 									</array>
 									<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
@@ -444,8 +442,8 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>ED6A674E130467BD006F7838</string>
-				<string>ED6A674F130467BD006F7838</string>
+				<string>ED9B253B13047FA1006666FC</string>
+				<string>ED9B253C13047FA1006666FC</string>
 				<string>1C9437FD063B20B00039CFAC</string>
 				<string>1C9437FE063B20B00039CFAC</string>
 				<string>1C9437FF063B20B00039CFAC</string>
@@ -482,12 +480,12 @@
 	<integer>0</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>ED6A68AB13047AC8006F7838</string>
-		<string>ED6A689C13047AA1006F7838</string>
-		<string>ED6A67A713046F24006F7838</string>
-		<string>ED6A67A113046F05006F7838</string>
+		<string>ED9B255013047FAE006666FC</string>
+		<string>ED9B254D13047FA1006666FC</string>
 		<string>1C530D5B069F1CE1000CFCEE</string>
 		<string>1C530D54069F1CE1000CFCEE</string>
+		<string>ED9B253D13047FA1006666FC</string>
+		<string>ED9B254013047FA1006666FC</string>
 		<string>1C530D52069F1CE1000CFCEE</string>
 		<string>/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Newsbox.xcodeproj</string>
 	</array>
@@ -667,8 +665,6 @@
 							<string>455pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -708,7 +704,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D52069F1CE1000CFCEE</string>
-				<string>ED6A6750130467BD006F7838</string>
+				<string>ED9B254413047FA1006666FC</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -830,13 +826,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D54069F1CE1000CFCEE</string>
-				<string>ED6A6757130467E6006F7838</string>
+				<string>ED9B254513047FA1006666FC</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>ED6A6758130467E6006F7838</string>
-				<string>ED6A6759130467E6006F7838</string>
-				<string>ED6A675A130467E6006F7838</string>
-				<string>ED6A675B130467E6006F7838</string>
-				<string>ED6A675C130467E6006F7838</string>
+				<string>ED9B254613047FA1006666FC</string>
+				<string>ED9B254713047FA1006666FC</string>
+				<string>ED9B254813047FA1006666FC</string>
+				<string>ED9B254913047FA1006666FC</string>
+				<string>ED9B254A13047FA1006666FC</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -955,8 +951,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -992,7 +986,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D5B069F1CE1000CFCEE</string>
-				<string>ED6A675D130467E6006F7838</string>
+				<string>ED9B254B13047FA1006666FC</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
