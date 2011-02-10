@@ -5,8 +5,8 @@ function resize() {
 	for (var i = 0; i < imgs.length; i++) {
 		var w = imgs[i].width;
 		var h = imgs[i].height;
-		if (w * h < 4000) 
-			imgs[i].className += "smallImage";
+		if (w * h < 1000) 
+			imgs[i].className = "";
 	}
 }
 

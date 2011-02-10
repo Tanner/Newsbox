@@ -61,7 +61,7 @@
 	
 	[html appendString:@"</head>"];
 	
-	[html appendString:@"<body"];
+	[html appendString:@"<body>"];
 
 	[html appendFormat:@"<div id=\"head\""];
 	[html appendFormat:@"<h1><a href=\"%@\">%@</a></h1>", [anItem contentLink], [anItem title]];
@@ -75,12 +75,13 @@
 	NSString *tagText = nil;
 	// big image class
 	while ([scanner isAtEnd] == NO) {
-	  [scanner scanUpToString:@"<" intoString:nil];
-	  [scanner scanUpToString:@">" intoString:&tagText];
-	  if (([tagText rangeOfString:@"vspace"].location != NSNotFound || [tagText rangeOfString:@"width"].location != NSNotFound)
-		  && [tagText rangeOfString:@"height=\"0\""].location == NSNotFound && [tagText rangeOfString:@"height=\"1\""].location == NSNotFound) {
-		  content = [content stringByReplacingOccurrencesOfString:tagText withString:[NSString stringWithFormat:@"%@ class=\"bigImage\"",tagText]];
-	  }							  
+		[scanner scanUpToString:@"<" intoString:nil];
+		[scanner scanUpToString:@">" intoString:&tagText];
+		if ([tagText rangeOfString:@"alt="].location != NSNotFound &&
+			[tagText rangeOfString:@"height=\"0\""].location == NSNotFound && [tagText rangeOfString:@"height=\"1\""].location == NSNotFound
+			&& [tagText rangeOfString:@"quantserve"].location == NSNotFound && [tagText rangeOfString:@"quantserve"].location == NSNotFound && [tagText rangeOfString:@"pheedo"].location == NSNotFound) {
+			content = [content stringByReplacingOccurrencesOfString:tagText withString:[NSString stringWithFormat:@"%@ class=\"bigImage\"",tagText]];
+		}
 	}
 	
 	[html appendString:content];
