@@ -443,8 +443,8 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>ED95D800130494B800E451EB</string>
-				<string>ED95D801130494B800E451EB</string>
+				<string>ED5877081304AFFF003556FA</string>
+				<string>ED5877091304AFFF003556FA</string>
 				<string>1C9437FD063B20B00039CFAC</string>
 				<string>1C9437FE063B20B00039CFAC</string>
 				<string>1C9437FF063B20B00039CFAC</string>
@@ -481,11 +481,14 @@
 	<integer>0</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>ED95D8941304A1E700E451EB</string>
-		<string>ED95D80E130494B800E451EB</string>
-		<string>ED95D80F130494B800E451EB</string>
+		<string>ED5877281304B0BE003556FA</string>
+		<string>ED5877291304B0BE003556FA</string>
+		<string>ED5877211304B035003556FA</string>
+		<string>ED58771B1304AFFF003556FA</string>
 		<string>1C530D5B069F1CE1000CFCEE</string>
 		<string>1C530D54069F1CE1000CFCEE</string>
+		<string>ED58770A1304AFFF003556FA</string>
+		<string>ED58770E1304AFFF003556FA</string>
 		<string>1C530D52069F1CE1000CFCEE</string>
 		<string>/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Newsbox.xcodeproj</string>
 	</array>
@@ -704,7 +707,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D52069F1CE1000CFCEE</string>
-				<string>ED95D805130494B800E451EB</string>
+				<string>ED5877121304AFFF003556FA</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -826,13 +829,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D54069F1CE1000CFCEE</string>
-				<string>ED95D806130494B800E451EB</string>
+				<string>ED5877131304AFFF003556FA</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>ED95D807130494B800E451EB</string>
-				<string>ED95D808130494B800E451EB</string>
-				<string>ED95D809130494B800E451EB</string>
-				<string>ED95D80A130494B800E451EB</string>
-				<string>ED95D80B130494B800E451EB</string>
+				<string>ED5877141304AFFF003556FA</string>
+				<string>ED5877151304AFFF003556FA</string>
+				<string>ED5877161304AFFF003556FA</string>
+				<string>ED5877171304AFFF003556FA</string>
+				<string>ED5877181304AFFF003556FA</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -951,8 +954,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -988,7 +989,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D5B069F1CE1000CFCEE</string>
-				<string>ED95D80C130494B800E451EB</string>
+				<string>ED5877191304AFFF003556FA</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>

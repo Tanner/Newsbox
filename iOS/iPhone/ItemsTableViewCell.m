@@ -98,6 +98,7 @@
 	[timeStampLabel setBackgroundColor:[UIColor whiteColor]];
 	[timeStampLabel setFont:[UIFont systemFontOfSize:12.0f]];
 	[timeStampLabel setTextColor:[UIColor darkGrayColor]];
+	[timeStampLabel setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
 	[self addSubview:timeStampLabel];
 	
 	CGSize titleLabelConstSize = { self.bounds.size.width - PADDING*2 - DISCLOSURE_ACCESSORY_WIDTH - PADDING, MAX_HEIGHT - PADDING - timeStampLabel.frame.origin.y - timeStampLabel.frame.size.height };
@@ -114,6 +115,7 @@
 	[titleLabel setFont:[UIFont boldSystemFontOfSize:16.0f]];
 	[titleLabel setNumberOfLines:2];
 	[titleLabel setLineBreakMode:UILineBreakModeTailTruncation];
+	[titleLabel setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
 	[self addSubview:titleLabel];
 	
 	CGSize contentLabelConstSize = { self.bounds.size.width - PADDING*2 - DISCLOSURE_ACCESSORY_WIDTH - PADDING, MAX_HEIGHT - PADDING - (titleLabel.frame.origin.y + titleLabel.frame.size.height) };
@@ -129,6 +131,7 @@
 	[contentLabel setNumberOfLines:2];
 	[contentLabel setLineBreakMode:UILineBreakModeTailTruncation];
 	[contentLabel setTextColor:[UIColor darkGrayColor]];
+	[contentLabel setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
 	[self addSubview:contentLabel];
 }
 
