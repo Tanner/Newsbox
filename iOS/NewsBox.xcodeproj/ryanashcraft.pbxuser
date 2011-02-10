@@ -92,7 +92,7 @@
 	};
 	8D1107310486CEB800E47090 /* Newsbox-Info.plist */ = {
 		uiCtxt = {
-			sepNavWindowFrame = "{{1680, -334}, {960, 1200}}";
+			sepNavWindowFrame = "{{720, 4}, {960, 1024}}";
 		};
 	};
 	ED0D9A0F13039B4000961E0D /* ItemsTableViewCell.h */ = {
@@ -291,8 +291,8 @@
 	};
 	ED639913130342810024D3ED /* ItemViewController_iPhone.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1621, 2249}}";
-			sepNavSelRange = "{2464, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1454, 2249}}";
+			sepNavSelRange = "{1803, 0}";
 			sepNavVisRange = "{1482, 2264}";
 			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
 		};
