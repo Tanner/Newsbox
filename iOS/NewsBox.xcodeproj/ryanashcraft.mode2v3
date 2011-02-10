@@ -197,90 +197,7 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>EDCF10E813045FBB00848B92</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>Item.m</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>EDCF10E913045FBB00848B92</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>Item.m</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>EDCF11201304609700848B92</string>
-						<key>history</key>
-						<array>
-							<string>EDCF10EA13045FBB00848B92</string>
-							<string>EDCF111E1304609700848B92</string>
-							<string>EDCF111F1304609700848B92</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {840, 927}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>840 60 840 968 0 0 1680 1028 </string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>EDCF10E513045FBB00848B92</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>ItemsTableViewController_iPhone.m</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>EDCF10E613045FBB00848B92</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>ItemsTableViewController_iPhone.m</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>EDCF11211304609700848B92</string>
-						<key>history</key>
-						<array>
-							<string>EDCF10E013045FAB00848B92</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {840, 927}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>0 60 840 968 0 0 1680 1028 </string>
-			</dict>
-		</dict>
-	</array>
+	<array/>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -356,7 +273,8 @@
 									<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 									<array>
 										<array>
-											<integer>12</integer>
+											<integer>7</integer>
+											<integer>2</integer>
 											<integer>1</integer>
 											<integer>0</integer>
 										</array>
@@ -408,7 +326,7 @@
 								<dict>
 									<key>PBXSmartGroupTreeModuleColumnWidthsKey</key>
 									<array>
-										<real>943</real>
+										<real>823</real>
 									</array>
 									<key>PBXSmartGroupTreeModuleColumnsKey_v4</key>
 									<array>
@@ -419,16 +337,19 @@
 								<dict>
 									<key>PBXSmartGroupTreeModuleOutlineStateExpansionKey</key>
 									<array>
+										<string>1C37FBAC04509CD000000102</string>
+										<string>ED6A679713046F05006F7838</string>
+										<string>ED6A679813046F05006F7838</string>
 										<string>1C37FAAC04509CD000000102</string>
 									</array>
 									<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 									<array>
 										<array>
-											<integer>1</integer>
+											<integer>0</integer>
 										</array>
 									</array>
 									<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-									<string>{{0, 0}, {943, 1059}}</string>
+									<string>{{0, 0}, {823, 883}}</string>
 								</dict>
 								<key>PBXTopSmartGroupGIDs</key>
 								<array/>
@@ -438,11 +359,11 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{10, 27}, {960, 1077}}</string>
+								<string>{{10, 27}, {840, 901}}</string>
 								<key>GroupTreeTableConfiguration</key>
 								<array>
 									<string>MainColumn</string>
-									<real>943</real>
+									<real>823</real>
 								</array>
 							</dict>
 							<key>Module</key>
@@ -523,8 +444,8 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>EDCF109D13045A8400848B92</string>
-				<string>EDCF109E13045A8400848B92</string>
+				<string>ED6A674E130467BD006F7838</string>
+				<string>ED6A674F130467BD006F7838</string>
 				<string>1C9437FD063B20B00039CFAC</string>
 				<string>1C9437FE063B20B00039CFAC</string>
 				<string>1C9437FF063B20B00039CFAC</string>
@@ -561,15 +482,14 @@
 	<integer>0</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>EDCF111B1304608600848B92</string>
-		<string>EDCF10A813045A8400848B92</string>
-		<string>EDCF10A913045A8400848B92</string>
+		<string>ED6A682A13047429006F7838</string>
+		<string>ED6A682313047418006F7838</string>
+		<string>ED6A67A713046F24006F7838</string>
+		<string>ED6A67A113046F05006F7838</string>
 		<string>1C530D5B069F1CE1000CFCEE</string>
 		<string>1C530D54069F1CE1000CFCEE</string>
 		<string>1C530D52069F1CE1000CFCEE</string>
 		<string>/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Newsbox.xcodeproj</string>
-		<string>EDCF10E513045FBB00848B92</string>
-		<string>EDCF10E813045FBB00848B92</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 59 840 969 0 0 1680 1028 </string>
@@ -730,7 +650,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Item.m</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -788,7 +708,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D52069F1CE1000CFCEE</string>
-				<string>EDCF109F13045A8400848B92</string>
+				<string>ED6A6750130467BD006F7838</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -910,13 +830,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D54069F1CE1000CFCEE</string>
-				<string>EDCF10A013045A8400848B92</string>
+				<string>ED6A6757130467E6006F7838</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>EDCF10A113045A8400848B92</string>
-				<string>EDCF10A213045A8400848B92</string>
-				<string>EDCF10A313045A8400848B92</string>
-				<string>EDCF10A413045A8400848B92</string>
-				<string>EDCF10A513045A8400848B92</string>
+				<string>ED6A6758130467E6006F7838</string>
+				<string>ED6A6759130467E6006F7838</string>
+				<string>ED6A675A130467E6006F7838</string>
+				<string>ED6A675B130467E6006F7838</string>
+				<string>ED6A675C130467E6006F7838</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -1072,7 +992,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D5B069F1CE1000CFCEE</string>
-				<string>EDCF10A613045A8400848B92</string>
+				<string>ED6A675D130467E6006F7838</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>

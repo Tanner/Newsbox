@@ -39,7 +39,9 @@
 - (NSString *)stylizedHTMLWithItem:(Item *)anItem {
 	NSMutableString *html = [[NSMutableString alloc] init];
 		
-	[html appendString:@"<html><head>"];
+	[html appendString:@"<html>"];
+	[html appendString:@"<head>"];
+	
 	[html appendString:@"<style type=\"text/css\">"];
 	NSError *err = nil;
 	NSString *css = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"itemstyle" ofType:@"css"] encoding:NSASCIIStringEncoding error:&err];
@@ -47,8 +49,17 @@
 		NSLog(@"%@", err);
 	}
 	[html appendString:css];
-	[html appendString:@"</style></head>"];
-	[html appendString:@"<body>"];
+	[html appendString:@"</style>"];
+	
+	NSString *js = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"itemscript" ofType:@"js"] encoding:NSASCIIStringEncoding error:&err];
+	if (js == nil) {
+		NSLog(@"%@", err);
+	}
+	[html appendString:js];
+	
+	[html appendString:@"</head>"];
+	
+	[html appendString:@"<body onload=\"resize()\">"];
 
 	[html appendFormat:@"<h1><a href=\"%@\">", [anItem contentLink]];
 	[html appendString:[anItem title]];
@@ -59,7 +70,7 @@
 	[html appendString:@"</div>"];
 	
 	[html appendString:@"</body></html>"];
-
+	
 	NSString *stylizedHTML = [NSString stringWithString:html];
 	[html release];
 	
@@ -78,6 +89,7 @@
 		wv = [[UIWebView alloc] initWithFrame:self.view.bounds];
 		[wv setDelegate:self];
 		[wv setBackgroundColor:[UIColor whiteColor]];
+		[wv setScalesPageToFit:NO];
 		
 		for (UIView *aView in [[[wv subviews] objectAtIndex:0] subviews]) { 
 			if ([aView isKindOfClass:[UIImageView class]]) {

@@ -4,6 +4,7 @@
 body {
 	padding: 15px;
 	font-family: 'Helvetica';
+	font-size: 95%;
 	}
 
 p {
@@ -20,9 +21,9 @@ ul li {
 
 h1 {
 	padding: 0 0 15px 0;
-	margin: 0 0 10px 0;
+	margin: 0 0 15px 0;
 	border-bottom: 1px solid #E0E0E0;
-	font-size: 1.7em;
+	font-size: 1.5em;
 	}
 
 h1 a {
@@ -37,9 +38,22 @@ hr {
 
 a {
 	color: #27d;
-}
+	}
 
 blockquote {
 	padding: 0 0 0 25px;
 	border-left: 1px solid #E0E0E0;
+	}
+
+img {
+	padding: 5px;
+	border: 1px solid #ddd !important;
+	background: #eee;
+	max-width: 300px;
+}
+
+.smallImage {
+	padding: 0 !important;
+	border: 0 !important;
+	background: transparent !important;
 }
