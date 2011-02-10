@@ -53,8 +53,8 @@
 			ED2E91B81301D22B00983CC3 /* Newsbox */,
 		);
 		perUserDictionary = {
-			PBXPerProjectTemplateStateSaveDate = 319047215;
-			PBXWorkspaceStateSaveDate = 319047215;
+			PBXPerProjectTemplateStateSaveDate = 319049241;
+			PBXWorkspaceStateSaveDate = 319049241;
 		};
 		sourceControlManager = ED2E91C21301D23300983CC3 /* Source Control */;
 		userBuildSettings = {
@@ -75,10 +75,10 @@
 	};
 	ED0D9A1013039B4000961E0D /* ItemsTableViewCell.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1503, 1846}}";
-			sepNavSelRange = "{3163, 0}";
-			sepNavVisRange = "{1472, 3548}";
-			sepNavWindowFrame = "{{1680, -334}, {960, 1200}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1188, 2145}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1809}";
+			sepNavWindowFrame = "{{840, 4}, {840, 1024}}";
 		};
 	};
 	ED2E91B81301D22B00983CC3 /* Newsbox */ = {
@@ -205,10 +205,10 @@
 	};
 	ED2E94F11302555D00983CC3 /* ItemsTableViewController_iPhone.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1419, 4056}}";
-			sepNavSelRange = "{2584, 0}";
-			sepNavVisRange = "{2173, 1801}";
-			sepNavWindowFrame = "{{840, 4}, {840, 1024}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1419, 3952}}";
+			sepNavSelRange = "{2319, 10}";
+			sepNavVisRange = "{4435, 2194}";
+			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
 		};
 	};
 	ED2E95451302575C00983CC3 /* Item.h */ = {
@@ -238,9 +238,9 @@
 	ED2E95C313025CA300983CC3 /* FeedParser.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1412, 2041}}";
-			sepNavSelRange = "{4555, 0}";
-			sepNavVisRange = "{3770, 783}";
-			sepNavWindowFrame = "{{2640, -334}, {960, 1200}}";
+			sepNavSelRange = "{2028, 0}";
+			sepNavVisRange = "{1472, 2503}";
+			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
 		};
 	};
 	ED37D92D1303644E00584EDE /* itemstyle.css */ = {

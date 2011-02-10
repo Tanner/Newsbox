@@ -96,7 +96,7 @@
 	[self.tableView addSubview:_refreshHeaderView];
 	[_refreshHeaderView refreshLastUpdatedDate];
 		
-	if (!modalView) {
+	if (!items && !modalView) {
 		modalView = [[UIView alloc] initWithFrame:self.view.bounds];
 		[modalView setBackgroundColor:[UIColor whiteColor]];
 		[modalView setOpaque:YES];
