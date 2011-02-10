@@ -45,15 +45,10 @@ blockquote {
 	border-left: 1px solid #E0E0E0;
 	}
 
-img {
+.bigImage {
 	padding: 5px;
 	border: 1px solid #ddd !important;
 	background: #eee;
 	max-width: 300px;
-}
-
-.smallImage {
-	padding: 0 !important;
-	border: 0 !important;
-	background: transparent !important;
+	margin: 0 0 5px 0;
 }

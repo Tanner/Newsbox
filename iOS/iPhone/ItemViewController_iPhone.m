@@ -51,22 +51,39 @@
 	[html appendString:css];
 	[html appendString:@"</style>"];
 	
+	/*
 	NSString *js = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"itemscript" ofType:@"js"] encoding:NSASCIIStringEncoding error:&err];
 	if (js == nil) {
 		NSLog(@"%@", err);
 	}
 	[html appendString:js];
+	 */
 	
 	[html appendString:@"</head>"];
 	
-	[html appendString:@"<body onload=\"resize()\">"];
+	[html appendString:@"<body"];
 
 	[html appendFormat:@"<h1><a href=\"%@\">", [anItem contentLink]];
+	
 	[html appendString:[anItem title]];
 	[html appendString:@"</a></h1>"];
 	
 	[html appendString:@"<div>"];
-	[html appendString:[anItem content]];
+	
+	NSScanner *scanner = [NSScanner scannerWithString:[anItem content]];
+	NSString *content = [anItem content];
+	NSString *tagText = nil;
+	// big image class
+	while ([scanner isAtEnd] == NO) {
+	  [scanner scanUpToString:@"<" intoString:nil];
+	  [scanner scanUpToString:@">" intoString:&tagText];
+	  if (([tagText rangeOfString:@"vspace"].location != NSNotFound || [tagText rangeOfString:@"width"].location != NSNotFound)
+		  && [tagText rangeOfString:@"height=\"0\""].location == NSNotFound && [tagText rangeOfString:@"height=\"1\""].location == NSNotFound) {
+		  content = [content stringByReplacingOccurrencesOfString:tagText withString:[NSString stringWithFormat:@"%@ class=\"bigImage\"",tagText]];
+	  }							  
+	}
+	
+	[html appendString:content];
 	[html appendString:@"</div>"];
 	
 	[html appendString:@"</body></html>"];
