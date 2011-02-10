@@ -1,0 +1,9 @@
+* copy Mail.app's tableview label styles
+* load all unread items (no limit)
+* load images
+* unread status indicator
+* timestamp label in item view
+* unread/star/thumbs up/thumbs down/share buttons in item toolbar
+* unread/star labels get pushed back to Google
+* red toolbars/labels
+* webview for links
