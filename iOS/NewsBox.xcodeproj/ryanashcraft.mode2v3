@@ -481,14 +481,10 @@
 	<integer>0</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>ED5877281304B0BE003556FA</string>
-		<string>ED5877291304B0BE003556FA</string>
 		<string>ED5877211304B035003556FA</string>
 		<string>ED58771B1304AFFF003556FA</string>
 		<string>1C530D5B069F1CE1000CFCEE</string>
 		<string>1C530D54069F1CE1000CFCEE</string>
-		<string>ED58770A1304AFFF003556FA</string>
-		<string>ED58770E1304AFFF003556FA</string>
 		<string>1C530D52069F1CE1000CFCEE</string>
 		<string>/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Newsbox.xcodeproj</string>
 	</array>

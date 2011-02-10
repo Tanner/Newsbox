@@ -41,7 +41,7 @@
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = ED2E91B81301D22B00983CC3 /* Newsbox */;
-		activeSDKPreference = iphonesimulator4.2;
+		activeSDKPreference = iphoneos4.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* Newsbox */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* Newsbox */,
@@ -53,16 +53,8 @@
 			ED2E91B81301D22B00983CC3 /* Newsbox */,
 		);
 		perUserDictionary = {
-			PBXPerProjectTemplateStateSaveDate = 319074258;
-			PBXWorkspaceStateSaveDate = 319074258;
-		};
-		perUserProjectItems = {
-			ED58770C1304AFFF003556FA /* PBXBookmark */ = ED58770C1304AFFF003556FA /* PBXBookmark */;
-			ED58770D1304AFFF003556FA /* PBXTextBookmark */ = ED58770D1304AFFF003556FA /* PBXTextBookmark */;
-			ED5877101304AFFF003556FA /* PBXBookmark */ = ED5877101304AFFF003556FA /* PBXBookmark */;
-			ED5877111304AFFF003556FA /* PBXTextBookmark */ = ED5877111304AFFF003556FA /* PBXTextBookmark */;
-			ED58771E1304B035003556FA /* PBXTextBookmark */ = ED58771E1304B035003556FA /* PBXTextBookmark */;
-			ED58771F1304B035003556FA /* PBXTextBookmark */ = ED58771F1304B035003556FA /* PBXTextBookmark */;
+			PBXPerProjectTemplateStateSaveDate = 319074600;
+			PBXWorkspaceStateSaveDate = 319074600;
 		};
 		sourceControlManager = ED2E91C21301D23300983CC3 /* Source Control */;
 		userBuildSettings = {
@@ -258,54 +250,6 @@
 			sepNavVisRange = "{0, 676}";
 			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
 		};
-	};
-	ED58770C1304AFFF003556FA /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = ED639913130342810024D3ED /* ItemViewController_iPhone.m */;
-	};
-	ED58770D1304AFFF003556FA /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = ED639913130342810024D3ED /* ItemViewController_iPhone.m */;
-		name = "ItemViewController_iPhone.m: 153";
-		rLen = 0;
-		rLoc = 4094;
-		rType = 0;
-		vrLen = 1602;
-		vrLoc = 3176;
-	};
-	ED5877101304AFFF003556FA /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = ED2E94F11302555D00983CC3 /* ItemsTableViewController_iPhone.m */;
-	};
-	ED5877111304AFFF003556FA /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = ED2E94F11302555D00983CC3 /* ItemsTableViewController_iPhone.m */;
-		name = "ItemsTableViewController_iPhone.m: 141";
-		rLen = 0;
-		rLoc = 3427;
-		rType = 0;
-		vrLen = 2072;
-		vrLoc = 2597;
-	};
-	ED58771E1304B035003556FA /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = ED2E94F11302555D00983CC3 /* ItemsTableViewController_iPhone.m */;
-		name = "ItemsTableViewController_iPhone.m: 146";
-		rLen = 0;
-		rLoc = 3726;
-		rType = 0;
-		vrLen = 2132;
-		vrLoc = 2637;
-	};
-	ED58771F1304B035003556FA /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = ED639913130342810024D3ED /* ItemViewController_iPhone.m */;
-		name = "ItemViewController_iPhone.m: 157";
-		rLen = 79;
-		rLoc = 4314;
-		rType = 0;
-		vrLen = 1640;
-		vrLoc = 3143;
 	};
 	ED639912130342810024D3ED /* ItemViewController_iPhone.h */ = {
 		uiCtxt = {

@@ -44,7 +44,6 @@
 
 - (NSString *)titleString {
 	// no xml chars
-	NSLog(@"%@", title);
 	NSString *titleString = [Item xmlSimpleUnescape:title];
 	
 	// trim
