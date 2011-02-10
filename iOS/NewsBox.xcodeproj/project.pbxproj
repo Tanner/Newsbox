@@ -50,6 +50,9 @@
 		ED2E94F41302555D00983CC3 /* FeedsTableViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED2E94F21302555D00983CC3 /* FeedsTableViewController_iPhone.xib */; };
 		ED2E95471302575C00983CC3 /* Feed.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2E95461302575C00983CC3 /* Feed.m */; };
 		ED2E95C413025CA300983CC3 /* FeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2E95C313025CA300983CC3 /* FeedParser.m */; };
+		ED37D8F7130361A500584EDE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED37D8F5130361A500584EDE /* Default@2x.png */; };
+		ED37D8F8130361A500584EDE /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = ED37D8F6130361A500584EDE /* Default.png */; };
+		ED37D92E1303644E00584EDE /* itemstyle.css in Resources */ = {isa = PBXBuildFile; fileRef = ED37D92D1303644E00584EDE /* itemstyle.css */; };
 		ED639915130342810024D3ED /* ItemViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = ED639913130342810024D3ED /* ItemViewController_iPhone.m */; };
 		ED639916130342810024D3ED /* ItemViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED639914130342810024D3ED /* ItemViewController_iPhone.xib */; };
 		ED71CFD013030B3600C3BE65 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED71CFC613030B3600C3BE65 /* EGORefreshTableHeaderView.m */; };
@@ -147,6 +150,9 @@
 		ED2E95461302575C00983CC3 /* Feed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Feed.m; path = Shared/Feed.m; sourceTree = "<group>"; };
 		ED2E95C213025CA300983CC3 /* FeedParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FeedParser.h; path = Shared/FeedParser.h; sourceTree = "<group>"; };
 		ED2E95C313025CA300983CC3 /* FeedParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FeedParser.m; path = Shared/FeedParser.m; sourceTree = "<group>"; };
+		ED37D8F5130361A500584EDE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		ED37D8F6130361A500584EDE /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		ED37D92D1303644E00584EDE /* itemstyle.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = itemstyle.css; path = ../../../Newsbox/iOS/itemstyle.css; sourceTree = "<group>"; };
 		ED639912130342810024D3ED /* ItemViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemViewController_iPhone.h; sourceTree = "<group>"; };
 		ED639913130342810024D3ED /* ItemViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemViewController_iPhone.m; sourceTree = "<group>"; };
 		ED639914130342810024D3ED /* ItemViewController_iPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemViewController_iPhone.xib; sourceTree = "<group>"; };
@@ -413,6 +419,9 @@
 			children = (
 				ED71D1091303268D00C3BE65 /* Icon-57.png */,
 				ED71D1071303266E00C3BE65 /* Icon-57@2x.png */,
+				ED37D8F5130361A500584EDE /* Default@2x.png */,
+				ED37D8F6130361A500584EDE /* Default.png */,
+				ED37D92D1303644E00584EDE /* itemstyle.css */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -480,6 +489,9 @@
 				ED71D1081303266E00C3BE65 /* Icon-57@2x.png in Resources */,
 				ED71D10A1303268D00C3BE65 /* Icon-57.png in Resources */,
 				ED639916130342810024D3ED /* ItemViewController_iPhone.xib in Resources */,
+				ED37D8F7130361A500584EDE /* Default@2x.png in Resources */,
+				ED37D8F8130361A500584EDE /* Default.png in Resources */,
+				ED37D92E1303644E00584EDE /* itemstyle.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,7 +14,6 @@
 
 
 @synthesize delegate;
-@synthesize _refreshHeaderView;
 
 
 - (void)setFeeds:(NSArray *)aFeeds withType:(FeedType)type {
@@ -71,7 +70,6 @@
 		view.delegate = self;
 		[self.tableView addSubview:view];
 		_refreshHeaderView = view;
-		[view release];
 	}
 	
 	//  update the last update date
@@ -80,7 +78,7 @@
 
 
 - (void)viewWillAppear:(BOOL)animated {
-	[self.navigationItem setTitle:@"Unread Items"];
+	[self.navigationItem setTitle:@"Unread"];
 	
     [super viewWillAppear:animated];
 }

@@ -28,7 +28,6 @@
 - (void)didLoadTableViewData;
 
 @property (nonatomic, assign) id<FeedTableViewControllerDelegate> delegate;
-@property (nonatomic, retain) EGORefreshTableHeaderView *_refreshHeaderView;
 
 @end
 

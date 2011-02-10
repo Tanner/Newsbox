@@ -16,8 +16,8 @@
 	2860E388111B897F00E27156 /* AppDelegate_iPhone.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1965, 1846}}";
-			sepNavSelRange = "{413, 0}";
-			sepNavVisRange = "{240, 960}";
+			sepNavSelRange = "{450, 6}";
+			sepNavVisRange = "{0, 1606}";
 			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
 		};
 	};
@@ -52,8 +52,8 @@
 			ED2E91B81301D22B00983CC3 /* Newsbox */,
 		);
 		perUserDictionary = {
-			PBXPerProjectTemplateStateSaveDate = 318980108;
-			PBXWorkspaceStateSaveDate = 318980108;
+			PBXPerProjectTemplateStateSaveDate = 318986737;
+			PBXWorkspaceStateSaveDate = 318986737;
 		};
 		sourceControlManager = ED2E91C21301D23300983CC3 /* Source Control */;
 		userBuildSettings = {
@@ -168,9 +168,9 @@
 	};
 	ED2E94F11302555D00983CC3 /* FeedsTableViewController_iPhone.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1510, 2938}}";
-			sepNavSelRange = "{268, 0}";
-			sepNavVisRange = "{3, 1509}";
+			sepNavIntBoundsRect = "{{0, 0}, {1510, 3081}}";
+			sepNavSelRange = "{2031, 0}";
+			sepNavVisRange = "{914, 1742}";
 			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
 		};
 	};
@@ -216,9 +216,9 @@
 	};
 	ED639913130342810024D3ED /* ItemViewController_iPhone.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1020, 1482}}";
-			sepNavSelRange = "{738, 0}";
-			sepNavVisRange = "{35, 1759}";
+			sepNavIntBoundsRect = "{{0, 0}, {1167, 1625}}";
+			sepNavSelRange = "{1055, 0}";
+			sepNavVisRange = "{50, 1794}";
 			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
 		};
 	};

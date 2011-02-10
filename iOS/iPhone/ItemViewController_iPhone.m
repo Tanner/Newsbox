@@ -10,7 +10,7 @@
 
 
 @interface ItemViewController_iPhone (private) 
-- (NSString *)stylizedHTMLWithTitle:(NSString *)title andBody:(NSString *)body;
+- (NSString *)stylizedHTMLWithItem:(Feed *)anItem;
 @end
 
 
@@ -36,27 +36,36 @@
 #pragma mark -
 
 
-- (NSString *)stylizedHTMLWithTitle:(NSString *)title andBody:(NSString *)body {
+- (NSString *)stylizedHTMLWithItem:(Feed *)anItem {
 	NSMutableString *html = [[NSMutableString alloc] init];
-	
-	[html appendString:@"<body style=\"font-family: Helvetica;\">"];
+		
+	[html appendString:@"<html><head>"];
+	[html appendString:@"<style type=\"text/css\">"];
+	NSError *err = nil;
+	NSString *css = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"itemstyle" ofType:@"css"] encoding:NSASCIIStringEncoding error:&err];
+	if (css == nil) {
+		NSLog(@"%@", err);
+	}
+	[html appendString:css];
+	[html appendString:@"</style></head>"];
+	[html appendString:@"<body>"];
 
-	[html appendString:@"<h1>"];
-	[html appendString:title];
-	[html appendString:@"</h1>"];
+	[html appendFormat:@"<h1><a href=\"%@\">", [anItem link]];
+	[html appendString:[anItem title]];
+	[html appendString:@"</a></h1>"];
 	
-	[html appendString:@"<p>"];
-	[html appendString:body];
-	[html appendString:@"</p>"];
+	[html appendString:@"<div>"];
+	[html appendString:[anItem summary]];
+	[html appendString:@"</div>"];
 	
-	[html appendString:@"</body>"];
+	[html appendString:@"</body></html>"];
 
 	return [NSString stringWithString:html];
 }
 
 
 - (void)setItem:(Feed *)anItem {
-	[wv loadHTMLString:[self stylizedHTMLWithTitle:[anItem title] andBody:[anItem summary]] baseURL:nil];
+	[wv loadHTMLString:[self stylizedHTMLWithItem:anItem] baseURL:nil];
 }
 
 
