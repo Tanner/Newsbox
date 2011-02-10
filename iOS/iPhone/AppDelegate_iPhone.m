@@ -52,7 +52,7 @@ NSString *const TEST_PASSWORD = @"FA1w0wxjRTHRyj";
 	feedLoader = [[ItemLoader alloc] initWithDelegate:self];
 	[feedLoader authenticateWithGoogleUser:TEST_GOOGLE_USER andPassword:TEST_PASSWORD];
 		
-	ftvc = [[ItemsTableViewController_iPhone alloc] initWithNibName:@"FeedsTableViewController_iPhone" bundle:nil];
+	ftvc = [[ItemsTableViewController_iPhone alloc] initWithNibName:@"ItemsTableViewController_iPhone" bundle:nil];
 	[ftvc setDelegate:self];
 	
 	ivc = [[ItemViewController_iPhone alloc] initWithNibName:@"ItemViewController_iPhone" bundle:nil];

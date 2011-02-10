@@ -38,3 +38,8 @@ hr {
 a {
 	color: #27d;
 }
+
+blockquote {
+	padding: 0 0 0 25px;
+	border-left: 1px solid #E0E0E0;
+}

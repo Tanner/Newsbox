@@ -16,9 +16,9 @@
 	};
 	2860E388111B897F00E27156 /* AppDelegate_iPhone.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1965, 1703}}";
-			sepNavSelRange = "{251, 0}";
-			sepNavVisRange = "{3, 2532}";
+			sepNavIntBoundsRect = "{{0, 0}, {1965, 1755}}";
+			sepNavSelRange = "{1218, 0}";
+			sepNavVisRange = "{889, 3159}";
 			sepNavWindowFrame = "{{2640, -334}, {960, 1200}}";
 		};
 	};
@@ -53,8 +53,8 @@
 			ED2E91B81301D22B00983CC3 /* Newsbox */,
 		);
 		perUserDictionary = {
-			PBXPerProjectTemplateStateSaveDate = 319016856;
-			PBXWorkspaceStateSaveDate = 319016856;
+			PBXPerProjectTemplateStateSaveDate = 319047215;
+			PBXWorkspaceStateSaveDate = 319047215;
 		};
 		sourceControlManager = ED2E91C21301D23300983CC3 /* Source Control */;
 		userBuildSettings = {
@@ -75,10 +75,10 @@
 	};
 	ED0D9A1013039B4000961E0D /* ItemsTableViewCell.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1412, 1820}}";
-			sepNavSelRange = "{2171, 0}";
-			sepNavVisRange = "{1412, 3492}";
-			sepNavWindowFrame = "{{2640, -334}, {960, 1200}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1503, 1846}}";
+			sepNavSelRange = "{3163, 0}";
+			sepNavVisRange = "{1472, 3548}";
+			sepNavWindowFrame = "{{1680, -334}, {960, 1200}}";
 		};
 	};
 	ED2E91B81301D22B00983CC3 /* Newsbox */ = {
@@ -197,18 +197,18 @@
 	};
 	ED2E94F01302555D00983CC3 /* ItemsTableViewController_iPhone.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1861, 1049}}";
-			sepNavSelRange = "{811, 0}";
-			sepNavVisRange = "{0, 893}";
+			sepNavIntBoundsRect = "{{0, 0}, {901, 1072}}";
+			sepNavSelRange = "{552, 0}";
+			sepNavVisRange = "{0, 960}";
 			sepNavWindowFrame = "{{1680, -334}, {960, 1200}}";
 		};
 	};
 	ED2E94F11302555D00983CC3 /* ItemsTableViewController_iPhone.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1419, 3328}}";
-			sepNavSelRange = "{5878, 0}";
-			sepNavVisRange = "{5021, 2651}";
-			sepNavWindowFrame = "{{1680, -334}, {960, 1200}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1419, 4056}}";
+			sepNavSelRange = "{2584, 0}";
+			sepNavVisRange = "{2173, 1801}";
+			sepNavWindowFrame = "{{840, 4}, {840, 1024}}";
 		};
 	};
 	ED2E95451302575C00983CC3 /* Item.h */ = {
@@ -245,10 +245,10 @@
 	};
 	ED37D92D1303644E00584EDE /* itemstyle.css */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {781, 873}}";
-			sepNavSelRange = "{368, 0}";
-			sepNavVisRange = "{0, 405}";
-			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
+			sepNavIntBoundsRect = "{{0, 0}, {901, 1049}}";
+			sepNavSelRange = "{474, 0}";
+			sepNavVisRange = "{0, 476}";
+			sepNavWindowFrame = "{{1680, -334}, {960, 1200}}";
 		};
 	};
 	ED639912130342810024D3ED /* ItemViewController_iPhone.h */ = {

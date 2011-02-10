@@ -88,7 +88,7 @@
 	int const MAX_HEIGHT = 95.0f;
 	
 	CGSize constSize = { self.bounds.size.width - PADDING*2 - DISCLOSURE_ACCESSORY_WIDTH - PADDING, MAX_HEIGHT };
-	CGSize timeStampTextSize = [timeStampText sizeWithFont:[UIFont systemFontOfSize:12.0f] constrainedToSize:constSize lineBreakMode:UILineBreakModeWordWrap];	
+	CGSize timeStampTextSize = [timeStampText sizeWithFont:[UIFont systemFontOfSize:12.0f] constrainedToSize:constSize lineBreakMode:UILineBreakModeTailTruncation];	
 	timeStampLabel = [[UILabel alloc] initWithFrame:CGRectMake(PADDING, 
 															   PADDING,
 															   constSize.width,
@@ -101,7 +101,9 @@
 	[self addSubview:timeStampLabel];
 	
 	CGSize titleLabelConstSize = { self.bounds.size.width - PADDING*2 - DISCLOSURE_ACCESSORY_WIDTH - PADDING, MAX_HEIGHT - PADDING - timeStampLabel.frame.origin.y - timeStampLabel.frame.size.height };
-	CGSize titleTextSize = [titleText sizeWithFont:[UIFont systemFontOfSize:16.0f] constrainedToSize:titleLabelConstSize lineBreakMode:UILineBreakModeWordWrap];
+	
+	// substring to 50 makes it a max of two lines
+	CGSize titleTextSize = [[titleText substringToIndex:MIN(50, [titleText length])] sizeWithFont:[UIFont systemFontOfSize:16.0f] constrainedToSize:titleLabelConstSize lineBreakMode:UILineBreakModeTailTruncation];
 	titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(timeStampLabel.frame.origin.x,
 														   timeStampLabel.frame.origin.y + timeStampLabel.frame.size.height,
 														   titleLabelConstSize.width,
@@ -115,7 +117,7 @@
 	[self addSubview:titleLabel];
 	
 	CGSize contentLabelConstSize = { self.bounds.size.width - PADDING*2 - DISCLOSURE_ACCESSORY_WIDTH - PADDING, MAX_HEIGHT - PADDING - (titleLabel.frame.origin.y + titleLabel.frame.size.height) };
-	CGSize contentTextSize = [contentText sizeWithFont:[UIFont systemFontOfSize:13.0f] constrainedToSize:contentLabelConstSize lineBreakMode:UILineBreakModeWordWrap];
+	CGSize contentTextSize = [contentText sizeWithFont:[UIFont systemFontOfSize:13.0f] constrainedToSize:contentLabelConstSize lineBreakMode:UILineBreakModeTailTruncation];
 	contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(titleLabel.frame.origin.x,
 														   timeStampLabel.frame.origin.y + timeStampLabel.frame.size.height + titleLabel.frame.size.height + PADDING/2,
 														   contentLabelConstSize.width,

@@ -20,6 +20,9 @@
 	ItemType currentItemType;
 	EGORefreshTableHeaderView *_refreshHeaderView;
 	
+	UIView *modalView;
+	UIActivityIndicatorView *activityIndicator;
+	
 	BOOL _reloading;
 }
 
