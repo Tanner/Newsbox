@@ -113,7 +113,7 @@
 	else {
 		if ([[elementStack lastObject] isEqualToString:@"title"]) {
 			[currentTitle appendString:string];
-		} else if ([[elementStack lastObject] isEqualToString:@"content"]) {
+		} else if ([[elementStack lastObject] isEqualToString:@"content"] || [[elementStack lastObject] isEqualToString:@"summary"]) {
 			[currentContent appendString:string];
 		} else if ([[elementStack lastObject] isEqualToString:@"updated"]) {
 			[currentDate appendString:string];

@@ -25,6 +25,8 @@ typedef enum {
 
 - (NSString *)contentSample;
 - (NSString *)dateString;
+- (NSString *)titleString;
++ (NSString *)xmlSimpleUnescape:(NSString *)string;
 
 @property (nonatomic, retain) NSString *title;
 @property (nonatomic, retain) NSDate *date;

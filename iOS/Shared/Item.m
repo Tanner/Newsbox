@@ -20,14 +20,51 @@
 	NSString *contentSample = content;
     NSString *tagText = nil;
 	
+	// no html tags
     while ([scanner isAtEnd] == NO) {
         [scanner scanUpToString:@"<" intoString:nil];
 		[scanner scanUpToString:@">" intoString:&tagText];
 		
         contentSample = [contentSample stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%@>", tagText] withString:@""];
     }
-    
-    return [[contentSample stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] substringToIndex:MIN(150, [contentSample length])];
+	
+	// blank lines
+	contentSample = [contentSample stringByReplacingOccurrencesOfString:[NSString stringWithString:@"\n"] withString:@""];
+	
+	// no xml chars
+	contentSample = [Item xmlSimpleUnescape:contentSample];
+	
+	// trim
+	contentSample = [contentSample stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+	
+	// sample only needs max 150 chars
+    return [contentSample substringToIndex:MIN(150, [contentSample length])];
+}
+
+
+- (NSString *)titleString {
+	// no xml chars
+	NSLog(@"%@", title);
+	NSString *titleString = [Item xmlSimpleUnescape:title];
+	
+	// trim
+	titleString = [titleString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+	
+	return titleString;
+}
+
+
++ (NSString *)xmlSimpleUnescape:(NSString *)string {
+	string = [string stringByReplacingOccurrencesOfString:@"&amp;" withString: @"&"];
+	string = [string stringByReplacingOccurrencesOfString:@"&quot;" withString:@"\""];
+	string = [string stringByReplacingOccurrencesOfString:@"&#27;" withString:@"'"];
+	string = [string stringByReplacingOccurrencesOfString:@"&#39;" withString:@"'"];
+	string = [string stringByReplacingOccurrencesOfString:@"&#92;" withString:@"'"];
+	string = [string stringByReplacingOccurrencesOfString:@"&#96;" withString:@"'"];
+	string = [string stringByReplacingOccurrencesOfString:@"&gt;" withString:@">"];
+	string = [string stringByReplacingOccurrencesOfString:@"&lt;" withString:@"<"];
+	
+	return string;
 }
 
 
