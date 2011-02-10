@@ -6,19 +6,35 @@
 //  Copyright 2011 Ashcraft Media. All rights reserved.
 //
 
-#import "FeedsTableViewController_iPhone.h"
-#import "Feed.h"
+#import "ItemsTableViewController_iPhone.h"
+#import "Item.h"
+#import "ItemsTableViewCell.h"
 
 
-@implementation FeedsTableViewController_iPhone
+@interface ItemsTableViewController_iPhone (private)
+	- (CGFloat)suggestedHeightForItem:(Item *)anItem;
+@end
+
+
+
+@implementation ItemsTableViewController_iPhone
 
 
 @synthesize delegate;
 
 
-- (void)setFeeds:(NSArray *)aFeeds withType:(FeedType)type {
-	currentFeedType = type;
-	feeds = [[NSMutableArray alloc] initWithArray:aFeeds];
+- (void)setItems:(NSArray *)someItems withType:(ItemType)type {
+	if (items) {
+		[items release];
+		items = nil;
+	}
+	
+	currentItemType = type;
+	items = [[NSMutableArray alloc] initWithArray:someItems];
+	
+	if ([self.tableView isHidden]) {
+		[self.tableView setHidden:NO];
+	}
 	
 	[self.tableView reloadData];
 	[self performSelector:@selector(didLoadTableViewData) withObject:nil afterDelay:3.0];
@@ -29,7 +45,7 @@
 #pragma mark Data Source Loading / Reloading Methods
 
 - (void)reloadTableViewDataSource {
-	[delegate refreshWithFeedType:currentFeedType];
+	[delegate refreshWithItemType:currentItemType];
 	
 	_reloading = YES;
 	
@@ -62,23 +78,24 @@
 #pragma mark View lifecycle
 
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-	
+- (void)viewDidLoad {	
 	if (_refreshHeaderView == nil) {
-		EGORefreshTableHeaderView *view = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - self.tableView.bounds.size.height, self.view.frame.size.width, self.tableView.bounds.size.height)];
-		view.delegate = self;
-		[self.tableView addSubview:view];
-		_refreshHeaderView = view;
+		_refreshHeaderView = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - self.tableView.bounds.size.height, self.view.frame.size.width, self.tableView.bounds.size.height)];
+		_refreshHeaderView.delegate = self;
 	}
 	
-	//  update the last update date
+	[self.tableView addSubview:_refreshHeaderView];
 	[_refreshHeaderView refreshLastUpdatedDate];
+	
+	[self.tableView setHidden:YES];
+	
+	[super viewDidLoad];
 }
 
 
 - (void)viewWillAppear:(BOOL)animated {
-	[self.navigationItem setTitle:@"Unread"];
+	[self.navigationItem setTitle:@"Newsbox"];
+	[self.navigationController setToolbarHidden:NO];
 	
     [super viewWillAppear:animated];
 }
@@ -117,7 +134,7 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [feeds count];
+    return [items count];
 }
 
 
@@ -127,11 +144,14 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[ItemsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
 //	NSLog(@"%d", indexPath.row);
-    [[cell textLabel] setText:[[feeds objectAtIndex:indexPath.row] title]];
+    [(ItemsTableViewCell *)cell setTimeStampLabelText:[(Item *)[items objectAtIndex:indexPath.row] dateString]
+									andTitleLabelText:[(Item *)[items objectAtIndex:indexPath.row] title]
+								  andContentLabelText:[(Item *)[items objectAtIndex:indexPath.row] contentSample]
+	 ];
     
     return cell;
 }
@@ -181,7 +201,7 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	[delegate showItem:[feeds objectAtIndex:indexPath.row]];
+	[delegate showItem:[items objectAtIndex:indexPath.row]];
 }
 
 
@@ -193,6 +213,34 @@
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
 	[_refreshHeaderView egoRefreshScrollViewDidEndDragging:scrollView];
 }
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 95.0f;
+}
+
+/*
+- (CGFloat)suggestedHeightForItem:(Item *)anItem {
+	float const PADDING = 2.0f;
+	float const MAX_HEIGHT = 100.0f;
+	float const DISCLOSURE_ACCESSORY_WIDTH = 12.0f;
+	
+	NSString *timeStampText = [anItem dateString];
+	NSString *titleText = [anItem title];
+	NSString *contentText = [anItem contentSample];
+	
+	CGSize constSize = { self.tableView.bounds.size.width - PADDING*2 - DISCLOSURE_ACCESSORY_WIDTH - PADDING, MAX_HEIGHT };
+	CGSize timeStampTextSize = [timeStampText sizeWithFont:[UIFont systemFontOfSize:13.0f] constrainedToSize:constSize lineBreakMode:UILineBreakModeTailTruncation];	
+	
+	CGSize titleLabelConstSize = { self.tableView.bounds.size.width - PADDING*2 - DISCLOSURE_ACCESSORY_WIDTH - PADDING, MAX_HEIGHT };
+	CGSize titleTextSize = [titleText sizeWithFont:[UIFont systemFontOfSize:15.0f] constrainedToSize:titleLabelConstSize lineBreakMode:UILineBreakModeTailTruncation];
+	
+	CGSize contentLabelConstSize = { self.tableView.bounds.size.width - PADDING*2 - DISCLOSURE_ACCESSORY_WIDTH - PADDING, MAX_HEIGHT };
+	CGSize contentTextSize = [contentText sizeWithFont:[UIFont systemFontOfSize:13.0f] constrainedToSize:contentLabelConstSize lineBreakMode:UILineBreakModeTailTruncation];
+	
+	return timeStampTextSize.height + titleTextSize.height + contentTextSize.height + PADDING*2;
+}
+ */
 
 
 #pragma mark -
@@ -212,6 +260,8 @@
 
 
 - (void)dealloc {
+	[items release];
+	
     [super dealloc];
 }
 

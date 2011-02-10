@@ -11,10 +11,9 @@
 
 @interface FeedParser : NSObject <NSXMLParserDelegate> {
 	@private
-	NSXMLParser *rssParser;
-	NSMutableArray *stories;
+	NSMutableArray *items;
 	NSMutableArray *elementStack;
-	NSMutableString *currentTitle, *currentDate, *currentSummary, *currentLink, *currentSource;
+	NSMutableString *currentTitle, *currentDate, *currentContent, *currentContentLink, *currentSource, *currentSourceLink;
 }
 
 - (NSArray *)getFeedsFromXMLData:(NSData *)data;

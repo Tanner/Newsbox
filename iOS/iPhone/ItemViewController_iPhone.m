@@ -10,7 +10,7 @@
 
 
 @interface ItemViewController_iPhone (private) 
-- (NSString *)stylizedHTMLWithItem:(Feed *)anItem;
+- (NSString *)stylizedHTMLWithItem:(Item *)anItem;
 @end
 
 
@@ -36,7 +36,7 @@
 #pragma mark -
 
 
-- (NSString *)stylizedHTMLWithItem:(Feed *)anItem {
+- (NSString *)stylizedHTMLWithItem:(Item *)anItem {
 	NSMutableString *html = [[NSMutableString alloc] init];
 		
 	[html appendString:@"<html><head>"];
@@ -50,21 +50,24 @@
 	[html appendString:@"</style></head>"];
 	[html appendString:@"<body>"];
 
-	[html appendFormat:@"<h1><a href=\"%@\">", [anItem link]];
+	[html appendFormat:@"<h1><a href=\"%@\">", [anItem contentLink]];
 	[html appendString:[anItem title]];
 	[html appendString:@"</a></h1>"];
 	
 	[html appendString:@"<div>"];
-	[html appendString:[anItem summary]];
+	[html appendString:[anItem content]];
 	[html appendString:@"</div>"];
 	
 	[html appendString:@"</body></html>"];
 
-	return [NSString stringWithString:html];
+	NSString *stylizedHTML = [NSString stringWithString:html];
+	[html release];
+	
+	return stylizedHTML;
 }
 
 
-- (void)setItem:(Feed *)anItem {
+- (void)setItem:(Item *)anItem {
 	[wv loadHTMLString:[self stylizedHTMLWithItem:anItem] baseURL:nil];
 }
 
@@ -90,9 +93,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	
+	[self.view addSubview:wv];
 }
 
 
+- (void)viewWillAppear:(BOOL)animated {
+	[self.navigationController setToolbarHidden:NO];
+	
+	[super viewWillAppear:animated];
+}
+
+	 
 - (void)viewDidDisappear:(BOOL)animated {
 	[wv loadHTMLString:@"" baseURL:nil];
 }

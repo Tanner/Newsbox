@@ -7,7 +7,7 @@
 //
 
 #import "FeedParser.h"
-#import "Feed.h"
+#import "Item.h"
 
 
 @interface FeedParser()
@@ -27,10 +27,10 @@
 }
 
 - (NSArray *)getFeedsFromXMLData:(NSData *)data {
-	stories = [[NSMutableArray alloc] init];
+	items = [[NSMutableArray alloc] init];
 	elementStack = [[NSMutableArray alloc] init];
 	
-    rssParser = [[NSXMLParser alloc] initWithData:data];
+    NSXMLParser *rssParser = [[NSXMLParser alloc] initWithData:data];
 	
     [rssParser setDelegate:self];
 	[rssParser setShouldProcessNamespaces:NO];
@@ -39,7 +39,12 @@
 	
     [rssParser parse];
 	
-	return [NSArray arrayWithArray:stories];
+	[rssParser release];
+	[elementStack release];
+	
+	NSArray *arr = [NSArray arrayWithArray:items];
+	[items release];
+	return arr;
 }
 
 - (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError {
@@ -51,30 +56,48 @@
 }
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {			
-	[elementStack addObject:[elementName copy]];
+	[elementStack addObject:elementName];
 
 	if ([elementName isEqualToString:@"entry"]) {
 		currentTitle = [[NSMutableString alloc] init];
 		currentDate = [[NSMutableString alloc] init];
-		currentSummary = [[NSMutableString alloc] init];
+		currentContent = [[NSMutableString alloc] init];
 		currentSource = [[NSMutableString alloc] init];
 	}
 	
-	else if (![self array:elementStack containsElement:@"source"] && [elementName isEqualToString:@"link"]) {
-		currentLink = [[NSString alloc] initWithString:[attributeDict valueForKey:@"href"]];
+	else if ([elementName isEqualToString:@"link"]) {
+		if ([self array:elementStack containsElement:@"source"]) {
+			currentSourceLink = [[NSString alloc] initWithString:[attributeDict valueForKey:@"href"]];
+		} else {
+			currentContentLink = [[NSString alloc] initWithString:[attributeDict valueForKey:@"href"]];
+		}
 	}
 }
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName{     
 	if ([elementName isEqualToString:@"entry"]) {
-		Feed *feed = [[Feed alloc] init];
-		[feed setTitle:[[NSString alloc] initWithString:currentTitle]];
-		[feed setDate:[[NSString alloc] initWithString:currentDate]];
-		[feed setSummary:[[NSString alloc] initWithString:currentSummary]];
-		[feed setLink:[[NSString alloc] initWithString:currentLink]];
-		[feed setSource:[[NSString alloc] initWithString:currentSource]];
+		Item *item = [[Item alloc] init];
+		[item setTitle:[NSString stringWithString:currentTitle]];
+		[currentTitle release];
 		
-		[stories addObject:feed];
+		NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+		[dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'Z'"];
+		NSDate *aDate = [dateFormatter dateFromString:currentDate];
+		[currentDate release];
+		[item setDate:aDate];
+		[dateFormatter release];
+		
+		[item setContent:[NSString stringWithString:currentContent]];
+		[currentContent release];
+		[item setContentLink:[NSString stringWithString:currentContentLink]];
+		[currentContentLink release];
+		[item setSource:[NSString stringWithString:currentSource]];
+		[currentSource release];
+		[item setSourceLink:[NSString stringWithString:currentSourceLink]];
+		[currentSourceLink release];
+		
+		[items addObject:item];
+		[item release];
 	}
 	
 	[self removeElement:elementName fromArray:elementStack];
@@ -91,7 +114,7 @@
 		if ([[elementStack lastObject] isEqualToString:@"title"]) {
 			[currentTitle appendString:string];
 		} else if ([[elementStack lastObject] isEqualToString:@"content"]) {
-			[currentSummary appendString:string];
+			[currentContent appendString:string];
 		} else if ([[elementStack lastObject] isEqualToString:@"updated"]) {
 			[currentDate appendString:string];
 		}
@@ -121,20 +144,11 @@
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser {
 	NSLog(@"all done!");
-	NSLog(@"stories array has %d items", [stories count]);
+	NSLog(@"items array has %d items", [items count]);
 }
 
 
-- (void)dealloc {
-	[elementStack release];
-	[rssParser release];
-	[stories release];
-	[currentTitle release];
-	[currentDate release];
-	[currentSummary release];
-	[currentLink release];
-	[currentSource release];
-	
+- (void)dealloc {	
 	[super dealloc];
 }	
 

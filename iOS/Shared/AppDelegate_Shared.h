@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
-#import "FeedLoader.h"
+#import "ItemLoader.h"
 
 @interface AppDelegate_Shared : NSObject <UIApplicationDelegate> {
     
     UIWindow *window;
 	
 @protected
-	FeedLoader *feedLoader;
+	ItemLoader *feedLoader;
     
 @private
     NSManagedObjectContext *managedObjectContext_;

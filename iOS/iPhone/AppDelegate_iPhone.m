@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate_iPhone.h"
-#import "FeedLoader.h"
-#import "Feed.h"
+#import "ItemLoader.h"
+#import "Item.h"
 
 
 @implementation AppDelegate_iPhone
@@ -20,17 +20,17 @@ NSString *const TEST_PASSWORD = @"FA1w0wxjRTHRyj";
 
 - (void)didLogin:(BOOL)login {
 	if (login) {
-		[feedLoader getFeedsOfType:FeedTypeUnread];
+		[feedLoader getItemsOfType:ItemTypeUnread];
 	}
 }
 
 
-- (void)didGetFeeds:(NSArray *)feeds ofType:(FeedType)type {
-	[ftvc setFeeds:feeds withType:type];
+- (void)didGetItems:(NSArray *)items ofType:(ItemType)type {
+	[ftvc setItems:items withType:type];
 }
 
 
-- (void)showItem:(Feed *)anItem {
+- (void)showItem:(Item *)anItem {
 	[ivc setItem:anItem];
 	[navController pushViewController:ivc animated:YES];
 }
@@ -40,8 +40,8 @@ NSString *const TEST_PASSWORD = @"FA1w0wxjRTHRyj";
 #pragma mark FeedTableViewControllerDelegate Methods
 
 
-- (void)refreshWithFeedType:(FeedType)type {
-	[feedLoader getFeedsOfType:type];
+- (void)refreshWithItemType:(ItemType)type {
+	[feedLoader getItemsOfType:type];
 }
 
 
@@ -49,15 +49,16 @@ NSString *const TEST_PASSWORD = @"FA1w0wxjRTHRyj";
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-	feedLoader = [[FeedLoader alloc] initWithDelegate:self];
+	feedLoader = [[ItemLoader alloc] initWithDelegate:self];
 	[feedLoader authenticateWithGoogleUser:TEST_GOOGLE_USER andPassword:TEST_PASSWORD];
 		
-	ftvc = [[FeedsTableViewController_iPhone alloc] initWithNibName:@"FeedsTableViewController_iPhone" bundle:nil];
+	ftvc = [[ItemsTableViewController_iPhone alloc] initWithNibName:@"FeedsTableViewController_iPhone" bundle:nil];
 	[ftvc setDelegate:self];
-	navController = [[UINavigationController alloc] initWithRootViewController:ftvc];
 	
 	ivc = [[ItemViewController_iPhone alloc] initWithNibName:@"ItemViewController_iPhone" bundle:nil];
 	[ivc setDelegate:self];
+	
+	navController = [[UINavigationController alloc] initWithRootViewController:ftvc];
 		
 	[self.window addSubview:navController.view];
     [self.window makeKeyAndVisible];
@@ -99,7 +100,7 @@ NSString *const TEST_PASSWORD = @"FA1w0wxjRTHRyj";
 	if (![feedLoader authenticated]) {
 		[feedLoader authenticateWithGoogleUser:TEST_GOOGLE_USER andPassword:TEST_PASSWORD];
 	} else {
-		[feedLoader getFeedsOfType:[feedLoader currentFeedType]];
+		[feedLoader getItemsOfType:[feedLoader currentItemType]];
 	}
 }
 

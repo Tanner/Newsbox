@@ -8,31 +8,29 @@
 
 #import <Foundation/Foundation.h>
 #import "ASIHTTPRequestDelegate.h"
-#import "Feed.h"
+#import "Item.h"
 #import "FeedParser.h"
 
-@protocol FeedLoaderDelegate;
+@protocol ItemLoaderDelegate;
 
 
-@interface FeedLoader : NSObject <ASIHTTPRequestDelegate> {
-	id<FeedLoaderDelegate> delegate;
-	FeedType currentFeedType;
+@interface ItemLoader : NSObject <ASIHTTPRequestDelegate> {
+	id<ItemLoaderDelegate> delegate;
+	ItemType currentItemType;
 		
 	NSString *sid;
 	NSString *auth;
-	
-	FeedParser *fp;
-	
+		
 	BOOL authenticated;
 }
 
 - (id)initWithDelegate:(id)aDelegate;
 - (void)authenticateWithGoogleUser:(NSString *)username andPassword:(NSString *)password;
-- (void)getFeedsOfType:(FeedType)type;
+- (void)getItemsOfType:(ItemType)type;
 
 
-@property (nonatomic, assign) id<FeedLoaderDelegate> delegate;
-@property (nonatomic, assign) FeedType currentFeedType;
+@property (nonatomic, assign) id<ItemLoaderDelegate> delegate;
+@property (nonatomic, assign) ItemType currentItemType;
 @property (nonatomic, retain) NSString *sid;
 @property (nonatomic, retain) NSString *auth;
 @property (nonatomic, assign) BOOL authenticated;
@@ -41,7 +39,7 @@
 @end
 
 
-@protocol FeedLoaderDelegate
+@protocol ItemLoaderDelegate
 - (void)didLogin:(BOOL)login;
-- (void)didGetFeeds:(NSArray *)feeds ofType:(FeedType)type;
+- (void)didGetItems:(NSArray *)items ofType:(ItemType)type;
 @end

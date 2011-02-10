@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Feed.h"
+#import "Item.h"
 
 
 @protocol ItemViewControllerDelegate;
@@ -19,7 +19,7 @@
 }
 
 
-- (void)setItem:(Feed *)anItem;
+- (void)setItem:(Item *)anItem;
 
 
 @property (nonatomic, assign) id<ItemViewControllerDelegate> delegate;

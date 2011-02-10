@@ -18,7 +18,8 @@
 		28AD733F0D9D9553002E5188 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow_iPad.xib */; };
 		28EEBFDD1118E19E00187D67 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28EEBFDC1118E19E00187D67 /* CoreData.framework */; };
 		28EEC04B1118E28000187D67 /* AppDelegate_Shared.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EEC04A1118E28000187D67 /* AppDelegate_Shared.m */; };
-		ED2E91C61301D23600983CC3 /* FeedLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2E91C41301D23600983CC3 /* FeedLoader.m */; };
+		ED0D9A1113039B4000961E0D /* ItemsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0D9A1013039B4000961E0D /* ItemsTableViewCell.m */; };
+		ED2E91C61301D23600983CC3 /* ItemLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2E91C41301D23600983CC3 /* ItemLoader.m */; };
 		ED2E91CE1301D26F00983CC3 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2E91CC1301D26F00983CC3 /* Reachability.m */; };
 		ED2E92221301D27800983CC3 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2E91D11301D27800983CC3 /* ASIAuthenticationDialog.m */; };
 		ED2E92231301D27800983CC3 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2E91D41301D27800983CC3 /* ASIDataCompressor.m */; };
@@ -46,9 +47,9 @@
 		ED2E92501301D2AC00983CC3 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2E924F1301D2AC00983CC3 /* MobileCoreServices.framework */; };
 		ED2E92521301D2B400983CC3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2E92511301D2B400983CC3 /* CFNetwork.framework */; };
 		ED2E92B61301D4A900983CC3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2E92B51301D4A900983CC3 /* Security.framework */; };
-		ED2E94F31302555D00983CC3 /* FeedsTableViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2E94F11302555D00983CC3 /* FeedsTableViewController_iPhone.m */; };
+		ED2E94F31302555D00983CC3 /* ItemsTableViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2E94F11302555D00983CC3 /* ItemsTableViewController_iPhone.m */; };
 		ED2E94F41302555D00983CC3 /* FeedsTableViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED2E94F21302555D00983CC3 /* FeedsTableViewController_iPhone.xib */; };
-		ED2E95471302575C00983CC3 /* Feed.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2E95461302575C00983CC3 /* Feed.m */; };
+		ED2E95471302575C00983CC3 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2E95461302575C00983CC3 /* Item.m */; };
 		ED2E95C413025CA300983CC3 /* FeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2E95C313025CA300983CC3 /* FeedParser.m */; };
 		ED37D8F7130361A500584EDE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED37D8F5130361A500584EDE /* Default@2x.png */; };
 		ED37D8F8130361A500584EDE /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = ED37D8F6130361A500584EDE /* Default.png */; };
@@ -87,8 +88,10 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Shared/main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Newsbox_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Newsbox_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Newsbox-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Newsbox-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		ED2E91C41301D23600983CC3 /* FeedLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FeedLoader.m; path = Shared/FeedLoader.m; sourceTree = "<group>"; };
-		ED2E91C51301D23600983CC3 /* FeedLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FeedLoader.h; path = Shared/FeedLoader.h; sourceTree = "<group>"; };
+		ED0D9A0F13039B4000961E0D /* ItemsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsTableViewCell.h; sourceTree = "<group>"; };
+		ED0D9A1013039B4000961E0D /* ItemsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsTableViewCell.m; sourceTree = "<group>"; };
+		ED2E91C41301D23600983CC3 /* ItemLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ItemLoader.m; path = Shared/ItemLoader.m; sourceTree = "<group>"; };
+		ED2E91C51301D23600983CC3 /* ItemLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ItemLoader.h; path = Shared/ItemLoader.h; sourceTree = "<group>"; };
 		ED2E91CB1301D26F00983CC3 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		ED2E91CC1301D26F00983CC3 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		ED2E91D01301D27800983CC3 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
@@ -143,11 +146,11 @@
 		ED2E924F1301D2AC00983CC3 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		ED2E92511301D2B400983CC3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		ED2E92B51301D4A900983CC3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		ED2E94F01302555D00983CC3 /* FeedsTableViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedsTableViewController_iPhone.h; sourceTree = "<group>"; };
-		ED2E94F11302555D00983CC3 /* FeedsTableViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedsTableViewController_iPhone.m; sourceTree = "<group>"; };
+		ED2E94F01302555D00983CC3 /* ItemsTableViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsTableViewController_iPhone.h; sourceTree = "<group>"; };
+		ED2E94F11302555D00983CC3 /* ItemsTableViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsTableViewController_iPhone.m; sourceTree = "<group>"; };
 		ED2E94F21302555D00983CC3 /* FeedsTableViewController_iPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedsTableViewController_iPhone.xib; sourceTree = "<group>"; };
-		ED2E95451302575C00983CC3 /* Feed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Feed.h; path = Shared/Feed.h; sourceTree = "<group>"; };
-		ED2E95461302575C00983CC3 /* Feed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Feed.m; path = Shared/Feed.m; sourceTree = "<group>"; };
+		ED2E95451302575C00983CC3 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Item.h; path = Shared/Item.h; sourceTree = "<group>"; };
+		ED2E95461302575C00983CC3 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Item.m; path = Shared/Item.m; sourceTree = "<group>"; };
 		ED2E95C213025CA300983CC3 /* FeedParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FeedParser.h; path = Shared/FeedParser.h; sourceTree = "<group>"; };
 		ED2E95C313025CA300983CC3 /* FeedParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FeedParser.m; path = Shared/FeedParser.m; sourceTree = "<group>"; };
 		ED37D8F5130361A500584EDE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -207,8 +210,10 @@
 				2860E387111B897F00E27156 /* AppDelegate_iPhone.h */,
 				2860E388111B897F00E27156 /* AppDelegate_iPhone.m */,
 				2860E389111B897F00E27156 /* MainWindow_iPhone.xib */,
-				ED2E94F01302555D00983CC3 /* FeedsTableViewController_iPhone.h */,
-				ED2E94F11302555D00983CC3 /* FeedsTableViewController_iPhone.m */,
+				ED2E94F01302555D00983CC3 /* ItemsTableViewController_iPhone.h */,
+				ED2E94F11302555D00983CC3 /* ItemsTableViewController_iPhone.m */,
+				ED0D9A0F13039B4000961E0D /* ItemsTableViewCell.h */,
+				ED0D9A1013039B4000961E0D /* ItemsTableViewCell.m */,
 				ED2E94F21302555D00983CC3 /* FeedsTableViewController_iPhone.xib */,
 				ED639912130342810024D3ED /* ItemViewController_iPhone.h */,
 				ED639913130342810024D3ED /* ItemViewController_iPhone.m */,
@@ -223,12 +228,12 @@
 				2819307C112F81BE00ECF9B4 /* Newsbox.xcdatamodeld */,
 				28EEC0491118E28000187D67 /* AppDelegate_Shared.h */,
 				28EEC04A1118E28000187D67 /* AppDelegate_Shared.m */,
-				ED2E91C51301D23600983CC3 /* FeedLoader.h */,
-				ED2E91C41301D23600983CC3 /* FeedLoader.m */,
+				ED2E91C51301D23600983CC3 /* ItemLoader.h */,
+				ED2E91C41301D23600983CC3 /* ItemLoader.m */,
 				ED2E95C213025CA300983CC3 /* FeedParser.h */,
 				ED2E95C313025CA300983CC3 /* FeedParser.m */,
-				ED2E95451302575C00983CC3 /* Feed.h */,
-				ED2E95461302575C00983CC3 /* Feed.m */,
+				ED2E95451302575C00983CC3 /* Item.h */,
+				ED2E95461302575C00983CC3 /* Item.m */,
 				8D1107310486CEB800E47090 /* Newsbox-Info.plist */,
 			);
 			name = Shared;
@@ -507,7 +512,7 @@
 				28EEC04B1118E28000187D67 /* AppDelegate_Shared.m in Sources */,
 				2819307D112F81BE00ECF9B4 /* Newsbox.xcdatamodeld in Sources */,
 				2860E38A111B897F00E27156 /* AppDelegate_iPhone.m in Sources */,
-				ED2E91C61301D23600983CC3 /* FeedLoader.m in Sources */,
+				ED2E91C61301D23600983CC3 /* ItemLoader.m in Sources */,
 				ED2E91CE1301D26F00983CC3 /* Reachability.m in Sources */,
 				ED2E92221301D27800983CC3 /* ASIAuthenticationDialog.m in Sources */,
 				ED2E92231301D27800983CC3 /* ASIDataCompressor.m in Sources */,
@@ -530,11 +535,12 @@
 				ED2E92351301D27800983CC3 /* ASIS3ObjectRequest.m in Sources */,
 				ED2E92361301D27800983CC3 /* ASIS3Request.m in Sources */,
 				ED2E92371301D27800983CC3 /* ASIS3ServiceRequest.m in Sources */,
-				ED2E94F31302555D00983CC3 /* FeedsTableViewController_iPhone.m in Sources */,
-				ED2E95471302575C00983CC3 /* Feed.m in Sources */,
+				ED2E94F31302555D00983CC3 /* ItemsTableViewController_iPhone.m in Sources */,
+				ED2E95471302575C00983CC3 /* Item.m in Sources */,
 				ED2E95C413025CA300983CC3 /* FeedParser.m in Sources */,
 				ED71CFD013030B3600C3BE65 /* EGORefreshTableHeaderView.m in Sources */,
 				ED639915130342810024D3ED /* ItemViewController_iPhone.m in Sources */,
+				ED0D9A1113039B4000961E0D /* ItemsTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,12 +588,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ryan Ashcraft (4G66M54XX5)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
 				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6648D5A0-E9C4-49E5-9AF3-EAA565B1812E";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -597,13 +604,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ryan Ashcraft (4G66M54XX5)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6648D5A0-E9C4-49E5-9AF3-EAA565B1812E";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

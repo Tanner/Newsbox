@@ -6,23 +6,23 @@
 //  Copyright 2011 Ashcraft Media. All rights reserved.
 //
 
-#import "FeedLoader.h"
+#import "ItemLoader.h"
 #import "ASIHTTPRequest.h"
 #import "ASIFormDataRequest.h"
 
 
-@interface FeedLoader()
+@interface ItemLoader()
 - (NSString *)sidHeader;
 - (NSString *)authHeader;
 - (ASIHTTPRequest *)requestForAPIEndpoint:(NSString *)apiEndpoint;
 @end
 
 
-@implementation FeedLoader
+@implementation ItemLoader
 
 
 @synthesize delegate;
-@synthesize currentFeedType;
+@synthesize currentItemType;
 @synthesize sid, auth;
 @synthesize authenticated;
 
@@ -36,9 +36,7 @@
 }
 
 
-- (void)authenticateWithGoogleUser:(NSString *)username andPassword:(NSString *)password {
-	fp = [[FeedParser alloc] init];
-	
+- (void)authenticateWithGoogleUser:(NSString *)username andPassword:(NSString *)password {	
 	NSURL *url = [NSURL URLWithString:@"https://www.google.com/accounts/ClientLogin"];;
 	ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
     [request setPostValue:[username stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding] forKey:@"Email"];
@@ -79,11 +77,11 @@
     NSArray *respArray = [responseString componentsSeparatedByCharactersInSet: [NSCharacterSet newlineCharacterSet]];
 	
     NSString *sidString = [respArray objectAtIndex:0];
-    sidString = [sidString stringByReplacingOccurrencesOfString: @"SID=" withString: @""];
+    sidString = [sidString stringByReplacingOccurrencesOfString: @"SID=" withString:@""];
     self.sid = sidString;
 	
 	NSString *authString = [respArray objectAtIndex:2];
-	authString = [authString stringByReplacingOccurrencesOfString: @"Auth=" withString: @""];
+	authString = [authString stringByReplacingOccurrencesOfString: @"Auth=" withString:@""];
 	self.auth = authString;
 	
 	authenticated = YES;
@@ -99,10 +97,10 @@
     //[self setLastError: error];
 }
 
-- (void)getFeedsOfType:(FeedType)type {
-	currentFeedType = type;
+- (void)getItemsOfType:(ItemType)type {
+	currentItemType = type;
 	
-	if (type == FeedTypeUnread) {
+	if (type == ItemTypeUnread) {
 		ASIHTTPRequest *request = [self requestForAPIEndpoint:@"http://www.google.com/reader/atom/user/-/state/com.google/reading-list"];
 		[request setDelegate:self];
 		[request startAsynchronous];
@@ -110,8 +108,11 @@
 }
 
 - (void)requestFinished:(ASIHTTPRequest *)request {
-	NSArray *feeds = [NSArray arrayWithArray:[fp getFeedsFromXMLData:[[request responseString] dataUsingEncoding:NSUTF8StringEncoding]]];
-	[delegate didGetFeeds:feeds ofType:currentFeedType];
+	FeedParser *parser = [[FeedParser alloc] init];
+	NSArray *feeds = [NSArray arrayWithArray:[parser getFeedsFromXMLData:[[request responseString] dataUsingEncoding:NSUTF8StringEncoding]]];
+	[parser release];
+	
+	[delegate didGetItems:feeds ofType:currentItemType];
 }
 
 - (void)requestFailed:(ASIHTTPRequest *)request {
@@ -133,7 +134,7 @@
     return [NSString stringWithFormat:@"GoogleLogin auth=%@",[self auth]];
 }
 
-- (void)dealloc {
+- (void)dealloc {	
 	[super dealloc];
 }
 
