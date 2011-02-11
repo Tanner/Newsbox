@@ -66,73 +66,76 @@
 }
 
 
-- (void)setTimeStampLabelText:(NSString *)timeStampText andTitleLabelText:(NSString *)titleText andContentLabelText:(NSString *)contentText {
-	if (timeStampLabel) {
-		[timeStampLabel removeFromSuperview];
-		[timeStampLabel release];
-		timeStampLabel = nil;
-	}
-	
-	if (titleLabel) {
-		[titleLabel removeFromSuperview];
-		[titleLabel release];
-		titleLabel = nil;
-	}
-	
-	if (contentLabel) {
-		[contentLabel removeFromSuperview];
-		[contentLabel release];
-		contentLabel = nil;
-	}
-	
+- (void)setTimeStampLabelText:(NSString *)timeStampText andTitleLabelText:(NSString *)titleText andContentLabelText:(NSString *)contentText {	
 	int const MAX_HEIGHT = 95.0f;
 	
 	CGSize constSize = { self.bounds.size.width - PADDING*2 - DISCLOSURE_ACCESSORY_WIDTH - PADDING, MAX_HEIGHT };
-	CGSize timeStampTextSize = [timeStampText sizeWithFont:[UIFont systemFontOfSize:12.0f] constrainedToSize:constSize lineBreakMode:UILineBreakModeTailTruncation];	
-	timeStampLabel = [[UILabel alloc] initWithFrame:CGRectMake(PADDING, 
-															   PADDING,
-															   constSize.width,
-															   timeStampTextSize.height)];
+	CGSize timeStampTextSize = [timeStampText sizeWithFont:[UIFont systemFontOfSize:12.0f] constrainedToSize:constSize lineBreakMode:UILineBreakModeTailTruncation];
+	if (!timeStampLabel) {
+		timeStampLabel = [[UILabel alloc] initWithFrame:CGRectMake(PADDING, 
+																   PADDING,
+																   constSize.width,
+																   timeStampTextSize.height)];
+		[timeStampLabel setOpaque:YES];
+		[timeStampLabel setBackgroundColor:[UIColor whiteColor]];
+		[timeStampLabel setFont:[UIFont systemFontOfSize:12.0f]];
+		[timeStampLabel setTextColor:[UIColor darkGrayColor]];
+		[timeStampLabel setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
+		[self addSubview:timeStampLabel];
+	} else {
+		[timeStampLabel setFrame:CGRectMake(PADDING, 
+											PADDING,
+											constSize.width,
+											timeStampTextSize.height)];
+	}
 	[timeStampLabel setText:timeStampText];
-	[timeStampLabel setOpaque:YES];
-	[timeStampLabel setBackgroundColor:[UIColor whiteColor]];
-	[timeStampLabel setFont:[UIFont systemFontOfSize:12.0f]];
-	[timeStampLabel setTextColor:[UIColor darkGrayColor]];
-	[timeStampLabel setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
-	[self addSubview:timeStampLabel];
 	
 	CGSize titleLabelConstSize = { self.bounds.size.width - PADDING*2 - DISCLOSURE_ACCESSORY_WIDTH - PADDING, MAX_HEIGHT - PADDING - timeStampLabel.frame.origin.y - timeStampLabel.frame.size.height };
 	
 	// substring to 50 makes it a max of two lines
 	CGSize titleTextSize = [[titleText substringToIndex:MIN(50, [titleText length])] sizeWithFont:[UIFont systemFontOfSize:16.0f] constrainedToSize:titleLabelConstSize lineBreakMode:UILineBreakModeTailTruncation];
-	titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(timeStampLabel.frame.origin.x,
-														   timeStampLabel.frame.origin.y + timeStampLabel.frame.size.height,
-														   titleLabelConstSize.width,
-														   titleTextSize.height)];
+	if (!titleLabel) {
+		titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(timeStampLabel.frame.origin.x,
+															   timeStampLabel.frame.origin.y + timeStampLabel.frame.size.height,
+															   titleLabelConstSize.width,
+															   titleTextSize.height)];
+		[titleLabel setOpaque:YES];
+		[titleLabel setBackgroundColor:[UIColor whiteColor]];
+		[titleLabel setFont:[UIFont boldSystemFontOfSize:16.0f]];
+		[titleLabel setNumberOfLines:2];
+		[titleLabel setLineBreakMode:UILineBreakModeTailTruncation];
+		[titleLabel setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
+		[self addSubview:titleLabel];
+	} else {
+		[titleLabel setFrame:CGRectMake(timeStampLabel.frame.origin.x,
+										timeStampLabel.frame.origin.y + timeStampLabel.frame.size.height,
+										titleLabelConstSize.width,
+										titleTextSize.height)];
+	}
 	[titleLabel setText:titleText];
-	[titleLabel setOpaque:YES];
-	[titleLabel setBackgroundColor:[UIColor whiteColor]];
-	[titleLabel setFont:[UIFont boldSystemFontOfSize:16.0f]];
-	[titleLabel setNumberOfLines:2];
-	[titleLabel setLineBreakMode:UILineBreakModeTailTruncation];
-	[titleLabel setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
-	[self addSubview:titleLabel];
 	
 	CGSize contentLabelConstSize = { self.bounds.size.width - PADDING*2 - DISCLOSURE_ACCESSORY_WIDTH - PADDING, MAX_HEIGHT - PADDING - (titleLabel.frame.origin.y + titleLabel.frame.size.height) };
 	CGSize contentTextSize = [contentText sizeWithFont:[UIFont systemFontOfSize:13.0f] constrainedToSize:contentLabelConstSize lineBreakMode:UILineBreakModeTailTruncation];
-	contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(titleLabel.frame.origin.x,
-														   timeStampLabel.frame.origin.y + timeStampLabel.frame.size.height + titleLabel.frame.size.height + PADDING/2,
-														   contentLabelConstSize.width,
-														   contentTextSize.height)];
+	if (!contentLabel) {
+		contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(titleLabel.frame.origin.x,
+															   timeStampLabel.frame.origin.y + timeStampLabel.frame.size.height + titleLabel.frame.size.height + PADDING/2,
+															   contentLabelConstSize.width,
+															   contentTextSize.height)];
+		[contentLabel setOpaque:YES];
+		[contentLabel setBackgroundColor:[UIColor whiteColor]];
+		[contentLabel setFont:[UIFont systemFontOfSize:13.0f]];
+		[contentLabel setNumberOfLines:2];
+		[contentLabel setLineBreakMode:UILineBreakModeTailTruncation];
+		[contentLabel setTextColor:[UIColor darkGrayColor]];
+		[contentLabel setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
+		[self addSubview:contentLabel];
+	} else {
+		[contentLabel setFrame:CGRectMake(titleLabel.frame.origin.x,
+										  timeStampLabel.frame.origin.y + timeStampLabel.frame.size.height + titleLabel.frame.size.height + PADDING/2,
+										  contentLabelConstSize.width,
+										  contentTextSize.height)];
+	}
 	[contentLabel setText:contentText];
-	[contentLabel setOpaque:YES];
-	[contentLabel setBackgroundColor:[UIColor whiteColor]];
-	[contentLabel setFont:[UIFont systemFontOfSize:13.0f]];
-	[contentLabel setNumberOfLines:2];
-	[contentLabel setLineBreakMode:UILineBreakModeTailTruncation];
-	[contentLabel setTextColor:[UIColor darkGrayColor]];
-	[contentLabel setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
-	[self addSubview:contentLabel];
 }
 
 

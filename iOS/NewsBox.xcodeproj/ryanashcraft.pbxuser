@@ -16,9 +16,9 @@
 	};
 	2860E388111B897F00E27156 /* AppDelegate_iPhone.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1965, 1755}}";
-			sepNavSelRange = "{290, 22}";
-			sepNavVisRange = "{0, 1608}";
+			sepNavIntBoundsRect = "{{0, 0}, {1965, 1651}}";
+			sepNavSelRange = "{2582, 0}";
+			sepNavVisRange = "{699, 2656}";
 			sepNavWindowFrame = "{{840, 4}, {840, 1024}}";
 		};
 	};
@@ -53,8 +53,8 @@
 			ED2E91B81301D22B00983CC3 /* Newsbox */,
 		);
 		perUserDictionary = {
-			PBXPerProjectTemplateStateSaveDate = 319074600;
-			PBXWorkspaceStateSaveDate = 319074600;
+			PBXPerProjectTemplateStateSaveDate = 319074883;
+			PBXWorkspaceStateSaveDate = 319074883;
 		};
 		sourceControlManager = ED2E91C21301D23300983CC3 /* Source Control */;
 		userBuildSettings = {
@@ -67,7 +67,7 @@
 	};
 	ED0D9A0F13039B4000961E0D /* ItemsTableViewCell.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1859, 487}}";
+			sepNavIntBoundsRect = "{{0, 0}, {894, 873}}";
 			sepNavSelRange = "{422, 0}";
 			sepNavVisRange = "{0, 428}";
 			sepNavWindowFrame = "{{15, 4}, {750, 1024}}";
@@ -75,10 +75,10 @@
 	};
 	ED0D9A1013039B4000961E0D /* ItemsTableViewCell.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1503, 1885}}";
-			sepNavSelRange = "{5086, 0}";
-			sepNavVisRange = "{1948, 3278}";
-			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1621, 1924}}";
+			sepNavSelRange = "{5585, 0}";
+			sepNavVisRange = "{2356, 3282}";
+			sepNavWindowFrame = "{{0, 4}, {1680, 1024}}";
 		};
 	};
 	ED2E91B81301D22B00983CC3 /* Newsbox */ = {
@@ -197,18 +197,18 @@
 	};
 	ED2E94F01302555D00983CC3 /* ItemsTableViewController_iPhone.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {901, 1072}}";
+			sepNavIntBoundsRect = "{{0, 0}, {781, 871}}";
 			sepNavSelRange = "{552, 0}";
 			sepNavVisRange = "{0, 960}";
-			sepNavWindowFrame = "{{1680, -334}, {960, 1200}}";
+			sepNavWindowFrame = "{{720, 4}, {960, 1024}}";
 		};
 	};
 	ED2E94F11302555D00983CC3 /* ItemsTableViewController_iPhone.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1419, 4030}}";
-			sepNavSelRange = "{3726, 0}";
-			sepNavVisRange = "{2637, 2137}";
-			sepNavWindowFrame = "{{840, 4}, {840, 1024}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1419, 4004}}";
+			sepNavSelRange = "{1221, 0}";
+			sepNavVisRange = "{1041, 1984}";
+			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
 		};
 	};
 	ED2E95451302575C00983CC3 /* Item.h */ = {
@@ -221,9 +221,9 @@
 	};
 	ED2E95461302575C00983CC3 /* Item.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {964, 1209}}";
-			sepNavSelRange = "{271, 434}";
-			sepNavVisRange = "{239, 2280}";
+			sepNavIntBoundsRect = "{{0, 0}, {964, 1144}}";
+			sepNavSelRange = "{1202, 0}";
+			sepNavVisRange = "{239, 2277}";
 			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
 		};
 	};
@@ -237,9 +237,9 @@
 	};
 	ED2E95C313025CA300983CC3 /* FeedParser.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1412, 2041}}";
-			sepNavSelRange = "{2921, 16}";
-			sepNavVisRange = "{2300, 2165}";
+			sepNavIntBoundsRect = "{{0, 0}, {1379, 2158}}";
+			sepNavSelRange = "{435, 0}";
+			sepNavVisRange = "{176, 702}";
 			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
 		};
 	};

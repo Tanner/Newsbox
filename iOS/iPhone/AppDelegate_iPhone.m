@@ -50,7 +50,6 @@ NSString *const TEST_PASSWORD = @"FA1w0wxjRTHRyj";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	feedLoader = [[ItemLoader alloc] initWithDelegate:self];
-	[feedLoader authenticateWithGoogleUser:TEST_GOOGLE_USER andPassword:TEST_PASSWORD];
 		
 	ftvc = [[ItemsTableViewController_iPhone alloc] initWithNibName:@"ItemsTableViewController_iPhone" bundle:nil];
 	[ftvc setDelegate:self];
@@ -97,6 +96,7 @@ NSString *const TEST_PASSWORD = @"FA1w0wxjRTHRyj";
     /*
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
+	
 	if (![feedLoader authenticated]) {
 		[feedLoader authenticateWithGoogleUser:TEST_GOOGLE_USER andPassword:TEST_PASSWORD];
 	} else {
