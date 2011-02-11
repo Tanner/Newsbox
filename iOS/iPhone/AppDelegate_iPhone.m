@@ -50,6 +50,13 @@ NSString *const TEST_PASSWORD = @"FA1w0wxjRTHRyj";
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+    NSString *name = [infoDictionary objectForKey:@"CFBundleDisplayName"];
+    NSString *version = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
+    NSString *build = [infoDictionary objectForKey:@"CFBundleVersion"];
+    NSString *label = [NSString stringWithFormat:@"%@ v%@ (build %@)",name,version,build];
+	NSLog(@"%@", label);
+	
 	feedLoader = [[ItemLoader alloc] initWithDelegate:self];
 		
 	itvc = [[ItemsTableViewController_iPhone alloc] initWithNibName:@"ItemsTableViewController_iPhone" bundle:nil];
