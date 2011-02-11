@@ -9,23 +9,32 @@
 #import "Item.h"
 
 
+@interface Item (private)
+- (NSString *)contentSample;
+@end
+
+
 @implementation Item
 
 
-@synthesize title, date, content, contentLink, source, sourceLink;
+@synthesize title, date, content, contentLink, source, sourceLink, contentSample, dateString;
 
 
-- (NSString *)contentSample {
-	NSScanner *scanner = [NSScanner scannerWithString:content];
-	NSString *contentSample = content;
+- (void)setContent:(NSString *)aContent {
+	content = [[NSString alloc] initWithString:aContent];
+	contentSample = [[NSString alloc] initWithString:content];
+		
+	NSScanner *scanner = [NSScanner scannerWithString:contentSample];
     NSString *tagText = nil;
 	
 	// no html tags
     while ([scanner isAtEnd] == NO) {
         [scanner scanUpToString:@"<" intoString:nil];
 		[scanner scanUpToString:@">" intoString:&tagText];
-		
-        contentSample = [contentSample stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%@>", tagText] withString:@""];
+				
+		if (![tagText isEqualToString:@""] && tagText != nil) { 
+			contentSample = [contentSample stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%@>", tagText] withString:@""];
+		}
     }
 	
 	// blank lines
@@ -35,21 +44,21 @@
 	contentSample = [Item xmlSimpleUnescape:contentSample];
 	
 	// trim
-	contentSample = [contentSample stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+	contentSample = [contentSample stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];		
 	
 	// sample only needs max 150 chars
-    return [contentSample substringToIndex:MIN(150, [contentSample length])];
+    contentSample = [[NSString alloc] initWithString:[contentSample substringToIndex:MIN(150, [contentSample length])]];
 }
 
 
-- (NSString *)titleString {
+- (void)setTitle:(NSString *)aTitle {
 	// no xml chars
-	NSString *titleString = [Item xmlSimpleUnescape:title];
+	NSString *titleString = [Item xmlSimpleUnescape:aTitle];
 	
 	// trim
 	titleString = [titleString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
 	
-	return titleString;
+	title = [[NSString alloc] initWithString:titleString];
 }
 
 
@@ -67,19 +76,24 @@
 }
 
 
-- (NSString *)dateString {
+- (void)setDate:(NSDate *)aDate {
+	date = aDate;
+	
 	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
 	[dateFormatter setDateFormat:@"EEEE, MMMM dd, yyyy hh:mm aaa"];
-	NSString *dateString = [dateFormatter stringFromDate:date];
+	NSString *aDateString = [dateFormatter stringFromDate:date];
 	[dateFormatter release];
-	return dateString;
+
+	self.dateString = aDateString;
 }
 
 
 - (void)dealloc {
 	[title release];
 	[date release];
+	[dateString release];
 	[content release];
+	[contentSample release];
 	[contentLink release];
 	[source release];
 	[sourceLink release];

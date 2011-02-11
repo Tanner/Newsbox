@@ -17,15 +17,14 @@ typedef enum {
 @interface Item : NSObject {
 	NSString *title;
 	NSDate *date;
+	NSString *dateString;
 	NSString *content;
 	NSString *contentLink;
 	NSString *source;
 	NSString *sourceLink;
+	NSString *contentSample;
 }
 
-- (NSString *)contentSample;
-- (NSString *)dateString;
-- (NSString *)titleString;
 + (NSString *)xmlSimpleUnescape:(NSString *)string;
 
 @property (nonatomic, retain) NSString *title;
@@ -34,5 +33,7 @@ typedef enum {
 @property (nonatomic, retain) NSString *contentLink;
 @property (nonatomic, retain) NSString *source;
 @property (nonatomic, retain) NSString *sourceLink;
+@property (nonatomic, retain) NSString *contentSample;
+@property (nonatomic, retain) NSString *dateString;
 
 @end

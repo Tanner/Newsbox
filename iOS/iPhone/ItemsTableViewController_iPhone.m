@@ -170,7 +170,7 @@
     
 //	NSLog(@"%d", indexPath.row);
     [(ItemsTableViewCell *)cell setTimeStampLabelText:[(Item *)[items objectAtIndex:indexPath.row] dateString]
-									andTitleLabelText:[(Item *)[items objectAtIndex:indexPath.row] titleString]
+									andTitleLabelText:[(Item *)[items objectAtIndex:indexPath.row] title]
 								  andContentLabelText:[(Item *)[items objectAtIndex:indexPath.row] contentSample]
 	 ];
     
