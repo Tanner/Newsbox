@@ -62,14 +62,13 @@
 	[html appendString:@"</head>"];
 	
 	[html appendString:@"<body>"];
+	[html appendString:@"<div id=\"wrapper\">"];
 
 	[html appendFormat:@"<div id=\"head\""];
 	[html appendFormat:@"<h1><a href=\"%@\">%@</a></h1>", [anItem contentLink], [anItem title]];
 	[html appendFormat:@"<p class=\"chronodata\">%@</p>", [anItem dateString]];
 	[html appendFormat:@"</div>"];
-	
-	[html appendString:@"<div>"];
-	
+		
 	NSScanner *scanner = [NSScanner scannerWithString:[anItem content]];
 	NSString *content = [anItem content];
 	NSString *tagText = nil;
@@ -97,9 +96,8 @@
 	}
 	
 	[html appendString:content];
-	[html appendString:@"</div>"];
 	
-	[html appendString:@"</body></html>"];
+	[html appendString:@"</div></body></html>"];
 	
 	NSString *stylizedHTML = [NSString stringWithString:html];
 	[html release];
@@ -120,6 +118,7 @@
 		[wv setDelegate:self];
 		[wv setBackgroundColor:[UIColor whiteColor]];
 		[wv setScalesPageToFit:NO];
+		[wv setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
 		
 		for (UIView *aView in [[[wv subviews] objectAtIndex:0] subviews]) { 
 			if ([aView isKindOfClass:[UIImageView class]]) {

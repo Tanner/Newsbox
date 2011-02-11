@@ -41,7 +41,7 @@
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = ED2E91B81301D22B00983CC3 /* Newsbox */;
-		activeSDKPreference = iphoneos4.2;
+		activeSDKPreference = iphonesimulator4.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* Newsbox */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* Newsbox */,
@@ -53,8 +53,23 @@
 			ED2E91B81301D22B00983CC3 /* Newsbox */,
 		);
 		perUserDictionary = {
-			PBXPerProjectTemplateStateSaveDate = 319074883;
-			PBXWorkspaceStateSaveDate = 319074883;
+			PBXPerProjectTemplateStateSaveDate = 319078700;
+			PBXWorkspaceStateSaveDate = 319078700;
+		};
+		perUserProjectItems = {
+			ED9D24D11304C16A00D24793 /* PBXBookmark */ = ED9D24D11304C16A00D24793 /* PBXBookmark */;
+			ED9D24D21304C16A00D24793 /* PBXTextBookmark */ = ED9D24D21304C16A00D24793 /* PBXTextBookmark */;
+			ED9D24D31304C1A900D24793 /* PBXBookmark */ = ED9D24D31304C1A900D24793 /* PBXBookmark */;
+			ED9D24DA1304C23500D24793 /* PBXTextBookmark */ = ED9D24DA1304C23500D24793 /* PBXTextBookmark */;
+			ED9D24DD1304C23500D24793 /* PBXTextBookmark */ = ED9D24DD1304C23500D24793 /* PBXTextBookmark */;
+			ED9D24EA1304C27B00D24793 /* PBXTextBookmark */ = ED9D24EA1304C27B00D24793 /* PBXTextBookmark */;
+			ED9D24EB1304C27B00D24793 /* PBXTextBookmark */ = ED9D24EB1304C27B00D24793 /* PBXTextBookmark */;
+			ED9D24ED1304C29200D24793 /* PBXTextBookmark */ = ED9D24ED1304C29200D24793 /* PBXTextBookmark */;
+			ED9D24EE1304C29200D24793 /* PBXTextBookmark */ = ED9D24EE1304C29200D24793 /* PBXTextBookmark */;
+			ED9D24F11304C3A900D24793 /* PBXTextBookmark */ = ED9D24F11304C3A900D24793 /* PBXTextBookmark */;
+			ED9D24F21304C3A900D24793 /* PBXTextBookmark */ = ED9D24F21304C3A900D24793 /* PBXTextBookmark */;
+			ED9D24F61304C3D800D24793 /* PBXTextBookmark */ = ED9D24F61304C3D800D24793 /* PBXTextBookmark */;
+			ED9D24F71304C3D800D24793 /* PBXTextBookmark */ = ED9D24F71304C3D800D24793 /* PBXTextBookmark */;
 		};
 		sourceControlManager = ED2E91C21301D23300983CC3 /* Source Control */;
 		userBuildSettings = {
@@ -75,10 +90,10 @@
 	};
 	ED0D9A1013039B4000961E0D /* ItemsTableViewCell.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1621, 1924}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1503, 1924}}";
 			sepNavSelRange = "{5585, 0}";
-			sepNavVisRange = "{2356, 3282}";
-			sepNavWindowFrame = "{{0, 4}, {1680, 1024}}";
+			sepNavVisRange = "{2116, 3492}";
+			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
 		};
 	};
 	ED2E91B81301D22B00983CC3 /* Newsbox */ = {
@@ -245,9 +260,9 @@
 	};
 	ED37D92D1303644E00584EDE /* itemstyle.css */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {781, 1326}}";
-			sepNavSelRange = "{478, 0}";
-			sepNavVisRange = "{0, 676}";
+			sepNavIntBoundsRect = "{{0, 0}, {781, 1274}}";
+			sepNavSelRange = "{475, 0}";
+			sepNavVisRange = "{261, 744}";
 			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
 		};
 	};
@@ -261,10 +276,10 @@
 	};
 	ED639913130342810024D3ED /* ItemViewController_iPhone.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1454, 2340}}";
-			sepNavSelRange = "{4314, 79}";
-			sepNavVisRange = "{3143, 1645}";
-			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1454, 2171}}";
+			sepNavSelRange = "{2976, 0}";
+			sepNavVisRange = "{1213, 2326}";
+			sepNavWindowFrame = "{{840, 4}, {840, 1024}}";
 		};
 	};
 	ED6A677013046C81006F7838 /* itemscript.js */ = {
@@ -309,5 +324,123 @@
 		uiCtxt = {
 			sepNavWindowFrame = "{{15, 4}, {750, 1024}}";
 		};
+	};
+	ED9D24D11304C16A00D24793 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = ED639913130342810024D3ED /* ItemViewController_iPhone.m */;
+	};
+	ED9D24D21304C16A00D24793 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ED639913130342810024D3ED /* ItemViewController_iPhone.m */;
+		name = "ItemViewController_iPhone.m: 124";
+		rLen = 0;
+		rLoc = 3662;
+		rType = 0;
+		vrLen = 1721;
+		vrLoc = 3139;
+	};
+	ED9D24D31304C1A900D24793 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = ED37D92D1303644E00584EDE /* itemstyle.css */;
+	};
+	ED9D24DA1304C23500D24793 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ED639913130342810024D3ED /* ItemViewController_iPhone.m */;
+		name = "ItemViewController_iPhone.m: 123";
+		rLen = 0;
+		rLoc = 3659;
+		rType = 0;
+		vrLen = 2023;
+		vrLoc = 1946;
+	};
+	ED9D24DD1304C23500D24793 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ED37D92D1303644E00584EDE /* itemstyle.css */;
+		name = "itemstyle.css: 14";
+		rLen = 0;
+		rLoc = 140;
+		rType = 0;
+		vrLen = 658;
+		vrLoc = 0;
+	};
+	ED9D24EA1304C27B00D24793 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ED639913130342810024D3ED /* ItemViewController_iPhone.m */;
+		name = "ItemViewController_iPhone.m: 119";
+		rLen = 0;
+		rLoc = 3447;
+		rType = 0;
+		vrLen = 2025;
+		vrLoc = 1974;
+	};
+	ED9D24EB1304C27B00D24793 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ED37D92D1303644E00584EDE /* itemstyle.css */;
+		name = "itemstyle.css: 14";
+		rLen = 0;
+		rLoc = 140;
+		rType = 0;
+		vrLen = 658;
+		vrLoc = 0;
+	};
+	ED9D24ED1304C29200D24793 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ED639913130342810024D3ED /* ItemViewController_iPhone.m */;
+		name = "ItemViewController_iPhone.m: 119";
+		rLen = 0;
+		rLoc = 3447;
+		rType = 0;
+		vrLen = 2039;
+		vrLoc = 1974;
+	};
+	ED9D24EE1304C29200D24793 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ED37D92D1303644E00584EDE /* itemstyle.css */;
+		name = "itemstyle.css: 14";
+		rLen = 0;
+		rLoc = 140;
+		rType = 0;
+		vrLen = 661;
+		vrLoc = 0;
+	};
+	ED9D24F11304C3A900D24793 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ED37D92D1303644E00584EDE /* itemstyle.css */;
+		name = "itemstyle.css: 19";
+		rLen = 0;
+		rLoc = 190;
+		rType = 0;
+		vrLen = 600;
+		vrLoc = 0;
+	};
+	ED9D24F21304C3A900D24793 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ED639913130342810024D3ED /* ItemViewController_iPhone.m */;
+		name = "ItemViewController_iPhone.m: 99";
+		rLen = 0;
+		rLoc = 2976;
+		rType = 0;
+		vrLen = 2207;
+		vrLoc = 1184;
+	};
+	ED9D24F61304C3D800D24793 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ED37D92D1303644E00584EDE /* itemstyle.css */;
+		name = "itemstyle.css: 78";
+		rLen = 0;
+		rLoc = 770;
+		rType = 0;
+		vrLen = 743;
+		vrLoc = 261;
+	};
+	ED9D24F71304C3D800D24793 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ED639913130342810024D3ED /* ItemViewController_iPhone.m */;
+		name = "ItemViewController_iPhone.m: 99";
+		rLen = 0;
+		rLoc = 2976;
+		rType = 0;
+		vrLen = 2253;
+		vrLoc = 1213;
 	};
 }

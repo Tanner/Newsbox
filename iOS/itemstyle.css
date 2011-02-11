@@ -4,16 +4,19 @@
 	}
 
 html {
-	width: 290px;
+	width: 100%;
 	overflow: hidden;
 }
 
 body {
-	padding: 10px;
 	font-family: 'Helvetica';
 	font-size: 95%;
-	width: 290px;
+	width: 100%;
 	overflow: hidden;
+	}
+
+#wrapper {
+	padding: 10px;
 	}
 
 p {
@@ -72,7 +75,7 @@ blockquote {
 .bigImage {
 	margin: 0 0 10px 0;
 	clear: both !important;
-	margin-right: 300px;
+	margin-right: 2000px;
 	overflow: hidden;
 	max-width: 300px;
 }
