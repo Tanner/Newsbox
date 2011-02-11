@@ -122,6 +122,23 @@
 	[self.navigationItem setTitle:@"Newsbox"];
 	[self.navigationController setToolbarHidden:NO];
 	
+	float width;
+	if (UIInterfaceOrientationIsPortrait([[UIDevice currentDevice] orientation])) {
+		width = 320.0f;
+	} else {
+		width = 480.0f;
+	}
+	
+	// don't reload everything, just visible
+	for (UITableViewCell *cell in [self.tableView visibleCells]) {
+		int index = [self.tableView indexPathForCell:cell].row;
+		[(ItemsTableViewCell *)cell setTimeStampLabelText:[[items objectAtIndex:index] dateString]
+										andTitleLabelText:[[items objectAtIndex:index] title]
+									  andContentLabelText:[[items objectAtIndex:index] contentSample]
+											  andCellSize:CGSizeMake(width, CELL_HEIGHT)
+		 ];
+	}
+	
     [super viewWillAppear:animated];
 }
 
@@ -163,7 +180,7 @@
 		[(ItemsTableViewCell *)cell setTimeStampLabelText:[[items objectAtIndex:index] dateString]
 										andTitleLabelText:[[items objectAtIndex:index] title]
 									  andContentLabelText:[[items objectAtIndex:index] contentSample]
-											  andCellSize:CGSizeMake(self.view.bounds.size.width, CELL_HEIGHT)
+											  andCellSize:CGSizeMake(width, CELL_HEIGHT)
 		 ];
 	}
 }
