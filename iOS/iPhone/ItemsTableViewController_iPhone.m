@@ -11,6 +11,9 @@
 #import "ItemsTableViewCell.h"
 
 
+#define CELL_HEIGHT 95.0f
+
+
 @interface ItemsTableViewController_iPhone (private)
 	- (CGFloat)suggestedHeightForItem:(Item *)anItem;
 @end
@@ -146,6 +149,26 @@
 }
 
 
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+	float width;
+	if (UIInterfaceOrientationIsPortrait(toInterfaceOrientation)) {
+		width = 320.0f;
+	} else {
+		width = 480.0f;
+	}
+	
+	// don't reload everything, just visible
+	for (UITableViewCell *cell in [self.tableView visibleCells]) {
+		int index = [self.tableView indexPathForCell:cell].row;
+		[(ItemsTableViewCell *)cell setTimeStampLabelText:[[items objectAtIndex:index] dateString]
+										andTitleLabelText:[[items objectAtIndex:index] title]
+									  andContentLabelText:[[items objectAtIndex:index] contentSample]
+											  andCellSize:CGSizeMake(self.view.bounds.size.width, CELL_HEIGHT)
+		 ];
+	}
+}
+
+
 #pragma mark -
 #pragma mark Table view data source
 
@@ -172,6 +195,7 @@
     [(ItemsTableViewCell *)cell setTimeStampLabelText:[(Item *)[items objectAtIndex:indexPath.row] dateString]
 									andTitleLabelText:[(Item *)[items objectAtIndex:indexPath.row] title]
 								  andContentLabelText:[(Item *)[items objectAtIndex:indexPath.row] contentSample]
+										  andCellSize:CGSizeMake(self.view.bounds.size.width, CELL_HEIGHT)
 	 ];
     
     return cell;
@@ -237,7 +261,7 @@
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 95.0f;
+    return CELL_HEIGHT;
 }
 
 /*

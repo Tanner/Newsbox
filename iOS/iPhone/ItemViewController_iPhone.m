@@ -42,6 +42,8 @@
 	[html appendString:@"<html>"];
 	[html appendString:@"<head>"];
 	
+	[html appendString:@"<meta name='viewport' content='width=device-width; initial-scale=1.0; maximum-scale=1.0;'>"];
+	
 	[html appendString:@"<style type=\"text/css\">"];
 	NSError *err = nil;
 	NSString *css = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"itemstyle" ofType:@"css"] encoding:NSASCIIStringEncoding error:&err];
@@ -68,6 +70,7 @@
 	[html appendFormat:@"<h1><a href=\"%@\">%@</a></h1>", [anItem contentLink], [anItem title]];
 	[html appendFormat:@"<p class=\"chronodata\">%@</p>", [anItem dateString]];
 	[html appendFormat:@"</div>"];
+	[html appendFormat:@"<div id=\"content\">"];
 		
 	NSScanner *scanner = [NSScanner scannerWithString:[anItem content]];
 	NSString *content = [anItem content];
@@ -97,7 +100,7 @@
 	
 	[html appendString:content];
 	
-	[html appendString:@"</div></body></html>"];
+	[html appendString:@"</div></div></body></html>"];
 	
 	NSString *stylizedHTML = [NSString stringWithString:html];
 	[html release];
@@ -155,6 +158,7 @@
     // Return YES for supported orientations.
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
+
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.

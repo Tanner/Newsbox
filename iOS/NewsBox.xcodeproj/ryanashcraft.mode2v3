@@ -197,48 +197,7 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>ED9D25601304C95000D24793</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>FeedParser.m</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>ED9D25611304C95000D24793</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>FeedParser.m</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>ED9D261F1304CDA000D24793</string>
-						<key>history</key>
-						<array>
-							<string>ED9D25621304C95000D24793</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {840, 927}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>0 60 840 968 0 0 1680 1028 </string>
-			</dict>
-		</dict>
-	</array>
+	<array/>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -307,15 +266,10 @@
 									<key>PBXSmartGroupTreeModuleOutlineStateExpansionKey</key>
 									<array>
 										<string>29B97314FDCFA39411CA2CEA</string>
-										<string>2860E386111B897F00E27156</string>
-										<string>ED71D1061303266800C3BE65</string>
-										<string>28EEBF621118D79A00187D67</string>
-										<string>19C28FACFE9D520D11CA2CBB</string>
 									</array>
 									<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 									<array>
 										<array>
-											<integer>13</integer>
 											<integer>1</integer>
 											<integer>0</integer>
 										</array>
@@ -483,8 +437,8 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>ED9D24CA1304C13100D24793</string>
-				<string>ED9D24CB1304C13100D24793</string>
+				<string>ED2FBB351304F4E7007841EA</string>
+				<string>ED2FBB361304F4E7007841EA</string>
 				<string>1C9437FD063B20B00039CFAC</string>
 				<string>1C9437FE063B20B00039CFAC</string>
 				<string>1C9437FF063B20B00039CFAC</string>
@@ -521,13 +475,13 @@
 	<integer>0</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>ED9D25141304C67700D24793</string>
-		<string>ED9D24E61304C23500D24793</string>
-		<string>ED9D24E71304C23500D24793</string>
+		<string>ED2FBBB81304FE5C007841EA</string>
+		<string>ED2FBBB91304FE5C007841EA</string>
+		<string>ED2FBB3B1304F4E7007841EA</string>
+		<string>ED2FBB3C1304F4E7007841EA</string>
 		<string>1C530D5B069F1CE1000CFCEE</string>
 		<string>1C530D54069F1CE1000CFCEE</string>
 		<string>1C530D52069F1CE1000CFCEE</string>
-		<string>ED9D25601304C95000D24793</string>
 		<string>/Users/ryanashcraft/Apps/Projects/NewsBox/iOS/Newsbox.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -689,7 +643,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>&lt;No Editor&gt;</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -745,7 +699,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D52069F1CE1000CFCEE</string>
-				<string>ED9D24CC1304C13100D24793</string>
+				<string>ED2FBB241304CEC1007841EA</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -867,13 +821,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D54069F1CE1000CFCEE</string>
-				<string>ED9D24DE1304C23500D24793</string>
+				<string>ED2FBB251304CEC1007841EA</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>ED9D24DF1304C23500D24793</string>
-				<string>ED9D24E01304C23500D24793</string>
-				<string>ED9D24E11304C23500D24793</string>
-				<string>ED9D24E21304C23500D24793</string>
-				<string>ED9D24E31304C23500D24793</string>
+				<string>ED2FBB261304CEC1007841EA</string>
+				<string>ED2FBB271304CEC1007841EA</string>
+				<string>ED2FBB281304CEC1007841EA</string>
+				<string>ED2FBB291304CEC1007841EA</string>
+				<string>ED2FBB2A1304CEC1007841EA</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -1029,7 +983,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D5B069F1CE1000CFCEE</string>
-				<string>ED9D24E41304C23500D24793</string>
+				<string>ED2FBB2B1304CEC1007841EA</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>

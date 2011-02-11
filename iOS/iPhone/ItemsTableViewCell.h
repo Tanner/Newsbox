@@ -16,6 +16,6 @@
 }
 
 
-- (void)setTimeStampLabelText:(NSString *)text andTitleLabelText:(NSString *)text andContentLabelText:(NSString *)contentText;
+- (void)setTimeStampLabelText:(NSString *)text andTitleLabelText:(NSString *)text andContentLabelText:(NSString *)contentText andCellSize:(CGSize)size;
 
 @end

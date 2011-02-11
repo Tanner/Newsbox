@@ -16,7 +16,7 @@ body {
 	}
 
 #wrapper {
-	padding: 10px;
+	padding: 0;
 	}
 
 p {
@@ -32,8 +32,7 @@ ul li {
 	}
 
 #head h1 {
-	font-size: 1.5em;
-	margin: 0 !important;
+	font-size: 1.3em;
 }
 
 h1 a {
@@ -46,15 +45,15 @@ h1, h2, h3, h4, h5 {
 }
 
 h2 {
-	font-size: 1.3em;
-}
-
-h3 {
 	font-size: 1.2em;
 }
 
-h4 {
+h3 {
 	font-size: 1.1em;
+}
+
+h4 {
+	font-size: 1.0em;
 }
 
 hr {
@@ -87,12 +86,17 @@ img {
 }
 
 #head {
-	margin: 0 0 10px 0;
+	padding: 10px;
 	border-bottom: 1px solid #E0E0E0;
+}
+
+
+#content {
+	padding: 10px;
 }
 
 p.chronodata {
 	font-size: 90%;
 	color: #666;
-	margin: 3px 0;
+	margin: 0;
 }
