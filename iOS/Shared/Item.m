@@ -90,7 +90,6 @@
 
 - (void)dealloc {
 	[title release];
-	[date release];
 	[dateString release];
 	[content release];
 	[contentSample release];

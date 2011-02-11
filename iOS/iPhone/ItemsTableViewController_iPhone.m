@@ -46,7 +46,7 @@
 	}
 	
 	[self.tableView reloadData];
-	[self performSelector:@selector(didLoadTableViewData) withObject:nil afterDelay:3.0];
+	[self didLoadTableViewData];
 }
 
 
