@@ -16,6 +16,7 @@
 
 @interface ItemsTableViewController_iPhone (private)
 	- (CGFloat)suggestedHeightForItem:(Item *)anItem;
+- (void)reformatCellLabelsWithOrientation:(UIInterfaceOrientation)orientation;
 @end
 
 
@@ -67,7 +68,26 @@
 	_reloading = NO;
 	
 	[_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:self.tableView];
+}
+
+
+- (void)reformatCellLabelsWithOrientation:(UIInterfaceOrientation)orientation {
+	float width;
+	if (UIInterfaceOrientationIsPortrait(orientation)) {
+		width = 320.0f;
+	} else {
+		width = 480.0f;
+	}
 	
+	// don't reload everything, just visible
+	for (UITableViewCell *cell in [self.tableView visibleCells]) {
+		int index = [self.tableView indexPathForCell:cell].row;
+		[(ItemsTableViewCell *)cell setTimeStampLabelText:[[items objectAtIndex:index] dateString]
+										andTitleLabelText:[[items objectAtIndex:index] title]
+									  andContentLabelText:[[items objectAtIndex:index] contentSample]
+											  andCellSize:CGSizeMake(width, CELL_HEIGHT)
+		 ];
+	}
 }
 
 
@@ -86,11 +106,14 @@
 	return [NSDate date]; // should return date data source was last changed	
 }
 
+
 #pragma mark -
 #pragma mark View lifecycle
 
 
-- (void)viewDidLoad {	
+- (void)viewDidLoad {
+	[self reformatCellLabelsWithOrientation:[[UIDevice currentDevice] orientation]];
+
 	if (_refreshHeaderView == nil) {
 		_refreshHeaderView = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - self.tableView.bounds.size.height, self.view.frame.size.width, self.tableView.bounds.size.height)];
 		_refreshHeaderView.delegate = self;
@@ -122,32 +145,16 @@
 	[self.navigationItem setTitle:@"Newsbox"];
 	[self.navigationController setToolbarHidden:NO];
 	
-	float width;
-	if (UIInterfaceOrientationIsPortrait([[UIDevice currentDevice] orientation])) {
-		width = 320.0f;
-	} else {
-		width = 480.0f;
-	}
-	
-	// don't reload everything, just visible
-	for (UITableViewCell *cell in [self.tableView visibleCells]) {
-		int index = [self.tableView indexPathForCell:cell].row;
-		[(ItemsTableViewCell *)cell setTimeStampLabelText:[[items objectAtIndex:index] dateString]
-										andTitleLabelText:[[items objectAtIndex:index] title]
-									  andContentLabelText:[[items objectAtIndex:index] contentSample]
-											  andCellSize:CGSizeMake(width, CELL_HEIGHT)
-		 ];
-	}
+	[self reformatCellLabelsWithOrientation:[[UIDevice currentDevice] orientation]];
 	
     [super viewWillAppear:animated];
 }
 
-
-
+/*
 - (void)viewDidAppear:(BOOL)animated {
-    
+    [super viewDidAppear:animated];
 }
-
+/*
 /*
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
@@ -167,22 +174,7 @@
 
 
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-	float width;
-	if (UIInterfaceOrientationIsPortrait(toInterfaceOrientation)) {
-		width = 320.0f;
-	} else {
-		width = 480.0f;
-	}
-	
-	// don't reload everything, just visible
-	for (UITableViewCell *cell in [self.tableView visibleCells]) {
-		int index = [self.tableView indexPathForCell:cell].row;
-		[(ItemsTableViewCell *)cell setTimeStampLabelText:[[items objectAtIndex:index] dateString]
-										andTitleLabelText:[[items objectAtIndex:index] title]
-									  andContentLabelText:[[items objectAtIndex:index] contentSample]
-											  andCellSize:CGSizeMake(width, CELL_HEIGHT)
-		 ];
-	}
+	[self reformatCellLabelsWithOrientation:toInterfaceOrientation];
 }
 
 
