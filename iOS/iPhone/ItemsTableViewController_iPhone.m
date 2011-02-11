@@ -142,7 +142,7 @@
 	[self.navigationItem setTitle:@"Newsbox"];
 	[self.navigationController setToolbarHidden:NO];
 	
-	[self reformatCellLabelsWithOrientation:[[UIDevice currentDevice] orientation]];
+	[self reformatCellLabelsWithOrientation:[self interfaceOrientation]];
 	
     [super viewWillAppear:animated];
 }
