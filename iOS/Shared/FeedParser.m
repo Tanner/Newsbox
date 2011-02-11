@@ -86,9 +86,7 @@
 		[currentDate release];
 		[item setDate:aDate];
 		[dateFormatter release];
-		
-		NSLog(@"%@", currentContent);
-		
+				
 		[item setContent:[NSString stringWithString:currentContent]];
 		[currentContent release];
 		[item setContentLink:[NSString stringWithString:currentContentLink]];
