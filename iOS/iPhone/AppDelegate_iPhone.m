@@ -9,6 +9,7 @@
 #import "AppDelegate_iPhone.h"
 #import "ItemLoader.h"
 #import "Item.h"
+#import "ItemsTableViewController_iPhone.h"
 
 
 @implementation AppDelegate_iPhone
@@ -26,7 +27,7 @@ NSString *const TEST_PASSWORD = @"FA1w0wxjRTHRyj";
 
 
 - (void)didGetItems:(NSArray *)items ofType:(ItemType)type {
-	[ftvc setItems:items withType:type];
+	[itvc setItems:items withType:type];
 }
 
 
@@ -51,13 +52,13 @@ NSString *const TEST_PASSWORD = @"FA1w0wxjRTHRyj";
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	feedLoader = [[ItemLoader alloc] initWithDelegate:self];
 		
-	ftvc = [[ItemsTableViewController_iPhone alloc] initWithNibName:@"ItemsTableViewController_iPhone" bundle:nil];
-	[ftvc setDelegate:self];
+	itvc = [[ItemsTableViewController_iPhone alloc] initWithNibName:@"ItemsTableViewController_iPhone" bundle:nil];
+	[itvc setDelegate:self];
 	
 	ivc = [[ItemViewController_iPhone alloc] initWithNibName:@"ItemViewController_iPhone" bundle:nil];
 	[ivc setDelegate:self];
 	
-	navController = [[UINavigationController alloc] initWithRootViewController:ftvc];
+	navController = [[UINavigationController alloc] initWithRootViewController:itvc];
 		
 	[self.window addSubview:navController.view];
     [self.window makeKeyAndVisible];
@@ -81,6 +82,7 @@ NSString *const TEST_PASSWORD = @"FA1w0wxjRTHRyj";
 
      Superclass implementation saves changes in the application's managed object context before the application terminates.
      */
+		
 	[super applicationDidEnterBackground:application];
 }
 
@@ -102,6 +104,8 @@ NSString *const TEST_PASSWORD = @"FA1w0wxjRTHRyj";
 	} else {
 		[feedLoader getItemsOfType:[feedLoader currentItemType]];
 	}
+	
+	[itvc reformatCellLabelsWithOrientation:[[UIDevice currentDevice] orientation]];
 }
 
 

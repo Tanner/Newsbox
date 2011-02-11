@@ -29,6 +29,7 @@
 - (void)setItems:(NSArray *)someItems withType:(ItemType)type;
 - (void)reloadTableViewDataSource;
 - (void)didLoadTableViewData;
+- (void)reformatCellLabelsWithOrientation:(UIInterfaceOrientation)orientation;
 
 @property (nonatomic, assign) id<ItemsTableViewControllerDelegate> delegate;
 

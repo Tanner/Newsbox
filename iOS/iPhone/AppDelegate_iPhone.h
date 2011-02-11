@@ -13,7 +13,7 @@
 
 @interface AppDelegate_iPhone : AppDelegate_Shared <ItemLoaderDelegate, ItemsTableViewControllerDelegate, ItemViewControllerDelegate> {
 	UINavigationController *navController;
-	ItemsTableViewController_iPhone *ftvc;
+	ItemsTableViewController_iPhone *itvc;
 	ItemViewController_iPhone *ivc;
 }
 

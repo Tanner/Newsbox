@@ -16,7 +16,6 @@
 
 @interface ItemsTableViewController_iPhone (private)
 	- (CGFloat)suggestedHeightForItem:(Item *)anItem;
-- (void)reformatCellLabelsWithOrientation:(UIInterfaceOrientation)orientation;
 @end
 
 
@@ -112,8 +111,6 @@
 
 
 - (void)viewDidLoad {
-	[self reformatCellLabelsWithOrientation:[[UIDevice currentDevice] orientation]];
-
 	if (_refreshHeaderView == nil) {
 		_refreshHeaderView = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - self.tableView.bounds.size.height, self.view.frame.size.width, self.tableView.bounds.size.height)];
 		_refreshHeaderView.delegate = self;
