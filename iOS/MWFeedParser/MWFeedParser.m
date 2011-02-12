@@ -194,6 +194,8 @@
 }
 
 - (void)startParsingData:(NSData *)data {
+	NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
+
 	// Reset
 	[self reset];
 	
@@ -205,6 +207,8 @@
 	parsingComplete = NO;
 	
 	[self startParsingData:data textEncodingName:self.asyncTextEncodingName];
+	
+	[pool drain];
 }
 
 // Begin XML parsing
@@ -289,7 +293,8 @@
 				// Parse!
 				feedParser.delegate = self;
 				[feedParser setShouldProcessNamespaces:YES];
-				[feedParser performSelectorInBackground:@selector(parse) withObject:nil];
+				[feedParser parse];
+				//[feedParser performSelectorInBackground:@selector(parse) withObject:nil];
 
 				self.feedParser = nil; // Release after parse
 				

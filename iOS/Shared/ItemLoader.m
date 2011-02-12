@@ -113,7 +113,7 @@
 }
 
 - (void)requestFinished:(ASIHTTPRequest *)request {
-	[parser startParsingData:[[request responseString] dataUsingEncoding:NSUTF8StringEncoding]];
+	[parser performSelectorInBackground:@selector(startParsingData:) withObject:[[[[request responseString] dataUsingEncoding:NSUTF8StringEncoding] retain] autorelease]];
 }
 
 - (void)requestFailed:(ASIHTTPRequest *)request {

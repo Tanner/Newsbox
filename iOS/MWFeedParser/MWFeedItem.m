@@ -66,7 +66,7 @@
 }
 
 - (void)setDate:(NSDate *)aDate {
-	date = aDate;
+	date = [aDate copy];
 	
 	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
 	[dateFormatter setDateFormat:@"EEEE, MMMM dd, yyyy hh:mm aaa"];
