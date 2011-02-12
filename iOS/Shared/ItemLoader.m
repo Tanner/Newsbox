@@ -30,6 +30,11 @@
 - (id)initWithDelegate:(id)aDelegate {
 	if (self = [self init]) {
 		delegate = aDelegate;
+		
+		parser = [[MWFeedParser alloc] init];
+		[parser setDelegate:self];
+		
+		items = [[NSMutableArray alloc] init];
 	}
 	
 	return self;
@@ -108,11 +113,7 @@
 }
 
 - (void)requestFinished:(ASIHTTPRequest *)request {
-	FeedParser *parser = [[FeedParser alloc] init];
-	NSArray *feeds = [NSArray arrayWithArray:[parser getFeedsFromXMLData:[[request responseString] dataUsingEncoding:NSUTF8StringEncoding]]];
-	[parser release];
-	
-	[delegate didGetItems:feeds ofType:currentItemType];
+	[parser startParsingData:[[request responseString] dataUsingEncoding:NSUTF8StringEncoding]];
 }
 
 - (void)requestFailed:(ASIHTTPRequest *)request {
@@ -134,7 +135,40 @@
     return [NSString stringWithFormat:@"GoogleLogin auth=%@",[self auth]];
 }
 
-- (void)dealloc {	
+
+#pragma mark -
+#pragma mark MWFeedParserDelegate
+
+
+- (void)feedParserDidStart:(MWFeedParser *)parser {
+	// necessary?
+}
+
+
+- (void)feedParser:(MWFeedParser *)parser didParseFeedInfo:(MWFeedInfo *)info {
+	// necessary?
+}
+
+
+- (void)feedParser:(MWFeedParser *)parser didParseFeedItem:(MWFeedItem *)item {
+	[items addObject:item];
+}
+
+
+- (void)feedParserDidFinish:(MWFeedParser *)parser {
+	[delegate didGetItems:items ofType:currentItemType];
+
+	[items removeAllObjects];
+}
+
+
+- (void)feedParser:(MWFeedParser *)parser didFailWithError:(NSError *)error {
+	// todo
+}
+
+
+- (void)dealloc {
+	[parser release];
 	[super dealloc];
 }
 

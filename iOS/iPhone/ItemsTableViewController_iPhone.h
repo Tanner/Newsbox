@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "EGORefreshTableHeaderView.h"
-#import "Item.h"
+#import "MWFeedItem.h"
 
 
 @protocol ItemsTableViewControllerDelegate;
@@ -38,5 +38,5 @@
 
 @protocol ItemsTableViewControllerDelegate
 - (void)refreshWithItemType:(ItemType)type;
-- (void)showItem:(Item *)anItem;
+- (void)showItem:(MWFeedItem *)anItem;
 @end

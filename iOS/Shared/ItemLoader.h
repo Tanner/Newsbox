@@ -8,20 +8,23 @@
 
 #import <Foundation/Foundation.h>
 #import "ASIHTTPRequestDelegate.h"
-#import "Item.h"
-#import "FeedParser.h"
+#import "MWFeedItem.h"
+#import "MWFeedParser.h"
 
 @protocol ItemLoaderDelegate;
 
-
-@interface ItemLoader : NSObject <ASIHTTPRequestDelegate> {
+@interface ItemLoader : NSObject <ASIHTTPRequestDelegate, MWFeedParserDelegate> {
 	id<ItemLoaderDelegate> delegate;
 	ItemType currentItemType;
 		
 	NSString *sid;
 	NSString *auth;
-		
+	
 	BOOL authenticated;
+	
+	MWFeedParser *parser;
+	
+	NSMutableArray *items;
 }
 
 - (id)initWithDelegate:(id)aDelegate;

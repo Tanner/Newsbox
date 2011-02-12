@@ -10,7 +10,7 @@
 
 
 @interface ItemViewController_iPhone (private) 
-- (NSString *)stylizedHTMLWithItem:(Item *)anItem;
+- (NSString *)stylizedHTMLWithItem:(MWFeedItem *)anItem;
 @end
 
 
@@ -36,7 +36,7 @@
 #pragma mark -
 
 
-- (NSString *)stylizedHTMLWithItem:(Item *)anItem {
+- (NSString *)stylizedHTMLWithItem:(MWFeedItem *)anItem {
 	NSMutableString *html = [[NSMutableString alloc] init];
 		
 	[html appendString:@"<html>"];
@@ -67,13 +67,23 @@
 	[html appendString:@"<div id=\"wrapper\">"];
 
 	[html appendFormat:@"<div id=\"head\""];
-	[html appendFormat:@"<h1><a href=\"%@\">%@</a></h1>", [anItem contentLink], [anItem title]];
+	[html appendFormat:@"<h1><a href=\"%@\">%@</a></h1>", [anItem link], [anItem title]];
 	[html appendFormat:@"<p class=\"chronodata\">%@</p>", [anItem dateString]];
 	[html appendFormat:@"</div>"];
 	[html appendFormat:@"<div id=\"content\">"];
-		
-	NSScanner *scanner = [NSScanner scannerWithString:[anItem content]];
-	NSString *content = [anItem content];
+	
+	NSScanner *scanner;
+	NSString *content;
+	if ([anItem content]) {
+		scanner = [NSScanner scannerWithString:[anItem content]];
+		content = [anItem content];
+	} else if ([anItem summary]) {
+		scanner = [NSScanner scannerWithString:[anItem summary]];
+		content = [anItem summary];
+	} else {
+		return @"";
+	}
+	
 	NSString *tagText = nil;
 	
 	// remove styling
@@ -109,7 +119,7 @@
 }
 
 
-- (void)setItem:(Item *)anItem {
+- (void)setItem:(MWFeedItem *)anItem {
 	[wv loadHTMLString:[self stylizedHTMLWithItem:anItem] baseURL:nil];
 }
 

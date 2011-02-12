@@ -49,11 +49,19 @@
 		ED2E92B61301D4A900983CC3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2E92B51301D4A900983CC3 /* Security.framework */; };
 		ED2E94F31302555D00983CC3 /* ItemsTableViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2E94F11302555D00983CC3 /* ItemsTableViewController_iPhone.m */; };
 		ED2E94F41302555D00983CC3 /* ItemsTableViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED2E94F21302555D00983CC3 /* ItemsTableViewController_iPhone.xib */; };
-		ED2E95471302575C00983CC3 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2E95461302575C00983CC3 /* Item.m */; };
-		ED2E95C413025CA300983CC3 /* FeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2E95C313025CA300983CC3 /* FeedParser.m */; };
 		ED37D8F7130361A500584EDE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED37D8F5130361A500584EDE /* Default@2x.png */; };
 		ED37D8F8130361A500584EDE /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = ED37D8F6130361A500584EDE /* Default.png */; };
 		ED37D92E1303644E00584EDE /* itemstyle.css in Resources */ = {isa = PBXBuildFile; fileRef = ED37D92D1303644E00584EDE /* itemstyle.css */; };
+		ED473C211307176D006CE75A /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED473C0C1307176D006CE75A /* DetailTableViewController.m */; };
+		ED473C221307176D006CE75A /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = ED473C0F1307176D006CE75A /* GTMNSString+HTML.m */; };
+		ED473C231307176D006CE75A /* MWFeedInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = ED473C111307176D006CE75A /* MWFeedInfo.m */; };
+		ED473C241307176D006CE75A /* MWFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ED473C131307176D006CE75A /* MWFeedItem.m */; };
+		ED473C251307176D006CE75A /* MWFeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = ED473C151307176D006CE75A /* MWFeedParser.m */; };
+		ED473C261307176D006CE75A /* MWFeedParserAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED473C181307176D006CE75A /* MWFeedParserAppDelegate.m */; };
+		ED473C271307176D006CE75A /* NSDate+InternetDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = ED473C1A1307176D006CE75A /* NSDate+InternetDateTime.m */; };
+		ED473C281307176D006CE75A /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = ED473C1C1307176D006CE75A /* NSString+HTML.m */; };
+		ED473C291307176D006CE75A /* NSString+XMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = ED473C1E1307176D006CE75A /* NSString+XMLEntities.m */; };
+		ED473C2A1307176D006CE75A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED473C201307176D006CE75A /* RootViewController.m */; };
 		ED639915130342810024D3ED /* ItemViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = ED639913130342810024D3ED /* ItemViewController_iPhone.m */; };
 		ED639916130342810024D3ED /* ItemViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED639914130342810024D3ED /* ItemViewController_iPhone.xib */; };
 		ED6A677113046C81006F7838 /* itemscript.js in Resources */ = {isa = PBXBuildFile; fileRef = ED6A677013046C81006F7838 /* itemscript.js */; };
@@ -150,13 +158,31 @@
 		ED2E94F01302555D00983CC3 /* ItemsTableViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsTableViewController_iPhone.h; sourceTree = "<group>"; };
 		ED2E94F11302555D00983CC3 /* ItemsTableViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsTableViewController_iPhone.m; sourceTree = "<group>"; };
 		ED2E94F21302555D00983CC3 /* ItemsTableViewController_iPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsTableViewController_iPhone.xib; sourceTree = "<group>"; };
-		ED2E95451302575C00983CC3 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Item.h; path = Shared/Item.h; sourceTree = "<group>"; };
-		ED2E95461302575C00983CC3 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Item.m; path = Shared/Item.m; sourceTree = "<group>"; };
-		ED2E95C213025CA300983CC3 /* FeedParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FeedParser.h; path = Shared/FeedParser.h; sourceTree = "<group>"; };
-		ED2E95C313025CA300983CC3 /* FeedParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FeedParser.m; path = Shared/FeedParser.m; sourceTree = "<group>"; };
 		ED37D8F5130361A500584EDE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		ED37D8F6130361A500584EDE /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		ED37D92D1303644E00584EDE /* itemstyle.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = itemstyle.css; path = ../../../Newsbox/iOS/itemstyle.css; sourceTree = "<group>"; };
+		ED473C0B1307176D006CE75A /* DetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewController.h; sourceTree = "<group>"; };
+		ED473C0C1307176D006CE75A /* DetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewController.m; sourceTree = "<group>"; };
+		ED473C0D1307176D006CE75A /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		ED473C0E1307176D006CE75A /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
+		ED473C0F1307176D006CE75A /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
+		ED473C101307176D006CE75A /* MWFeedInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedInfo.h; sourceTree = "<group>"; };
+		ED473C111307176D006CE75A /* MWFeedInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFeedInfo.m; sourceTree = "<group>"; };
+		ED473C121307176D006CE75A /* MWFeedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedItem.h; sourceTree = "<group>"; };
+		ED473C131307176D006CE75A /* MWFeedItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFeedItem.m; sourceTree = "<group>"; };
+		ED473C141307176D006CE75A /* MWFeedParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedParser.h; sourceTree = "<group>"; };
+		ED473C151307176D006CE75A /* MWFeedParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFeedParser.m; sourceTree = "<group>"; };
+		ED473C161307176D006CE75A /* MWFeedParser_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedParser_Private.h; sourceTree = "<group>"; };
+		ED473C171307176D006CE75A /* MWFeedParserAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedParserAppDelegate.h; sourceTree = "<group>"; };
+		ED473C181307176D006CE75A /* MWFeedParserAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFeedParserAppDelegate.m; sourceTree = "<group>"; };
+		ED473C191307176D006CE75A /* NSDate+InternetDateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+InternetDateTime.h"; sourceTree = "<group>"; };
+		ED473C1A1307176D006CE75A /* NSDate+InternetDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+InternetDateTime.m"; sourceTree = "<group>"; };
+		ED473C1B1307176D006CE75A /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
+		ED473C1C1307176D006CE75A /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
+		ED473C1D1307176D006CE75A /* NSString+XMLEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XMLEntities.h"; sourceTree = "<group>"; };
+		ED473C1E1307176D006CE75A /* NSString+XMLEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XMLEntities.m"; sourceTree = "<group>"; };
+		ED473C1F1307176D006CE75A /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		ED473C201307176D006CE75A /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		ED639912130342810024D3ED /* ItemViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemViewController_iPhone.h; sourceTree = "<group>"; };
 		ED639913130342810024D3ED /* ItemViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemViewController_iPhone.m; sourceTree = "<group>"; };
 		ED639914130342810024D3ED /* ItemViewController_iPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemViewController_iPhone.xib; sourceTree = "<group>"; };
@@ -232,10 +258,7 @@
 				28EEC04A1118E28000187D67 /* AppDelegate_Shared.m */,
 				ED2E91C51301D23600983CC3 /* ItemLoader.h */,
 				ED2E91C41301D23600983CC3 /* ItemLoader.m */,
-				ED2E95C213025CA300983CC3 /* FeedParser.h */,
-				ED2E95C313025CA300983CC3 /* FeedParser.m */,
-				ED2E95451302575C00983CC3 /* Item.h */,
-				ED2E95461302575C00983CC3 /* Item.m */,
+				ED473C0A1307176D006CE75A /* MWFeedParser */,
 				8D1107310486CEB800E47090 /* Newsbox-Info.plist */,
 			);
 			name = Shared;
@@ -378,6 +401,35 @@
 				ED2E92031301D27800983CC3 /* ASIS3ServiceRequest.m */,
 			);
 			path = S3;
+			sourceTree = "<group>";
+		};
+		ED473C0A1307176D006CE75A /* MWFeedParser */ = {
+			isa = PBXGroup;
+			children = (
+				ED473C0B1307176D006CE75A /* DetailTableViewController.h */,
+				ED473C0C1307176D006CE75A /* DetailTableViewController.m */,
+				ED473C0D1307176D006CE75A /* GTMDefines.h */,
+				ED473C0E1307176D006CE75A /* GTMNSString+HTML.h */,
+				ED473C0F1307176D006CE75A /* GTMNSString+HTML.m */,
+				ED473C101307176D006CE75A /* MWFeedInfo.h */,
+				ED473C111307176D006CE75A /* MWFeedInfo.m */,
+				ED473C121307176D006CE75A /* MWFeedItem.h */,
+				ED473C131307176D006CE75A /* MWFeedItem.m */,
+				ED473C141307176D006CE75A /* MWFeedParser.h */,
+				ED473C151307176D006CE75A /* MWFeedParser.m */,
+				ED473C161307176D006CE75A /* MWFeedParser_Private.h */,
+				ED473C171307176D006CE75A /* MWFeedParserAppDelegate.h */,
+				ED473C181307176D006CE75A /* MWFeedParserAppDelegate.m */,
+				ED473C191307176D006CE75A /* NSDate+InternetDateTime.h */,
+				ED473C1A1307176D006CE75A /* NSDate+InternetDateTime.m */,
+				ED473C1B1307176D006CE75A /* NSString+HTML.h */,
+				ED473C1C1307176D006CE75A /* NSString+HTML.m */,
+				ED473C1D1307176D006CE75A /* NSString+XMLEntities.h */,
+				ED473C1E1307176D006CE75A /* NSString+XMLEntities.m */,
+				ED473C1F1307176D006CE75A /* RootViewController.h */,
+				ED473C201307176D006CE75A /* RootViewController.m */,
+			);
+			path = MWFeedParser;
 			sourceTree = "<group>";
 		};
 		ED71CFC213030B3500C3BE65 /* EGOTableViewPullRefresh */ = {
@@ -540,11 +592,19 @@
 				ED2E92361301D27800983CC3 /* ASIS3Request.m in Sources */,
 				ED2E92371301D27800983CC3 /* ASIS3ServiceRequest.m in Sources */,
 				ED2E94F31302555D00983CC3 /* ItemsTableViewController_iPhone.m in Sources */,
-				ED2E95471302575C00983CC3 /* Item.m in Sources */,
-				ED2E95C413025CA300983CC3 /* FeedParser.m in Sources */,
 				ED71CFD013030B3600C3BE65 /* EGORefreshTableHeaderView.m in Sources */,
 				ED639915130342810024D3ED /* ItemViewController_iPhone.m in Sources */,
 				ED0D9A1113039B4000961E0D /* ItemsTableViewCell.m in Sources */,
+				ED473C211307176D006CE75A /* DetailTableViewController.m in Sources */,
+				ED473C221307176D006CE75A /* GTMNSString+HTML.m in Sources */,
+				ED473C231307176D006CE75A /* MWFeedInfo.m in Sources */,
+				ED473C241307176D006CE75A /* MWFeedItem.m in Sources */,
+				ED473C251307176D006CE75A /* MWFeedParser.m in Sources */,
+				ED473C261307176D006CE75A /* MWFeedParserAppDelegate.m in Sources */,
+				ED473C271307176D006CE75A /* NSDate+InternetDateTime.m in Sources */,
+				ED473C281307176D006CE75A /* NSString+HTML.m in Sources */,
+				ED473C291307176D006CE75A /* NSString+XMLEntities.m in Sources */,
+				ED473C2A1307176D006CE75A /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

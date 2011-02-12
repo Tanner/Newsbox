@@ -8,7 +8,7 @@
 
 #import "AppDelegate_iPhone.h"
 #import "ItemLoader.h"
-#import "Item.h"
+#import "MWFeedItem.h"
 #import "ItemsTableViewController_iPhone.h"
 
 
@@ -31,7 +31,7 @@ NSString *const TEST_PASSWORD = @"FA1w0wxjRTHRyj";
 }
 
 
-- (void)showItem:(Item *)anItem {
+- (void)showItem:(MWFeedItem *)anItem {
 	[ivc setItem:anItem];
 	[navController pushViewController:ivc animated:YES];
 }

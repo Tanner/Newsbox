@@ -7,7 +7,7 @@
 //
 
 #import "ItemsTableViewController_iPhone.h"
-#import "Item.h"
+#import "MWFeedItem.h"
 #import "ItemsTableViewCell.h"
 
 
@@ -15,7 +15,7 @@
 
 
 @interface ItemsTableViewController_iPhone (private)
-	- (CGFloat)suggestedHeightForItem:(Item *)anItem;
+	- (CGFloat)suggestedHeightForItem:(MWFeedItem *)anItem;
 @end
 
 
@@ -33,7 +33,7 @@
 	}
 	
 	currentItemType = type;
-	items = [[NSMutableArray alloc] initWithArray:someItems];
+	items = [[NSMutableArray alloc] initWithArray:[someItems copy]];
 	
 	if (modalView) {
 		[activityIndicator removeFromSuperview];
@@ -198,9 +198,9 @@
     }
     
 //	NSLog(@"%d", indexPath.row);
-    [(ItemsTableViewCell *)cell setTimeStampLabelText:[(Item *)[items objectAtIndex:indexPath.row] dateString]
-									andTitleLabelText:[(Item *)[items objectAtIndex:indexPath.row] title]
-								  andContentLabelText:[(Item *)[items objectAtIndex:indexPath.row] contentSample]
+    [(ItemsTableViewCell *)cell setTimeStampLabelText:[(MWFeedItem *)[items objectAtIndex:indexPath.row] dateString]
+									andTitleLabelText:[(MWFeedItem *)[items objectAtIndex:indexPath.row] title]
+								  andContentLabelText:[(MWFeedItem *)[items objectAtIndex:indexPath.row] contentSample]
 										  andCellSize:CGSizeMake(self.view.bounds.size.width, CELL_HEIGHT)
 	 ];
     
