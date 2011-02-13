@@ -56,7 +56,6 @@
 		ED473C231307176D006CE75A /* MWFeedInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = ED473C111307176D006CE75A /* MWFeedInfo.m */; };
 		ED473C241307176D006CE75A /* MWFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ED473C131307176D006CE75A /* MWFeedItem.m */; };
 		ED473C251307176D006CE75A /* MWFeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = ED473C151307176D006CE75A /* MWFeedParser.m */; };
-		ED473C261307176D006CE75A /* MWFeedParserAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED473C181307176D006CE75A /* MWFeedParserAppDelegate.m */; };
 		ED473C271307176D006CE75A /* NSDate+InternetDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = ED473C1A1307176D006CE75A /* NSDate+InternetDateTime.m */; };
 		ED473C281307176D006CE75A /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = ED473C1C1307176D006CE75A /* NSString+HTML.m */; };
 		ED473C291307176D006CE75A /* NSString+XMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = ED473C1E1307176D006CE75A /* NSString+XMLEntities.m */; };
@@ -175,8 +174,6 @@
 		ED473C141307176D006CE75A /* MWFeedParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedParser.h; sourceTree = "<group>"; };
 		ED473C151307176D006CE75A /* MWFeedParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFeedParser.m; sourceTree = "<group>"; };
 		ED473C161307176D006CE75A /* MWFeedParser_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedParser_Private.h; sourceTree = "<group>"; };
-		ED473C171307176D006CE75A /* MWFeedParserAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedParserAppDelegate.h; sourceTree = "<group>"; };
-		ED473C181307176D006CE75A /* MWFeedParserAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFeedParserAppDelegate.m; sourceTree = "<group>"; };
 		ED473C191307176D006CE75A /* NSDate+InternetDateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+InternetDateTime.h"; sourceTree = "<group>"; };
 		ED473C1A1307176D006CE75A /* NSDate+InternetDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+InternetDateTime.m"; sourceTree = "<group>"; };
 		ED473C1B1307176D006CE75A /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
@@ -431,8 +428,6 @@
 				ED473C141307176D006CE75A /* MWFeedParser.h */,
 				ED473C151307176D006CE75A /* MWFeedParser.m */,
 				ED473C161307176D006CE75A /* MWFeedParser_Private.h */,
-				ED473C171307176D006CE75A /* MWFeedParserAppDelegate.h */,
-				ED473C181307176D006CE75A /* MWFeedParserAppDelegate.m */,
 				ED473C191307176D006CE75A /* NSDate+InternetDateTime.h */,
 				ED473C1A1307176D006CE75A /* NSDate+InternetDateTime.m */,
 				ED473C1B1307176D006CE75A /* NSString+HTML.h */,
@@ -660,7 +655,6 @@
 				ED473C231307176D006CE75A /* MWFeedInfo.m in Sources */,
 				ED473C241307176D006CE75A /* MWFeedItem.m in Sources */,
 				ED473C251307176D006CE75A /* MWFeedParser.m in Sources */,
-				ED473C261307176D006CE75A /* MWFeedParserAppDelegate.m in Sources */,
 				ED473C271307176D006CE75A /* NSDate+InternetDateTime.m in Sources */,
 				ED473C281307176D006CE75A /* NSString+HTML.m in Sources */,
 				ED473C291307176D006CE75A /* NSString+XMLEntities.m in Sources */,
