@@ -97,6 +97,8 @@
 		}
 	}
 	
+    tagText = nil;
+    
 	// big image class
 	[scanner setScanLocation:0];
 	while ([scanner isAtEnd] == NO) {
@@ -104,7 +106,7 @@
 		[scanner scanUpToString:@"\"" intoString:&tagText];
 		
 		if (tagText != nil) {
-			content = [content stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"style=\"%@\"", tagText] withString:@""];
+			content = [content stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%@\"", tagText] withString:@""];
 		}
 	}
 	
