@@ -28,6 +28,8 @@
 //
 
 #import "MWFeedItem.h"
+#import "NSString+HTML.h"
+#import "GTMNSString+HTML.h"
 
 #define EXCERPT(str, len) (([str length] > len) ? [[str substringToIndex:len-1] stringByAppendingString:@"…"] : str)
 
@@ -37,8 +39,9 @@
 
 - (void)setSummary:(NSString *)aSummary {
 	summary = [[NSString alloc] initWithString:aSummary];
-	contentSample = [[NSString alloc] initWithString:summary];
+	NSString *aContentSample = [[NSString alloc] initWithString:[[summary stringByConvertingHTMLToPlainText] gtm_stringByUnescapingFromHTML]];
 	
+    /*
 	NSScanner *scanner = [NSScanner scannerWithString:contentSample];
     NSString *tagText = nil;
 	
@@ -51,18 +54,24 @@
 			contentSample = [contentSample stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%@>", tagText] withString:@""];
 		}
     }
+     */
 	
 	// blank lines
-	contentSample = [contentSample stringByReplacingOccurrencesOfString:[NSString stringWithString:@"\n"] withString:@""];
+	//contentSample = [contentSample stringByReplacingOccurrencesOfString:[NSString stringWithString:@"\n"] withString:@""];
 	
 	// no xml chars
 	//contentSample = [Item xmlSimpleUnescape:contentSample];
 	
 	// trim
-	contentSample = [contentSample stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];		
+	//contentSample = [contentSample stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];		
 	
 	// sample only needs max 150 chars
-    contentSample = [[NSString alloc] initWithString:[contentSample substringToIndex:MIN(150, [contentSample length])]];
+    contentSample = [[NSString alloc] initWithString:[aContentSample substringToIndex:MIN(150, [aContentSample length])]];
+    [aContentSample release];
+}
+
+- (void)setTitle:(NSString *)aTitle {
+    title = [[NSString alloc] initWithString:[aTitle gtm_stringByUnescapingFromHTML]];
 }
 
 - (void)setDate:(NSDate *)aDate {
@@ -102,7 +111,7 @@
 #pragma mark NSCoding
 
 - (id)initWithCoder:(NSCoder *)decoder {
-	if (self = [super init]) {
+	if ((self = [super init])) {
 		identifier = [[decoder decodeObjectForKey:@"identifier"] retain];
 		title = [[decoder decodeObjectForKey:@"title"] retain];
 		link = [[decoder decodeObjectForKey:@"link"] retain];
