@@ -139,8 +139,6 @@
 	} else {
 		[feedLoader getItemsOfType:[feedLoader currentItemType]];
 	}
-	
-	[itvc reformatCellLabelsWithOrientation:[[UIDevice currentDevice] orientation]];
 }
 
 
