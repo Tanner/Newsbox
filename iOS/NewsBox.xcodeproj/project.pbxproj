@@ -62,6 +62,10 @@
 		ED473C281307176D006CE75A /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = ED473C1C1307176D006CE75A /* NSString+HTML.m */; };
 		ED473C291307176D006CE75A /* NSString+XMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = ED473C1E1307176D006CE75A /* NSString+XMLEntities.m */; };
 		ED473C2A1307176D006CE75A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED473C201307176D006CE75A /* RootViewController.m */; };
+		ED59CDA31307734900595B0A /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = ED59CD991307734900595B0A /* SFHFKeychainUtils.m */; };
+		ED59CDA51307734900595B0A /* SFHFEditableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED59CD9E1307734900595B0A /* SFHFEditableCell.m */; };
+		ED59CDA61307734900595B0A /* SFHFHUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED59CDA01307734900595B0A /* SFHFHUDView.m */; };
+		ED59CDA71307734900595B0A /* UIWebView+SFHFStringMetrics.m in Sources */ = {isa = PBXBuildFile; fileRef = ED59CDA21307734900595B0A /* UIWebView+SFHFStringMetrics.m */; };
 		ED639915130342810024D3ED /* ItemViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = ED639913130342810024D3ED /* ItemViewController_iPhone.m */; };
 		ED639916130342810024D3ED /* ItemViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED639914130342810024D3ED /* ItemViewController_iPhone.xib */; };
 		ED6A677113046C81006F7838 /* itemscript.js in Resources */ = {isa = PBXBuildFile; fileRef = ED6A677013046C81006F7838 /* itemscript.js */; };
@@ -77,6 +81,8 @@
 		ED71CFE213030B9A00C3BE65 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED71CFE113030B9A00C3BE65 /* QuartzCore.framework */; };
 		ED71D1081303266E00C3BE65 /* Icon-57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED71D1071303266E00C3BE65 /* Icon-57@2x.png */; };
 		ED71D10A1303268D00C3BE65 /* Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = ED71D1091303268D00C3BE65 /* Icon-57.png */; };
+		EDAFC7A913074F04009C47D7 /* SettingsTableViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = EDAFC7A713074F04009C47D7 /* SettingsTableViewController_iPhone.m */; };
+		EDAFC7AA13074F04009C47D7 /* SettingsTableViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDAFC7A813074F04009C47D7 /* SettingsTableViewController_iPhone.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -183,6 +189,14 @@
 		ED473C1E1307176D006CE75A /* NSString+XMLEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XMLEntities.m"; sourceTree = "<group>"; };
 		ED473C1F1307176D006CE75A /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		ED473C201307176D006CE75A /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		ED59CD981307734900595B0A /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFKeychainUtils.h; sourceTree = "<group>"; };
+		ED59CD991307734900595B0A /* SFHFKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHFKeychainUtils.m; sourceTree = "<group>"; };
+		ED59CD9D1307734900595B0A /* SFHFEditableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFEditableCell.h; sourceTree = "<group>"; };
+		ED59CD9E1307734900595B0A /* SFHFEditableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHFEditableCell.m; sourceTree = "<group>"; };
+		ED59CD9F1307734900595B0A /* SFHFHUDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFHUDView.h; sourceTree = "<group>"; };
+		ED59CDA01307734900595B0A /* SFHFHUDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHFHUDView.m; sourceTree = "<group>"; };
+		ED59CDA11307734900595B0A /* UIWebView+SFHFStringMetrics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+SFHFStringMetrics.h"; sourceTree = "<group>"; };
+		ED59CDA21307734900595B0A /* UIWebView+SFHFStringMetrics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+SFHFStringMetrics.m"; sourceTree = "<group>"; };
 		ED639912130342810024D3ED /* ItemViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemViewController_iPhone.h; sourceTree = "<group>"; };
 		ED639913130342810024D3ED /* ItemViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemViewController_iPhone.m; sourceTree = "<group>"; };
 		ED639914130342810024D3ED /* ItemViewController_iPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemViewController_iPhone.xib; sourceTree = "<group>"; };
@@ -200,6 +214,9 @@
 		ED71CFE113030B9A00C3BE65 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		ED71D1071303266E00C3BE65 /* Icon-57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57@2x.png"; sourceTree = "<group>"; };
 		ED71D1091303268D00C3BE65 /* Icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57.png"; sourceTree = "<group>"; };
+		EDAFC7A613074F04009C47D7 /* SettingsTableViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController_iPhone.h; sourceTree = "<group>"; };
+		EDAFC7A713074F04009C47D7 /* SettingsTableViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController_iPhone.m; sourceTree = "<group>"; };
+		EDAFC7A813074F04009C47D7 /* SettingsTableViewController_iPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewController_iPhone.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +263,9 @@
 				ED639912130342810024D3ED /* ItemViewController_iPhone.h */,
 				ED639913130342810024D3ED /* ItemViewController_iPhone.m */,
 				ED639914130342810024D3ED /* ItemViewController_iPhone.xib */,
+				EDAFC7A613074F04009C47D7 /* SettingsTableViewController_iPhone.h */,
+				EDAFC7A713074F04009C47D7 /* SettingsTableViewController_iPhone.m */,
+				EDAFC7A813074F04009C47D7 /* SettingsTableViewController_iPhone.xib */,
 			);
 			path = iPhone;
 			sourceTree = "<group>";
@@ -258,6 +278,7 @@
 				28EEC04A1118E28000187D67 /* AppDelegate_Shared.m */,
 				ED2E91C51301D23600983CC3 /* ItemLoader.h */,
 				ED2E91C41301D23600983CC3 /* ItemLoader.m */,
+				ED59CD961307734900595B0A /* SFHFKeychainUtils */,
 				ED473C0A1307176D006CE75A /* MWFeedParser */,
 				8D1107310486CEB800E47090 /* Newsbox-Info.plist */,
 			);
@@ -432,6 +453,37 @@
 			path = MWFeedParser;
 			sourceTree = "<group>";
 		};
+		ED59CD961307734900595B0A /* SFHFKeychainUtils */ = {
+			isa = PBXGroup;
+			children = (
+				ED59CD971307734900595B0A /* security */,
+				ED59CD9A1307734900595B0A /* UI */,
+			);
+			path = SFHFKeychainUtils;
+			sourceTree = "<group>";
+		};
+		ED59CD971307734900595B0A /* security */ = {
+			isa = PBXGroup;
+			children = (
+				ED59CD981307734900595B0A /* SFHFKeychainUtils.h */,
+				ED59CD991307734900595B0A /* SFHFKeychainUtils.m */,
+			);
+			path = security;
+			sourceTree = "<group>";
+		};
+		ED59CD9A1307734900595B0A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				ED59CD9D1307734900595B0A /* SFHFEditableCell.h */,
+				ED59CD9E1307734900595B0A /* SFHFEditableCell.m */,
+				ED59CD9F1307734900595B0A /* SFHFHUDView.h */,
+				ED59CDA01307734900595B0A /* SFHFHUDView.m */,
+				ED59CDA11307734900595B0A /* UIWebView+SFHFStringMetrics.h */,
+				ED59CDA21307734900595B0A /* UIWebView+SFHFStringMetrics.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		ED71CFC213030B3500C3BE65 /* EGOTableViewPullRefresh */ = {
 			isa = PBXGroup;
 			children = (
@@ -554,6 +606,7 @@
 				ED37D8F7130361A500584EDE /* Default@2x.png in Resources */,
 				ED37D8F8130361A500584EDE /* Default.png in Resources */,
 				ED37D92E1303644E00584EDE /* itemstyle.css in Resources */,
+				EDAFC7AA13074F04009C47D7 /* SettingsTableViewController_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,6 +676,11 @@
 				ED473C281307176D006CE75A /* NSString+HTML.m in Sources */,
 				ED473C291307176D006CE75A /* NSString+XMLEntities.m in Sources */,
 				ED473C2A1307176D006CE75A /* RootViewController.m in Sources */,
+				EDAFC7A913074F04009C47D7 /* SettingsTableViewController_iPhone.m in Sources */,
+				ED59CDA31307734900595B0A /* SFHFKeychainUtils.m in Sources */,
+				ED59CDA51307734900595B0A /* SFHFEditableCell.m in Sources */,
+				ED59CDA61307734900595B0A /* SFHFHUDView.m in Sources */,
+				ED59CDA71307734900595B0A /* UIWebView+SFHFStringMetrics.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,13 +10,15 @@
 #import "ItemLoader.h"
 #import "MWFeedItem.h"
 #import "ItemsTableViewController_iPhone.h"
+#import "SettingsTableViewController_iPhone.h"
+#import "SFHFKeychainUtils.h"
 
 
 @implementation AppDelegate_iPhone
 
 
-NSString *const TEST_GOOGLE_USER = @"newsbox.test@gmail.com";
-NSString *const TEST_PASSWORD = @"FA1w0wxjRTHRyj";
+// NSString *const TEST_GOOGLE_USER = @"newsbox.test@gmail.com";
+// NSString *const TEST_PASSWORD = @"FA1w0wxjRTHRyj";
 
 
 - (void)didLogin:(BOOL)login {
@@ -31,18 +33,39 @@ NSString *const TEST_PASSWORD = @"FA1w0wxjRTHRyj";
 }
 
 
+#pragma mark -
+#pragma mark FeedTableViewControllerDelegate Methods
+
 - (void)showItem:(MWFeedItem *)anItem {
 	[ivc setItem:anItem];
 	[navController pushViewController:ivc animated:YES];
 }
 
-
-#pragma mark -
-#pragma mark FeedTableViewControllerDelegate Methods
-
-
 - (void)refreshWithItemType:(ItemType)type {
 	[feedLoader getItemsOfType:type];
+}
+
+- (void)showSettingsView {
+    [navController presentModalViewController:settingsNavController animated:YES];
+}
+
+
+#pragma mark -
+#pragma mark SettingsTableViewControllerDelegate Methods
+
+- (void)returnFromSettingsTableViewController {
+    [navController dismissModalViewControllerAnimated:YES];
+}
+
+
+- (void)changedUsername:(NSString *)username andPassword:(NSString *)password {
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    [prefs setValue:username forKey:@"username"];
+    
+    NSError *error = nil;
+    [SFHFKeychainUtils storeUsername:username andPassword:password forServiceName:@"google" updateExisting:YES error:&error];
+    
+    [feedLoader authenticateWithGoogleUser:username andPassword:password];
 }
 
 
@@ -50,13 +73,8 @@ NSString *const TEST_PASSWORD = @"FA1w0wxjRTHRyj";
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-	NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
-    NSString *name = [infoDictionary objectForKey:@"CFBundleDisplayName"];
-    NSString *version = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
-    NSString *build = [infoDictionary objectForKey:@"CFBundleVersion"];
-    NSString *label = [NSString stringWithFormat:@"%@ v%@ (build %@)",name,version,build];
-	NSLog(@"%@", label);
-	
+    // [SFHFKeychainUtils storeUsername:TEST_GOOGLE_USER andPassword:TEST_PASSWORD forServiceName:@"google" updateExisting:YES error:&error];
+    
 	feedLoader = [[ItemLoader alloc] initWithDelegate:self];
 		
 	itvc = [[ItemsTableViewController_iPhone alloc] initWithNibName:@"ItemsTableViewController_iPhone" bundle:nil];
@@ -65,7 +83,11 @@ NSString *const TEST_PASSWORD = @"FA1w0wxjRTHRyj";
 	ivc = [[ItemViewController_iPhone alloc] initWithNibName:@"ItemViewController_iPhone" bundle:nil];
 	[ivc setDelegate:self];
 	
+	stvc = [[SettingsTableViewController_iPhone alloc] initWithNibName:@"SettingsTableViewController_iPhone" bundle:nil];
+	[stvc setDelegate:self];
+	
 	navController = [[UINavigationController alloc] initWithRootViewController:itvc];
+    settingsNavController = [[UINavigationController alloc] initWithRootViewController:stvc];
 		
 	[self.window addSubview:navController.view];
     [self.window makeKeyAndVisible];
@@ -107,7 +129,13 @@ NSString *const TEST_PASSWORD = @"FA1w0wxjRTHRyj";
      */
 	
 	if (![feedLoader authenticated]) {
-		[feedLoader authenticateWithGoogleUser:TEST_GOOGLE_USER andPassword:TEST_PASSWORD];
+        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+        NSString *username = [prefs objectForKey:@"username"];
+        
+        NSError *error = nil;
+        NSString *password = [SFHFKeychainUtils getPasswordForUsername:username andServiceName:@"google" error:&error];
+        
+		[feedLoader authenticateWithGoogleUser:username andPassword:password];
 	} else {
 		[feedLoader getItemsOfType:[feedLoader currentItemType]];
 	}

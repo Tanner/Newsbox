@@ -141,17 +141,26 @@
 - (void)viewWillAppear:(BOOL)animated {
 	[self.navigationItem setTitle:@"Newsbox"];
 	[self.navigationController setToolbarHidden:NO];
+    
+    UIBarButtonItem *flexibleSpaceItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil] autorelease];
+    UIBarButtonItem *settingsItem = [[[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStyleBordered target:self action:@selector(settingsButtonPressed:)] autorelease];
+    [self setToolbarItems:[NSArray arrayWithObjects:flexibleSpaceItem, settingsItem, nil]];
 	
 	[self reformatCellLabelsWithOrientation:[self interfaceOrientation]];
 	
     [super viewWillAppear:animated];
 }
 
+
+- (void)settingsButtonPressed:(id)sender {
+    [delegate showSettingsView];
+}
+
 /*
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 }
-/*
+*/
 /*
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];

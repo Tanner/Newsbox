@@ -39,4 +39,5 @@
 @protocol ItemsTableViewControllerDelegate
 - (void)refreshWithItemType:(ItemType)type;
 - (void)showItem:(MWFeedItem *)anItem;
+- (void)showSettingsView;
 @end
