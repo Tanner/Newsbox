@@ -72,11 +72,15 @@ blockquote {
 	}
 
 .bigImage {
-	margin: 0 0 10px 0;
+	margin: 0 2000px 10px 0 !important;
 	clear: both !important;
-	margin-right: 2000px;
 	overflow: hidden;
-	max-width: 300px;
+	max-width: 300px !important;
+    float: left !important;
+}
+
+table .bigimage {
+    margin-right: 0 !important;
 }
 
 img {

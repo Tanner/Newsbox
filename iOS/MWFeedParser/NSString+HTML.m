@@ -206,7 +206,7 @@
 	
 }
 
-// Remove newlines and white space from strong
+// Remove newlines and white space from string
 - (NSString *)stringByRemovingNewLinesAndWhitespace {
 	
 	// Pool

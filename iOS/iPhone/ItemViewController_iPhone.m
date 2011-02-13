@@ -104,7 +104,7 @@
 		[scanner scanUpToString:@"\"" intoString:&tagText];
 		
 		if (tagText != nil) {
-			content = [content stringByReplacingOccurrencesOfString:tagText withString:@""];
+			content = [content stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"style=\"%@\"", tagText] withString:@""];
 		}
 	}
 	
@@ -115,6 +115,7 @@
 	NSString *stylizedHTML = [NSString stringWithString:html];
 	[html release];
 	
+    
 	return stylizedHTML;
 }
 
