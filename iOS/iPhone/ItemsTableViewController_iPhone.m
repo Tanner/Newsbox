@@ -123,13 +123,15 @@
 		modalView = [[UIView alloc] initWithFrame:self.view.bounds];
 		[modalView setBackgroundColor:[UIColor whiteColor]];
 		[modalView setOpaque:YES];
+        [modalView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
 		[self.view addSubview:modalView];
 		
 		[self.tableView scrollRectToVisible:modalView.frame animated:NO];
 		[self.tableView setScrollEnabled:NO];
 		
 		activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-		[activityIndicator setFrame:CGRectMake((self.view.bounds.size.width - 20.0f)/2, (self.view.bounds.size.height - 20.0f)/2 - 20.0f, 20.0f, 20.0f)];
+		[activityIndicator setFrame:CGRectMake((self.view.bounds.size.width - 20.0f)/2, (self.view.bounds.size.height - 20.0f)/2 - 10.0f, 20.0f, 20.0f)];
+        [activityIndicator setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleBottomMargin];
 		[activityIndicator startAnimating];
 		[modalView addSubview:activityIndicator];
 	}
