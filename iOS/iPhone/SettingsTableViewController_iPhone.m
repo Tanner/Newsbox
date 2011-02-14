@@ -17,11 +17,9 @@
 
 @synthesize delegate, latestGitSHA;
 
-
 - (void)cancelButtonPushed:(id)sender {
     [delegate returnFromSettingsTableViewController];
 }
-
 
 - (void)doneButtonPushed:(id)sender {
     [delegate returnFromSettingsTableViewController];
@@ -29,7 +27,6 @@
     NSString *password = [[(SFHFEditableCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]] textField] text];
     [delegate changedUsername:username andPassword:password];
 }
-
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -44,14 +41,13 @@
 */
 
 
-- (void)viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated {    
     [self.navigationItem setTitle:@"Settings"];
     [self.navigationItem setLeftBarButtonItem:[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelButtonPushed:)] autorelease]];
     [self.navigationItem setRightBarButtonItem:[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneButtonPushed:)] autorelease]];
         
     [self.tableView reloadData];
     
-    latestGitSHA = [[NSString alloc] init];
     [GitHubServiceSettings setCredential:[NSURLCredential credentialWithUser:@"Tanner"
                                                                     password:@"pack12"
                                                                  persistence:NSURLCredentialPersistenceNone]]; 
@@ -97,7 +93,7 @@
         case 0:
             return 2;
         case 1:
-            return 1;
+            return 2;
         default:
             return 0;
     }
@@ -156,11 +152,31 @@
             break;
         }
         case 1: {
-            NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
-            NSString *build = [infoDictionary objectForKey:@"CFBundleVersion"];
-            [[cell textLabel] setText:@"Build"];
-            [[cell detailTextLabel] setText:build];
-            break;
+            switch (indexPath.row) {
+                case 0: {
+                    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+                    NSString *build = [infoDictionary objectForKey:@"CFBundleVersion"];
+                    [[cell textLabel] setText:@"Build"];
+                    [[cell detailTextLabel] setText:build];
+                    break;
+                }
+                case 1: {
+                    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+                    NSString *build = [infoDictionary objectForKey:@"CFBundleVersion"];
+                    
+                    [[cell textLabel] setText:@"Up To Date"];
+
+                    if (latestGitSHA != nil && [latestGitSHA length] > 0) {
+                        NSString *latestShortGitSHA = [latestGitSHA substringToIndex:6];
+                        if ([latestShortGitSHA isEqualToString:build]) {
+                            [[cell detailTextLabel] setText:@"YES"];
+                        } else {
+                            [[cell detailTextLabel] setText:@"NO"];
+                        }
+                    }
+                    break;
+                }
+            }
         }
     }
     
@@ -176,9 +192,12 @@
 
 
 -(void)gitHubService:(id<GitHubService>)gitHubService gotCommit:(id<GitHubCommit>)commit {
-    if ([latestGitSHA isEqualToString:@""]) {
-        latestGitSHA = commit.sha;
+    if (latestGitSHA == nil) {
+        latestGitSHA = [[NSString alloc] initWithString:commit.sha];
+//        NSLog(@"Setting: %@", latestGitSHA);
     }
+    
+    [self.tableView reloadData];
 }
 
 
@@ -254,6 +273,8 @@
 - (void)viewDidUnload {
     // Relinquish ownership of anything that can be recreated in viewDidLoad or on demand.
     // For example: self.myOutlet = nil;
+    latestGitSHA = nil;
+    [latestGitSHA release];
 }
 
 
