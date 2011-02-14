@@ -83,12 +83,12 @@ table .bigimage {
     clear: auto !important;
     overflow: auto !important;
     float: none !important;
-    max-width: 150px !important;
+    max-width: 50% !important;
 }
 
 img {
 	height: auto !important;
-	max-width: 290px !important;
+	max-width: 100% !important;
 	margin: 10px 0 !important;
     border: 0 !important;
 }
@@ -105,7 +105,7 @@ img {
 
 #content * {
     max-width: 100%;
-    height: auto;
+    height: auto !important;
 }
 
 p.chronodata {
