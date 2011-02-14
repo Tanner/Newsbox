@@ -92,37 +92,14 @@
 
 
 - (void)viewDidLoad {
-	if (!items && !modalView) {
-		modalView = [[UIView alloc] initWithFrame:self.view.bounds];
-		[modalView setBackgroundColor:[UIColor whiteColor]];
-		[modalView setOpaque:YES];
-        [modalView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
-		[self.view addSubview:modalView];
-		
-		[self.tableView scrollRectToVisible:modalView.frame animated:NO];
-		[self.tableView setScrollEnabled:NO];
-		
-        /*
-		activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-		[activityIndicator setFrame:CGRectMake((self.view.bounds.size.width - 20.0f)/2, (self.view.bounds.size.height - 20.0f)/2 - 10.0f  , 20.0f, 20.0f)];
-        [activityIndicator setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleBottomMargin];
-		[activityIndicator startAnimating];
-		[modalView addSubview:activityIndicator];
-         */
-	}
-    
-	[super viewDidLoad];
-}
+    [super viewDidLoad];
 
+    [self.navigationItem setTitle:@"Unread"];
 
-- (void)viewWillAppear:(BOOL)animated {
-	[self.navigationItem setTitle:@"Unread"];
-	[self.navigationController setToolbarHidden:NO];
-    
     NSMutableArray *toolbarItems = [[NSMutableArray alloc] init];
     
     UIBarButtonItem *refreshItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refresh)];
-
+    
     [toolbarItems addObject:refreshItem];
     [refreshItem release];
     
@@ -146,12 +123,34 @@
     [self setToolbarItems:toolbarItems animated:NO];
     
     [toolbarItems release];
-	    
+    
 	[self reformatCellLabelsWithOrientation:[self interfaceOrientation]];
 	
     [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:0.7 green:0.0 blue:0.0 alpha:1.0]];
     [self.navigationController.toolbar setTintColor:[UIColor colorWithRed:0.7 green:0.0 blue:0.0 alpha:1.0]];
     
+	if (!items && !modalView) {
+		modalView = [[UIView alloc] initWithFrame:self.view.bounds];
+		[modalView setBackgroundColor:[UIColor whiteColor]];
+		[modalView setOpaque:YES];
+        [modalView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
+		[self.view addSubview:modalView];
+		
+		[self.tableView scrollRectToVisible:modalView.frame animated:NO];
+		[self.tableView setScrollEnabled:NO];
+		
+        /*
+		activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+		[activityIndicator setFrame:CGRectMake((self.view.bounds.size.width - 20.0f)/2, (self.view.bounds.size.height - 20.0f)/2 - 10.0f  , 20.0f, 20.0f)];
+        [activityIndicator setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleBottomMargin];
+		[activityIndicator startAnimating];
+		[modalView addSubview:activityIndicator];
+         */
+	}
+}
+
+
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 }
 

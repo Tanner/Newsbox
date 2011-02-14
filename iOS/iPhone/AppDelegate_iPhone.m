@@ -119,8 +119,11 @@
 	stvc = [[SettingsTableViewController_iPhone alloc] initWithNibName:@"SettingsTableViewController_iPhone" bundle:nil];
 	[stvc setDelegate:self];
 	
-	navController = [[UINavigationController alloc] init];
-    [navController setViewControllers:[NSArray arrayWithObjects:rtvc, itvc, nil]];
+	navController = [[UINavigationController alloc] initWithRootViewController:rtvc];
+    [rtvc.navigationItem setTitle:@"Newsbox"];
+    [navController setToolbarHidden:NO];
+    [navController pushViewController:itvc animated:NO];
+    
     settingsNavController = [[UINavigationController alloc] initWithRootViewController:stvc];
     
     refreshInfoView = [[RefreshInfoView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 150.0f, 44.0f)];
