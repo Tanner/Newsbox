@@ -9,14 +9,19 @@
 #import "SettingsTableViewController_iPhone.h"
 #import "SFHFKeychainUtils.h"
 #import "SFHFEditableCell.h"
+#import "GitHubCommitServiceFactory.h"
+#import "GitHubService.h"
+#import "GitHubServiceSettings.h"
 
 @implementation SettingsTableViewController_iPhone
 
-@synthesize delegate;
+@synthesize delegate, latestGitSHA;
+
 
 - (void)cancelButtonPushed:(id)sender {
     [delegate returnFromSettingsTableViewController];
 }
+
 
 - (void)doneButtonPushed:(id)sender {
     [delegate returnFromSettingsTableViewController];
@@ -45,6 +50,13 @@
     [self.navigationItem setRightBarButtonItem:[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneButtonPushed:)] autorelease]];
         
     [self.tableView reloadData];
+    
+    latestGitSHA = [[NSString alloc] init];
+    [GitHubServiceSettings setCredential:[NSURLCredential credentialWithUser:@"Tanner"
+                                                                    password:@"pack12"
+                                                                 persistence:NSURLCredentialPersistenceNone]]; 
+    [GitHubServiceSettings setSecureServerAddress:@"https://github.com"];
+    [GitHubCommitServiceFactory requestCommitsOnBranch:@"iOS" repository:@"Newsbox" user:@"Tanner" delegate:self];
     
     [super viewWillAppear:animated];
 }
@@ -163,6 +175,24 @@
 }
 
 
+-(void)gitHubService:(id<GitHubService>)gitHubService gotCommit:(id<GitHubCommit>)commit {
+    if ([latestGitSHA isEqualToString:@""]) {
+        latestGitSHA = commit.sha;
+    }
+}
+
+
+-(void)gitHubServiceDone:(id <GitHubService>)gitHubService {
+    //NSLog(@"Git Hub Service done!");
+}
+
+
+-(void)gitHubService:(id <GitHubService>)gitHubService didFailWithError:error {
+    //NSLog(@"Git Hub Service failed!");
+    //NSLog(@"%@", error);
+}
+
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -228,6 +258,8 @@
 
 
 - (void)dealloc {
+    [latestGitSHA release];
+    
     [super dealloc];
 }
 
