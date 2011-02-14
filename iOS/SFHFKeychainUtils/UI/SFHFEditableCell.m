@@ -74,6 +74,7 @@
 - (void)setTextFieldAsPassword {
     self.textField.clearButtonMode = UITextFieldViewModeNever;
     [self.textField setSecureTextEntry:YES];
+    [self.textField setClearsOnBeginEditing:YES];
 }
 
 - (void) dealloc {
