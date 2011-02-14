@@ -75,7 +75,6 @@
     refreshing = NO;
 }
 
-
 - (void)showError:(NSString *)errorTitle withMessage:(NSString *)errorMessage withSettingsButton:(BOOL)settingsButton {
     if (settingsButton) {
         UIAlertView *alertView = [[[UIAlertView alloc] initWithTitle:errorTitle message:errorMessage delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:@"Settings", nil] autorelease];
@@ -85,7 +84,6 @@
         [alertView show];
     }
 }
-
 
 #pragma mark -
 #pragma mark UIAlertViewDelegate Methods
@@ -120,7 +118,6 @@
     [navController dismissModalViewControllerAnimated:YES];
 }
 
-
 - (void)changedUsername:(NSString *)username andPassword:(NSString *)password {
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     [prefs setValue:username forKey:@"GoogleUsername"];
@@ -129,15 +126,17 @@
     NSError *error = nil;
     [SFHFKeychainUtils storeUsername:username andPassword:password forServiceName:@"Google" updateExisting:YES error:&error];
     
-    [feedLoader authenticateWithGoogleUser:username andPassword:password];
+    [self loginAndDownloadItems];
 }
-
 
 #pragma mark -
 #pragma mark Application lifecycle
 
-
 - (void)loginAndDownloadItems {
+    if (refreshing) {
+        return;
+    }
+    
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     NSString *username = [prefs objectForKey:@"GoogleUsername"];
     
@@ -154,7 +153,6 @@
     [refreshInfoView animateLogin];
     refreshing = YES;
 }
-
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 	feedLoader = [[ItemLoader alloc] initWithDelegate:self];
@@ -192,14 +190,12 @@
     return YES;
 }
 
-
 - (void)applicationWillResignActive:(UIApplication *)application {
     /*
      Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
      Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
      */
 }
-
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     /*
@@ -212,13 +208,11 @@
 	[super applicationDidEnterBackground:application];
 }
 
-
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     /*
      Called as part of the transition from the background to the inactive state: here you can undo many of the changes made on entering the background.
      */
 }
-
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     /*
@@ -228,14 +222,12 @@
 	[self loginAndDownloadItems];
 }
 
-
 /**
  Superclass implementation saves changes in the application's managed object context before the application terminates.
  */
 - (void)applicationWillTerminate:(UIApplication *)application {
 	[super applicationWillTerminate:application];
 }
-
 
 #pragma mark -
 #pragma mark Memory management
@@ -247,12 +239,9 @@
     [super applicationDidReceiveMemoryWarning:application];
 }
 
-
 - (void)dealloc {
 	
 	[super dealloc];
 }
 
-
 @end
-
