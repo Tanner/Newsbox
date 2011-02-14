@@ -18,6 +18,41 @@
 		28AD733F0D9D9553002E5188 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow_iPad.xib */; };
 		28EEBFDD1118E19E00187D67 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28EEBFDC1118E19E00187D67 /* CoreData.framework */; };
 		28EEC04B1118E28000187D67 /* AppDelegate_Shared.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EEC04A1118E28000187D67 /* AppDelegate_Shared.m */; };
+		C39890441309AAE400647369 /* GitHubCommitFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C3988FE01309AAE400647369 /* GitHubCommitFactory.m */; };
+		C39890451309AAE400647369 /* GitHubCommitImp.m in Sources */ = {isa = PBXBuildFile; fileRef = C3988FE21309AAE400647369 /* GitHubCommitImp.m */; };
+		C39890461309AAE400647369 /* GitHubCommitServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C3988FE31309AAE400647369 /* GitHubCommitServiceFactory.m */; };
+		C39890471309AAE400647369 /* GitHubBaseFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C3988FE61309AAE400647369 /* GitHubBaseFactory.m */; };
+		C39890481309AAE400647369 /* GitHubServiceSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = C3988FE71309AAE400647369 /* GitHubServiceSettings.m */; };
+		C39890491309AAE400647369 /* GitHubCommentFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C3988FEA1309AAE400647369 /* GitHubCommentFactory.m */; };
+		C398904A1309AAE400647369 /* GitHubCommentImp.m in Sources */ = {isa = PBXBuildFile; fileRef = C3988FEC1309AAE400647369 /* GitHubCommentImp.m */; };
+		C398904B1309AAE400647369 /* GitHubIssueFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C3988FEE1309AAE400647369 /* GitHubIssueFactory.m */; };
+		C398904C1309AAE400647369 /* GitHubIssueImp.m in Sources */ = {isa = PBXBuildFile; fileRef = C3988FF01309AAE400647369 /* GitHubIssueImp.m */; };
+		C398904D1309AAE400647369 /* GitHubIssueServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C3988FF11309AAE400647369 /* GitHubIssueServiceFactory.m */; };
+		C398904E1309AAE400647369 /* GitHubLabelFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C3988FF31309AAE400647369 /* GitHubLabelFactory.m */; };
+		C398904F1309AAE400647369 /* GitHubBlobFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C3988FF61309AAE400647369 /* GitHubBlobFactory.m */; };
+		C39890501309AAE400647369 /* GitHubBlobImp.m in Sources */ = {isa = PBXBuildFile; fileRef = C3988FF81309AAE400647369 /* GitHubBlobImp.m */; };
+		C39890511309AAE400647369 /* GitHubDataFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C3988FFA1309AAE400647369 /* GitHubDataFactory.m */; };
+		C39890521309AAE400647369 /* GitHubObjectServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C3988FFB1309AAE400647369 /* GitHubObjectServiceFactory.m */; };
+		C39890531309AAE400647369 /* GitHubTreeItemFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C3988FFD1309AAE400647369 /* GitHubTreeItemFactory.m */; };
+		C39890541309AAE400647369 /* GitHubTreeItemImp.m in Sources */ = {isa = PBXBuildFile; fileRef = C3988FFF1309AAE400647369 /* GitHubTreeItemImp.m */; };
+		C39890551309AAE400647369 /* GitHubBranchFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C39890021309AAE400647369 /* GitHubBranchFactory.m */; };
+		C39890561309AAE400647369 /* GitHubBranchImp.m in Sources */ = {isa = PBXBuildFile; fileRef = C39890041309AAE400647369 /* GitHubBranchImp.m */; };
+		C39890571309AAE400647369 /* GitHubCollaboratorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C39890061309AAE400647369 /* GitHubCollaboratorFactory.m */; };
+		C39890581309AAE400647369 /* GitHubContributorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C39890081309AAE400647369 /* GitHubContributorFactory.m */; };
+		C39890591309AAE400647369 /* GitHubContributorImp.m in Sources */ = {isa = PBXBuildFile; fileRef = C398900A1309AAE400647369 /* GitHubContributorImp.m */; };
+		C398905A1309AAE400647369 /* GitHubRepositoryFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C398900C1309AAE400647369 /* GitHubRepositoryFactory.m */; };
+		C398905B1309AAE400647369 /* GitHubRepositoryImp.m in Sources */ = {isa = PBXBuildFile; fileRef = C398900E1309AAE400647369 /* GitHubRepositoryImp.m */; };
+		C398905C1309AAE400647369 /* GitHubRepositoryPoster.m in Sources */ = {isa = PBXBuildFile; fileRef = C39890101309AAE400647369 /* GitHubRepositoryPoster.m */; };
+		C398905D1309AAE400647369 /* GitHubRepositoryServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C39890111309AAE400647369 /* GitHubRepositoryServiceFactory.m */; };
+		C398905E1309AAE400647369 /* GitHubTagFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C39890131309AAE400647369 /* GitHubTagFactory.m */; };
+		C398905F1309AAE400647369 /* GitHubTagImp.m in Sources */ = {isa = PBXBuildFile; fileRef = C39890151309AAE400647369 /* GitHubTagImp.m */; };
+		C39890601309AAE400647369 /* GitHubWatcherFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C39890171309AAE400647369 /* GitHubWatcherFactory.m */; };
+		C39890611309AAE400647369 /* GitHubUserFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C398901A1309AAE400647369 /* GitHubUserFactory.m */; };
+		C39890621309AAE400647369 /* GitHubUserImp.m in Sources */ = {isa = PBXBuildFile; fileRef = C398901C1309AAE400647369 /* GitHubUserImp.m */; };
+		C39890631309AAE400647369 /* GitHubUserNameFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C398901E1309AAE400647369 /* GitHubUserNameFactory.m */; };
+		C39890641309AAE400647369 /* GitHubUserPoster.m in Sources */ = {isa = PBXBuildFile; fileRef = C39890201309AAE400647369 /* GitHubUserPoster.m */; };
+		C39890651309AAE400647369 /* GitHubUserSearchFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C39890221309AAE400647369 /* GitHubUserSearchFactory.m */; };
+		C39890661309AAE400647369 /* GitHubUserServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C39890231309AAE400647369 /* GitHubUserServiceFactory.m */; };
 		ED0D9A1113039B4000961E0D /* ItemsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0D9A1013039B4000961E0D /* ItemsTableViewCell.m */; };
 		ED2E91C61301D23600983CC3 /* ItemLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2E91C41301D23600983CC3 /* ItemLoader.m */; };
 		ED2E91CE1301D26F00983CC3 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2E91CC1301D26F00983CC3 /* Reachability.m */; };
@@ -103,6 +138,101 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Shared/main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Newsbox_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Newsbox_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Newsbox-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Newsbox-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		C3988FDF1309AAE400647369 /* GitHubCommitFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubCommitFactory.h; sourceTree = "<group>"; };
+		C3988FE01309AAE400647369 /* GitHubCommitFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubCommitFactory.m; sourceTree = "<group>"; };
+		C3988FE11309AAE400647369 /* GitHubCommitImp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubCommitImp.h; sourceTree = "<group>"; };
+		C3988FE21309AAE400647369 /* GitHubCommitImp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubCommitImp.m; sourceTree = "<group>"; };
+		C3988FE31309AAE400647369 /* GitHubCommitServiceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubCommitServiceFactory.m; sourceTree = "<group>"; };
+		C3988FE51309AAE400647369 /* GitHubBaseFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubBaseFactory.h; sourceTree = "<group>"; };
+		C3988FE61309AAE400647369 /* GitHubBaseFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubBaseFactory.m; sourceTree = "<group>"; };
+		C3988FE71309AAE400647369 /* GitHubServiceSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubServiceSettings.m; sourceTree = "<group>"; };
+		C3988FE91309AAE400647369 /* GitHubCommentFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubCommentFactory.h; sourceTree = "<group>"; };
+		C3988FEA1309AAE400647369 /* GitHubCommentFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubCommentFactory.m; sourceTree = "<group>"; };
+		C3988FEB1309AAE400647369 /* GitHubCommentImp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubCommentImp.h; sourceTree = "<group>"; };
+		C3988FEC1309AAE400647369 /* GitHubCommentImp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubCommentImp.m; sourceTree = "<group>"; };
+		C3988FED1309AAE400647369 /* GitHubIssueFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubIssueFactory.h; sourceTree = "<group>"; };
+		C3988FEE1309AAE400647369 /* GitHubIssueFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubIssueFactory.m; sourceTree = "<group>"; };
+		C3988FEF1309AAE400647369 /* GitHubIssueImp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubIssueImp.h; sourceTree = "<group>"; };
+		C3988FF01309AAE400647369 /* GitHubIssueImp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubIssueImp.m; sourceTree = "<group>"; };
+		C3988FF11309AAE400647369 /* GitHubIssueServiceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubIssueServiceFactory.m; sourceTree = "<group>"; };
+		C3988FF21309AAE400647369 /* GitHubLabelFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubLabelFactory.h; sourceTree = "<group>"; };
+		C3988FF31309AAE400647369 /* GitHubLabelFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubLabelFactory.m; sourceTree = "<group>"; };
+		C3988FF51309AAE400647369 /* GitHubBlobFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubBlobFactory.h; sourceTree = "<group>"; };
+		C3988FF61309AAE400647369 /* GitHubBlobFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubBlobFactory.m; sourceTree = "<group>"; };
+		C3988FF71309AAE400647369 /* GitHubBlobImp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubBlobImp.h; sourceTree = "<group>"; };
+		C3988FF81309AAE400647369 /* GitHubBlobImp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubBlobImp.m; sourceTree = "<group>"; };
+		C3988FF91309AAE400647369 /* GitHubDataFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubDataFactory.h; sourceTree = "<group>"; };
+		C3988FFA1309AAE400647369 /* GitHubDataFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubDataFactory.m; sourceTree = "<group>"; };
+		C3988FFB1309AAE400647369 /* GitHubObjectServiceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubObjectServiceFactory.m; sourceTree = "<group>"; };
+		C3988FFC1309AAE400647369 /* GitHubTreeItemFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubTreeItemFactory.h; sourceTree = "<group>"; };
+		C3988FFD1309AAE400647369 /* GitHubTreeItemFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubTreeItemFactory.m; sourceTree = "<group>"; };
+		C3988FFE1309AAE400647369 /* GitHubTreeItemImp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubTreeItemImp.h; sourceTree = "<group>"; };
+		C3988FFF1309AAE400647369 /* GitHubTreeItemImp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubTreeItemImp.m; sourceTree = "<group>"; };
+		C39890011309AAE400647369 /* GitHubBranchFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubBranchFactory.h; sourceTree = "<group>"; };
+		C39890021309AAE400647369 /* GitHubBranchFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubBranchFactory.m; sourceTree = "<group>"; };
+		C39890031309AAE400647369 /* GitHubBranchImp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubBranchImp.h; sourceTree = "<group>"; };
+		C39890041309AAE400647369 /* GitHubBranchImp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubBranchImp.m; sourceTree = "<group>"; };
+		C39890051309AAE400647369 /* GitHubCollaboratorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubCollaboratorFactory.h; sourceTree = "<group>"; };
+		C39890061309AAE400647369 /* GitHubCollaboratorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubCollaboratorFactory.m; sourceTree = "<group>"; };
+		C39890071309AAE400647369 /* GitHubContributorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubContributorFactory.h; sourceTree = "<group>"; };
+		C39890081309AAE400647369 /* GitHubContributorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubContributorFactory.m; sourceTree = "<group>"; };
+		C39890091309AAE400647369 /* GitHubContributorImp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubContributorImp.h; sourceTree = "<group>"; };
+		C398900A1309AAE400647369 /* GitHubContributorImp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubContributorImp.m; sourceTree = "<group>"; };
+		C398900B1309AAE400647369 /* GitHubRepositoryFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubRepositoryFactory.h; sourceTree = "<group>"; };
+		C398900C1309AAE400647369 /* GitHubRepositoryFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubRepositoryFactory.m; sourceTree = "<group>"; };
+		C398900D1309AAE400647369 /* GitHubRepositoryImp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubRepositoryImp.h; sourceTree = "<group>"; };
+		C398900E1309AAE400647369 /* GitHubRepositoryImp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubRepositoryImp.m; sourceTree = "<group>"; };
+		C398900F1309AAE400647369 /* GitHubRepositoryPoster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubRepositoryPoster.h; sourceTree = "<group>"; };
+		C39890101309AAE400647369 /* GitHubRepositoryPoster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubRepositoryPoster.m; sourceTree = "<group>"; };
+		C39890111309AAE400647369 /* GitHubRepositoryServiceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubRepositoryServiceFactory.m; sourceTree = "<group>"; };
+		C39890121309AAE400647369 /* GitHubTagFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubTagFactory.h; sourceTree = "<group>"; };
+		C39890131309AAE400647369 /* GitHubTagFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubTagFactory.m; sourceTree = "<group>"; };
+		C39890141309AAE400647369 /* GitHubTagImp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubTagImp.h; sourceTree = "<group>"; };
+		C39890151309AAE400647369 /* GitHubTagImp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubTagImp.m; sourceTree = "<group>"; };
+		C39890161309AAE400647369 /* GitHubWatcherFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubWatcherFactory.h; sourceTree = "<group>"; };
+		C39890171309AAE400647369 /* GitHubWatcherFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubWatcherFactory.m; sourceTree = "<group>"; };
+		C39890191309AAE400647369 /* GitHubUserFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubUserFactory.h; sourceTree = "<group>"; };
+		C398901A1309AAE400647369 /* GitHubUserFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubUserFactory.m; sourceTree = "<group>"; };
+		C398901B1309AAE400647369 /* GitHubUserImp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubUserImp.h; sourceTree = "<group>"; };
+		C398901C1309AAE400647369 /* GitHubUserImp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubUserImp.m; sourceTree = "<group>"; };
+		C398901D1309AAE400647369 /* GitHubUserNameFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubUserNameFactory.h; sourceTree = "<group>"; };
+		C398901E1309AAE400647369 /* GitHubUserNameFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubUserNameFactory.m; sourceTree = "<group>"; };
+		C398901F1309AAE400647369 /* GitHubUserPoster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubUserPoster.h; sourceTree = "<group>"; };
+		C39890201309AAE400647369 /* GitHubUserPoster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubUserPoster.m; sourceTree = "<group>"; };
+		C39890211309AAE400647369 /* GitHubUserSearchFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubUserSearchFactory.h; sourceTree = "<group>"; };
+		C39890221309AAE400647369 /* GitHubUserSearchFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubUserSearchFactory.m; sourceTree = "<group>"; };
+		C39890231309AAE400647369 /* GitHubUserServiceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubUserServiceFactory.m; sourceTree = "<group>"; };
+		C39890251309AAE400647369 /* GitHubBlob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubBlob.h; sourceTree = "<group>"; };
+		C39890261309AAE400647369 /* GitHubBranch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubBranch.h; sourceTree = "<group>"; };
+		C39890271309AAE400647369 /* GitHubComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubComment.h; sourceTree = "<group>"; };
+		C39890281309AAE400647369 /* GitHubCommit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubCommit.h; sourceTree = "<group>"; };
+		C39890291309AAE400647369 /* GitHubCommitServiceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubCommitServiceFactory.h; sourceTree = "<group>"; };
+		C398902A1309AAE400647369 /* GitHubContributor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubContributor.h; sourceTree = "<group>"; };
+		C398902B1309AAE400647369 /* GitHubIssue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubIssue.h; sourceTree = "<group>"; };
+		C398902C1309AAE400647369 /* GitHubIssueServiceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubIssueServiceFactory.h; sourceTree = "<group>"; };
+		C398902D1309AAE400647369 /* GitHubObjectServiceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubObjectServiceFactory.h; sourceTree = "<group>"; };
+		C398902E1309AAE400647369 /* GitHubRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubRef.h; sourceTree = "<group>"; };
+		C398902F1309AAE400647369 /* GitHubRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubRepository.h; sourceTree = "<group>"; };
+		C39890301309AAE400647369 /* GitHubRepositoryServiceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubRepositoryServiceFactory.h; sourceTree = "<group>"; };
+		C39890311309AAE400647369 /* GitHubService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubService.h; sourceTree = "<group>"; };
+		C39890321309AAE400647369 /* GitHubServiceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubServiceDelegate.h; sourceTree = "<group>"; };
+		C39890331309AAE400647369 /* GitHubServiceGotBlobDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubServiceGotBlobDelegate.h; sourceTree = "<group>"; };
+		C39890341309AAE400647369 /* GitHubServiceGotBranchDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubServiceGotBranchDelegate.h; sourceTree = "<group>"; };
+		C39890351309AAE400647369 /* GitHubServiceGotCommentDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubServiceGotCommentDelegate.h; sourceTree = "<group>"; };
+		C39890361309AAE400647369 /* GitHubServiceGotCommitDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubServiceGotCommitDelegate.h; sourceTree = "<group>"; };
+		C39890371309AAE400647369 /* GitHubServiceGotContributorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubServiceGotContributorDelegate.h; sourceTree = "<group>"; };
+		C39890381309AAE400647369 /* GitHubServiceGotDataDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubServiceGotDataDelegate.h; sourceTree = "<group>"; };
+		C39890391309AAE400647369 /* GitHubServiceGotIssueDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubServiceGotIssueDelegate.h; sourceTree = "<group>"; };
+		C398903A1309AAE400647369 /* GitHubServiceGotNameDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubServiceGotNameDelegate.h; sourceTree = "<group>"; };
+		C398903B1309AAE400647369 /* GitHubServiceGotRepositoryDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubServiceGotRepositoryDelegate.h; sourceTree = "<group>"; };
+		C398903C1309AAE400647369 /* GitHubServiceGotTagDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubServiceGotTagDelegate.h; sourceTree = "<group>"; };
+		C398903D1309AAE400647369 /* GitHubServiceGotTreeItemDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubServiceGotTreeItemDelegate.h; sourceTree = "<group>"; };
+		C398903E1309AAE400647369 /* GitHubServiceGotUserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubServiceGotUserDelegate.h; sourceTree = "<group>"; };
+		C398903F1309AAE400647369 /* GitHubServiceSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubServiceSettings.h; sourceTree = "<group>"; };
+		C39890401309AAE400647369 /* GitHubTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubTag.h; sourceTree = "<group>"; };
+		C39890411309AAE400647369 /* GitHubTreeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubTreeItem.h; sourceTree = "<group>"; };
+		C39890421309AAE400647369 /* GitHubUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubUser.h; sourceTree = "<group>"; };
+		C39890431309AAE400647369 /* GitHubUserServiceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubUserServiceFactory.h; sourceTree = "<group>"; };
 		ED0D9A0F13039B4000961E0D /* ItemsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsTableViewCell.h; sourceTree = "<group>"; };
 		ED0D9A1013039B4000961E0D /* ItemsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsTableViewCell.m; sourceTree = "<group>"; };
 		ED2E91C41301D23600983CC3 /* ItemLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ItemLoader.m; path = Shared/ItemLoader.m; sourceTree = "<group>"; };
@@ -339,9 +469,176 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C3988FDC1309AA8E00647369 /* GitHubLib */ = {
+			isa = PBXGroup;
+			children = (
+				C3988FDD1309AAE400647369 /* Implementation */,
+				C39890241309AAE400647369 /* Interface */,
+			);
+			name = GitHubLib;
+			sourceTree = "<group>";
+		};
+		C3988FDD1309AAE400647369 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				C3988FDE1309AAE400647369 /* CommitService */,
+				C3988FE41309AAE400647369 /* Common */,
+				C3988FE81309AAE400647369 /* IssueService */,
+				C3988FF41309AAE400647369 /* ObjectService */,
+				C39890001309AAE400647369 /* RepositoryService */,
+				C39890181309AAE400647369 /* UserService */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		C3988FDE1309AAE400647369 /* CommitService */ = {
+			isa = PBXGroup;
+			children = (
+				C3988FDF1309AAE400647369 /* GitHubCommitFactory.h */,
+				C3988FE01309AAE400647369 /* GitHubCommitFactory.m */,
+				C3988FE11309AAE400647369 /* GitHubCommitImp.h */,
+				C3988FE21309AAE400647369 /* GitHubCommitImp.m */,
+				C3988FE31309AAE400647369 /* GitHubCommitServiceFactory.m */,
+			);
+			path = CommitService;
+			sourceTree = "<group>";
+		};
+		C3988FE41309AAE400647369 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C3988FE51309AAE400647369 /* GitHubBaseFactory.h */,
+				C3988FE61309AAE400647369 /* GitHubBaseFactory.m */,
+				C3988FE71309AAE400647369 /* GitHubServiceSettings.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		C3988FE81309AAE400647369 /* IssueService */ = {
+			isa = PBXGroup;
+			children = (
+				C3988FE91309AAE400647369 /* GitHubCommentFactory.h */,
+				C3988FEA1309AAE400647369 /* GitHubCommentFactory.m */,
+				C3988FEB1309AAE400647369 /* GitHubCommentImp.h */,
+				C3988FEC1309AAE400647369 /* GitHubCommentImp.m */,
+				C3988FED1309AAE400647369 /* GitHubIssueFactory.h */,
+				C3988FEE1309AAE400647369 /* GitHubIssueFactory.m */,
+				C3988FEF1309AAE400647369 /* GitHubIssueImp.h */,
+				C3988FF01309AAE400647369 /* GitHubIssueImp.m */,
+				C3988FF11309AAE400647369 /* GitHubIssueServiceFactory.m */,
+				C3988FF21309AAE400647369 /* GitHubLabelFactory.h */,
+				C3988FF31309AAE400647369 /* GitHubLabelFactory.m */,
+			);
+			path = IssueService;
+			sourceTree = "<group>";
+		};
+		C3988FF41309AAE400647369 /* ObjectService */ = {
+			isa = PBXGroup;
+			children = (
+				C3988FF51309AAE400647369 /* GitHubBlobFactory.h */,
+				C3988FF61309AAE400647369 /* GitHubBlobFactory.m */,
+				C3988FF71309AAE400647369 /* GitHubBlobImp.h */,
+				C3988FF81309AAE400647369 /* GitHubBlobImp.m */,
+				C3988FF91309AAE400647369 /* GitHubDataFactory.h */,
+				C3988FFA1309AAE400647369 /* GitHubDataFactory.m */,
+				C3988FFB1309AAE400647369 /* GitHubObjectServiceFactory.m */,
+				C3988FFC1309AAE400647369 /* GitHubTreeItemFactory.h */,
+				C3988FFD1309AAE400647369 /* GitHubTreeItemFactory.m */,
+				C3988FFE1309AAE400647369 /* GitHubTreeItemImp.h */,
+				C3988FFF1309AAE400647369 /* GitHubTreeItemImp.m */,
+			);
+			path = ObjectService;
+			sourceTree = "<group>";
+		};
+		C39890001309AAE400647369 /* RepositoryService */ = {
+			isa = PBXGroup;
+			children = (
+				C39890011309AAE400647369 /* GitHubBranchFactory.h */,
+				C39890021309AAE400647369 /* GitHubBranchFactory.m */,
+				C39890031309AAE400647369 /* GitHubBranchImp.h */,
+				C39890041309AAE400647369 /* GitHubBranchImp.m */,
+				C39890051309AAE400647369 /* GitHubCollaboratorFactory.h */,
+				C39890061309AAE400647369 /* GitHubCollaboratorFactory.m */,
+				C39890071309AAE400647369 /* GitHubContributorFactory.h */,
+				C39890081309AAE400647369 /* GitHubContributorFactory.m */,
+				C39890091309AAE400647369 /* GitHubContributorImp.h */,
+				C398900A1309AAE400647369 /* GitHubContributorImp.m */,
+				C398900B1309AAE400647369 /* GitHubRepositoryFactory.h */,
+				C398900C1309AAE400647369 /* GitHubRepositoryFactory.m */,
+				C398900D1309AAE400647369 /* GitHubRepositoryImp.h */,
+				C398900E1309AAE400647369 /* GitHubRepositoryImp.m */,
+				C398900F1309AAE400647369 /* GitHubRepositoryPoster.h */,
+				C39890101309AAE400647369 /* GitHubRepositoryPoster.m */,
+				C39890111309AAE400647369 /* GitHubRepositoryServiceFactory.m */,
+				C39890121309AAE400647369 /* GitHubTagFactory.h */,
+				C39890131309AAE400647369 /* GitHubTagFactory.m */,
+				C39890141309AAE400647369 /* GitHubTagImp.h */,
+				C39890151309AAE400647369 /* GitHubTagImp.m */,
+				C39890161309AAE400647369 /* GitHubWatcherFactory.h */,
+				C39890171309AAE400647369 /* GitHubWatcherFactory.m */,
+			);
+			path = RepositoryService;
+			sourceTree = "<group>";
+		};
+		C39890181309AAE400647369 /* UserService */ = {
+			isa = PBXGroup;
+			children = (
+				C39890191309AAE400647369 /* GitHubUserFactory.h */,
+				C398901A1309AAE400647369 /* GitHubUserFactory.m */,
+				C398901B1309AAE400647369 /* GitHubUserImp.h */,
+				C398901C1309AAE400647369 /* GitHubUserImp.m */,
+				C398901D1309AAE400647369 /* GitHubUserNameFactory.h */,
+				C398901E1309AAE400647369 /* GitHubUserNameFactory.m */,
+				C398901F1309AAE400647369 /* GitHubUserPoster.h */,
+				C39890201309AAE400647369 /* GitHubUserPoster.m */,
+				C39890211309AAE400647369 /* GitHubUserSearchFactory.h */,
+				C39890221309AAE400647369 /* GitHubUserSearchFactory.m */,
+				C39890231309AAE400647369 /* GitHubUserServiceFactory.m */,
+			);
+			path = UserService;
+			sourceTree = "<group>";
+		};
+		C39890241309AAE400647369 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				C39890251309AAE400647369 /* GitHubBlob.h */,
+				C39890261309AAE400647369 /* GitHubBranch.h */,
+				C39890271309AAE400647369 /* GitHubComment.h */,
+				C39890281309AAE400647369 /* GitHubCommit.h */,
+				C39890291309AAE400647369 /* GitHubCommitServiceFactory.h */,
+				C398902A1309AAE400647369 /* GitHubContributor.h */,
+				C398902B1309AAE400647369 /* GitHubIssue.h */,
+				C398902C1309AAE400647369 /* GitHubIssueServiceFactory.h */,
+				C398902D1309AAE400647369 /* GitHubObjectServiceFactory.h */,
+				C398902E1309AAE400647369 /* GitHubRef.h */,
+				C398902F1309AAE400647369 /* GitHubRepository.h */,
+				C39890301309AAE400647369 /* GitHubRepositoryServiceFactory.h */,
+				C39890311309AAE400647369 /* GitHubService.h */,
+				C39890321309AAE400647369 /* GitHubServiceDelegate.h */,
+				C39890331309AAE400647369 /* GitHubServiceGotBlobDelegate.h */,
+				C39890341309AAE400647369 /* GitHubServiceGotBranchDelegate.h */,
+				C39890351309AAE400647369 /* GitHubServiceGotCommentDelegate.h */,
+				C39890361309AAE400647369 /* GitHubServiceGotCommitDelegate.h */,
+				C39890371309AAE400647369 /* GitHubServiceGotContributorDelegate.h */,
+				C39890381309AAE400647369 /* GitHubServiceGotDataDelegate.h */,
+				C39890391309AAE400647369 /* GitHubServiceGotIssueDelegate.h */,
+				C398903A1309AAE400647369 /* GitHubServiceGotNameDelegate.h */,
+				C398903B1309AAE400647369 /* GitHubServiceGotRepositoryDelegate.h */,
+				C398903C1309AAE400647369 /* GitHubServiceGotTagDelegate.h */,
+				C398903D1309AAE400647369 /* GitHubServiceGotTreeItemDelegate.h */,
+				C398903E1309AAE400647369 /* GitHubServiceGotUserDelegate.h */,
+				C398903F1309AAE400647369 /* GitHubServiceSettings.h */,
+				C39890401309AAE400647369 /* GitHubTag.h */,
+				C39890411309AAE400647369 /* GitHubTreeItem.h */,
+				C39890421309AAE400647369 /* GitHubUser.h */,
+				C39890431309AAE400647369 /* GitHubUserServiceFactory.h */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
 		ED2E91C71301D26F00983CC3 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				C3988FDC1309AA8E00647369 /* GitHubLib */,
 				ED71CFC213030B3500C3BE65 /* EGOTableViewPullRefresh */,
 				ED2E91CF1301D27800983CC3 /* ASIHTTPRequest */,
 				ED2E91CA1301D26F00983CC3 /* Reachability */,
@@ -562,7 +859,7 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Newsbox" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "NewsBox" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -679,6 +976,41 @@
 				ED59CDA71307734900595B0A /* UIWebView+SFHFStringMetrics.m in Sources */,
 				EDDA76171308B167007AB030 /* RefreshInfoView.m in Sources */,
 				EDDA761B1308D24B007AB030 /* RootTableViewController_iPhone.m in Sources */,
+				C39890441309AAE400647369 /* GitHubCommitFactory.m in Sources */,
+				C39890451309AAE400647369 /* GitHubCommitImp.m in Sources */,
+				C39890461309AAE400647369 /* GitHubCommitServiceFactory.m in Sources */,
+				C39890471309AAE400647369 /* GitHubBaseFactory.m in Sources */,
+				C39890481309AAE400647369 /* GitHubServiceSettings.m in Sources */,
+				C39890491309AAE400647369 /* GitHubCommentFactory.m in Sources */,
+				C398904A1309AAE400647369 /* GitHubCommentImp.m in Sources */,
+				C398904B1309AAE400647369 /* GitHubIssueFactory.m in Sources */,
+				C398904C1309AAE400647369 /* GitHubIssueImp.m in Sources */,
+				C398904D1309AAE400647369 /* GitHubIssueServiceFactory.m in Sources */,
+				C398904E1309AAE400647369 /* GitHubLabelFactory.m in Sources */,
+				C398904F1309AAE400647369 /* GitHubBlobFactory.m in Sources */,
+				C39890501309AAE400647369 /* GitHubBlobImp.m in Sources */,
+				C39890511309AAE400647369 /* GitHubDataFactory.m in Sources */,
+				C39890521309AAE400647369 /* GitHubObjectServiceFactory.m in Sources */,
+				C39890531309AAE400647369 /* GitHubTreeItemFactory.m in Sources */,
+				C39890541309AAE400647369 /* GitHubTreeItemImp.m in Sources */,
+				C39890551309AAE400647369 /* GitHubBranchFactory.m in Sources */,
+				C39890561309AAE400647369 /* GitHubBranchImp.m in Sources */,
+				C39890571309AAE400647369 /* GitHubCollaboratorFactory.m in Sources */,
+				C39890581309AAE400647369 /* GitHubContributorFactory.m in Sources */,
+				C39890591309AAE400647369 /* GitHubContributorImp.m in Sources */,
+				C398905A1309AAE400647369 /* GitHubRepositoryFactory.m in Sources */,
+				C398905B1309AAE400647369 /* GitHubRepositoryImp.m in Sources */,
+				C398905C1309AAE400647369 /* GitHubRepositoryPoster.m in Sources */,
+				C398905D1309AAE400647369 /* GitHubRepositoryServiceFactory.m in Sources */,
+				C398905E1309AAE400647369 /* GitHubTagFactory.m in Sources */,
+				C398905F1309AAE400647369 /* GitHubTagImp.m in Sources */,
+				C39890601309AAE400647369 /* GitHubWatcherFactory.m in Sources */,
+				C39890611309AAE400647369 /* GitHubUserFactory.m in Sources */,
+				C39890621309AAE400647369 /* GitHubUserImp.m in Sources */,
+				C39890631309AAE400647369 /* GitHubUserNameFactory.m in Sources */,
+				C39890641309AAE400647369 /* GitHubUserPoster.m in Sources */,
+				C39890651309AAE400647369 /* GitHubUserSearchFactory.m in Sources */,
+				C39890661309AAE400647369 /* GitHubUserServiceFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -726,13 +1058,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ryan Ashcraft (4G66M54XX5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tanner Smith (KXNM2S876K)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
 				PREBINDING = NO;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6648D5A0-E9C4-49E5-9AF3-EAA565B1812E";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4C347101-401D-4491-8569-E92D0775176F";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -742,14 +1074,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ryan Ashcraft (4G66M54XX5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tanner Smith (KXNM2S876K)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6648D5A0-E9C4-49E5-9AF3-EAA565B1812E";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4C347101-401D-4491-8569-E92D0775176F";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -767,7 +1099,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Newsbox" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "NewsBox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
