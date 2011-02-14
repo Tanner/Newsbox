@@ -90,6 +90,7 @@
 - (void)changedUsername:(NSString *)username andPassword:(NSString *)password {
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     [prefs setValue:username forKey:@"username"];
+    [prefs synchronize];
     
     NSError *error = nil;
     [SFHFKeychainUtils storeUsername:username andPassword:password forServiceName:@"google" updateExisting:YES error:&error];
