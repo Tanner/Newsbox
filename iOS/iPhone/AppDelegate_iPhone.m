@@ -14,6 +14,11 @@
 #import "SFHFKeychainUtils.h"
 
 
+@interface AppDelegate_iPhone (private)
+- (void)loginAndDownloadItems;
+@end
+
+
 @implementation AppDelegate_iPhone
 
 
@@ -21,7 +26,7 @@
 #pragma mark RefreshInfoViewDelegate Methods
 
 - (NSDate *)dataSourceLastUpdated:(id)sender {
-    return [NSDate date];
+    return lastUpdatedDate;
 }
 
 - (BOOL)isRefreshing {
@@ -43,17 +48,39 @@
 // NSString *const TEST_GOOGLE_USER = @"newsbox.test@gmail.com";
 // NSString *const TEST_PASSWORD = @"FA1w0wxjRTHRyj";
 
+#pragma mark -
+#pragma mark FeedLoaderDelegate Methods
+
 
 - (void)didLogin:(BOOL)login {
 	if (login) {
-		[self refresh];
-	}
+        [refreshInfoView animateDownload];
+        
+        [self loginAndDownloadItems];
+	} else {
+        [refreshInfoView stopAnimating];
+        
+        refreshing = NO;
+    }
 }
 
 - (void)didGetItems:(NSArray *)items ofType:(ItemType)type {
 	[itvc setItems:items withType:type];
+    
+    lastUpdatedDate = [[NSDate date] retain];
+    [[NSUserDefaults standardUserDefaults] setObject:lastUpdatedDate forKey:@"LastRefresh"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
     [refreshInfoView stopAnimating];
+    
     refreshing = NO;
+}
+
+
+- (void)showError:(NSString *)errorTitle withMessage:(NSString *)errorMessage {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:errorTitle message:errorMessage delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+    [alertView show];
+    [alertView release];
 }
 
 
@@ -63,15 +90,6 @@
 - (void)showItem:(MWFeedItem *)anItem {
 	[ivc setItem:anItem];
 	[navController pushViewController:ivc animated:YES];
-}
-
-- (void)refresh {
-    if (!refreshing) {
-        [feedLoader getItemsOfType:ItemTypeUnread];
-        
-        [refreshInfoView animateRefresh];
-        refreshing = YES;
-    }
 }
 
 - (void)showSettingsView {
@@ -102,6 +120,28 @@
 #pragma mark -
 #pragma mark Application lifecycle
 
+
+- (void)loginAndDownloadItems {
+    if (![feedLoader authenticated]) {
+        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+        NSString *username = [prefs objectForKey:@"username"];
+        
+        NSError *error = nil;
+        NSString *password = [SFHFKeychainUtils getPasswordForUsername:username andServiceName:@"google" error:&error];
+        
+		[feedLoader authenticateWithGoogleUser:username andPassword:password];
+        
+        [refreshInfoView animateLogin];
+        refreshing = YES;
+	} else {
+		[feedLoader getItemsOfType:[feedLoader currentItemType]];
+        
+        [refreshInfoView animateDownload];
+        refreshing = YES;
+	}
+}
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // [SFHFKeychainUtils storeUsername:TEST_GOOGLE_USER andPassword:TEST_PASSWORD forServiceName:@"google" updateExisting:YES error:&error];
     
@@ -130,7 +170,10 @@
     [refreshInfoView setDelegate:self];
     
     refreshInfoViewButtonItem = [[UIBarButtonItem alloc] initWithCustomView:refreshInfoView];
-		
+    
+    lastUpdatedDate = [[NSUserDefaults standardUserDefaults] objectForKey:@"LastRefresh"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
 	[self.window addSubview:navController.view];
     [self.window makeKeyAndVisible];
     
@@ -170,18 +213,7 @@
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
 	
-	if (![feedLoader authenticated]) {
-        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-        NSString *username = [prefs objectForKey:@"username"];
-        
-        NSError *error = nil;
-        NSString *password = [SFHFKeychainUtils getPasswordForUsername:username andServiceName:@"google" error:&error];
-        
-		[feedLoader authenticateWithGoogleUser:username andPassword:password];
-	} else {
-//		[feedLoader getItemsOfType:[feedLoader currentItemType]];
-        [itvc refresh];
-	}
+	[self loginAndDownloadItems];
 }
 
 

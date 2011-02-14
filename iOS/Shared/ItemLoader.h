@@ -45,4 +45,5 @@
 @protocol ItemLoaderDelegate
 - (void)didLogin:(BOOL)login;
 - (void)didGetItems:(NSArray *)items ofType:(ItemType)type;
+- (void)showError:(NSString *)errorTitle withMessage:(NSString *)errorMessage;
 @end

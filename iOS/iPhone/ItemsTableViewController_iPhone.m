@@ -60,7 +60,7 @@
 #pragma mark Data Source Loading / Reloading Methods
 
 - (void)refresh {
-    [delegate refresh];
+    [delegate loginAndDownloadItems];
 }
 
 - (void)reformatCellLabelsWithOrientation:(UIInterfaceOrientation)orientation {

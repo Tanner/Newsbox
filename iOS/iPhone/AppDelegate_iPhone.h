@@ -31,6 +31,8 @@ RefreshInfoViewDelegate> {
     RefreshInfoView *refreshInfoView;
     BOOL refreshing;
     UIBarButtonItem *refreshInfoViewButtonItem;
+    
+    NSDate *lastUpdatedDate;
 }
 
 @end

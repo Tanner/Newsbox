@@ -13,11 +13,20 @@
 
 @synthesize delegate;
 
-- (void)animateRefresh {
+- (void)animateLogin {
+    [self addSubview:label];
+    [self addSubview:activityIndicator];
+    
+    [label setText:@"Logging into Google Reader…"];
+    [activityIndicator startAnimating];
+    [self customLayoutSubviews];
+}
+
+- (void)animateDownload {
     [self addSubview:label];
     [self addSubview:activityIndicator];
 
-    [label setText:@"Checking for feeds…"];
+    [label setText:@"Checking for new items…"];
     [activityIndicator startAnimating];
     [self customLayoutSubviews];
 }
@@ -27,25 +36,27 @@
     [activityIndicator removeFromSuperview];
     
     [self refreshLastUpdatedDate];
-    
+        
     [self customLayoutSubviews];
 }
 
 - (void)refreshLastUpdatedDate {
     NSDate *date = [delegate dataSourceLastUpdated:self];
     
+    if (date == nil) {
+        [label setText:@"Never Updated"];
+        return;
+    }
+    
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setAMSymbol:@"AM"];
     [formatter setPMSymbol:@"PM"];
     [formatter setDateFormat:@"MM/dd/yyyy hh:mm a"];
-    label.text = [NSString stringWithFormat:@"Updated: %@", [formatter stringFromDate:date]];
- //   [[NSUserDefaults standardUserDefaults] setObject:label forKey:@"LastRefresh"];
- //   [[NSUserDefaults standardUserDefaults] synchronize];
+    [label setText:[NSString stringWithFormat:@"Updated: %@", [formatter stringFromDate:date]]];
     [formatter release];
 }
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];

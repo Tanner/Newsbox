@@ -21,7 +21,8 @@
 
 @property (nonatomic, assign) id<RefreshInfoViewDelegate> delegate;
 
-- (void)animateRefresh;
+- (void)animateLogin;
+- (void)animateDownload;
 - (void)stopAnimating;
 - (void)refreshLastUpdatedDate;
 

@@ -12,7 +12,7 @@
 
 
 @protocol ItemsTableViewControllerDelegate
-- (void)refresh;
+- (void)loginAndDownloadItems;
 - (void)showItem:(MWFeedItem *)anItem;
 - (void)showSettingsView;
 @end

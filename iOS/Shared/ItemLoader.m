@@ -28,7 +28,7 @@
 
 
 - (id)initWithDelegate:(id)aDelegate {
-	if (self = [self init]) {
+	if ((self = [self init])) {
 		delegate = aDelegate;
 		
 		parser = [[MWFeedParser alloc] init];
@@ -57,7 +57,7 @@
     [request start];
 }
 
--(BOOL)loginRequestFinished:(ASIHTTPRequest *)request {	
+-(void)loginRequestFinished:(ASIHTTPRequest *)request {	
     NSString *responseString = [request responseString];
 	
     //login failed
@@ -65,8 +65,12 @@
         //[self setLastError: [self errorWithDescription: @"Bad Username/Passsword" code: 0x001 andErrorLevel: 0x00]];
 		
 		NSLog(@"login failed");
+        [delegate showError:@"Google Login Failed" withMessage:@"Failed to log into Google Reader"];
 		
-        return NO;
+        authenticated = NO;
+        [delegate didLogin:NO];
+        
+        return;
     }
 	
     //captcha required
@@ -74,8 +78,12 @@
         //[self setLastError: [self errorWithDescription: @"Captcha Required" code: 0x001 andErrorLevel: 0x00]];
 		
 		NSLog(@"captcha required");
+        [delegate showError:@"Google Login Failed" withMessage:@"Failed to log into Google Reader"];
 		
-        return NO;
+        authenticated = NO;
+        [delegate didLogin:NO];
+        
+        return;
     }
 		
     //extract SID + auth
@@ -91,14 +99,17 @@
 	
 	authenticated = YES;
 	[delegate didLogin:YES];
-	
-    return YES;
 }
 
 - (void)loginRequestFailed:(ASIHTTPRequest *)request {
     NSError *error = [request error];
 	
     NSLog(@"login request failed with error: %@", [error localizedDescription]);
+    [delegate showError:@"No Connection" withMessage:@"Could not connect to Google Reader."];
+
+    authenticated = NO;
+    [delegate didLogin:NO];
+    
     //[self setLastError: error];
 }
 
@@ -118,6 +129,10 @@
 
 - (void)requestFailed:(ASIHTTPRequest *)request {
 	NSLog(@"%@", @"failed to get feeds");
+    [delegate showError:@"Failed to Download Items" withMessage:@"An error occurred when downloading your items. Try again."];
+    
+    authenticated = NO;
+    [delegate didLogin:NO];
 }
 
 - (ASIHTTPRequest *)requestForAPIEndpoint:(NSString *)apiEndpoint {

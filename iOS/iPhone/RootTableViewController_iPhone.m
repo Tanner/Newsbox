@@ -14,7 +14,7 @@
 @synthesize delegate;
 
 - (void)refresh {
-    [delegate refresh];
+    [delegate loginAndDownloadItems];
 }
 
 - (void)settingsButtonPressed:(id)sender {

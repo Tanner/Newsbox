@@ -11,7 +11,7 @@
 #import "RefreshInfoView.h"
 
 @protocol RootTableViewControllerDelegate
-- (void)refresh;
+- (void)loginAndDownloadItems;
 - (void)showItemsTableViewWithType:(ItemType)type;
 - (void)showSettingsView;
 - (RefreshInfoView *)refreshInfoView;
