@@ -133,6 +133,7 @@
     switch (indexPath.row) {
         case 0: {
             [[cell textLabel] setText:@"Unread"];
+            [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
             break;
         }
     }
