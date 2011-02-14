@@ -27,6 +27,9 @@
 @synthesize authenticated;
 
 
+//NSDictionary const *errors = [NSDictionary dictionaryWithObjects:<#(NSArray *)#> forKeys:<#(NSArray *)#>
+
+
 - (id)initWithDelegate:(id)aDelegate {
 	if ((self = [self init])) {
 		delegate = aDelegate;
@@ -65,7 +68,7 @@
         //[self setLastError: [self errorWithDescription: @"Bad Username/Passsword" code: 0x001 andErrorLevel: 0x00]];
 		
 		NSLog(@"login failed");
-        [delegate showError:@"Google Login Failed" withMessage:@"Failed to log into Google Reader"];
+        [delegate showError:@"Google Reader Login Failed" withMessage:@"Failed to log into Google Reader."];
 		
         authenticated = NO;
         [delegate didLogin:NO];
@@ -78,7 +81,7 @@
         //[self setLastError: [self errorWithDescription: @"Captcha Required" code: 0x001 andErrorLevel: 0x00]];
 		
 		NSLog(@"captcha required");
-        [delegate showError:@"Google Login Failed" withMessage:@"Failed to log into Google Reader"];
+        [delegate showError:@"Google Reader Login Failed" withMessage:@"Failed to log into Google Reader."];
 		
         authenticated = NO;
         [delegate didLogin:NO];

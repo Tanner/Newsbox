@@ -71,7 +71,7 @@
 }
 
 - (void)setTitle:(NSString *)aTitle {
-    title = [[NSString alloc] initWithString:[aTitle gtm_stringByUnescapingFromHTML]];
+    title = [[NSString alloc] initWithString:[[aTitle stringByConvertingHTMLToPlainText] gtm_stringByUnescapingFromHTML]];
 }
 
 - (void)setDate:(NSDate *)aDate {
