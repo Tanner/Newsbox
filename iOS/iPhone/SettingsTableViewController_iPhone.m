@@ -164,14 +164,14 @@
                     NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
                     NSString *build = [infoDictionary objectForKey:@"CFBundleVersion"];
                     
-                    [[cell textLabel] setText:@"Up To Date"];
+                    [[cell textLabel] setText:@"Up-to-Date"];
 
                     if (latestGitSHA != nil && [latestGitSHA length] > 0) {
                         NSString *latestShortGitSHA = [latestGitSHA substringToIndex:6];
                         if ([latestShortGitSHA isEqualToString:build]) {
-                            [[cell detailTextLabel] setText:@"YES"];
+                            [[cell detailTextLabel] setText:@"Yes"];
                         } else {
-                            [[cell detailTextLabel] setText:@"NO"];
+                            [[cell detailTextLabel] setText:@"No"];
                         }
                     }
                     break;
@@ -194,7 +194,6 @@
 -(void)gitHubService:(id<GitHubService>)gitHubService gotCommit:(id<GitHubCommit>)commit {
     if (latestGitSHA == nil) {
         latestGitSHA = [[NSString alloc] initWithString:commit.sha];
-//        NSLog(@"Setting: %@", latestGitSHA);
     }
     
     [self.tableView reloadData];
@@ -208,7 +207,6 @@
 
 -(void)gitHubService:(id <GitHubService>)gitHubService didFailWithError:error {
     //NSLog(@"Git Hub Service failed!");
-    //NSLog(@"%@", error);
 }
 
 
