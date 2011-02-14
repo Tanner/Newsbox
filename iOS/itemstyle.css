@@ -27,6 +27,10 @@ ul, ol {
 	margin: 0 0 10px 20px !important;
 	}
 
+blockquote {
+    margin: 0 0 10px 10px !important;
+    }
+
 ul li {
 	list-style: square !important;
 	}
@@ -66,11 +70,6 @@ a {
 	color: #27d;
 	}
 
-blockquote {
-	padding: 0 0 0 25px;
-	margin: 0 0 10px 0;
-	}
-
 .bigImage {
 	margin: 0 2000px 10px 0 !important;
 	clear: both !important;
@@ -105,7 +104,8 @@ img {
 }
 
 #content * {
-    max-width: 300px;
+    max-width: 100%;
+    height: auto;
 }
 
 p.chronodata {
