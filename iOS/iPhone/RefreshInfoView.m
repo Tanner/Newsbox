@@ -19,7 +19,7 @@
 
     [label setText:@"Checking for feeds…"];
     [activityIndicator startAnimating];
-    [self layoutSubviews];
+    [self customLayoutSubviews];
 }
 
 - (void)stopAnimating {
@@ -28,7 +28,7 @@
     
     [self refreshLastUpdatedDate];
     
-    [self layoutSubviews];
+    [self customLayoutSubviews];
 }
 
 - (void)refreshLastUpdatedDate {
@@ -49,6 +49,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+        [activityIndicator setHidesWhenStopped:NO];
         label = [[UILabel alloc] initWithFrame:CGRectZero];
         [label setTextAlignment:UITextAlignmentLeft];
         [label setLineBreakMode:UILineBreakModeClip];
@@ -63,7 +64,7 @@
     return self;
 }
 
-- (void)layoutSubviews {
+- (void)customLayoutSubviews {
     double const PADDING = 15.0f;
     
     [label setFrame:CGRectZero];

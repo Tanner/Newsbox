@@ -31,6 +31,7 @@
 
 typedef enum {
 	ItemTypeUnread,
+    ItemTypeStarred
 } ItemType;
 
 @interface MWFeedItem : NSObject <NSCoding> {

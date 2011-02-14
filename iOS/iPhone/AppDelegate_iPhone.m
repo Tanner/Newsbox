@@ -17,19 +17,43 @@
 @implementation AppDelegate_iPhone
 
 
+#pragma mark -
+#pragma mark RefreshInfoViewDelegate Methods
+
+- (NSDate *)dataSourceLastUpdated:(id)sender {
+    return [NSDate date];
+}
+
+- (BOOL)isRefreshing {
+    return refreshing;
+}
+
+- (RefreshInfoView *)refreshInfoView {
+    return refreshInfoView;
+}
+
+- (UIBarButtonItem *)refreshInfoViewButtonItem {
+    return refreshInfoViewButtonItem;
+}
+
+- (void)showItemsTableViewWithType:(ItemType)type {
+    [navController pushViewController:itvc animated:YES];
+}
+
 // NSString *const TEST_GOOGLE_USER = @"newsbox.test@gmail.com";
 // NSString *const TEST_PASSWORD = @"FA1w0wxjRTHRyj";
 
 
 - (void)didLogin:(BOOL)login {
 	if (login) {
-		[itvc reloadTableViewDataSource];
+		[self refresh];
 	}
 }
 
-
 - (void)didGetItems:(NSArray *)items ofType:(ItemType)type {
 	[itvc setItems:items withType:type];
+    [refreshInfoView stopAnimating];
+    refreshing = NO;
 }
 
 
@@ -41,8 +65,13 @@
 	[navController pushViewController:ivc animated:YES];
 }
 
-- (void)refreshWithItemType:(ItemType)type {
-	[feedLoader getItemsOfType:type];
+- (void)refresh {
+    if (!refreshing) {
+        [feedLoader getItemsOfType:ItemTypeUnread];
+        
+        [refreshInfoView animateRefresh];
+        refreshing = YES;
+    }
 }
 
 - (void)showSettingsView {
@@ -76,7 +105,10 @@
     // [SFHFKeychainUtils storeUsername:TEST_GOOGLE_USER andPassword:TEST_PASSWORD forServiceName:@"google" updateExisting:YES error:&error];
     
 	feedLoader = [[ItemLoader alloc] initWithDelegate:self];
-		
+    
+    rtvc = [[RootTableViewController_iPhone alloc] initWithNibName:@"RootTableViewController_iPhone" bundle:nil];
+    [rtvc setDelegate:self];
+    
 	itvc = [[ItemsTableViewController_iPhone alloc] initWithNibName:@"ItemsTableViewController_iPhone" bundle:nil];
 	[itvc setDelegate:self];
 	
@@ -86,8 +118,14 @@
 	stvc = [[SettingsTableViewController_iPhone alloc] initWithNibName:@"SettingsTableViewController_iPhone" bundle:nil];
 	[stvc setDelegate:self];
 	
-	navController = [[UINavigationController alloc] initWithRootViewController:itvc];
+	navController = [[UINavigationController alloc] init];
+    [navController setViewControllers:[NSArray arrayWithObjects:rtvc, itvc, nil]];
     settingsNavController = [[UINavigationController alloc] initWithRootViewController:stvc];
+    
+    refreshInfoView = [[RefreshInfoView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 150.0f, 44.0f)];
+    [refreshInfoView setDelegate:self];
+    
+    refreshInfoViewButtonItem = [[UIBarButtonItem alloc] initWithCustomView:refreshInfoView];
 		
 	[self.window addSubview:navController.view];
     [self.window makeKeyAndVisible];
@@ -138,7 +176,7 @@
 		[feedLoader authenticateWithGoogleUser:username andPassword:password];
 	} else {
 //		[feedLoader getItemsOfType:[feedLoader currentItemType]];
-        [itvc reloadTableViewDataSource];
+        [itvc refresh];
 	}
 }
 

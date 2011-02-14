@@ -81,6 +81,8 @@
 		EDAFC7A913074F04009C47D7 /* SettingsTableViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = EDAFC7A713074F04009C47D7 /* SettingsTableViewController_iPhone.m */; };
 		EDAFC7AA13074F04009C47D7 /* SettingsTableViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDAFC7A813074F04009C47D7 /* SettingsTableViewController_iPhone.xib */; };
 		EDDA76171308B167007AB030 /* RefreshInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDA76161308B167007AB030 /* RefreshInfoView.m */; };
+		EDDA761B1308D24B007AB030 /* RootTableViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDA76191308D249007AB030 /* RootTableViewController_iPhone.m */; };
+		EDDA761C1308D24B007AB030 /* RootTableViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDDA761A1308D24A007AB030 /* RootTableViewController_iPhone.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -211,6 +213,9 @@
 		EDAFC7A813074F04009C47D7 /* SettingsTableViewController_iPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewController_iPhone.xib; sourceTree = "<group>"; };
 		EDDA76151308B167007AB030 /* RefreshInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshInfoView.h; sourceTree = "<group>"; };
 		EDDA76161308B167007AB030 /* RefreshInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefreshInfoView.m; sourceTree = "<group>"; };
+		EDDA76181308D249007AB030 /* RootTableViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTableViewController_iPhone.h; sourceTree = "<group>"; };
+		EDDA76191308D249007AB030 /* RootTableViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTableViewController_iPhone.m; sourceTree = "<group>"; };
+		EDDA761A1308D24A007AB030 /* RootTableViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootTableViewController_iPhone.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +254,9 @@
 				2860E387111B897F00E27156 /* AppDelegate_iPhone.h */,
 				2860E388111B897F00E27156 /* AppDelegate_iPhone.m */,
 				2860E389111B897F00E27156 /* MainWindow_iPhone.xib */,
+				EDDA76181308D249007AB030 /* RootTableViewController_iPhone.h */,
+				EDDA76191308D249007AB030 /* RootTableViewController_iPhone.m */,
+				EDDA761A1308D24A007AB030 /* RootTableViewController_iPhone.xib */,
 				ED2E94F01302555D00983CC3 /* ItemsTableViewController_iPhone.h */,
 				ED2E94F11302555D00983CC3 /* ItemsTableViewController_iPhone.m */,
 				ED2E94F21302555D00983CC3 /* ItemsTableViewController_iPhone.xib */,
@@ -597,6 +605,7 @@
 				ED37D8F8130361A500584EDE /* Default.png in Resources */,
 				ED37D92E1303644E00584EDE /* itemstyle.css in Resources */,
 				EDAFC7AA13074F04009C47D7 /* SettingsTableViewController_iPhone.xib in Resources */,
+				EDDA761C1308D24B007AB030 /* RootTableViewController_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -669,6 +678,7 @@
 				ED59CDA61307734900595B0A /* SFHFHUDView.m in Sources */,
 				ED59CDA71307734900595B0A /* UIWebView+SFHFStringMetrics.m in Sources */,
 				EDDA76171308B167007AB030 /* RefreshInfoView.m in Sources */,
+				EDDA761B1308D24B007AB030 /* RootTableViewController_iPhone.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

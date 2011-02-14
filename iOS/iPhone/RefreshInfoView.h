@@ -8,11 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-
-@protocol RefreshInfoViewDelegate
-- (NSDate *)dataSourceLastUpdated:(id)sender;
-@end
-
+@protocol RefreshInfoViewDelegate;
 
 @interface RefreshInfoView : UIView {
     id <RefreshInfoViewDelegate> delegate;
@@ -21,10 +17,19 @@
     UILabel *label;
 }
 
+- (void)customLayoutSubviews;
+
 @property (nonatomic, assign) id<RefreshInfoViewDelegate> delegate;
 
 - (void)animateRefresh;
 - (void)stopAnimating;
 - (void)refreshLastUpdatedDate;
 
+@end
+
+@protocol RefreshInfoViewDelegate
+- (NSDate *)dataSourceLastUpdated:(id)sender;
+- (BOOL)isRefreshing;
+- (RefreshInfoView *)refreshInfoView;
+- (UIBarButtonItem *)refreshInfoViewButtonItem;
 @end

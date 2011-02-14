@@ -59,14 +59,8 @@
 #pragma mark -
 #pragma mark Data Source Loading / Reloading Methods
 
-- (void)reloadTableViewDataSource {
-    if (!reloading) {
-        reloading = YES;
-        
-        [delegate refreshWithItemType:currentItemType];
-    
-        [refreshInfoView animateRefresh];
-    }
+- (void)refresh {
+    [delegate refresh];
 }
 
 - (void)reformatCellLabelsWithOrientation:(UIInterfaceOrientation)orientation {
@@ -90,12 +84,6 @@
 
 
 - (void)didLoadTableViewData {
-    [refreshInfoView stopAnimating];
-    reloading = NO;
-}
-
-- (NSDate *)dataSourceLastUpdated:(id)sender {
-    return [NSDate date];
 }
 
 
@@ -123,24 +111,17 @@
          */
 	}
     
-    if (!refreshInfoView) {
-        refreshInfoView = [[RefreshInfoView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 150.0f, 44.0f)];
-        [refreshInfoView setDelegate:self];
-    }
-    
 	[super viewDidLoad];
 }
 
 
 - (void)viewWillAppear:(BOOL)animated {
-	[self.navigationItem setTitle:@"Newsbox"];
+	[self.navigationItem setTitle:@"Unread"];
 	[self.navigationController setToolbarHidden:NO];
     
-    NSMutableArray *toolbarItems = [[self toolbarItems] mutableCopy];
-    if (!toolbarItems) {
-        toolbarItems = [[NSMutableArray alloc] init];
+        NSMutableArray *toolbarItems = [[NSMutableArray alloc] init];
         
-        UIBarButtonItem *refreshItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(reloadTableViewDataSource)];
+        UIBarButtonItem *refreshItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refresh)];
         [toolbarItems addObject:refreshItem];
         [refreshItem release];
         
@@ -148,9 +129,9 @@
         [toolbarItems addObject:flexibleSpaceItem];
         [flexibleSpaceItem release];
         
-        UIBarButtonItem *refreshInfoItem = [[UIBarButtonItem alloc] initWithCustomView:refreshInfoView];
+        UIBarButtonItem *refreshInfoItem = [delegate refreshInfoViewButtonItem];
         [toolbarItems addObject:refreshInfoItem];
-        [refreshInfoItem release];
+        //[refreshInfoItem release];
         
         UIBarButtonItem *flexibleSpaceItem2 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
         [toolbarItems addObject:flexibleSpaceItem2];
@@ -161,7 +142,6 @@
         [settingsItem release];
         
         [self setToolbarItems:toolbarItems animated:NO];
-    }
     
     [toolbarItems release];
 	    
