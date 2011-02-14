@@ -41,13 +41,16 @@
 */
 
 
-- (void)viewWillAppear:(BOOL)animated {    
+- (void)viewWillAppear:(BOOL)animated {
     [self.navigationItem setTitle:@"Settings"];
     [self.navigationItem setLeftBarButtonItem:[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelButtonPushed:)] autorelease]];
     [self.navigationItem setRightBarButtonItem:[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneButtonPushed:)] autorelease]];
         
     [self.tableView reloadData];
     
+    // GIT
+    [latestGitSHA release];
+    latestGitSHA = nil;
     [GitHubServiceSettings setCredential:[NSURLCredential credentialWithUser:@"Tanner"
                                                                     password:@"pack12"
                                                                  persistence:NSURLCredentialPersistenceNone]]; 
@@ -167,7 +170,7 @@
                     [[cell textLabel] setText:@"Up-to-Date"];
 
                     if (latestGitSHA != nil && [latestGitSHA length] > 0) {
-                        NSString *latestShortGitSHA = [latestGitSHA substringToIndex:6];
+                        NSString *latestShortGitSHA = [latestGitSHA substringToIndex:7];
                         if ([latestShortGitSHA isEqualToString:build]) {
                             [[cell detailTextLabel] setText:@"Yes"];
                         } else {
