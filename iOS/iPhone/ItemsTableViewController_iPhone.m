@@ -123,9 +123,7 @@
     [self setToolbarItems:toolbarItems animated:NO];
     
     [toolbarItems release];
-    
-	[self reformatCellLabelsWithOrientation:[self interfaceOrientation]];
-	
+    	
     [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:0.7 green:0.0 blue:0.0 alpha:1.0]];
     [self.navigationController.toolbar setTintColor:[UIColor colorWithRed:0.7 green:0.0 blue:0.0 alpha:1.0]];
     
@@ -151,6 +149,8 @@
 
 
 - (void)viewWillAppear:(BOOL)animated {
+    [self reformatCellLabelsWithOrientation:[self interfaceOrientation]];
+
     [super viewWillAppear:animated];
 }
 
