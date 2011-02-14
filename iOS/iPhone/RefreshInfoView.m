@@ -8,6 +8,9 @@
 
 #import "RefreshInfoView.h"
 
+CGRect CGRectMakeInt(float x, float y, float width, float height) {
+    return CGRectMake((int)x, (int)y, (int)width, (int)height);
+}
 
 @implementation RefreshInfoView
 
@@ -80,13 +83,13 @@
     
     [label setFrame:CGRectZero];
     [label sizeToFit];
-    [activityIndicator setFrame:CGRectMake((self.bounds.size.width - label.frame.size.width - PADDING - activityIndicator.frame.size.width)/2, 2.0f + activityIndicator.frame.size.height / 2, activityIndicator.frame.size.width, activityIndicator.frame.size.height)];
+    [activityIndicator setFrame:CGRectMakeInt((self.bounds.size.width - label.frame.size.width - PADDING - activityIndicator.frame.size.width)/2, 2.0f + activityIndicator.frame.size.height / 2, activityIndicator.frame.size.width, activityIndicator.frame.size.height)];
     
     float activityIndicatorWidth = 0.0f;
     if ([activityIndicator isAnimating]) {
         activityIndicatorWidth = activityIndicator.frame.size.width;
     }
-    [label setFrame:CGRectMake((self.bounds.size.width - label.frame.size.width - activityIndicatorWidth)/2 + activityIndicatorWidth, 5.0f + label.frame.size.height / 2, label.frame.size.width, label.frame.size.height)];
+    [label setFrame:CGRectMakeInt((self.bounds.size.width - label.frame.size.width - activityIndicatorWidth)/2 + activityIndicatorWidth, 5.0f + label.frame.size.height / 2, label.frame.size.width, label.frame.size.height)];
         
     [super layoutSubviews];
 }
