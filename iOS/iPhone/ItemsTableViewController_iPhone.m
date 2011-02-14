@@ -34,7 +34,7 @@
 	}
 	
 	currentItemType = type;
-	items = [[NSMutableArray alloc] initWithArray:[someItems copy]];
+	items = [[NSMutableArray alloc] initWithArray:someItems];
 	
 	if (modalView) {
         /*

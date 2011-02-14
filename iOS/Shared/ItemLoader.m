@@ -179,6 +179,8 @@
 
 - (void)dealloc {
 	[parser release];
+    [items release];
+    
 	[super dealloc];
 }
 
