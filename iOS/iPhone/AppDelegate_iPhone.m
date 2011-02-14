@@ -13,14 +13,11 @@
 #import "SettingsTableViewController_iPhone.h"
 #import "SFHFKeychainUtils.h"
 
-
 @interface AppDelegate_iPhone (private)
 - (void)loginAndDownloadItems;
 @end
 
-
 @implementation AppDelegate_iPhone
-
 
 #pragma mark -
 #pragma mark RefreshInfoViewDelegate Methods
@@ -144,6 +141,11 @@
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     NSString *username = [prefs objectForKey:@"GoogleUsername"];
     
+    if (username == nil || [username isEqualToString:@""]) {
+        [self showSettingsView];
+        return;
+    }
+    
     NSError *error = nil;
     NSString *password = [SFHFKeychainUtils getPasswordForUsername:username andServiceName:@"Google" error:&error];
     
@@ -154,9 +156,7 @@
 }
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // [SFHFKeychainUtils storeUsername:TEST_GOOGLE_USER andPassword:TEST_PASSWORD forServiceName:@"google" updateExisting:YES error:&error];
-    
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 	feedLoader = [[ItemLoader alloc] initWithDelegate:self];
     
     rtvc = [[RootTableViewController_iPhone alloc] initWithNibName:@"RootTableViewController_iPhone" bundle:nil];
