@@ -115,7 +115,7 @@
     }
     
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    NSString *username = [prefs objectForKey:@"username"];
+    NSString *username = [prefs objectForKey:@"GoogleUsername"];
         
     switch (indexPath.section) {
         case 0: {
@@ -130,7 +130,7 @@
                 case 1: {
                     [(SFHFEditableCell *)cell setTextFieldAsPassword];
                     NSError *error = nil;
-                    NSString *pass = [SFHFKeychainUtils getPasswordForUsername:username andServiceName:@"google" error:&error];
+                    NSString *pass = [SFHFKeychainUtils getPasswordForUsername:username andServiceName:@"Google" error:&error];
                     [(SFHFEditableCell *)cell setLabelText:@"Password" andPlaceholderText:nil];
                     if (pass) {
                         [[(SFHFEditableCell *)cell textField] setText:pass];

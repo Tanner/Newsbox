@@ -26,7 +26,7 @@
     [self addSubview:label];
     [self addSubview:activityIndicator];
 
-    [label setText:@"Checking for new items…"];
+    [label setText:@"Downloading items…"];
     [activityIndicator startAnimating];
     [self customLayoutSubviews];
 }

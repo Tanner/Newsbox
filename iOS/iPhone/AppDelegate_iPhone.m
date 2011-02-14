@@ -56,7 +56,10 @@
 	if (login) {
         [refreshInfoView animateDownload];
         
-        [self loginAndDownloadItems];
+        [feedLoader getItemsOfType:[feedLoader currentItemType]];
+            
+        [refreshInfoView animateDownload];
+        refreshing = YES;
 	} else {
         [refreshInfoView stopAnimating];
         
@@ -107,11 +110,11 @@
 
 - (void)changedUsername:(NSString *)username andPassword:(NSString *)password {
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    [prefs setValue:username forKey:@"username"];
+    [prefs setValue:username forKey:@"GoogleUsername"];
     [prefs synchronize];
     
     NSError *error = nil;
-    [SFHFKeychainUtils storeUsername:username andPassword:password forServiceName:@"google" updateExisting:YES error:&error];
+    [SFHFKeychainUtils storeUsername:username andPassword:password forServiceName:@"Google" updateExisting:YES error:&error];
     
     [feedLoader authenticateWithGoogleUser:username andPassword:password];
 }
@@ -122,23 +125,16 @@
 
 
 - (void)loginAndDownloadItems {
-    if (![feedLoader authenticated]) {
-        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-        NSString *username = [prefs objectForKey:@"username"];
-        
-        NSError *error = nil;
-        NSString *password = [SFHFKeychainUtils getPasswordForUsername:username andServiceName:@"google" error:&error];
-        
-		[feedLoader authenticateWithGoogleUser:username andPassword:password];
-        
-        [refreshInfoView animateLogin];
-        refreshing = YES;
-	} else {
-		[feedLoader getItemsOfType:[feedLoader currentItemType]];
-        
-        [refreshInfoView animateDownload];
-        refreshing = YES;
-	}
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSString *username = [prefs objectForKey:@"GoogleUsername"];
+    
+    NSError *error = nil;
+    NSString *password = [SFHFKeychainUtils getPasswordForUsername:username andServiceName:@"Google" error:&error];
+    
+    [feedLoader authenticateWithGoogleUser:username andPassword:password];
+    
+    [refreshInfoView animateLogin];
+    refreshing = YES;
 }
 
 
