@@ -17,6 +17,10 @@
     [delegate refresh];
 }
 
+- (void)settingsButtonPressed:(id)sender {
+    [delegate showSettingsView];
+}
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
