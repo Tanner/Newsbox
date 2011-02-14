@@ -89,8 +89,9 @@ CGRect CGRectMakeInt(float x, float y, float width, float height) {
     if ([activityIndicator isAnimating]) {
         activityIndicatorWidth = activityIndicator.frame.size.width;
     }
+    
     [label setFrame:CGRectMakeInt((self.bounds.size.width - label.frame.size.width - activityIndicatorWidth)/2 + activityIndicatorWidth, 5.0f + label.frame.size.height / 2, label.frame.size.width, label.frame.size.height)];
-        
+    
     [super layoutSubviews];
 }
 

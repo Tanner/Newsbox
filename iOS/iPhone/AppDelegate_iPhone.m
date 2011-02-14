@@ -13,6 +13,8 @@
 #import "SettingsTableViewController_iPhone.h"
 #import "SFHFKeychainUtils.h"
 
+#define MIN_TIME_TO_REFRESH_ON_BECOME_ACTIVE 1
+
 @interface AppDelegate_iPhone (private)
 - (void)loginAndDownloadItems;
 @end
@@ -187,6 +189,8 @@
 	[self.window addSubview:navController.view];
     [self.window makeKeyAndVisible];
     
+    [self loginAndDownloadItems];
+    
     return YES;
 }
 
@@ -204,7 +208,7 @@
 
      Superclass implementation saves changes in the application's managed object context before the application terminates.
      */
-		
+    
 	[super applicationDidEnterBackground:application];
 }
 
@@ -218,8 +222,10 @@
     /*
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
-	
-	[self loginAndDownloadItems];
+	    
+    if (abs(floor([lastUpdatedDate timeIntervalSinceNow]/60)) > MIN_TIME_TO_REFRESH_ON_BECOME_ACTIVE) {
+        [self loginAndDownloadItems];
+    }
 }
 
 /**
