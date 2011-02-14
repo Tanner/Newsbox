@@ -10,12 +10,13 @@
 #import "SFHFKeychainUtils.h"
 #import "SFHFEditableCell.h"
 
-
 @implementation SettingsTableViewController_iPhone
-
 
 @synthesize delegate;
 
+- (void)cancelButtonPushed:(id)sender {
+    [delegate returnFromSettingsTableViewController];
+}
 
 - (void)doneButtonPushed:(id)sender {
     [delegate returnFromSettingsTableViewController];
@@ -40,8 +41,11 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [self.navigationItem setTitle:@"Settings"];
+    [self.navigationItem setLeftBarButtonItem:[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelButtonPushed:)] autorelease]];
     [self.navigationItem setRightBarButtonItem:[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneButtonPushed:)] autorelease]];
         
+    [self.tableView reloadData];
+    
     [super viewWillAppear:animated];
 }
 
