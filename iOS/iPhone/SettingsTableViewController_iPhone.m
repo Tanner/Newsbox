@@ -176,6 +176,8 @@
                         } else {
                             [[cell detailTextLabel] setText:@"No"];
                         }
+                    } else {
+                        [[cell detailTextLabel] setText:@""];
                     }
                     break;
                 }
@@ -186,11 +188,6 @@
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     
     return cell;
-}
-
-
-- (NSString *)tableView:(UITableView *)tableView headerForFooterInSection:(NSInteger)section {
-    return @"Settings";
 }
 
 
