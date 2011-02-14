@@ -119,29 +119,31 @@
 	[self.navigationItem setTitle:@"Unread"];
 	[self.navigationController setToolbarHidden:NO];
     
-        NSMutableArray *toolbarItems = [[NSMutableArray alloc] init];
-        
-        UIBarButtonItem *refreshItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refresh)];
-        [toolbarItems addObject:refreshItem];
-        [refreshItem release];
-        
-        UIBarButtonItem *flexibleSpaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-        [toolbarItems addObject:flexibleSpaceItem];
-        [flexibleSpaceItem release];
-        
-        UIBarButtonItem *refreshInfoItem = [delegate refreshInfoViewButtonItem];
-        [toolbarItems addObject:refreshInfoItem];
-        //[refreshInfoItem release];
-        
-        UIBarButtonItem *flexibleSpaceItem2 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-        [toolbarItems addObject:flexibleSpaceItem2];
-        [flexibleSpaceItem2 release];
-        
-        UIBarButtonItem *settingsItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(settingsButtonPressed:)];
-        [toolbarItems addObject:settingsItem];
-        [settingsItem release];
-        
-        [self setToolbarItems:toolbarItems animated:NO];
+    NSMutableArray *toolbarItems = [[NSMutableArray alloc] init];
+    
+    UIBarButtonItem *refreshItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refresh)];
+
+    [toolbarItems addObject:refreshItem];
+    [refreshItem release];
+    
+    UIBarButtonItem *flexibleSpaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    [toolbarItems addObject:flexibleSpaceItem];
+    [flexibleSpaceItem release];
+    
+    UIBarButtonItem *refreshInfoItem = [delegate refreshInfoViewButtonItem];
+    [toolbarItems addObject:refreshInfoItem];
+    //[refreshInfoItem release];
+    
+    UIBarButtonItem *flexibleSpaceItem2 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    [toolbarItems addObject:flexibleSpaceItem2];
+    [flexibleSpaceItem2 release];
+    
+    UIBarButtonItem *fixedSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    [fixedSpace setWidth:24.0f];
+    [toolbarItems addObject:fixedSpace];
+    [fixedSpace release];    
+    
+    [self setToolbarItems:toolbarItems animated:NO];
     
     [toolbarItems release];
 	    
