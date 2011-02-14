@@ -7,23 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EGORefreshTableHeaderView.h"
 #import "MWFeedItem.h"
+#import "RefreshInfoView.h"
 
 
 @protocol ItemsTableViewControllerDelegate;
 
-@interface ItemsTableViewController_iPhone : UITableViewController <EGORefreshTableHeaderDelegate> {
+@interface ItemsTableViewController_iPhone : UITableViewController <RefreshInfoViewDelegate> {
 	id<ItemsTableViewControllerDelegate> delegate;
 	
 	NSMutableArray *items;
 	ItemType currentItemType;
-	EGORefreshTableHeaderView *_refreshHeaderView;
+//	EGORefreshTableHeaderView *_refreshHeaderView;
 	
 	UIView *modalView;
-	UIActivityIndicatorView *activityIndicator;
 	
-	BOOL _reloading;
+    RefreshInfoView *refreshInfoView;
+    
+	BOOL reloading;
 }
 
 - (void)setItems:(NSArray *)someItems withType:(ItemType)type;

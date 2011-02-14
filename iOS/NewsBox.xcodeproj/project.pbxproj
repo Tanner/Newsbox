@@ -80,6 +80,7 @@
 		ED71D10A1303268D00C3BE65 /* Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = ED71D1091303268D00C3BE65 /* Icon-57.png */; };
 		EDAFC7A913074F04009C47D7 /* SettingsTableViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = EDAFC7A713074F04009C47D7 /* SettingsTableViewController_iPhone.m */; };
 		EDAFC7AA13074F04009C47D7 /* SettingsTableViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDAFC7A813074F04009C47D7 /* SettingsTableViewController_iPhone.xib */; };
+		EDDA76171308B167007AB030 /* RefreshInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDA76161308B167007AB030 /* RefreshInfoView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -208,6 +209,8 @@
 		EDAFC7A613074F04009C47D7 /* SettingsTableViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController_iPhone.h; sourceTree = "<group>"; };
 		EDAFC7A713074F04009C47D7 /* SettingsTableViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController_iPhone.m; sourceTree = "<group>"; };
 		EDAFC7A813074F04009C47D7 /* SettingsTableViewController_iPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewController_iPhone.xib; sourceTree = "<group>"; };
+		EDDA76151308B167007AB030 /* RefreshInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshInfoView.h; sourceTree = "<group>"; };
+		EDDA76161308B167007AB030 /* RefreshInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefreshInfoView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +252,8 @@
 				ED2E94F01302555D00983CC3 /* ItemsTableViewController_iPhone.h */,
 				ED2E94F11302555D00983CC3 /* ItemsTableViewController_iPhone.m */,
 				ED2E94F21302555D00983CC3 /* ItemsTableViewController_iPhone.xib */,
+				EDDA76151308B167007AB030 /* RefreshInfoView.h */,
+				EDDA76161308B167007AB030 /* RefreshInfoView.m */,
 				ED0D9A0F13039B4000961E0D /* ItemsTableViewCell.h */,
 				ED0D9A1013039B4000961E0D /* ItemsTableViewCell.m */,
 				ED639912130342810024D3ED /* ItemViewController_iPhone.h */,
@@ -663,6 +668,7 @@
 				ED59CDA51307734900595B0A /* SFHFEditableCell.m in Sources */,
 				ED59CDA61307734900595B0A /* SFHFHUDView.m in Sources */,
 				ED59CDA71307734900595B0A /* UIWebView+SFHFStringMetrics.m in Sources */,
+				EDDA76171308B167007AB030 /* RefreshInfoView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

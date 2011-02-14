@@ -9,6 +9,7 @@
 #import "ItemsTableViewController_iPhone.h"
 #import "MWFeedItem.h"
 #import "ItemsTableViewCell.h"
+#import "RefreshInfoView.h"
 
 
 #define CELL_HEIGHT 95.0f
@@ -36,10 +37,12 @@
 	items = [[NSMutableArray alloc] initWithArray:[someItems copy]];
 	
 	if (modalView) {
+        /*
 		[activityIndicator removeFromSuperview];
 		[activityIndicator stopAnimating];
 		[activityIndicator release];
 		activityIndicator = nil;
+         */
 		
 		[modalView removeFromSuperview];
 		[modalView release];
@@ -57,18 +60,14 @@
 #pragma mark Data Source Loading / Reloading Methods
 
 - (void)reloadTableViewDataSource {
-	[delegate refreshWithItemType:currentItemType];
-	
-	_reloading = YES;
-	
+    if (!reloading) {
+        reloading = YES;
+        
+        [delegate refreshWithItemType:currentItemType];
+    
+        [refreshInfoView animateRefresh];
+    }
 }
-
-- (void)didLoadTableViewData {
-	_reloading = NO;
-	
-	[_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:self.tableView];
-}
-
 
 - (void)reformatCellLabelsWithOrientation:(UIInterfaceOrientation)orientation {
 	float width;
@@ -90,19 +89,13 @@
 }
 
 
-#pragma mark -
-#pragma mark EGORefreshTableHeaderView delegate
-
-- (void)egoRefreshTableHeaderDidTriggerRefresh:(EGORefreshTableHeaderView *)view{
-	[self reloadTableViewDataSource];
+- (void)didLoadTableViewData {
+    [refreshInfoView stopAnimating];
+    reloading = NO;
 }
 
-- (BOOL)egoRefreshTableHeaderDataSourceIsLoading:(EGORefreshTableHeaderView *)view{
-	return _reloading; // should return if data source model is reloading
-}
-
-- (NSDate*)egoRefreshTableHeaderDataSourceLastUpdated:(EGORefreshTableHeaderView *)view{
-	return [NSDate date]; // should return date data source was last changed	
+- (NSDate *)dataSourceLastUpdated:(id)sender {
+    return [NSDate date];
 }
 
 
@@ -111,14 +104,6 @@
 
 
 - (void)viewDidLoad {
-	if (_refreshHeaderView == nil) {
-		_refreshHeaderView = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - self.tableView.bounds.size.height, self.view.frame.size.width, self.tableView.bounds.size.height)];
-		_refreshHeaderView.delegate = self;
-	}
-	
-	[self.tableView addSubview:_refreshHeaderView];
-	[_refreshHeaderView refreshLastUpdatedDate];
-		
 	if (!items && !modalView) {
 		modalView = [[UIView alloc] initWithFrame:self.view.bounds];
 		[modalView setBackgroundColor:[UIColor whiteColor]];
@@ -129,13 +114,20 @@
 		[self.tableView scrollRectToVisible:modalView.frame animated:NO];
 		[self.tableView setScrollEnabled:NO];
 		
+        /*
 		activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-		[activityIndicator setFrame:CGRectMake((self.view.bounds.size.width - 20.0f)/2, (self.view.bounds.size.height - 20.0f)/2 - 10.0f, 20.0f, 20.0f)];
+		[activityIndicator setFrame:CGRectMake((self.view.bounds.size.width - 20.0f)/2, (self.view.bounds.size.height - 20.0f)/2 - 10.0f  , 20.0f, 20.0f)];
         [activityIndicator setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleBottomMargin];
 		[activityIndicator startAnimating];
 		[modalView addSubview:activityIndicator];
+         */
 	}
-	
+    
+    if (!refreshInfoView) {
+        refreshInfoView = [[RefreshInfoView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 150.0f, 44.0f)];
+        [refreshInfoView setDelegate:self];
+    }
+    
 	[super viewDidLoad];
 }
 
@@ -144,12 +136,40 @@
 	[self.navigationItem setTitle:@"Newsbox"];
 	[self.navigationController setToolbarHidden:NO];
     
-    UIBarButtonItem *flexibleSpaceItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil] autorelease];
-    UIBarButtonItem *settingsItem = [[[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStyleBordered target:self action:@selector(settingsButtonPressed:)] autorelease];
-    [self setToolbarItems:[NSArray arrayWithObjects:flexibleSpaceItem, settingsItem, nil]];
-	
+    NSMutableArray *toolbarItems = [[self toolbarItems] mutableCopy];
+    if (!toolbarItems) {
+        toolbarItems = [[NSMutableArray alloc] init];
+        
+        UIBarButtonItem *refreshItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(reloadTableViewDataSource)];
+        [toolbarItems addObject:refreshItem];
+        [refreshItem release];
+        
+        UIBarButtonItem *flexibleSpaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+        [toolbarItems addObject:flexibleSpaceItem];
+        [flexibleSpaceItem release];
+        
+        UIBarButtonItem *refreshInfoItem = [[UIBarButtonItem alloc] initWithCustomView:refreshInfoView];
+        [toolbarItems addObject:refreshInfoItem];
+        [refreshInfoItem release];
+        
+        UIBarButtonItem *flexibleSpaceItem2 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+        [toolbarItems addObject:flexibleSpaceItem2];
+        [flexibleSpaceItem2 release];
+        
+        UIBarButtonItem *settingsItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(settingsButtonPressed:)];
+        [toolbarItems addObject:settingsItem];
+        [settingsItem release];
+        
+        [self setToolbarItems:toolbarItems animated:NO];
+    }
+    
+    [toolbarItems release];
+	    
 	[self reformatCellLabelsWithOrientation:[self interfaceOrientation]];
 	
+    [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:0.7 green:0.0 blue:0.0 alpha:1.0]];
+    [self.navigationController.toolbar setTintColor:[UIColor colorWithRed:0.7 green:0.0 blue:0.0 alpha:1.0]];
+    
     [super viewWillAppear:animated];
 }
 
@@ -268,12 +288,12 @@
 
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-	[_refreshHeaderView egoRefreshScrollViewDidScroll:scrollView];
+
 }
 
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-	[_refreshHeaderView egoRefreshScrollViewDidEndDragging:scrollView];
+
 }
 
 

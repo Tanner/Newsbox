@@ -23,7 +23,7 @@
 
 - (void)didLogin:(BOOL)login {
 	if (login) {
-		[feedLoader getItemsOfType:ItemTypeUnread];
+		[itvc reloadTableViewDataSource];
 	}
 }
 
@@ -137,7 +137,8 @@
         
 		[feedLoader authenticateWithGoogleUser:username andPassword:password];
 	} else {
-		[feedLoader getItemsOfType:[feedLoader currentItemType]];
+//		[feedLoader getItemsOfType:[feedLoader currentItemType]];
+        [itvc reloadTableViewDataSource];
 	}
 }
 
