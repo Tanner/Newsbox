@@ -28,6 +28,8 @@
 //
 
 #import "MWFeedInfo.h"
+#import "NSString+HTML.h"
+#import "GTMNSString+HTML.h"
 
 #define EXCERPT(str, len) (([str length] > len) ? [[str substringToIndex:len-1] stringByAppendingString:@"…"] : str)
 
@@ -45,6 +47,10 @@
 	return [string autorelease];
 }
 
+- (void)setTitle:(NSString *)aTitle {
+    title = [[NSString alloc] initWithString:[[aTitle stringByConvertingHTMLToPlainText] gtm_stringByUnescapingFromHTML]];
+}
+
 - (void)dealloc {
 	[title release];
 	[link release];
@@ -55,7 +61,7 @@
 #pragma mark NSCoding
 
 - (id)initWithCoder:(NSCoder *)decoder {
-	if (self = [super init]) {
+	if ((self = [super init])) {
 		title = [[decoder decodeObjectForKey:@"title"] retain];
 		link = [[decoder decodeObjectForKey:@"link"] retain];
 		summary = [[decoder decodeObjectForKey:@"summary"] retain];

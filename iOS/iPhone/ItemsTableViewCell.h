@@ -10,12 +10,17 @@
 
 
 @interface ItemsTableViewCell : UITableViewCell {
-	UILabel *timeStampLabel;
+	UILabel *sourceLabel;
+    UILabel *dateLabel;
 	UILabel *titleLabel;
 	UILabel *contentLabel;
 }
 
 
-- (void)setTimeStampLabelText:(NSString *)text andTitleLabelText:(NSString *)text andContentLabelText:(NSString *)contentText andCellSize:(CGSize)size;
+- (void)setSourceLabelText:(NSString *)sourceText
+             andDateLabelText:(NSString *)dateText
+            andTitleLabelText:(NSString *)titleText
+          andContentLabelText:(NSString *)contentText
+                  andCellSize:(CGSize)size;
 
 @end

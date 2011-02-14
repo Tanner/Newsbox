@@ -175,6 +175,8 @@
     [rtvc.navigationItem setTitle:@"Newsbox"];
     [navController setToolbarHidden:NO];
     [navController pushViewController:itvc animated:NO];
+    [navController.navigationBar setTintColor:[UIColor colorWithRed:0.7 green:0.0 blue:0.0 alpha:1.0]];
+    [navController.toolbar setTintColor:[UIColor colorWithRed:0.7 green:0.0 blue:0.0 alpha:1.0]];
     
     settingsNavController = [[UINavigationController alloc] initWithRootViewController:stvc];
     

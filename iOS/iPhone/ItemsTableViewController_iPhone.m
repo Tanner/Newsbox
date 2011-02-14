@@ -74,7 +74,8 @@
 	// don't reload everything, just visible
 	for (UITableViewCell *cell in [self.tableView visibleCells]) {
 		int index = [self.tableView indexPathForCell:cell].row;
-		[(ItemsTableViewCell *)cell setTimeStampLabelText:[[items objectAtIndex:index] dateString]
+		[(ItemsTableViewCell *)cell setSourceLabelText:[[[items objectAtIndex:index] source] title]
+                                      andDateLabelText:[[items objectAtIndex:index] shortDateString]
 										andTitleLabelText:[[items objectAtIndex:index] title]
 									  andContentLabelText:[[items objectAtIndex:index] contentSample]
 											  andCellSize:CGSizeMake(width, CELL_HEIGHT)
@@ -123,9 +124,6 @@
     [self setToolbarItems:toolbarItems animated:NO];
     
     [toolbarItems release];
-    	
-    [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:0.7 green:0.0 blue:0.0 alpha:1.0]];
-    [self.navigationController.toolbar setTintColor:[UIColor colorWithRed:0.7 green:0.0 blue:0.0 alpha:1.0]];
     
 	if (!items && !modalView) {
 		modalView = [[UIView alloc] initWithFrame:self.view.bounds];
@@ -210,7 +208,8 @@
     }
     
 //	NSLog(@"%d", indexPath.row);
-    [(ItemsTableViewCell *)cell setTimeStampLabelText:[(MWFeedItem *)[items objectAtIndex:indexPath.row] dateString]
+    [(ItemsTableViewCell *)cell setSourceLabelText:[[(MWFeedItem *)[items objectAtIndex:indexPath.row] source] title]
+                                  andDateLabelText:[(MWFeedItem *)[items objectAtIndex:indexPath.row] shortDateString]
 									andTitleLabelText:[(MWFeedItem *)[items objectAtIndex:indexPath.row] title]
 								  andContentLabelText:[(MWFeedItem *)[items objectAtIndex:indexPath.row] contentSample]
 										  andCellSize:CGSizeMake(self.view.bounds.size.width, CELL_HEIGHT)
@@ -281,30 +280,6 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return CELL_HEIGHT;
 }
-
-/*
-- (CGFloat)suggestedHeightForItem:(Item *)anItem {
-	float const PADDING = 2.0f;
-	float const MAX_HEIGHT = 100.0f;
-	float const DISCLOSURE_ACCESSORY_WIDTH = 12.0f;
-	
-	NSString *timeStampText = [anItem dateString];
-	NSString *titleText = [anItem title];
-	NSString *contentText = [anItem contentSample];
-	
-	CGSize constSize = { self.tableView.bounds.size.width - PADDING*2 - DISCLOSURE_ACCESSORY_WIDTH - PADDING, MAX_HEIGHT };
-	CGSize timeStampTextSize = [timeStampText sizeWithFont:[UIFont systemFontOfSize:13.0f] constrainedToSize:constSize lineBreakMode:UILineBreakModeTailTruncation];	
-	
-	CGSize titleLabelConstSize = { self.tableView.bounds.size.width - PADDING*2 - DISCLOSURE_ACCESSORY_WIDTH - PADDING, MAX_HEIGHT };
-	CGSize titleTextSize = [titleText sizeWithFont:[UIFont systemFontOfSize:15.0f] constrainedToSize:titleLabelConstSize lineBreakMode:UILineBreakModeTailTruncation];
-	
-	CGSize contentLabelConstSize = { self.tableView.bounds.size.width - PADDING*2 - DISCLOSURE_ACCESSORY_WIDTH - PADDING, MAX_HEIGHT };
-	CGSize contentTextSize = [contentText sizeWithFont:[UIFont systemFontOfSize:13.0f] constrainedToSize:contentLabelConstSize lineBreakMode:UILineBreakModeTailTruncation];
-	
-	return timeStampTextSize.height + titleTextSize.height + contentTextSize.height + PADDING*2;
-}
- */
-
 
 #pragma mark -
 #pragma mark Memory management

@@ -28,6 +28,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MWFeedInfo.h"
 
 typedef enum {
 	ItemTypeUnread,
@@ -42,6 +43,7 @@ typedef enum {
 	NSDate *date; // Date the item was published
 	NSDate *updated; // Date the item was updated if available
 	NSString *dateString;
+    NSString *shortDateString;
 	NSString *summary; // Description of item
 	NSString *content; // More detailed content (if available)
 	
@@ -54,6 +56,7 @@ typedef enum {
 	//     type: what its type is, a standard MIME type  (NSString)
 	NSArray *enclosures;
 
+    MWFeedInfo *source;
 }
 
 @property (nonatomic, copy) NSString *identifier;
@@ -62,9 +65,12 @@ typedef enum {
 @property (nonatomic, copy) NSDate *date;
 @property (nonatomic, copy) NSDate *updated;
 @property (nonatomic, retain) NSString *dateString;
+@property (nonatomic, retain) NSString *shortDateString;
 @property (nonatomic, copy) NSString *summary;
 @property (nonatomic, copy) NSString *content;
 @property (nonatomic, retain) NSString *contentSample;
 @property (nonatomic, copy) NSArray *enclosures;
+
+@property (nonatomic, copy) MWFeedInfo *source;
 
 @end

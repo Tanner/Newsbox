@@ -35,35 +35,19 @@
 
 @implementation MWFeedItem
 
-@synthesize identifier, title, link, date, dateString, updated, summary, content, contentSample, enclosures;
+@synthesize identifier, title, link, date, dateString, shortDateString, updated, summary, content, contentSample, enclosures, source;
+
+- (id)init {
+    if ((self = [super init])) {
+        source = [[MWFeedInfo alloc] init];
+    }
+    
+    return self;
+}
 
 - (void)setSummary:(NSString *)aSummary {
 	summary = [[NSString alloc] initWithString:aSummary];
 	NSString *aContentSample = [[NSString alloc] initWithString:[[summary stringByConvertingHTMLToPlainText] gtm_stringByUnescapingFromHTML]];
-	
-    /*
-	NSScanner *scanner = [NSScanner scannerWithString:contentSample];
-    NSString *tagText = nil;
-	
-	// no html tags
-    while ([scanner isAtEnd] == NO) {
-        [scanner scanUpToString:@"<" intoString:nil];
-		[scanner scanUpToString:@">" intoString:&tagText];
-		
-		if (![tagText isEqualToString:@""] && tagText != nil) { 
-			contentSample = [contentSample stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%@>", tagText] withString:@""];
-		}
-    }
-     */
-	
-	// blank lines
-	//contentSample = [contentSample stringByReplacingOccurrencesOfString:[NSString stringWithString:@"\n"] withString:@""];
-	
-	// no xml chars
-	//contentSample = [Item xmlSimpleUnescape:contentSample];
-	
-	// trim
-	//contentSample = [contentSample stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];		
 	
 	// sample only needs max 150 chars
     contentSample = [[NSString alloc] initWithString:[aContentSample substringToIndex:MIN(150, [aContentSample length])]];
@@ -80,9 +64,20 @@
 	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
 	[dateFormatter setDateFormat:@"EEEE, MMMM dd, yyyy hh:mm aaa"];
 	NSString *aDateString = [dateFormatter stringFromDate:date];
-	[dateFormatter release];
+    
+    NSString *aShortDateString;
+    if (abs((int)[aDate timeIntervalSinceNow]/(60*60*24)) >= 1) {
+        [dateFormatter setDateFormat:@"MMMM dd"];
+        aShortDateString = [dateFormatter stringFromDate:date];
+        [dateFormatter release];
+    } else {
+        [dateFormatter setDateFormat:@"hh:mm aaa"];
+        aShortDateString = [dateFormatter stringFromDate:date];
+        [dateFormatter release];
+    }
 	
 	self.dateString = aDateString;
+    self.shortDateString = aShortDateString;
 }
 
 #pragma mark NSObject
@@ -101,10 +96,13 @@
 	[title release];
 	[link release];
 	[date release];
+    [dateString release];
+    [shortDateString release];
 	[updated release];
 	[summary release];
 	[content release];
 	[enclosures release];
+    [source release];
 	[super dealloc];
 }
 

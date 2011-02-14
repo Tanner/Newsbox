@@ -112,7 +112,7 @@
 	currentItemType = type;
 	
 	if (type == ItemTypeUnread) {
-		ASIHTTPRequest *request = [self requestForAPIEndpoint:@"http://www.google.com/reader/atom/user/-/state/com.google/reading-list"];
+		ASIHTTPRequest *request = [self requestForAPIEndpoint:@"https://www.google.com/reader/atom/user/-/state/com.google/reading-list?xt=user/-/state/com.google/read"];
 		[request setDelegate:self];
 		[request startAsynchronous];
 	}
@@ -156,7 +156,7 @@
 
 
 - (void)feedParser:(MWFeedParser *)parser didParseFeedInfo:(MWFeedInfo *)info {
-	// necessary?
+    // necessary?
 }
 
 

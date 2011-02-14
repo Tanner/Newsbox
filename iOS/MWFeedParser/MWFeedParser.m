@@ -59,7 +59,7 @@
 #pragma mark NSObject
 
 - (id)init {
-	if (self = [super init]) {
+	if ((self = [super init])) {
 
 		// Defaults
 		feedParseType = ParseTypeFull;
@@ -83,7 +83,7 @@
 // Initialise with a URL
 // Mainly for historic reasons before -parseURL:
 - (id)initWithFeedURL:(NSString *)feedURL {
-	if (self = [self init]) {
+	if ((self = [self init])) {
 		
 		// Remember url
 		self.url = feedURL;
@@ -686,13 +686,17 @@
 					else if ([currentPath isEqualToString:@"/feed/entry/content"]) { if (processedText.length > 0) item.content = processedText; processed = YES; }
 					else if ([currentPath isEqualToString:@"/feed/entry/published"]) { if (processedText.length > 0) item.date = [NSDate dateFromInternetDateTimeString:processedText formatHint:DateFormatHintRFC3339]; processed = YES; }
 					else if ([currentPath isEqualToString:@"/feed/entry/updated"]) { if (processedText.length > 0) item.updated = [NSDate dateFromInternetDateTimeString:processedText formatHint:DateFormatHintRFC3339]; processed = YES; }
+                    /*
+                    else if ([currentPath isEqualToString:@"/feed/entry/source/title"] { if (processedText.length > 0) item.sourceDescription = processedText; processed = YES;
+                    else if ([currentPath isEqualToString:@"/feed/entry/source/title/link"] { if (processedText.length > 0) [self processAtomLink:currentElementAttributes andAddToMWObject:item]; processed = YES;
+                     */
 				}
 				
 				// Info
 				if (!processed && feedParseType != ParseTypeItemsOnly) {
-					if ([currentPath isEqualToString:@"/feed/title"]) { if (processedText.length > 0) info.title = processedText; processed = YES; }
-					else if ([currentPath isEqualToString:@"/feed/description"]) { if (processedText.length > 0) info.summary = processedText; processed = YES; }
-					else if ([currentPath isEqualToString:@"/feed/link"]) { [self processAtomLink:currentElementAttributes andAddToMWObject:info]; processed = YES;}
+					if ([currentPath isEqualToString:@"/feed/entry/source/title"]) { if (processedText.length > 0) item.source.title = processedText; processed = YES; }
+					else if ([currentPath isEqualToString:@"/feed/entry/source/description"]) { if (processedText.length > 0) item.source.summary = processedText; processed = YES; }
+					else if ([currentPath isEqualToString:@"/feed/entry/source/link"]) { [self processAtomLink:currentElementAttributes andAddToMWObject:item.source]; processed = YES;}
 				}
 				
 				break;
@@ -714,6 +718,7 @@
 		}
 	}
 	
+    /*
 	// Check if the document has finished parsing and send off info if needed (i.e. there were no items)
 	if (!processed) {
 		if ((feedType == FeedTypeRSS && [qName isEqualToString:@"rss"]) ||
@@ -725,6 +730,7 @@
 			
 		}	
 	}
+     */
 	
 	// Drain pool
 	[pool drain];
