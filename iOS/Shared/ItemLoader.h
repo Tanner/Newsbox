@@ -31,19 +31,16 @@
 - (void)authenticateWithGoogleUser:(NSString *)username andPassword:(NSString *)password;
 - (void)getItemsOfType:(ItemType)type;
 
-
 @property (nonatomic, assign) id<ItemLoaderDelegate> delegate;
 @property (nonatomic, assign) ItemType currentItemType;
 @property (nonatomic, retain) NSString *sid;
 @property (nonatomic, retain) NSString *auth;
 @property (nonatomic, assign) BOOL authenticated;
 
-
 @end
-
 
 @protocol ItemLoaderDelegate
 - (void)didLogin:(BOOL)login;
 - (void)didGetItems:(NSArray *)items ofType:(ItemType)type;
-- (void)showError:(NSString *)errorTitle withMessage:(NSString *)errorMessage;
+- (void)showError:(NSString *)errorTitle withMessage:(NSString *)errorMessage withSettingsButton:(BOOL)settingsButton;
 @end

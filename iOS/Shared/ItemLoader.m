@@ -10,25 +10,18 @@
 #import "ASIHTTPRequest.h"
 #import "ASIFormDataRequest.h"
 
-
 @interface ItemLoader()
 - (NSString *)sidHeader;
 - (NSString *)authHeader;
 - (ASIHTTPRequest *)requestForAPIEndpoint:(NSString *)apiEndpoint;
 @end
 
-
 @implementation ItemLoader
-
 
 @synthesize delegate;
 @synthesize currentItemType;
 @synthesize sid, auth;
 @synthesize authenticated;
-
-
-//NSDictionary const *errors = [NSDictionary dictionaryWithObjects:<#(NSArray *)#> forKeys:<#(NSArray *)#>
-
 
 - (id)initWithDelegate:(id)aDelegate {
 	if ((self = [self init])) {
@@ -42,7 +35,6 @@
 	
 	return self;
 }
-
 
 - (void)authenticateWithGoogleUser:(NSString *)username andPassword:(NSString *)password {	
 	NSURL *url = [NSURL URLWithString:@"https://www.google.com/accounts/ClientLogin"];;
@@ -68,7 +60,7 @@
         //[self setLastError: [self errorWithDescription: @"Bad Username/Passsword" code: 0x001 andErrorLevel: 0x00]];
 		
 		NSLog(@"login failed");
-        [delegate showError:@"Google Reader Login Failed" withMessage:@"Failed to log into Google Reader."];
+        [delegate showError:@"Google Reader Login Failed" withMessage:@"Failed to log into Google Reader." withSettingsButton:YES];
 		
         authenticated = NO;
         [delegate didLogin:NO];
@@ -81,7 +73,7 @@
         //[self setLastError: [self errorWithDescription: @"Captcha Required" code: 0x001 andErrorLevel: 0x00]];
 		
 		NSLog(@"captcha required");
-        [delegate showError:@"Google Reader Login Failed" withMessage:@"Failed to log into Google Reader."];
+        [delegate showError:@"Google Reader Login Failed" withMessage:@"Failed to log into Google Reader." withSettingsButton:YES];
 		
         authenticated = NO;
         [delegate didLogin:NO];
@@ -108,7 +100,7 @@
     NSError *error = [request error];
 	
     NSLog(@"login request failed with error: %@", [error localizedDescription]);
-    [delegate showError:@"No Connection" withMessage:@"Could not connect to Google Reader."];
+    [delegate showError:@"No Connection" withMessage:@"Could not connect to Google Reader." withSettingsButton:NO];
 
     authenticated = NO;
     [delegate didLogin:NO];
@@ -132,7 +124,7 @@
 
 - (void)requestFailed:(ASIHTTPRequest *)request {
 	NSLog(@"%@", @"failed to get feeds");
-    [delegate showError:@"Failed to Download Items" withMessage:@"An error occurred when downloading your items. Try again."];
+    [delegate showError:@"Failed to Download Items" withMessage:@"An error occurred when downloading your items. Try again." withSettingsButton:NO];
     
     authenticated = NO;
     [delegate didLogin:NO];

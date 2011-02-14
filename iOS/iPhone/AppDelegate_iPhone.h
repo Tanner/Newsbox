@@ -19,7 +19,8 @@ RootTableViewControllerDelegate,
 ItemsTableViewControllerDelegate,
 ItemViewControllerDelegate,
 SettingsTableViewControllerDelegate,
-RefreshInfoViewDelegate> {
+RefreshInfoViewDelegate,
+UIAlertViewDelegate> {
 	UINavigationController *navController;
     RootTableViewController_iPhone *rtvc;
 	ItemsTableViewController_iPhone *itvc;

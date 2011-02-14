@@ -51,7 +51,6 @@
 #pragma mark -
 #pragma mark FeedLoaderDelegate Methods
 
-
 - (void)didLogin:(BOOL)login {
 	if (login) {
         [refreshInfoView animateDownload];
@@ -80,12 +79,29 @@
 }
 
 
-- (void)showError:(NSString *)errorTitle withMessage:(NSString *)errorMessage {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:errorTitle message:errorMessage delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
-    [alertView show];
-    [alertView release];
+- (void)showError:(NSString *)errorTitle withMessage:(NSString *)errorMessage withSettingsButton:(BOOL)settingsButton {
+    if (settingsButton) {
+        UIAlertView *alertView = [[[UIAlertView alloc] initWithTitle:errorTitle message:errorMessage delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:@"Settings", nil] autorelease];
+        [alertView show];
+    } else {
+        UIAlertView *alertView = [[[UIAlertView alloc] initWithTitle:errorTitle message:errorMessage delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil] autorelease];
+        [alertView show];
+    }
 }
 
+
+#pragma mark -
+#pragma mark UIAlertViewDelegate Methods
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == [alertView cancelButtonIndex]) {
+        return;
+    }
+    
+    else if (buttonIndex == 1) {
+        [self showSettingsView];
+    }
+}
 
 #pragma mark -
 #pragma mark FeedTableViewControllerDelegate Methods
