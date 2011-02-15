@@ -8,6 +8,7 @@
 
 #import "RootTableViewController_iPhone.h"
 #import "RefreshInfoView.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation RootTableViewController_iPhone
 
@@ -129,6 +130,13 @@
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
+    
+    UIView *view = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, cell.bounds.size.width, cell.bounds.size.height)] autorelease];
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = view.bounds;
+    gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor colorWithRed:241.0/255.0 green:22.0/255.0 blue:22.0/255.0 alpha:1.0] CGColor], (id)[[UIColor colorWithRed:207.0/255.0 green:14.0/255.0 blue:14.0/255.0 alpha:1.0] CGColor], nil];
+    [view.layer insertSublayer:gradient atIndex:0];
+    [cell setSelectedBackgroundView:view];
     
     switch (indexPath.row) {
         case 0: {
