@@ -35,5 +35,6 @@
 - (void)reformatCellLabelsWithOrientation:(UIInterfaceOrientation)orientation;
 
 @property (nonatomic, assign) id<ItemsTableViewControllerDelegate, RefreshInfoViewDelegate> delegate;
+@property (nonatomic, retain) NSMutableArray *items;
 
 @end

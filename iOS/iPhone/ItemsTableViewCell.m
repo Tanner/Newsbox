@@ -9,18 +9,14 @@
 #import "ItemsTableViewCell.h"
 #import "OBGradientView.h"
 
-
 #define PADDING 10.0f
 #define DISCLOSURE_ACCESSORY_WIDTH 12.0f
-
 
 @interface ItemsTableViewCell (private)
 - (void)updateCellDisplay;
 @end
 
-
 @implementation ItemsTableViewCell
-
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -36,18 +32,15 @@
     return self;
 }
 
-
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 	[self updateCellDisplay];
 }
 
-
 - (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
 	[super setHighlighted:highlighted animated:animated];
 	[self updateCellDisplay];
 }
-
 
 - (void)updateCellDisplay {
     if (self.selected || self.highlighted) {
@@ -73,7 +66,6 @@
         }
     }
 }
-
 
 - (void)setSourceLabelText:(NSString *)sourceText
           andDateLabelText:(NSString *)dateText
@@ -184,10 +176,8 @@
 										  contentTextSize.height)];
 }
 
-
 - (void)dealloc {
     [super dealloc];
 }
-
 
 @end

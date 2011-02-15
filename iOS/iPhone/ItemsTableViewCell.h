@@ -16,7 +16,6 @@
 	UILabel *contentLabel;
 }
 
-
 - (void)setSourceLabelText:(NSString *)sourceText
              andDateLabelText:(NSString *)dateText
             andTitleLabelText:(NSString *)titleText

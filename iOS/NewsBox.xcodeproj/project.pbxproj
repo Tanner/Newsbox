@@ -87,6 +87,10 @@
 		ED37D8F7130361A500584EDE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED37D8F5130361A500584EDE /* Default@2x.png */; };
 		ED37D8F8130361A500584EDE /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = ED37D8F6130361A500584EDE /* Default.png */; };
 		ED37D92E1303644E00584EDE /* itemstyle.css in Resources */ = {isa = PBXBuildFile; fileRef = ED37D92D1303644E00584EDE /* itemstyle.css */; };
+		ED4000C2130A483C00B66C10 /* left_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = ED4000C0130A483C00B66C10 /* left_arrow.png */; };
+		ED4000C3130A483C00B66C10 /* right_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = ED4000C1130A483C00B66C10 /* right_arrow.png */; };
+		ED4000C6130A485500B66C10 /* left_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED4000C4130A485500B66C10 /* left_arrow@2x.png */; };
+		ED4000C7130A485500B66C10 /* right_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED4000C5130A485500B66C10 /* right_arrow@2x.png */; };
 		ED473C221307176D006CE75A /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = ED473C0F1307176D006CE75A /* GTMNSString+HTML.m */; };
 		ED473C231307176D006CE75A /* MWFeedInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = ED473C111307176D006CE75A /* MWFeedInfo.m */; };
 		ED473C241307176D006CE75A /* MWFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ED473C131307176D006CE75A /* MWFeedItem.m */; };
@@ -289,6 +293,10 @@
 		ED37D8F5130361A500584EDE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		ED37D8F6130361A500584EDE /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		ED37D92D1303644E00584EDE /* itemstyle.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = itemstyle.css; path = ../../../Newsbox/iOS/itemstyle.css; sourceTree = "<group>"; };
+		ED4000C0130A483C00B66C10 /* left_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_arrow.png; sourceTree = "<group>"; };
+		ED4000C1130A483C00B66C10 /* right_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right_arrow.png; sourceTree = "<group>"; };
+		ED4000C4130A485500B66C10 /* left_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_arrow@2x.png"; sourceTree = "<group>"; };
+		ED4000C5130A485500B66C10 /* right_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right_arrow@2x.png"; sourceTree = "<group>"; };
 		ED473C0D1307176D006CE75A /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
 		ED473C0E1307176D006CE75A /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
 		ED473C0F1307176D006CE75A /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
@@ -781,6 +789,10 @@
 				ED37D8F6130361A500584EDE /* Default.png */,
 				ED37D92D1303644E00584EDE /* itemstyle.css */,
 				ED6A677013046C81006F7838 /* itemscript.js */,
+				ED4000C0130A483C00B66C10 /* left_arrow.png */,
+				ED4000C1130A483C00B66C10 /* right_arrow.png */,
+				ED4000C4130A485500B66C10 /* left_arrow@2x.png */,
+				ED4000C5130A485500B66C10 /* right_arrow@2x.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -847,6 +859,10 @@
 				ED37D92E1303644E00584EDE /* itemstyle.css in Resources */,
 				EDAFC7AA13074F04009C47D7 /* SettingsTableViewController_iPhone.xib in Resources */,
 				EDDA761C1308D24B007AB030 /* RootTableViewController_iPhone.xib in Resources */,
+				ED4000C2130A483C00B66C10 /* left_arrow.png in Resources */,
+				ED4000C3130A483C00B66C10 /* right_arrow.png in Resources */,
+				ED4000C6130A485500B66C10 /* left_arrow@2x.png in Resources */,
+				ED4000C7130A485500B66C10 /* right_arrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,17 +8,35 @@
 
 #import "ItemViewController_iPhone.h"
 
-
 @interface ItemViewController_iPhone (private) 
 - (NSString *)stylizedHTMLWithItem:(MWFeedItem *)anItem;
 @end
 
-
 @implementation ItemViewController_iPhone
-
 
 @synthesize delegate;
 
+- (void)prevNextControlValueChanged:(id)sender {
+	if ([sender selectedSegmentIndex] == 0) {
+		[delegate showPrevItemBefore:item];
+	} else {
+		[delegate showNextItemAfter:item];
+	}
+}
+
+- (void)setIsPrevItemAvailable:(BOOL)prevItemAvailable andIsNextItemAvailable:(BOOL)nextItemAvailable {
+    if (prevItemAvailable) {
+        [prevNextControl setEnabled:YES forSegmentAtIndex:0];
+    } else {
+        [prevNextControl setEnabled:NO forSegmentAtIndex:0];
+    }
+    
+    if (nextItemAvailable) {
+        [prevNextControl setEnabled:YES forSegmentAtIndex:1];
+    } else {
+        [prevNextControl setEnabled:NO forSegmentAtIndex:1];
+    }
+}
 
 #pragma mark -
 #pragma mark UIWebViewDelegate Methods
@@ -32,9 +50,7 @@
 	return NO;
 }
 
-
 #pragma mark -
-
 
 - (NSString *)stylizedHTMLWithItem:(MWFeedItem *)anItem {
 	NSMutableString *html = [[NSMutableString alloc] init];
@@ -121,11 +137,10 @@
 	return stylizedHTML;
 }
 
-
 - (void)setItem:(MWFeedItem *)anItem {
+    item = anItem;
 	[wv loadHTMLString:[self stylizedHTMLWithItem:anItem] baseURL:nil];
 }
-
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -147,20 +162,28 @@
     return self;
 }
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
+    if (!prevNextControl) {
+        NSArray *prevNextControlItems = [NSArray arrayWithObjects:[UIImage imageNamed:@"left_arrow.png"],[UIImage imageNamed:@"right_arrow.png"],nil];
+        prevNextControl = [[UISegmentedControl alloc] initWithItems:prevNextControlItems];
+        [prevNextControl setSegmentedControlStyle:UISegmentedControlStyleBar];
+        [prevNextControl setMomentary:YES];
+        [prevNextControl setWidth:42.0f forSegmentAtIndex:0];
+        [prevNextControl setWidth:42.0f forSegmentAtIndex:1];
+        [prevNextControl setFrame:CGRectMake(0, 0, prevNextControl.frame.size.width, 35)]; // 35 is height of UIBarButton in UIToolbar
+        [prevNextControl addTarget:self action:@selector(prevNextControlValueChanged:) forControlEvents:UIControlEventValueChanged];
+    }
+    
+	[self.navigationItem setRightBarButtonItem:[[[UIBarButtonItem alloc] initWithCustomView:prevNextControl] autorelease]];
+    
 	[self.view addSubview:wv];
 }
 
-
 - (void)viewWillAppear:(BOOL)animated {
-	[self.navigationController setToolbarHidden:NO];
-	
 	[super viewWillAppear:animated];
 }
-
 	 
 - (void)viewDidDisappear:(BOOL)animated {
 	[wv loadHTMLString:@"" baseURL:nil];
@@ -171,7 +194,6 @@
     // Return YES for supported orientations.
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
-
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
@@ -186,10 +208,8 @@
     // e.g. self.myOutlet = nil;
 }
 
-
 - (void)dealloc {
     [super dealloc];
 }
-
 
 @end

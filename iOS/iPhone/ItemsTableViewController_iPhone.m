@@ -11,21 +11,15 @@
 #import "ItemsTableViewCell.h"
 #import "RefreshInfoView.h"
 
-
 #define CELL_HEIGHT 95.0f
-
 
 @interface ItemsTableViewController_iPhone (private)
 	- (CGFloat)suggestedHeightForItem:(MWFeedItem *)anItem;
 @end
 
-
-
 @implementation ItemsTableViewController_iPhone
 
-
-@synthesize delegate;
-
+@synthesize delegate, items;
 
 - (void)setItems:(NSArray *)someItems withType:(ItemType)type {
 	if (items) {
@@ -54,7 +48,6 @@
 	[self.tableView reloadData];
 	[self didLoadTableViewData];
 }
-
 
 #pragma mark -
 #pragma mark Data Source Loading / Reloading Methods

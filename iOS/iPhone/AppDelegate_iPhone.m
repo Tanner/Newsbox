@@ -22,6 +22,23 @@
 @implementation AppDelegate_iPhone
 
 #pragma mark -
+#pragma mark ItemViewControllerDelegate Methods
+
+- (void)showNextItemAfter:(MWFeedItem *)feedItem {
+    [ivc setItem:[itvc.items objectAtIndex:[itvc.items indexOfObject:feedItem]+1]];
+    
+    int newIndex = [itvc.items indexOfObject:feedItem]+1;
+    [ivc setIsPrevItemAvailable:(newIndex-1 >= 0) andIsNextItemAvailable:(newIndex+1 <= [itvc.items count]-1)];
+}
+
+- (void)showPrevItemBefore:(MWFeedItem *)feedItem {
+    [ivc setItem:[itvc.items objectAtIndex:[itvc.items indexOfObject:feedItem]-1]];
+    
+    int newIndex = [itvc.items indexOfObject:feedItem]-1;
+    [ivc setIsPrevItemAvailable:(newIndex-1 >= 0) andIsNextItemAvailable:(newIndex+1 <= [itvc.items count]-1)];
+}
+
+#pragma mark -
 #pragma mark RefreshInfoViewDelegate Methods
 
 - (NSDate *)dataSourceLastUpdated:(id)sender {
@@ -106,6 +123,9 @@
 - (void)showItem:(MWFeedItem *)anItem {
 	[ivc setItem:anItem];
 	[navController pushViewController:ivc animated:YES];
+    
+    int newIndex = [itvc.items indexOfObject:anItem];
+    [ivc setIsPrevItemAvailable:(newIndex-1 >= 0) andIsNextItemAvailable:(newIndex+1 <= [itvc.items count]-1)];
 }
 
 - (void)showSettingsView {
