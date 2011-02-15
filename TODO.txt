@@ -1,8 +1,9 @@
-* gui show refresh on resume
-* uialertview error messages for feeds
-* show sign in/settings on launch with no username
+* restructure parser so feed info objects hold feed items, sorted by date
+* restructure so appdelegate holds item mutablearray, ivc holds a copy
+* new uitableviewcontroller for sources
+* toolbar items held by appdelegate
+* up/down arrows for ivc
 
-* copy Mail.app's tableview label styles
 * load all unread items (no limit)
 * unread status indicator
 * unread/star/thumbs up/thumbs down/share buttons in item toolbar
