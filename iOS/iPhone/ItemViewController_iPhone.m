@@ -155,28 +155,25 @@
 			if ([aView isKindOfClass:[UIImageView class]]) {
 				aView.hidden = YES;
 			}
-		}   
+		}
 		
 		[self.view addSubview:wv];
-	}
-    return self;
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-	
-    if (!prevNextControl) {
+        
         NSArray *prevNextControlItems = [NSArray arrayWithObjects:[UIImage imageNamed:@"left_arrow.png"],[UIImage imageNamed:@"right_arrow.png"],nil];
         prevNextControl = [[UISegmentedControl alloc] initWithItems:prevNextControlItems];
         [prevNextControl setSegmentedControlStyle:UISegmentedControlStyleBar];
         [prevNextControl setMomentary:YES];
         [prevNextControl setWidth:42.0f forSegmentAtIndex:0];
         [prevNextControl setWidth:42.0f forSegmentAtIndex:1];
-        [prevNextControl setFrame:CGRectMake(0, 0, prevNextControl.frame.size.width, 35)]; // 35 is height of UIBarButton in UIToolbar
         [prevNextControl addTarget:self action:@selector(prevNextControlValueChanged:) forControlEvents:UIControlEventValueChanged];
-    }
     
-	[self.navigationItem setRightBarButtonItem:[[[UIBarButtonItem alloc] initWithCustomView:prevNextControl] autorelease]];
+        [self.navigationItem setRightBarButtonItem:[[[UIBarButtonItem alloc] initWithCustomView:prevNextControl] autorelease]];
+	}
+    return self;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
     
 	[self.view addSubview:wv];
 }
