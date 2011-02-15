@@ -7,7 +7,7 @@
 //
 
 #import "ItemsTableViewCell.h"
-#import <QuartzCore/QuartzCore.h>
+#import "OBGradientView.h"
 
 
 #define PADDING 10.0f
@@ -27,6 +27,11 @@
     if (self) {
 		[self.textLabel setHidden:YES];
 		[self setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+        
+        OBGradientView *gradientView = [[[OBGradientView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)] autorelease];
+        [gradientView setColors:[NSArray arrayWithObjects:(id)[[UIColor colorWithRed:241.0/255.0 green:22.0/255.0 blue:22.0/255.0 alpha:1.0] CGColor], (id)[[UIColor colorWithRed:207.0/255.0 green:14.0/255.0 blue:14.0/255.0 alpha:1.0] CGColor], nil]];
+        [gradientView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
+        [self setSelectedBackgroundView:gradientView];
     }
     return self;
 }
@@ -77,13 +82,6 @@
 				  andCellSize:(CGSize)size {
     
 	int const MAX_HEIGHT = 95.0f;
-    
-    UIView *view = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height)] autorelease];
-    CAGradientLayer *gradient = [CAGradientLayer layer];
-    gradient.frame = view.bounds;
-    gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor colorWithRed:241.0/255.0 green:22.0/255.0 blue:22.0/255.0 alpha:1.0] CGColor], (id)[[UIColor colorWithRed:207.0/255.0 green:14.0/255.0 blue:14.0/255.0 alpha:1.0] CGColor], nil];
-    [view.layer insertSublayer:gradient atIndex:0];
-    [self setSelectedBackgroundView:view];
     
     /*
      Date

@@ -101,6 +101,7 @@
 		ED639915130342810024D3ED /* ItemViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = ED639913130342810024D3ED /* ItemViewController_iPhone.m */; };
 		ED639916130342810024D3ED /* ItemViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED639914130342810024D3ED /* ItemViewController_iPhone.xib */; };
 		ED6446E9130A0E1000C197DB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED6446E8130A0E1000C197DB /* QuartzCore.framework */; };
+		ED6446F1130A17E500C197DB /* OBGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6446F0130A17E500C197DB /* OBGradientView.m */; };
 		ED6A677113046C81006F7838 /* itemscript.js in Resources */ = {isa = PBXBuildFile; fileRef = ED6A677013046C81006F7838 /* itemscript.js */; };
 		ED71D1081303266E00C3BE65 /* Icon-57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED71D1071303266E00C3BE65 /* Icon-57@2x.png */; };
 		ED71D10A1303268D00C3BE65 /* Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = ED71D1091303268D00C3BE65 /* Icon-57.png */; };
@@ -316,6 +317,8 @@
 		ED639913130342810024D3ED /* ItemViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemViewController_iPhone.m; sourceTree = "<group>"; };
 		ED639914130342810024D3ED /* ItemViewController_iPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemViewController_iPhone.xib; sourceTree = "<group>"; };
 		ED6446E8130A0E1000C197DB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		ED6446EF130A17E500C197DB /* OBGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBGradientView.h; sourceTree = "<group>"; };
+		ED6446F0130A17E500C197DB /* OBGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBGradientView.m; sourceTree = "<group>"; };
 		ED6A677013046C81006F7838 /* itemscript.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = itemscript.js; sourceTree = "<group>"; };
 		ED71D1071303266E00C3BE65 /* Icon-57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57@2x.png"; sourceTree = "<group>"; };
 		ED71D1091303268D00C3BE65 /* Icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57.png"; sourceTree = "<group>"; };
@@ -393,6 +396,7 @@
 				28EEC04A1118E28000187D67 /* AppDelegate_Shared.m */,
 				ED2E91C51301D23600983CC3 /* ItemLoader.h */,
 				ED2E91C41301D23600983CC3 /* ItemLoader.m */,
+				ED6446EE130A17E400C197DB /* OBGradientView */,
 				ED59CD961307734900595B0A /* SFHFKeychainUtils */,
 				ED473C0A1307176D006CE75A /* MWFeedParser */,
 				8D1107310486CEB800E47090 /* Newsbox-Info.plist */,
@@ -759,6 +763,15 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		ED6446EE130A17E400C197DB /* OBGradientView */ = {
+			isa = PBXGroup;
+			children = (
+				ED6446EF130A17E500C197DB /* OBGradientView.h */,
+				ED6446F0130A17E500C197DB /* OBGradientView.m */,
+			);
+			path = OBGradientView;
+			sourceTree = "<group>";
+		};
 		ED71D1061303266800C3BE65 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -941,6 +954,7 @@
 				C39890641309AAE400647369 /* GitHubUserPoster.m in Sources */,
 				C39890651309AAE400647369 /* GitHubUserSearchFactory.m in Sources */,
 				C39890661309AAE400647369 /* GitHubUserServiceFactory.m in Sources */,
+				ED6446F1130A17E500C197DB /* OBGradientView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
