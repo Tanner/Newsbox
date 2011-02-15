@@ -37,7 +37,7 @@ ul li {
 
 #head h1 {
 	font-size: 1.3em;
-    margin: 0 0 5px 0 !important;
+    margin: 3px 0 !important;
 }
 
 h1 a {
@@ -109,8 +109,13 @@ img {
 }
 
 p.chronodata {
-	font-size: 90% !important;
-	color: #666 !important;
-	margin: 0 !important
-    ;
+	font-size: 85% !important;
+	color: #cc0000 !important;
+	margin: 0 !important;
+}
+
+p.source {
+    font-size: 85% !important;
+    color: #666 !important;
+    margin: 0 !important;
 }

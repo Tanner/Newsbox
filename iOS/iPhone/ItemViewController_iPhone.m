@@ -83,8 +83,9 @@
 	[html appendString:@"<div id=\"wrapper\">"];
 
 	[html appendFormat:@"<div id=\"head\""];
+    [html appendFormat:@"<p class=\"chronodata\">%@</p>", [anItem dateString]];
 	[html appendFormat:@"<h1><a href=\"%@\">%@</a></h1>", [anItem link], [anItem title]];
-	[html appendFormat:@"<p class=\"chronodata\">%@</p>", [anItem dateString]];
+    [html appendFormat:@"<p class=\"source\">%@</p>", [[anItem source] title]];
 	[html appendFormat:@"</div>"];
 	[html appendFormat:@"<div id=\"content\">"];
 	
