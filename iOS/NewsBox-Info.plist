@@ -8,8 +8,11 @@
 	<string>${PRODUCT_NAME}</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
-	<key>CFBundleIconFile</key>
-	<string></string>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>Icon-57.png</string>
+		<string>Icon-57@2x.png</string>
+	</array>
 	<key>CFBundleIdentifier</key>
 	<string>com.ashcraftmedia.newsbox</string>
 	<key>CFBundleInfoDictionaryVersion</key>

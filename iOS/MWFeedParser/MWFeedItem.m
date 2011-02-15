@@ -71,7 +71,7 @@
         aShortDateString = [dateFormatter stringFromDate:date];
         [dateFormatter release];
     } else {
-        [dateFormatter setDateFormat:@"hh:mm aaa"];
+        [dateFormatter setDateFormat:@"h:mm aaa"];
         aShortDateString = [dateFormatter stringFromDate:date];
         [dateFormatter release];
     }
