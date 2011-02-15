@@ -18,9 +18,9 @@
 
 - (void)prevNextControlValueChanged:(id)sender {
 	if ([sender selectedSegmentIndex] == 0) {
-		[delegate showPrevItemBefore:item];
+		[delegate showPrevItemBefore:feedItemIndex];
 	} else {
-		[delegate showNextItemAfter:item];
+		[delegate showNextItemAfter:feedItemIndex];
 	}
 }
 
@@ -137,8 +137,8 @@
 	return stylizedHTML;
 }
 
-- (void)setItem:(MWFeedItem *)anItem {
-    item = anItem;
+- (void)setItem:(MWFeedItem *)anItem withIndex:(int)index {
+    feedItemIndex = index;
 	[wv loadHTMLString:[self stylizedHTMLWithItem:anItem] baseURL:nil];
 }
 

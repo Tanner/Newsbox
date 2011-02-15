@@ -15,11 +15,11 @@
 	id<ItemViewControllerDelegate> delegate;
 	UIWebView *wv;
     UISegmentedControl *prevNextControl;
-    
-    MWFeedItem *item;
+        
+    int feedItemIndex;
 }
 
-- (void)setItem:(MWFeedItem *)anItem;
+- (void)setItem:(MWFeedItem *)anItem withIndex:(int)index;
 - (void)setIsPrevItemAvailable:(BOOL)prevItemAvailable andIsNextItemAvailable:(BOOL)nextItemAvailable;
 
 @property (nonatomic, assign) id<ItemViewControllerDelegate> delegate;
@@ -27,6 +27,6 @@
 @end
 
 @protocol ItemViewControllerDelegate
-- (void)showNextItemAfter:(MWFeedItem *)item;
-- (void)showPrevItemBefore:(MWFeedItem *)item;
+- (void)showNextItemAfter:(int)index;
+- (void)showPrevItemBefore:(int)index;
 @end
