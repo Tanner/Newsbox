@@ -160,7 +160,7 @@
 		
 		[self.view addSubview:wv];
         
-        NSArray *prevNextControlItems = [NSArray arrayWithObjects:[UIImage imageNamed:@"left_arrow.png"],[UIImage imageNamed:@"right_arrow.png"],nil];
+        NSArray *prevNextControlItems = [NSArray arrayWithObjects:[UIImage imageNamed:@"up_arrow.png"],[UIImage imageNamed:@"down_arrow.png"],nil];
         prevNextControl = [[UISegmentedControl alloc] initWithItems:prevNextControlItems];
         [prevNextControl setSegmentedControlStyle:UISegmentedControlStyleBar];
         [prevNextControl setMomentary:YES];
