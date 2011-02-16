@@ -10,6 +10,7 @@
 #import "GitHubServiceGotCommitDelegate.h"
 
 @interface GitCommitsTableViewController_iPhone : UITableViewController <GitHubServiceGotCommitDelegate> {
+    @private
     NSMutableArray *commits;
     BOOL foundBuild;
 }

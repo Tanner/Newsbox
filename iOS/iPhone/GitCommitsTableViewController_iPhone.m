@@ -24,6 +24,8 @@
 
 - (void)dealloc
 {
+    [commits release];
+    
     [super dealloc];
 }
 
@@ -54,6 +56,9 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    [commits removeAllObjects];
+    foundBuild = NO;
+    
     [GitHubServiceSettings setCredential:[NSURLCredential credentialWithUser:@"Tanner"
                                                                     password:@"pack12"
                                                                  persistence:NSURLCredentialPersistenceNone]]; 
@@ -260,7 +265,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if ([commits count] > 1 && indexPath.section == 1) {
-        NSString *cellText = [[commits objectAtIndex:indexPath.row+1] message];
+        NSString *cellText = [[commits objectAtIndex:indexPath.row] message];
         UIFont *cellFont = [UIFont systemFontOfSize:[UIFont systemFontSize]];
         
         CGSize constraintSize = CGSizeMake(self.view.bounds.size.width, 95.0f);
