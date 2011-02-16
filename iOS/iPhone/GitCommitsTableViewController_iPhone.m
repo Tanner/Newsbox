@@ -111,7 +111,7 @@
             break;
         }
         case 1: {
-            return [commits count];
+            return [commits count] - 1;
             break;
         }
     }
