@@ -106,7 +106,7 @@
             break;
         }
         case 1: {
-            return [commits count];
+            return [commits count] - 1;
             break;
         }
     }
@@ -260,7 +260,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if ([commits count] > 1 && indexPath.section == 1) {
-        NSString *cellText = [[commits objectAtIndex:indexPath.row+1] message];
+        NSString *cellText = [[commits objectAtIndex:indexPath.row] message];
         UIFont *cellFont = [UIFont systemFontOfSize:[UIFont systemFontSize]];
         
         CGSize constraintSize = CGSizeMake(self.view.bounds.size.width, 95.0f);
