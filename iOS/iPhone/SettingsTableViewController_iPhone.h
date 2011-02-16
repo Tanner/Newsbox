@@ -7,23 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GitHubServiceGotCommitDelegate.h"
 
 //@protocol SettingsTableViewControllerDelegate;
 
 @protocol SettingsTableViewControllerDelegate
 - (void)returnFromSettingsTableViewController;
 - (void)changedUsername:(NSString *)username andPassword:(NSString *)password;
+- (void)showGitCommits;
 @end
 
-
-
-@interface SettingsTableViewController_iPhone : UITableViewController <GitHubServiceGotCommitDelegate> {
+@interface SettingsTableViewController_iPhone : UITableViewController {
 	id<SettingsTableViewControllerDelegate> delegate;
-    NSString *latestGitSHA;
 }
 
 @property (nonatomic, assign) id<SettingsTableViewControllerDelegate> delegate;
-@property (nonatomic, retain) NSString *latestGitSHA;
 
 @end

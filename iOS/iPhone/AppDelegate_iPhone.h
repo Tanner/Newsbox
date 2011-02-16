@@ -12,6 +12,7 @@
 #import "ItemsTableViewController_iPhone.h"
 #import "ItemViewController_iPhone.h"
 #import "SettingsTableViewController_iPhone.h"
+#import "GitCommitsTableViewController_iPhone.h"
 #import "RefreshInfoView.h"
 
 @interface AppDelegate_iPhone : AppDelegate_Shared <ItemLoaderDelegate,
@@ -28,6 +29,7 @@ UIAlertViewDelegate> {
     
     UINavigationController *settingsNavController;
 	SettingsTableViewController_iPhone *stvc;
+    GitCommitsTableViewController_iPhone *gctvc;
     
     RefreshInfoView *refreshInfoView;
     BOOL refreshing;

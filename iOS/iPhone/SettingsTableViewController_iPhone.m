@@ -9,13 +9,10 @@
 #import "SettingsTableViewController_iPhone.h"
 #import "SFHFKeychainUtils.h"
 #import "SFHFEditableCell.h"
-#import "GitHubCommitServiceFactory.h"
-#import "GitHubService.h"
-#import "GitHubServiceSettings.h"
 
 @implementation SettingsTableViewController_iPhone
 
-@synthesize delegate, latestGitSHA;
+@synthesize delegate;
 
 - (void)cancelButtonPushed:(id)sender {
     [delegate returnFromSettingsTableViewController];
@@ -45,17 +42,6 @@
     [self.navigationItem setTitle:@"Settings"];
     [self.navigationItem setLeftBarButtonItem:[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelButtonPushed:)] autorelease]];
     [self.navigationItem setRightBarButtonItem:[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneButtonPushed:)] autorelease]];
-        
-    [self.tableView reloadData];
-    
-    // GIT
-    [latestGitSHA release];
-    latestGitSHA = nil;
-    [GitHubServiceSettings setCredential:[NSURLCredential credentialWithUser:@"Tanner"
-                                                                    password:@"pack12"
-                                                                 persistence:NSURLCredentialPersistenceNone]]; 
-    [GitHubServiceSettings setSecureServerAddress:@"https://github.com"];
-    [GitHubCommitServiceFactory requestCommitsOnBranch:@"iOS" repository:@"Newsbox" user:@"Tanner" delegate:self];
     
     [super viewWillAppear:animated];
 }
@@ -96,7 +82,7 @@
         case 0:
             return 2;
         case 1:
-            return 2;
+            return 1;
         default:
             return 0;
     }
@@ -130,6 +116,7 @@
         
     switch (indexPath.section) {
         case 0: {
+            [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
             switch (indexPath.row) {
                 case 0: {
                     [(SFHFEditableCell *)cell setLabelText:@"Username" andPlaceholderText:@""];
@@ -155,58 +142,13 @@
             break;
         }
         case 1: {
-            switch (indexPath.row) {
-                case 0: {
-                    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
-                    NSString *build = [infoDictionary objectForKey:@"CFBundleVersion"];
-                    [[cell textLabel] setText:@"Build"];
-                    [[cell detailTextLabel] setText:build];
-                    break;
-                }
-                case 1: {
-                    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
-                    NSString *build = [infoDictionary objectForKey:@"CFBundleVersion"];
-                    
-                    [[cell textLabel] setText:@"Up-to-Date"];
-
-                    if (latestGitSHA != nil && [latestGitSHA length] > 0) {
-                        NSString *latestShortGitSHA = [latestGitSHA substringToIndex:7];
-                        if ([latestShortGitSHA isEqualToString:build]) {
-                            [[cell detailTextLabel] setText:@"Yes"];
-                        } else {
-                            [[cell detailTextLabel] setText:@"No"];
-                        }
-                    } else {
-                        [[cell detailTextLabel] setText:@""];
-                    }
-                    break;
-                }
-            }
+            [[cell textLabel] setText:@"Git Information"];
+            [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+            break;
         }
     }
     
-    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-    
     return cell;
-}
-
-
--(void)gitHubService:(id<GitHubService>)gitHubService gotCommit:(id<GitHubCommit>)commit {
-    if (latestGitSHA == nil) {
-        latestGitSHA = [[NSString alloc] initWithString:commit.sha];
-    }
-    
-    [self.tableView reloadData];
-}
-
-
--(void)gitHubServiceDone:(id <GitHubService>)gitHubService {
-    //NSLog(@"Git Hub Service done!");
-}
-
-
--(void)gitHubService:(id <GitHubService>)gitHubService didFailWithError:error {
-    //NSLog(@"Git Hub Service failed!");
 }
 
 
@@ -254,7 +196,17 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    switch(indexPath.section) {
+        case 1: {
+            switch (indexPath.row) {
+                case 0: {
+                    [delegate showGitCommits];
+                    break;
+                }
+            }
+            break;
+        }
+    }
 }
 
 
@@ -274,9 +226,7 @@
 }
 
 
-- (void)dealloc {
-    [latestGitSHA release];
-    
+- (void)dealloc {    
     [super dealloc];
 }
 

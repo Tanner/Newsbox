@@ -153,6 +153,10 @@
     [self loginAndDownloadItems];
 }
 
+- (void)showGitCommits {
+    [settingsNavController pushViewController:gctvc animated:YES];
+}
+
 #pragma mark -
 #pragma mark Application lifecycle
 
@@ -192,6 +196,8 @@
 	
 	stvc = [[SettingsTableViewController_iPhone alloc] initWithNibName:@"SettingsTableViewController_iPhone" bundle:nil];
 	[stvc setDelegate:self];
+    
+    gctvc = [[GitCommitsTableViewController_iPhone alloc] initWithNibName:@"GitCommitsTableViewController_iPhone" bundle:nil];
 	
 	navController = [[UINavigationController alloc] initWithRootViewController:rtvc];
     [rtvc.navigationItem setTitle:@"Newsbox"];

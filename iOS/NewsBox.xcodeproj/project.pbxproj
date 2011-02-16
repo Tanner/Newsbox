@@ -18,6 +18,8 @@
 		28AD733F0D9D9553002E5188 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow_iPad.xib */; };
 		28EEBFDD1118E19E00187D67 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28EEBFDC1118E19E00187D67 /* CoreData.framework */; };
 		28EEC04B1118E28000187D67 /* AppDelegate_Shared.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EEC04A1118E28000187D67 /* AppDelegate_Shared.m */; };
+		C37C2FBD130C439E00C9AEB3 /* GitCommitsTableViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = C37C2FBB130C439E00C9AEB3 /* GitCommitsTableViewController_iPhone.m */; };
+		C37C2FBE130C439E00C9AEB3 /* GitCommitsTableViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = C37C2FBC130C439E00C9AEB3 /* GitCommitsTableViewController_iPhone.xib */; };
 		C39890441309AAE400647369 /* GitHubCommitFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C3988FE01309AAE400647369 /* GitHubCommitFactory.m */; };
 		C39890451309AAE400647369 /* GitHubCommitImp.m in Sources */ = {isa = PBXBuildFile; fileRef = C3988FE21309AAE400647369 /* GitHubCommitImp.m */; };
 		C39890461309AAE400647369 /* GitHubCommitServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C3988FE31309AAE400647369 /* GitHubCommitServiceFactory.m */; };
@@ -134,6 +136,9 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Shared/main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Newsbox_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Newsbox_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Newsbox-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Newsbox-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		C37C2FBA130C439E00C9AEB3 /* GitCommitsTableViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitCommitsTableViewController_iPhone.h; sourceTree = "<group>"; };
+		C37C2FBB130C439E00C9AEB3 /* GitCommitsTableViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitCommitsTableViewController_iPhone.m; sourceTree = "<group>"; };
+		C37C2FBC130C439E00C9AEB3 /* GitCommitsTableViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GitCommitsTableViewController_iPhone.xib; sourceTree = "<group>"; };
 		C3988FDF1309AAE400647369 /* GitHubCommitFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubCommitFactory.h; sourceTree = "<group>"; };
 		C3988FE01309AAE400647369 /* GitHubCommitFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubCommitFactory.m; sourceTree = "<group>"; };
 		C3988FE11309AAE400647369 /* GitHubCommitImp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubCommitImp.h; sourceTree = "<group>"; };
@@ -392,6 +397,9 @@
 				EDAFC7A613074F04009C47D7 /* SettingsTableViewController_iPhone.h */,
 				EDAFC7A713074F04009C47D7 /* SettingsTableViewController_iPhone.m */,
 				EDAFC7A813074F04009C47D7 /* SettingsTableViewController_iPhone.xib */,
+				C37C2FBA130C439E00C9AEB3 /* GitCommitsTableViewController_iPhone.h */,
+				C37C2FBB130C439E00C9AEB3 /* GitCommitsTableViewController_iPhone.m */,
+				C37C2FBC130C439E00C9AEB3 /* GitCommitsTableViewController_iPhone.xib */,
 			);
 			path = iPhone;
 			sourceTree = "<group>";
@@ -823,7 +831,7 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Newsbox" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "NewsBox" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -863,6 +871,7 @@
 				ED0581C0130B30050055703C /* up_arrow@2x.png in Resources */,
 				ED0581C3130B30930055703C /* down_arrow.png in Resources */,
 				ED0581C4130B30930055703C /* up_arrow.png in Resources */,
+				C37C2FBE130C439E00C9AEB3 /* GitCommitsTableViewController_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -971,6 +980,7 @@
 				C39890651309AAE400647369 /* GitHubUserSearchFactory.m in Sources */,
 				C39890661309AAE400647369 /* GitHubUserServiceFactory.m in Sources */,
 				ED6446F1130A17E500C197DB /* OBGradientView.m in Sources */,
+				C37C2FBD130C439E00C9AEB3 /* GitCommitsTableViewController_iPhone.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1018,13 +1028,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ryan Ashcraft (4G66M54XX5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tanner Smith (KXNM2S876K)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
 				PREBINDING = NO;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6648D5A0-E9C4-49E5-9AF3-EAA565B1812E";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4C347101-401D-4491-8569-E92D0775176F";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1034,14 +1044,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ryan Ashcraft (4G66M54XX5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tanner Smith (KXNM2S876K)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6648D5A0-E9C4-49E5-9AF3-EAA565B1812E";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4C347101-401D-4491-8569-E92D0775176F";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1059,7 +1069,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Newsbox" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "NewsBox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
