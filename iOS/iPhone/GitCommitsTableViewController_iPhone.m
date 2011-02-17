@@ -104,7 +104,11 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     switch (section) {
         case 0: {
-            return 2;
+            if ([commits count] > 0) {
+                return 2;
+            } else {
+                return 1;
+            }
             break;
         }
         case 1: {
