@@ -24,15 +24,11 @@
 - (void)setItems:(NSMutableArray *)someItems withType:(ItemType)type {	
 	items = someItems;
 	
-	if (modalView) {
-		[modalView removeFromSuperview];
-		[modalView release];
-		modalView = nil;
-		
-		[self.tableView setScrollEnabled:YES];
-	}
-	
 	[self.tableView reloadData];
+}
+
+- (void)reloadData {
+    [self.tableView reloadData];
 }
 
 #pragma mark -
@@ -96,17 +92,6 @@
     [self setToolbarItems:toolbarItems animated:NO];
     
     [toolbarItems release];
-    
-	if (!items && !modalView) {
-		modalView = [[UIView alloc] initWithFrame:self.view.bounds];
-		[modalView setBackgroundColor:[UIColor whiteColor]];
-		[modalView setOpaque:YES];
-        [modalView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
-		[self.view addSubview:modalView];
-		
-		[self.tableView scrollRectToVisible:modalView.frame animated:NO];
-		[self.tableView setScrollEnabled:NO];
-	}
 }
 
 

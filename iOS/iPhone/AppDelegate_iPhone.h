@@ -46,7 +46,5 @@ UIAlertViewDelegate> {
     NSMutableArray *allItems;
 }
 
-@property (nonatomic, retain) NSMutableArray *sources;
-
 @end
 

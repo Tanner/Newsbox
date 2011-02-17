@@ -22,6 +22,7 @@
     NSMutableArray *sources;
 }
 
+- (void)reloadData;
 - (void)setSources:(NSMutableArray *)someSources withType:(ItemType)type;
 
 @property (nonatomic, assign) id<SourcesTableViewControllerDelegate, RefreshInfoViewDelegate> delegate;

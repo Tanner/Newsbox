@@ -45,6 +45,11 @@
     return self;
 }
 
+- (NSComparisonResult)compareByDate:(MWFeedItem *)otherItem {    
+    // reverse sort
+    return [otherItem.date compare:date];
+}
+
 - (void)setSummary:(NSString *)aSummary {
 	summary = [[NSString alloc] initWithString:aSummary];
 	NSString *aContentSample = [[NSString alloc] initWithString:[[summary stringByConvertingHTMLToPlainText] gtm_stringByUnescapingFromHTML]];

@@ -22,6 +22,10 @@
     [self.tableView reloadData];
 }
 
+- (void)reloadData {
+    [self.tableView reloadData];
+}
+
 - (void)refresh {
     [delegate loginAndDownloadItems];
 }

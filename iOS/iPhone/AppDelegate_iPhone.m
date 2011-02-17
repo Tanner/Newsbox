@@ -21,8 +21,6 @@
 
 @implementation AppDelegate_iPhone
 
-@synthesize sources;
-
 #pragma mark -
 #pragma mark RefreshInfoViewDelegate Methods
 
@@ -115,17 +113,16 @@
 
 - (void)didGetSources:(NSArray *)sourcesArr ofType:(ItemType)type {
     // sources array
-    NSMutableArray *mutableSources = [[NSMutableArray alloc] initWithArray:sourcesArr];
-    self.sources = mutableSources;
-    [mutableSources release];
-    
+    [sources addObjectsFromArray:sourcesArr];
     [sources sortUsingSelector:@selector(compareByName:)];
     
     // all items
-    allItems = [[NSMutableArray alloc] init];
     for (MWFeedInfo *source in sources) {
+        [source.items sortUsingSelector:@selector(compareByDate:)];
         [allItems addObjectsFromArray:source.items];
     }
+    
+    [allItems sortUsingSelector:@selector(compareByDate:)];
 
     // last updated date
     lastUpdatedDate = [[NSDate date] retain];
@@ -138,7 +135,11 @@
     
     // TODO
     if ([[navController viewControllers] containsObject:stvc]) {
-        [stvc setSources:sources withType:ItemTypeUnread];
+        [stvc reloadData];
+    }
+    
+    if ([[navController viewControllers] containsObject:itvc]) {
+        [itvc reloadData];
     }
 }
 
@@ -200,6 +201,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 	feedLoader = [[ItemLoader alloc] initWithDelegate:self];
+    sources = [[NSMutableArray alloc] init];
+    allItems = [[NSMutableArray alloc] init];
     
     rtvc = [[RootTableViewController_iPhone alloc] initWithNibName:@"RootTableViewController_iPhone" bundle:nil];
     [rtvc setDelegate:self];
@@ -298,6 +301,8 @@
 }
 
 - (void)dealloc {
+    [sources release];
+    [allItems release];
 	
 	[super dealloc];
 }
