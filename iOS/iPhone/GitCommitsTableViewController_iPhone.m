@@ -126,7 +126,7 @@
             return @"Build Information";
         }
         case 1: {
-            return @"Latest Commits";
+            return @"Latest GitHub Commits";
         }
     }
     return @"";
