@@ -407,6 +407,7 @@
 		28EEBF621118D79A00187D67 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				8D1107310486CEB800E47090 /* Newsbox-Info.plist */,
 				2819307C112F81BE00ECF9B4 /* Newsbox.xcdatamodeld */,
 				28EEC0491118E28000187D67 /* AppDelegate_Shared.h */,
 				28EEC04A1118E28000187D67 /* AppDelegate_Shared.m */,
@@ -415,7 +416,6 @@
 				ED6446EE130A17E400C197DB /* OBGradientView */,
 				ED59CD961307734900595B0A /* SFHFKeychainUtils */,
 				ED473C0A1307176D006CE75A /* MWFeedParser */,
-				8D1107310486CEB800E47090 /* Newsbox-Info.plist */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -890,7 +890,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "GIT=/usr/local/git/bin/git\nGITOPTIONS=\"--pretty=oneline --abbrev-commit\"\nCUT=/usr/bin/cut\n\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion `$GIT log -1 $GITOPTIONS | $CUT -c1-7`\" ${TARGET_BUILD_DIR}/${INFOPLIST_PATH}";
+			shellScript = "GIT=/usr/local/git/bin/git\nGITOPTIONS=\"--pretty=oneline --abbrev-commit\"\nHEAD=/usr/bin/head\nCUT=/usr/bin/cut\n\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion `$GIT log -1 $GITOPTIONS | $CUT -c1-7`\" ${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\n\n/usr/libexec/PlistBuddy -c \"Set :BuildDate `$GIT log --pretty=format:'%cd' --date=iso | $HEAD -1 | $CUT -c1-19`\" ${TARGET_BUILD_DIR}/${INFOPLIST_PATH}";
 		};
 /* End PBXShellScriptBuildPhase section */
 

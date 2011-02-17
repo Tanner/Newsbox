@@ -12,7 +12,6 @@
 @interface GitCommitsTableViewController_iPhone : UITableViewController <GitHubServiceGotCommitDelegate> {
     @private
     NSMutableArray *commits;
-    BOOL foundBuild;
 }
 
 @end

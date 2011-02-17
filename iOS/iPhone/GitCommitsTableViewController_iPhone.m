@@ -16,7 +16,6 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
         commits = [[NSMutableArray alloc] init];
-        foundBuild = NO;
     }
     
     return self;
@@ -57,7 +56,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [commits removeAllObjects];
-    foundBuild = NO;
     
     [GitHubServiceSettings setCredential:[NSURLCredential credentialWithUser:@"Tanner"
                                                                     password:@"pack12"
@@ -154,17 +152,28 @@
                     break;
                 }
                 case 1: {
+                    if (!commits || [commits count] == 0) {
+                        break;
+                    }
+                    
                     NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
-                    NSString *build = [infoDictionary objectForKey:@"CFBundleVersion"];
-                    
-                    [[cell textLabel] setText:@"Up-to-Date"];
-                    
+                    NSString *buildDate = [infoDictionary objectForKey:@"BuildDate"];
+                    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+                    [dateFormatter setDateFormat:@"YYYY-MM-dd HH:mm:ss ZZZ"];
+                    [dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"EST"]];
+                    NSDate *localBuildDate = [dateFormatter dateFromString:buildDate];
+                                                            
+                    NSDate *latestCommitDate = [[commits objectAtIndex:0] committedDate];
+                                        
+                    [[cell textLabel] setText:@"Status"];
+                                        
                     if (commits && [commits count] > 0) {
-                        NSString *latestShortGitSHA = [[[commits objectAtIndex:0] sha] substringToIndex:7];
-                        if ([latestShortGitSHA isEqualToString:build]) {
-                            [[cell detailTextLabel] setText:@"Yes"];
-                        } else {
-                            [[cell detailTextLabel] setText:@"No"];
+                        if ([localBuildDate compare:latestCommitDate] == NSOrderedSame) {
+                            [[cell detailTextLabel] setText:@"Up-to-Date"];
+                        } else if ([localBuildDate compare:latestCommitDate] == NSOrderedDescending) {
+                            [[cell detailTextLabel] setText:@"Not Pushed"];
+                        } else if ([localBuildDate compare:latestCommitDate] == NSOrderedAscending) {
+                            [[cell detailTextLabel] setText:@"Out-of-Date"];
                         }
                     } else {
                         [[cell detailTextLabel] setText:@""];

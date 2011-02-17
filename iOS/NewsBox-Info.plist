@@ -27,6 +27,8 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string></string>
+	<key>BuildDate</key>
+	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSMainNibFile</key>

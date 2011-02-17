@@ -475,7 +475,8 @@ didReceiveResponse:(NSURLResponse *)response {
   if (!localFormatter) {
     
     localFormatter = [[NSDateFormatter alloc] init];
-    [localFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"];
+    [localFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"EST"]];
+    [localFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZZZ"];
   }
 
 }
@@ -512,9 +513,8 @@ NSString * const GitHubServerErrorDomain = @"GitHubServerErrorDomain";
   
   NSDate *retVal = nil;
   
-  if ([string length] > 18) {
-    
-    retVal = [localFormatter dateFromString:[string substringToIndex:18]];
+  if ([string length] > 19) {
+    retVal = [localFormatter dateFromString:[string stringByReplacingOccurrencesOfString:@":" withString:@""]];
   }
   return retVal;
 }
