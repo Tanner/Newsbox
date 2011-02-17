@@ -103,8 +103,7 @@
     }
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     switch (section) {
         case 0: {
             return 2;
@@ -125,7 +124,7 @@
             return @"Build Information";
         }
         case 1: {
-            return @"Missing Commits";
+            return @"Latest Commits";
         }
     }
     return @"";
@@ -182,14 +181,26 @@
                 cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CommitCellIdentifier] autorelease];
             }
             
-            [[cell textLabel] setFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
-            [[cell textLabel] setNumberOfLines:0];
+            [[cell detailTextLabel] setNumberOfLines:0];
             
             if (commits && [commits count] > 1) {
-                [[cell textLabel] setText:[[commits objectAtIndex:indexPath.row] message]];
-            } else {
-                [[cell textLabel] setText:@"No Missing Commits"];
+                [[cell textLabel] setText:[NSString stringWithFormat:@"%d. %@", indexPath.row+1, [[[commits objectAtIndex:indexPath.row] sha] substringToIndex:7]]];
+                [[cell detailTextLabel] setText:[[commits objectAtIndex:indexPath.row] message]];
             }
+            
+            [[cell textLabel] setFont:[UIFont boldSystemFontOfSize:16.0f]];
+            [[cell detailTextLabel] setFont:[UIFont systemFontOfSize:14.0f]];
+            
+            NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+            NSString *build = [infoDictionary objectForKey:@"CFBundleVersion"];
+            
+            NSString *latestShortGitSHA = [[[commits objectAtIndex:indexPath.row] sha] substringToIndex:7];
+            if ([latestShortGitSHA isEqualToString:build]) {
+                [cell setBackgroundColor:[UIColor colorWithWhite:0.9 alpha:1.0]];
+            } else {
+                [cell setBackgroundColor:[UIColor whiteColor]];
+            }
+            
             break;
         }
     }
@@ -203,16 +214,9 @@
 #pragma mark GitHubServiceDelegate Methods
 
 -(void)gitHubService:(id<GitHubService>)gitHubService gotCommit:(id<GitHubCommit>)commit {
-    if (!foundBuild) {
-        NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
-        NSString *build = [infoDictionary objectForKey:@"CFBundleVersion"];
-        
+    if ([commits count] <= 10) {
         [commits addObject:commit];
-        
-        if ([[commit.sha substringToIndex:7] isEqualToString:build]) {
-            foundBuild = YES;
-        }
-        
+    
         [self.tableView reloadData];
     }
 }
@@ -270,13 +274,19 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if ([commits count] > 1 && indexPath.section == 1) {
-        NSString *cellText = [[commits objectAtIndex:indexPath.row] message];
-        UIFont *cellFont = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+        NSString *commitText = [[[commits objectAtIndex:indexPath.row] sha] substringToIndex:7];
+        UIFont *commitFont = [UIFont boldSystemFontOfSize:16.0f];
         
-        CGSize constraintSize = CGSizeMake(self.view.bounds.size.width, 95.0f);
-        CGSize labelSize = [cellText sizeWithFont:cellFont constrainedToSize:constraintSize lineBreakMode:UILineBreakModeWordWrap];
+        CGSize commitLabelConstraintSize = CGSizeMake(self.view.bounds.size.width - 40.0f, 95.0f);
+        CGSize commitLabelSize = [commitText sizeWithFont:commitFont constrainedToSize:commitLabelConstraintSize lineBreakMode:UILineBreakModeWordWrap];
         
-        return labelSize.height + 20;   
+        NSString *messageText = [[commits objectAtIndex:indexPath.row] message];
+        UIFont *messageFont = [UIFont systemFontOfSize:14.0f];
+        
+        CGSize messageLabelConstraintSize = CGSizeMake(self.view.bounds.size.width - 40.0f, 95.0f);
+        CGSize messageLabelSize = [messageText sizeWithFont:messageFont constrainedToSize:messageLabelConstraintSize lineBreakMode:UILineBreakModeWordWrap];
+        
+        return commitLabelSize.height + 5 + messageLabelSize.height + 20;   
     }
     
     return 44.0f;

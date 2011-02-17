@@ -113,7 +113,6 @@
 		ED71D10A1303268D00C3BE65 /* Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = ED71D1091303268D00C3BE65 /* Icon-57.png */; };
 		EDAFC7A913074F04009C47D7 /* SettingsTableViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = EDAFC7A713074F04009C47D7 /* SettingsTableViewController_iPhone.m */; };
 		EDAFC7AA13074F04009C47D7 /* SettingsTableViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDAFC7A813074F04009C47D7 /* SettingsTableViewController_iPhone.xib */; };
-		EDCD56C2130CE63F0043BDC2 /* red_stripe_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDCD56C1130CE63F0043BDC2 /* red_stripe_bg@2x.png */; };
 		EDDA76171308B167007AB030 /* RefreshInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDA76161308B167007AB030 /* RefreshInfoView.m */; };
 		EDDA761B1308D24B007AB030 /* RootTableViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDA76191308D249007AB030 /* RootTableViewController_iPhone.m */; };
 		EDDA761C1308D24B007AB030 /* RootTableViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDDA761A1308D24A007AB030 /* RootTableViewController_iPhone.xib */; };
@@ -339,7 +338,6 @@
 		EDAFC7A613074F04009C47D7 /* SettingsTableViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController_iPhone.h; sourceTree = "<group>"; };
 		EDAFC7A713074F04009C47D7 /* SettingsTableViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController_iPhone.m; sourceTree = "<group>"; };
 		EDAFC7A813074F04009C47D7 /* SettingsTableViewController_iPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewController_iPhone.xib; sourceTree = "<group>"; };
-		EDCD56C1130CE63F0043BDC2 /* red_stripe_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red_stripe_bg@2x.png"; sourceTree = "<group>"; };
 		EDDA76151308B167007AB030 /* RefreshInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshInfoView.h; sourceTree = "<group>"; };
 		EDDA76161308B167007AB030 /* RefreshInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefreshInfoView.m; sourceTree = "<group>"; };
 		EDDA76181308D249007AB030 /* RootTableViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTableViewController_iPhone.h; sourceTree = "<group>"; };
@@ -803,7 +801,6 @@
 				ED0581BE130B30050055703C /* up_arrow@2x.png */,
 				ED0581C1130B30930055703C /* down_arrow.png */,
 				ED0581C2130B30930055703C /* up_arrow.png */,
-				EDCD56C1130CE63F0043BDC2 /* red_stripe_bg@2x.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -875,7 +872,6 @@
 				ED0581C3130B30930055703C /* down_arrow.png in Resources */,
 				ED0581C4130B30930055703C /* up_arrow.png in Resources */,
 				C37C2FBE130C439E00C9AEB3 /* GitCommitsTableViewController_iPhone.xib in Resources */,
-				EDCD56C2130CE63F0043BDC2 /* red_stripe_bg@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
