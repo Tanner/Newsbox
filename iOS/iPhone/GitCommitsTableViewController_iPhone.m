@@ -158,6 +158,7 @@
                     
                     NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
                     NSString *buildDate = [infoDictionary objectForKey:@"BuildDate"];
+                                        
                     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
                     [dateFormatter setDateFormat:@"YYYY-MM-dd HH:mm:ss ZZZ"];
                     [dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"EST"]];

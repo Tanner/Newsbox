@@ -511,11 +511,10 @@ NSString * const GitHubServerErrorDomain = @"GitHubServerErrorDomain";
 
 -(NSDate *)createDateFromString:(NSString *)string {
   
+    NSLog(@"%@", [localFormatter stringFromDate:[NSDate date]]);
+    
   NSDate *retVal = nil;
-  
-  if ([string length] > 19) {
-    retVal = [localFormatter dateFromString:[string stringByReplacingOccurrencesOfString:@":" withString:@""]];
-  }
+  retVal = [localFormatter dateFromString:[string stringByReplacingOccurrencesOfString:@":" withString:@"" options:0 range:NSMakeRange(19, 5)]];
   return retVal;
 }
 

@@ -890,7 +890,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "GIT=/usr/local/git/bin/git\nGITOPTIONS=\"--pretty=oneline --abbrev-commit\"\nHEAD=/usr/bin/head\nCUT=/usr/bin/cut\n\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion `$GIT log -1 $GITOPTIONS | $CUT -c1-7`\" ${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\n\n/usr/libexec/PlistBuddy -c \"Set :BuildDate `$GIT log --pretty=format:'%cd' --date=iso | $HEAD -1 | $CUT -c1-19`\" ${TARGET_BUILD_DIR}/${INFOPLIST_PATH}";
+			shellScript = "GIT=/usr/local/git/bin/git\nGITOPTIONS=\"--pretty=oneline --abbrev-commit\"\nHEAD=/usr/bin/head\nCUT=/usr/bin/cut\n\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion `$GIT log -1 $GITOPTIONS | $CUT -c1-7`\" ${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\n\n/usr/libexec/PlistBuddy -c \"Set :BuildDate `$GIT log --pretty=format:'%cd' --date=iso | $HEAD -1 | $CUT -c1-25`\" ${TARGET_BUILD_DIR}/${INFOPLIST_PATH}";
 		};
 /* End PBXShellScriptBuildPhase section */
 
