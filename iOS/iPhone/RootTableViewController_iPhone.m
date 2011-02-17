@@ -114,13 +114,11 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 1;
 }
 
@@ -193,7 +191,7 @@
 {
     switch (indexPath.row) {
         case 0: {
-            [delegate showItemsTableViewWithType:ItemTypeUnread];
+            [delegate showSourcesTableViewWithType:ItemTypeUnread];
             break;
         }
     }

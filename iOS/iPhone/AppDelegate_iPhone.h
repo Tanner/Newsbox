@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate_Shared.h"
 #import "RootTableViewController_iPhone.h"
+#import "SourcesTableViewController_iPhone.h"
 #import "ItemsTableViewController_iPhone.h"
 #import "ItemViewController_iPhone.h"
 #import "SettingsTableViewController_iPhone.h"
@@ -18,6 +19,7 @@
 @interface AppDelegate_iPhone : AppDelegate_Shared <ItemLoaderDelegate,
 RootTableViewControllerDelegate,
 ItemsTableViewControllerDelegate,
+SourcesTableViewControllerDelegate,
 ItemViewControllerDelegate,
 SettingsTableViewControllerDelegate,
 RefreshInfoViewDelegate,
@@ -25,12 +27,13 @@ UIAlertViewDelegate> {
     @private
 	UINavigationController *navController;
     RootTableViewController_iPhone *rtvc;
+    SourcesTableViewController_iPhone *stvc;
 	ItemsTableViewController_iPhone *itvc;
 	ItemViewController_iPhone *ivc;
     
     UINavigationController *settingsNavController;
-	SettingsTableViewController_iPhone *stvc;
-    GitCommitsTableViewController_iPhone *gctvc;
+	SettingsTableViewController_iPhone *settingsTableViewController;
+    GitCommitsTableViewController_iPhone *gitTableViewController;
     
     RefreshInfoView *refreshInfoView;
     BOOL refreshing;
@@ -39,8 +42,10 @@ UIAlertViewDelegate> {
     
     NSDate *lastUpdatedDate;
     
-    NSMutableArray *feeds;
+    NSMutableArray *sources;
 }
+
+@property (nonatomic, retain) NSMutableArray *sources;
 
 @end
 

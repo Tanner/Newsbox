@@ -21,6 +21,8 @@
 
 @implementation AppDelegate_iPhone
 
+@synthesize sources;
+
 #pragma mark -
 #pragma mark ItemViewControllerDelegate Methods
 
@@ -63,12 +65,57 @@
     return refreshInfoViewButtonItem;
 }
 
-- (void)showItemsTableViewWithType:(ItemType)type {
-    [navController pushViewController:itvc animated:YES];
+#pragma mark -
+#pragma mark RootTableViewControllerDelegate Methods
+
+- (void)loginAndDownloadItems {
+    if (refreshing) {
+        return;
+    }
+    
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSString *username = [prefs objectForKey:@"GoogleUsername"];
+    
+    if (username == nil || [username isEqualToString:@""]) {
+        [self showSettingsView];
+        return;
+    }
+    
+    NSError *error = nil;
+    NSString *password = [SFHFKeychainUtils getPasswordForUsername:username andServiceName:@"Google" error:&error];
+    
+    [feedLoader authenticateWithGoogleUser:username andPassword:password];
+    
+    [refreshInfoView animateLogin];
+    refreshing = YES;
 }
 
-// NSString *const TEST_GOOGLE_USER = @"newsbox.test@gmail.com";
-// NSString *const TEST_PASSWORD = @"FA1w0wxjRTHRyj";
+- (void)showSourcesTableViewWithType:(ItemType)type {
+    [stvc setSources:sources withType:ItemTypeUnread];
+    [navController pushViewController:stvc animated:YES];
+}
+
+- (void)showSettingsView {
+    [navController presentModalViewController:settingsNavController animated:YES];
+}
+
+#pragma mark -
+#pragma mark SourcesTableViewControllerDelegate Methods
+
+- (void)showItemsTableViewWithSource:(MWFeedInfo *)source {
+    if (source == nil) {
+        NSMutableArray *allItems = [[NSMutableArray alloc] init];
+        for (MWFeedInfo *source in sources) {
+            [allItems addObjectsFromArray:source.items];
+        }
+        [itvc setItems:allItems withType:ItemTypeUnread];
+//        [allItems release];
+    } else {
+        [itvc setItems:source.items withType:ItemTypeUnread];
+    }
+    
+    [navController pushViewController:itvc animated:YES];
+}
 
 #pragma mark -
 #pragma mark FeedLoaderDelegate Methods
@@ -88,8 +135,12 @@
     }
 }
 
-- (void)didGetItems:(NSArray *)items ofType:(ItemType)type {
-	[itvc setItems:items withType:type];
+- (void)didGetSources:(NSArray *)sourcesArr ofType:(ItemType)type {    
+    NSMutableArray *mutableSources = [[NSMutableArray alloc] initWithArray:sourcesArr];
+    self.sources = mutableSources;
+    [mutableSources release];
+    
+    [sources sortUsingSelector:@selector(compareByName:)];
     
     lastUpdatedDate = [[NSDate date] retain];
     [[NSUserDefaults standardUserDefaults] setObject:lastUpdatedDate forKey:@"LastRefresh"];
@@ -98,6 +149,8 @@
     [refreshInfoView stopAnimating];
     
     refreshing = NO;
+    
+    // [itvc setItems:items withType:type];
 }
 
 - (void)showError:(NSString *)errorTitle withMessage:(NSString *)errorMessage withSettingsButton:(BOOL)settingsButton {
@@ -134,11 +187,6 @@
     [ivc setIsPrevItemAvailable:(newIndex-1 >= 0) andIsNextItemAvailable:(newIndex+1 <= [itvc.items count]-1)];
 }
 
-- (void)showSettingsView {
-    [navController presentModalViewController:settingsNavController animated:YES];
-}
-
-
 #pragma mark -
 #pragma mark SettingsTableViewControllerDelegate Methods
 
@@ -158,33 +206,11 @@
 }
 
 - (void)showGitCommits {
-    [settingsNavController pushViewController:gctvc animated:YES];
+    [settingsNavController pushViewController:gitTableViewController animated:YES];
 }
 
 #pragma mark -
 #pragma mark Application lifecycle
-
-- (void)loginAndDownloadItems {
-    if (refreshing) {
-        return;
-    }
-    
-    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    NSString *username = [prefs objectForKey:@"GoogleUsername"];
-    
-    if (username == nil || [username isEqualToString:@""]) {
-        [self showSettingsView];
-        return;
-    }
-    
-    NSError *error = nil;
-    NSString *password = [SFHFKeychainUtils getPasswordForUsername:username andServiceName:@"Google" error:&error];
-    
-    [feedLoader authenticateWithGoogleUser:username andPassword:password];
-    
-    [refreshInfoView animateLogin];
-    refreshing = YES;
-}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 	feedLoader = [[ItemLoader alloc] initWithDelegate:self];
@@ -197,21 +223,17 @@
 	
 	ivc = [[ItemViewController_iPhone alloc] initWithNibName:@"ItemViewController_iPhone" bundle:nil];
 	[ivc setDelegate:self];
-	
-	stvc = [[SettingsTableViewController_iPhone alloc] initWithNibName:@"SettingsTableViewController_iPhone" bundle:nil];
-	[stvc setDelegate:self];
     
-    gctvc = [[GitCommitsTableViewController_iPhone alloc] initWithNibName:@"GitCommitsTableViewController_iPhone" bundle:nil];
+    stvc = [[SourcesTableViewController_iPhone alloc] initWithNibName:@"SourcesTableViewController_iPhone" bundle:nil];
+    [stvc setDelegate:self];
 	
 	navController = [[UINavigationController alloc] initWithRootViewController:rtvc];
     [rtvc.navigationItem setTitle:@"Newsbox"];
     [navController setToolbarHidden:NO];
-    [navController pushViewController:itvc animated:NO];
     [navController.navigationBar setTintColor:[UIColor colorWithRed:0.7 green:0.0 blue:0.0 alpha:1.0]];
     [navController.toolbar setTintColor:[UIColor colorWithRed:0.7 green:0.0 blue:0.0 alpha:1.0]];
     
-    settingsNavController = [[UINavigationController alloc] initWithRootViewController:stvc];
-    
+    // refresh
     refreshInfoView = [[RefreshInfoView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 150.0f, 44.0f)];
     [refreshInfoView setDelegate:self];
     
@@ -221,6 +243,15 @@
     lastUpdatedDate = [[NSUserDefaults standardUserDefaults] objectForKey:@"LastRefresh"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
+    // settings
+    settingsTableViewController = [[SettingsTableViewController_iPhone alloc] initWithNibName:@"SettingsTableViewController_iPhone" bundle:nil];
+	[settingsTableViewController setDelegate:self];
+
+    gitTableViewController = [[GitCommitsTableViewController_iPhone alloc] initWithNibName:@"GitCommitsTableViewController_iPhone" bundle:nil];
+    
+    settingsNavController = [[UINavigationController alloc] initWithRootViewController:settingsTableViewController];
+    
+    // window
 	[self.window addSubview:navController.view];
     [self.window makeKeyAndVisible];
     

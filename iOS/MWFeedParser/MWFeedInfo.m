@@ -35,7 +35,27 @@
 
 @implementation MWFeedInfo
 
-@synthesize title, link, summary;
+@synthesize title, link, summary, items;
+
+- (id)init {
+    if ((self = [super init])) {
+        items = [[NSMutableArray alloc] init];
+    }
+        
+    return self;
+}
+
+- (NSComparisonResult)compare:(MWFeedInfo *)otherSource {    
+    return [link compare:otherSource.link];
+}
+
+- (NSComparisonResult)compareByName:(MWFeedInfo *)otherSource {
+    return [title compare:otherSource.title options:NSCaseInsensitiveSearch];
+}
+
+- (void)addItem:(MWFeedItem *)item {
+    [items addObject:item];
+}
 
 #pragma mark NSObject
 

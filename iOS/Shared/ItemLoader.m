@@ -30,7 +30,7 @@
 		parser = [[MWFeedParser alloc] init];
 		[parser setDelegate:self];
 		
-		items = [[NSMutableArray alloc] init];
+        sources = [[NSMutableArray alloc] init];
 	}
 	
 	return self;
@@ -160,15 +160,25 @@
 }
 
 
-- (void)feedParser:(MWFeedParser *)parser didParseFeedItem:(MWFeedItem *)item {
-	[items addObject:item];
+- (void)feedParser:(MWFeedParser *)parser didParseFeedItem:(MWFeedItem *)item {    
+    // make array of sources
+    for (MWFeedInfo *source in sources) {
+        if ([source compare:item.source] == NSOrderedSame) {
+            [[source items] addObject:item];
+            
+            return;
+        }
+    }
+    
+    [sources addObject:item.source];
+    [[sources lastObject] addItem:item];
 }
 
 
 - (void)feedParserDidFinish:(MWFeedParser *)parser {
-	[delegate didGetItems:items ofType:currentItemType];
+	[delegate didGetSources:sources ofType:currentItemType];
 
-	[items removeAllObjects];
+	[sources removeAllObjects];
 }
 
 
@@ -176,10 +186,9 @@
 	// todo
 }
 
-
 - (void)dealloc {
 	[parser release];
-    [items release];
+    [sources release];
     
 	[super dealloc];
 }

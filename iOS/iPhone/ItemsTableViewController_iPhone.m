@@ -21,23 +21,10 @@
 
 @synthesize delegate, items;
 
-- (void)setItems:(NSArray *)someItems withType:(ItemType)type {
-	if (items) {
-		[items release];
-		items = nil;
-	}
-	
-	currentItemType = type;
-	items = [[NSMutableArray alloc] initWithArray:someItems];
+- (void)setItems:(NSMutableArray *)someItems withType:(ItemType)type {	
+	self.items = someItems;
 	
 	if (modalView) {
-        /*
-		[activityIndicator removeFromSuperview];
-		[activityIndicator stopAnimating];
-		[activityIndicator release];
-		activityIndicator = nil;
-         */
-		
 		[modalView removeFromSuperview];
 		[modalView release];
 		modalView = nil;
@@ -46,7 +33,6 @@
 	}
 	
 	[self.tableView reloadData];
-	[self didLoadTableViewData];
 }
 
 #pragma mark -
@@ -76,19 +62,11 @@
 	}
 }
 
-
-- (void)didLoadTableViewData {
-}
-
-
 #pragma mark -
 #pragma mark View lifecycle
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    [self.navigationItem setTitle:@"Unread"];
 
     NSMutableArray *toolbarItems = [[NSMutableArray alloc] init];
     
@@ -128,14 +106,6 @@
 		
 		[self.tableView scrollRectToVisible:modalView.frame animated:NO];
 		[self.tableView setScrollEnabled:NO];
-		
-        /*
-		activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-		[activityIndicator setFrame:CGRectMake((self.view.bounds.size.width - 20.0f)/2, (self.view.bounds.size.height - 20.0f)/2 - 10.0f  , 20.0f, 20.0f)];
-        [activityIndicator setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleBottomMargin];
-		[activityIndicator startAnimating];
-		[modalView addSubview:activityIndicator];
-         */
 	}
 }
 
@@ -147,52 +117,25 @@
 }
 
 
-- (void)settingsButtonPressed:(id)sender {
-    [delegate showSettingsView];
-}
-
-/*
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-}
-*/
-/*
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-}
-*/
-/*
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-}
-*/
-
-// Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations.
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
-
 
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
 	[self reformatCellLabelsWithOrientation:toInterfaceOrientation];
 }
 
-
 #pragma mark -
-#pragma mark Table view data source
+#pragma mark UITableViewDataSource Methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [items count];
 }
 
-
-// Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
     
@@ -201,7 +144,6 @@
         cell = [[[ItemsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-//	NSLog(@"%d", indexPath.row);
     [(ItemsTableViewCell *)cell setSourceLabelText:[[(MWFeedItem *)[items objectAtIndex:indexPath.row] source] title]
                                   andDateLabelText:[(MWFeedItem *)[items objectAtIndex:indexPath.row] shortDateString]
 									andTitleLabelText:[(MWFeedItem *)[items objectAtIndex:indexPath.row] title]
@@ -212,64 +154,12 @@
     return cell;
 }
 
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source.
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }   
-}
-*/
-
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-
 #pragma mark -
-#pragma mark Table view delegate
+#pragma mark UITableViewDelegate Methods
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	[delegate showItem:[items objectAtIndex:indexPath.row]];
 }
-
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-
-}
-
-
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-
-}
-
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return CELL_HEIGHT;
@@ -279,24 +169,18 @@
 #pragma mark Memory management
 
 - (void)didReceiveMemoryWarning {
-    // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-    
-    // Relinquish ownership any cached data, images, etc. that aren't in use.
 }
 
 - (void)viewDidUnload {
-    // Relinquish ownership of anything that can be recreated in viewDidLoad or on demand.
-    // For example: self.myOutlet = nil;
+    
 }
-
 
 - (void)dealloc {
 	[items release];
 	
     [super dealloc];
 }
-
 
 @end
 

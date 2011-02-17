@@ -24,7 +24,7 @@
 	
 	MWFeedParser *parser;
 	
-	NSMutableArray *items;
+    NSMutableArray *sources;
 }
 
 - (id)initWithDelegate:(id)aDelegate;
@@ -41,6 +41,6 @@
 
 @protocol ItemLoaderDelegate
 - (void)didLogin:(BOOL)login;
-- (void)didGetItems:(NSArray *)items ofType:(ItemType)type;
+- (void)didGetSources:(NSArray *)sources ofType:(ItemType)type;
 - (void)showError:(NSString *)errorTitle withMessage:(NSString *)errorMessage withSettingsButton:(BOOL)settingsButton;
 @end

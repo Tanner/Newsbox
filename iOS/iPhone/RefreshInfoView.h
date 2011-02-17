@@ -32,5 +32,6 @@
 - (NSDate *)dataSourceLastUpdated:(id)sender;
 - (BOOL)isRefreshing;
 - (RefreshInfoView *)refreshInfoView;
+- (UIBarButtonItem *)refreshButtonItem;
 - (UIBarButtonItem *)refreshInfoViewButtonItem;
 @end

@@ -10,33 +10,24 @@
 #import "MWFeedItem.h"
 #import "RefreshInfoView.h"
 
-
 @protocol ItemsTableViewControllerDelegate
 - (void)loginAndDownloadItems;
 - (void)showItem:(MWFeedItem *)anItem;
-- (void)showSettingsView;
-- (UIBarButtonItem *)refreshButtonItem;
-- (UIBarButtonItem *)refreshInfoViewButtonItem;
 @end
 
 @interface ItemsTableViewController_iPhone : UITableViewController {
 	id<ItemsTableViewControllerDelegate, RefreshInfoViewDelegate> delegate;
-	
-	NSMutableArray *items;
-	ItemType currentItemType;
-//	EGORefreshTableHeaderView *_refreshHeaderView;
-	
+    
+    NSMutableArray *items;
+    
 	UIView *modalView;
-	    
-	BOOL reloading;
 }
 
-- (void)setItems:(NSArray *)someItems withType:(ItemType)type;
-- (void)refresh;
-- (void)didLoadTableViewData;
+- (void)setItems:(NSMutableArray *)someItems withType:(ItemType)type;
+
 - (void)reformatCellLabelsWithOrientation:(UIInterfaceOrientation)orientation;
 
 @property (nonatomic, assign) id<ItemsTableViewControllerDelegate, RefreshInfoViewDelegate> delegate;
-@property (nonatomic, retain) NSMutableArray *items;
+@property (nonatomic, assign) NSMutableArray *items;
 
 @end

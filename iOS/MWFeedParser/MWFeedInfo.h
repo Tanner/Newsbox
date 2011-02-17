@@ -29,16 +29,25 @@
 
 #import <Foundation/Foundation.h>
 
+@class MWFeedItem;
+
 @interface MWFeedInfo : NSObject <NSCoding> {
 	
 	NSString *title; // Feed title
 	NSString *link; // Feed link
 	NSString *summary; // Feed summary / description
 	
+    @private
+    NSMutableArray *items;
 }
+
+- (NSComparisonResult)compare:(MWFeedInfo *)feedInfo;
+- (void)addItem:(MWFeedItem *)item;
 
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *link;
 @property (nonatomic, copy) NSString *summary;
+
+@property (nonatomic, retain) NSMutableArray *items;
 
 @end

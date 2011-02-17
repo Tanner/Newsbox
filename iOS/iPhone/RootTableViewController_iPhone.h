@@ -12,10 +12,8 @@
 
 @protocol RootTableViewControllerDelegate
 - (void)loginAndDownloadItems;
-- (void)showItemsTableViewWithType:(ItemType)type;
+- (void)showSourcesTableViewWithType:(ItemType)type;
 - (void)showSettingsView;
-- (UIBarButtonItem *)refreshButtonItem;
-- (UIBarButtonItem *)refreshInfoViewButtonItem;
 @end
 
 
