@@ -195,7 +195,7 @@
                 cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CommitCellIdentifier] autorelease];
             }
             
-            [[cell detailTextLabel] setNumberOfLines:0];
+            [[cell detailTextLabel] setNumberOfLines:10];
             
             if (commits && [commits count] > 1) {
                 [[cell textLabel] setText:[NSString stringWithFormat:@"%d. %@", indexPath.row+1, [[[commits objectAtIndex:indexPath.row] sha] substringToIndex:7]]];
@@ -297,7 +297,7 @@
         NSString *messageText = [[commits objectAtIndex:indexPath.row] message];
         UIFont *messageFont = [UIFont systemFontOfSize:14.0f];
         
-        CGSize messageLabelConstraintSize = CGSizeMake(self.view.bounds.size.width - 40.0f, 95.0f);
+        CGSize messageLabelConstraintSize = CGSizeMake(self.view.bounds.size.width - 40.0f, 320.0f);
         CGSize messageLabelSize = [messageText sizeWithFont:messageFont constrainedToSize:messageLabelConstraintSize lineBreakMode:UILineBreakModeWordWrap];
         
         return commitLabelSize.height + 5 + messageLabelSize.height + 20;   
