@@ -30,5 +30,5 @@
 @end
 
 @protocol ItemViewControllerDelegate
-
+- (void)didChangeCurrentItemTo:(MWFeedItem *)item;
 @end

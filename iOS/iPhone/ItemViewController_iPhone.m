@@ -23,6 +23,8 @@
 		currentItem = [array objectAtIndex:[array indexOfObject:currentItem]+1];
 	}
     
+    [delegate didChangeCurrentItemTo:currentItem];
+    
     [self displayCurrentItem];
 }
 

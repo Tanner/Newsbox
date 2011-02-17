@@ -26,10 +26,6 @@
     [self.tableView reloadData];
 }
 
-- (void)refresh {
-    [delegate loginAndDownloadItems];
-}
-
 - (void)reformatCellLabelsWithOrientation:(UIInterfaceOrientation)orientation {
 	
 }
@@ -56,8 +52,6 @@
     NSMutableArray *toolbarItems = [[NSMutableArray alloc] init];
     
     UIBarButtonItem *refreshItem = [delegate refreshButtonItem];
-    [refreshItem setTarget:self];
-    [refreshItem setAction:@selector(refresh)];
     [toolbarItems addObject:refreshItem];
     [refreshItem release];
     

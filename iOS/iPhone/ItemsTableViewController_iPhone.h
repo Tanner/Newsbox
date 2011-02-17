@@ -11,7 +11,6 @@
 #import "MWFeedItem.h"
 
 @protocol ItemsTableViewControllerDelegate
-- (void)loginAndDownloadItems;
 - (void)showItem:(MWFeedItem *)anItem withArray:(NSMutableArray *)anArray;
 @end
 
@@ -19,6 +18,8 @@
 	id<ItemsTableViewControllerDelegate, RefreshInfoViewDelegate> delegate;
     
     NSMutableArray *items;
+    
+    MWFeedItem *currentItem;
 }
 
 - (void)setItems:(NSMutableArray *)someItems withType:(ItemType)type;
@@ -26,5 +27,6 @@
 - (void)reformatCellLabelsWithOrientation:(UIInterfaceOrientation)orientation;
 
 @property (nonatomic, assign) id<ItemsTableViewControllerDelegate, RefreshInfoViewDelegate> delegate;
+@property (nonatomic, assign) MWFeedItem *currentItem;
 
 @end

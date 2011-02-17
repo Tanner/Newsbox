@@ -52,6 +52,10 @@
         return;
     }
     
+    // TODO
+    [sources removeAllObjects];
+    [allItems removeAllObjects];
+    
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     NSString *username = [prefs objectForKey:@"GoogleUsername"];
     
@@ -175,6 +179,13 @@
 }
 
 #pragma mark -
+#pragma mark ItemViewControllerDelegate Methods
+
+- (void)didChangeCurrentItemTo:(MWFeedItem *)item {
+    [itvc setCurrentItem:item];
+}
+
+#pragma mark -
 #pragma mark SettingsTableViewControllerDelegate Methods
 
 - (void)returnFromSettingsTableViewController {
@@ -226,7 +237,7 @@
     refreshInfoView = [[RefreshInfoView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 150.0f, 44.0f)];
     [refreshInfoView setDelegate:self];
     
-    refreshButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:nil action:nil];
+    refreshButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(loginAndDownloadItems)];
     refreshInfoViewButtonItem = [[UIBarButtonItem alloc] initWithCustomView:refreshInfoView];
     
     lastUpdatedDate = [[NSUserDefaults standardUserDefaults] objectForKey:@"LastRefresh"];

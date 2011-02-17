@@ -19,7 +19,17 @@
 
 @implementation ItemsTableViewController_iPhone
 
-@synthesize delegate;
+@synthesize delegate, currentItem;
+
+- (void)setCurrentItem:(MWFeedItem *)aCurrentItem {
+    [[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:[items indexOfObject:currentItem] inSection:0]] setSelected:NO animated:NO];
+
+    currentItem = aCurrentItem;
+    
+    [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:[items indexOfObject:currentItem] inSection:0] atScrollPosition:UITableViewScrollPositionNone animated:NO];
+    
+    [[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:[items indexOfObject:currentItem] inSection:0]] setSelected:YES animated:NO];
+}
 
 - (void)setItems:(NSMutableArray *)someItems withType:(ItemType)type {	
 	items = someItems;
@@ -33,10 +43,6 @@
 
 #pragma mark -
 #pragma mark Data Source Loading / Reloading Methods
-
-- (void)refresh {
-    [delegate loginAndDownloadItems];
-}
 
 - (void)reformatCellLabelsWithOrientation:(UIInterfaceOrientation)orientation {
 	float width;
@@ -67,8 +73,6 @@
     NSMutableArray *toolbarItems = [[NSMutableArray alloc] init];
     
     UIBarButtonItem *refreshItem = [delegate refreshButtonItem];
-    [refreshItem setTarget:self];
-    [refreshItem setAction:@selector(refresh)];
     [toolbarItems addObject:refreshItem];
     [refreshItem release];
     
@@ -94,13 +98,25 @@
     [toolbarItems release];
 }
 
-
 - (void)viewWillAppear:(BOOL)animated {
-    [self reformatCellLabelsWithOrientation:[self interfaceOrientation]];
-
     [super viewWillAppear:animated];
+    
+    [self reformatCellLabelsWithOrientation:[self interfaceOrientation]];
+    
+    [[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:[items indexOfObject:currentItem] inSection:0]] setSelected:NO animated:YES];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    currentItem = nil;
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+        
+    self.currentItem = [items objectAtIndex:[[self.tableView indexPathForSelectedRow] row]];
+}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
@@ -143,7 +159,9 @@
 #pragma mark UITableViewDelegate Methods
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	[delegate showItem:[items objectAtIndex:indexPath.row] withArray:items];
+    currentItem = [items objectAtIndex:indexPath.row];
+    
+	[delegate showItem:currentItem withArray:items];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

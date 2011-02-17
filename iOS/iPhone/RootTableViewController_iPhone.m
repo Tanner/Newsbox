@@ -14,10 +14,6 @@
 
 @synthesize delegate;
 
-- (void)refresh {
-    [delegate loginAndDownloadItems];
-}
-
 - (void)settingsButtonPressed:(id)sender {
     [delegate showSettingsView];
 }
@@ -54,8 +50,6 @@
     NSMutableArray *toolbarItems = [[NSMutableArray alloc] init];
     
     UIBarButtonItem *refreshItem = [delegate refreshButtonItem];
-    [refreshItem setTarget:self];
-    [refreshItem setAction:@selector(refresh)];
     [toolbarItems addObject:refreshItem];
     [refreshItem release];
     
