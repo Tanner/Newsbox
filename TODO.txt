@@ -1,14 +1,7 @@
-* restructure parser so feed info objects hold feed items, sorted by date
-* restructure so appdelegate holds item mutablearray, ivc holds a copy
-* new uitableviewcontroller for sources
-* toolbar items held by appdelegate
-* up/down arrows for ivc
-
 * load all unread items (no limit)
-* unread status indicator
+* unread status indicators
 * unread/star/thumbs up/thumbs down/share buttons in item toolbar
 * unread/star labels get pushed back to Google
-* red toolbars/labels
 * webview for links
 
 * topics view
