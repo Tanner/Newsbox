@@ -14,7 +14,8 @@
 - (void)loginAndDownloadItems;
 - (void)showItemsTableViewWithType:(ItemType)type;
 - (void)showSettingsView;
-- (RefreshInfoView *)refreshInfoView;
+- (UIBarButtonItem *)refreshButtonItem;
+- (UIBarButtonItem *)refreshInfoViewButtonItem;
 @end
 
 

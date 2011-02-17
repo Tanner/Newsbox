@@ -15,6 +15,8 @@
 - (void)loginAndDownloadItems;
 - (void)showItem:(MWFeedItem *)anItem;
 - (void)showSettingsView;
+- (UIBarButtonItem *)refreshButtonItem;
+- (UIBarButtonItem *)refreshInfoViewButtonItem;
 @end
 
 @interface ItemsTableViewController_iPhone : UITableViewController {

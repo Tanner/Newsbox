@@ -53,7 +53,9 @@
     
     NSMutableArray *toolbarItems = [[NSMutableArray alloc] init];
     
-    UIBarButtonItem *refreshItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refresh)];
+    UIBarButtonItem *refreshItem = [delegate refreshButtonItem];
+    [refreshItem setTarget:self];
+    [refreshItem setAction:@selector(refresh)];
     [toolbarItems addObject:refreshItem];
     [refreshItem release];
     

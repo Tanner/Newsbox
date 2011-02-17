@@ -22,6 +22,7 @@ ItemViewControllerDelegate,
 SettingsTableViewControllerDelegate,
 RefreshInfoViewDelegate,
 UIAlertViewDelegate> {
+    @private
 	UINavigationController *navController;
     RootTableViewController_iPhone *rtvc;
 	ItemsTableViewController_iPhone *itvc;
@@ -33,9 +34,12 @@ UIAlertViewDelegate> {
     
     RefreshInfoView *refreshInfoView;
     BOOL refreshing;
+    UIBarButtonItem *refreshButtonItem;
     UIBarButtonItem *refreshInfoViewButtonItem;
     
     NSDate *lastUpdatedDate;
+    
+    NSMutableArray *feeds;
 }
 
 @end

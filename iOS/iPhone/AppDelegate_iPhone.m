@@ -55,6 +55,10 @@
     return refreshInfoView;
 }
 
+- (UIBarButtonItem *)refreshButtonItem {
+    return refreshButtonItem;
+}
+
 - (UIBarButtonItem *)refreshInfoViewButtonItem {
     return refreshInfoViewButtonItem;
 }
@@ -211,6 +215,7 @@
     refreshInfoView = [[RefreshInfoView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 150.0f, 44.0f)];
     [refreshInfoView setDelegate:self];
     
+    refreshButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:nil action:nil];
     refreshInfoViewButtonItem = [[UIBarButtonItem alloc] initWithCustomView:refreshInfoView];
     
     lastUpdatedDate = [[NSUserDefaults standardUserDefaults] objectForKey:@"LastRefresh"];
