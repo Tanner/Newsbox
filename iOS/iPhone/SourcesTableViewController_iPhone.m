@@ -7,18 +7,27 @@
 //
 
 #import "SourcesTableViewController_iPhone.h"
+#import "OBGradientView.h"
 
 @implementation SourcesTableViewController_iPhone
 
 @synthesize delegate, sources;
 
-#pragma mark - 
-#pragma mark General
+#pragma mark -
+#pragma mark Data Source Loading / Reloading Methods
 
 - (void)setSources:(NSMutableArray *)someSources withType:(ItemType)type {
     sources = someSources;
     
     [self.tableView reloadData];
+}
+
+- (void)refresh {
+    [delegate loginAndDownloadItems];
+}
+
+- (void)reformatCellLabelsWithOrientation:(UIInterfaceOrientation)orientation {
+	
 }
 
 #pragma mark -
@@ -91,7 +100,7 @@
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
 #pragma mark -
@@ -124,7 +133,14 @@
     } else {
         [[cell textLabel] setText:[[sources objectAtIndex:indexPath.row] title]];
     }
-        
+    
+    OBGradientView *gradientView = [[[OBGradientView alloc] initWithFrame:CGRectMake(0, 0, cell.bounds.size.width, cell.bounds.size.height)] autorelease];
+    [gradientView setColors:[NSArray arrayWithObjects:(id)[[UIColor colorWithRed:241.0/255.0 green:22.0/255.0 blue:22.0/255.0 alpha:1.0] CGColor], (id)[[UIColor colorWithRed:207.0/255.0 green:14.0/255.0 blue:14.0/255.0 alpha:1.0] CGColor], nil]];
+    [gradientView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
+    [cell setSelectedBackgroundView:gradientView];
+    
+    [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+    
     return cell;
 }
 
@@ -148,6 +164,7 @@
         }
         case 1: {
             [delegate showItemsTableViewWithSource:[sources objectAtIndex:indexPath.row]];
+            
             break;
         }
     }

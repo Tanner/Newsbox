@@ -12,7 +12,7 @@
 
 @protocol ItemsTableViewControllerDelegate
 - (void)loginAndDownloadItems;
-- (void)showItem:(MWFeedItem *)anItem;
+- (void)showItem:(MWFeedItem *)anItem withArray:(NSMutableArray *)anArray;
 @end
 
 @interface ItemsTableViewController_iPhone : UITableViewController {
@@ -24,10 +24,8 @@
 }
 
 - (void)setItems:(NSMutableArray *)someItems withType:(ItemType)type;
-
 - (void)reformatCellLabelsWithOrientation:(UIInterfaceOrientation)orientation;
 
 @property (nonatomic, assign) id<ItemsTableViewControllerDelegate, RefreshInfoViewDelegate> delegate;
-@property (nonatomic, assign) NSMutableArray *items;
 
 @end

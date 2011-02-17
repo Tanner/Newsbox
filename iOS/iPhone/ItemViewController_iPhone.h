@@ -13,13 +13,16 @@
 
 @interface ItemViewController_iPhone : UIViewController <UIWebViewDelegate> {
 	id<ItemViewControllerDelegate> delegate;
+    
+    NSMutableArray *array;
+    MWFeedItem *currentItem;
+    
 	UIWebView *wv;
     UISegmentedControl *prevNextControl;
-        
-    int feedItemIndex;
 }
 
-- (void)setItem:(MWFeedItem *)anItem withIndex:(int)index;
+- (void)displayCurrentItem;
+- (void)setItem:(MWFeedItem *)anItem withArray:(NSMutableArray *)anArray;
 - (void)setIsPrevItemAvailable:(BOOL)prevItemAvailable andIsNextItemAvailable:(BOOL)nextItemAvailable;
 
 @property (nonatomic, assign) id<ItemViewControllerDelegate> delegate;
@@ -27,6 +30,5 @@
 @end
 
 @protocol ItemViewControllerDelegate
-- (void)showNextItemAfter:(int)index;
-- (void)showPrevItemBefore:(int)index;
+
 @end

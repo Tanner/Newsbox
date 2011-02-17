@@ -18,10 +18,12 @@
 
 - (void)prevNextControlValueChanged:(id)sender {
 	if ([sender selectedSegmentIndex] == 0) {
-		[delegate showPrevItemBefore:feedItemIndex];
+		currentItem = [array objectAtIndex:[array indexOfObject:currentItem]-1];
 	} else {
-		[delegate showNextItemAfter:feedItemIndex];
+		currentItem = [array objectAtIndex:[array indexOfObject:currentItem]+1];
 	}
+    
+    [self displayCurrentItem];
 }
 
 - (void)setIsPrevItemAvailable:(BOOL)prevItemAvailable andIsNextItemAvailable:(BOOL)nextItemAvailable {
@@ -138,9 +140,17 @@
 	return stylizedHTML;
 }
 
-- (void)setItem:(MWFeedItem *)anItem withIndex:(int)index {
-    feedItemIndex = index;
-	[wv loadHTMLString:[self stylizedHTMLWithItem:anItem] baseURL:nil];
+- (void)setItem:(MWFeedItem *)anItem withArray:(NSMutableArray *)anArray {
+    currentItem = anItem;
+    array = anArray;
+
+    [self displayCurrentItem];
+}
+         
+- (void)displayCurrentItem {
+    [self setIsPrevItemAvailable:([array indexOfObject:currentItem] > 0)
+          andIsNextItemAvailable:([array indexOfObject:currentItem] < [array count]-1)];
+    [wv loadHTMLString:[self stylizedHTMLWithItem:currentItem] baseURL:nil];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {

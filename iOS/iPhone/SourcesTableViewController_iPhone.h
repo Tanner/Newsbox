@@ -12,6 +12,7 @@
 #import "MWFeedItem.h"
 
 @protocol SourcesTableViewControllerDelegate
+- (void)loginAndDownloadItems;
 - (void)showItemsTableViewWithSource:(MWFeedInfo *)source;
 @end
 

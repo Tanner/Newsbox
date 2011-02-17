@@ -43,6 +43,7 @@ UIAlertViewDelegate> {
     NSDate *lastUpdatedDate;
     
     NSMutableArray *sources;
+    NSMutableArray *allItems;
 }
 
 @property (nonatomic, retain) NSMutableArray *sources;

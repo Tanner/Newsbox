@@ -19,10 +19,10 @@
 
 @implementation ItemsTableViewController_iPhone
 
-@synthesize delegate, items;
+@synthesize delegate;
 
 - (void)setItems:(NSMutableArray *)someItems withType:(ItemType)type {	
-	self.items = someItems;
+	items = someItems;
 	
 	if (modalView) {
 		[modalView removeFromSuperview];
@@ -158,7 +158,7 @@
 #pragma mark UITableViewDelegate Methods
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	[delegate showItem:[items objectAtIndex:indexPath.row]];
+	[delegate showItem:[items objectAtIndex:indexPath.row] withArray:items];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

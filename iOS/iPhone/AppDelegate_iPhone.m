@@ -24,25 +24,6 @@
 @synthesize sources;
 
 #pragma mark -
-#pragma mark ItemViewControllerDelegate Methods
-
-- (void)showNextItemAfter:(int)feedItemIndex {
-    int newIndex = MAX(MIN(feedItemIndex+1, [itvc.items count]-1), 0);
-
-    [ivc setItem:[itvc.items objectAtIndex:newIndex] withIndex:newIndex];
-    
-    [ivc setIsPrevItemAvailable:(newIndex-1 >= 0) andIsNextItemAvailable:(newIndex+1 <= [itvc.items count]-1)];
-}
-
-- (void)showPrevItemBefore:(int)feedItemIndex {
-    int newIndex = MAX(MIN(feedItemIndex-1, [itvc.items count]-1), 0);
-    
-    [ivc setItem:[itvc.items objectAtIndex:newIndex] withIndex:newIndex];
-    
-    [ivc setIsPrevItemAvailable:(newIndex-1 >= 0) andIsNextItemAvailable:(newIndex+1 <= [itvc.items count]-1)];
-}
-
-#pragma mark -
 #pragma mark RefreshInfoViewDelegate Methods
 
 - (NSDate *)dataSourceLastUpdated:(id)sender {
@@ -92,6 +73,7 @@
 
 - (void)showSourcesTableViewWithType:(ItemType)type {
     [stvc setSources:sources withType:ItemTypeUnread];
+    
     [navController pushViewController:stvc animated:YES];
 }
 
@@ -104,12 +86,7 @@
 
 - (void)showItemsTableViewWithSource:(MWFeedInfo *)source {
     if (source == nil) {
-        NSMutableArray *allItems = [[NSMutableArray alloc] init];
-        for (MWFeedInfo *source in sources) {
-            [allItems addObjectsFromArray:source.items];
-        }
         [itvc setItems:allItems withType:ItemTypeUnread];
-//        [allItems release];
     } else {
         [itvc setItems:source.items withType:ItemTypeUnread];
     }
@@ -127,6 +104,7 @@
         [feedLoader getItemsOfType:[feedLoader currentItemType]];
             
         [refreshInfoView animateDownload];
+        
         refreshing = YES;
 	} else {
         [refreshInfoView stopAnimating];
@@ -135,22 +113,33 @@
     }
 }
 
-- (void)didGetSources:(NSArray *)sourcesArr ofType:(ItemType)type {    
+- (void)didGetSources:(NSArray *)sourcesArr ofType:(ItemType)type {
+    // sources array
     NSMutableArray *mutableSources = [[NSMutableArray alloc] initWithArray:sourcesArr];
     self.sources = mutableSources;
     [mutableSources release];
     
     [sources sortUsingSelector:@selector(compareByName:)];
     
+    // all items
+    allItems = [[NSMutableArray alloc] init];
+    for (MWFeedInfo *source in sources) {
+        [allItems addObjectsFromArray:source.items];
+    }
+
+    // last updated date
     lastUpdatedDate = [[NSDate date] retain];
     [[NSUserDefaults standardUserDefaults] setObject:lastUpdatedDate forKey:@"LastRefresh"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
+    // refresh info view
     [refreshInfoView stopAnimating];
-    
     refreshing = NO;
     
-    // [itvc setItems:items withType:type];
+    // TODO
+    if ([[navController viewControllers] containsObject:stvc]) {
+        [stvc setSources:sources withType:ItemTypeUnread];
+    }
 }
 
 - (void)showError:(NSString *)errorTitle withMessage:(NSString *)errorMessage withSettingsButton:(BOOL)settingsButton {
@@ -177,14 +166,11 @@
 }
 
 #pragma mark -
-#pragma mark FeedTableViewControllerDelegate Methods
+#pragma mark ItemsTableViewControllerDelegate Methods
 
-- (void)showItem:(MWFeedItem *)anItem {
-	[ivc setItem:anItem withIndex:[itvc.items indexOfObject:anItem]];
+- (void)showItem:(MWFeedItem *)anItem withArray:(NSMutableArray *)anArray {
+	[ivc setItem:anItem withArray:anArray];
 	[navController pushViewController:ivc animated:YES];
-    
-    int newIndex = [itvc.items indexOfObject:anItem];
-    [ivc setIsPrevItemAvailable:(newIndex-1 >= 0) andIsNextItemAvailable:(newIndex+1 <= [itvc.items count]-1)];
 }
 
 #pragma mark -
