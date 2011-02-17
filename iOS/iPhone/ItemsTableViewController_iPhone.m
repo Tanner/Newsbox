@@ -22,13 +22,15 @@
 @synthesize delegate, currentItem;
 
 - (void)setCurrentItem:(MWFeedItem *)aCurrentItem {
-    [[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:[items indexOfObject:currentItem] inSection:0]] setSelected:NO animated:NO];
+    if ([items count] > 0) {
+        [[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:[items indexOfObject:currentItem] inSection:0]] setSelected:NO animated:NO];
 
-    currentItem = aCurrentItem;
-    
-    [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:[items indexOfObject:currentItem] inSection:0] atScrollPosition:UITableViewScrollPositionNone animated:NO];
-    
-    [[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:[items indexOfObject:currentItem] inSection:0]] setSelected:YES animated:NO];
+        currentItem = aCurrentItem;
+        
+        [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:[items indexOfObject:currentItem] inSection:0] atScrollPosition:UITableViewScrollPositionNone animated:NO];
+        
+        [[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:[items indexOfObject:currentItem] inSection:0]] setSelected:YES animated:NO];
+    }
 }
 
 - (void)setItems:(NSMutableArray *)someItems withType:(ItemType)type {	
@@ -101,9 +103,10 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [self reformatCellLabelsWithOrientation:[self interfaceOrientation]];
-    
-    [[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:[items indexOfObject:currentItem] inSection:0]] setSelected:NO animated:YES];
+    if ([items count] > 0) {    
+        [self reformatCellLabelsWithOrientation:[self interfaceOrientation]];
+        [[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:[items indexOfObject:currentItem] inSection:0]] setSelected:NO animated:YES];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -114,8 +117,10 @@
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
-        
-    self.currentItem = [items objectAtIndex:[[self.tableView indexPathForSelectedRow] row]];
+    
+    if ([items count] > 0) {    
+        self.currentItem = [items objectAtIndex:[[self.tableView indexPathForSelectedRow] row]];
+    }
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
