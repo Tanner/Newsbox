@@ -53,8 +53,20 @@
     }
     
     // TODO
+    for (MWFeedInfo *source in sources) {
+        [source.items removeAllObjects];
+    }
     [sources removeAllObjects];
     [allItems removeAllObjects];
+    
+    // TODO
+    if ([[navController viewControllers] containsObject:stvc]) {
+        [stvc reloadData];
+    }
+    
+    if ([[navController viewControllers] containsObject:itvc]) {
+        [itvc reloadData];
+    }
     
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     NSString *username = [prefs objectForKey:@"GoogleUsername"];
