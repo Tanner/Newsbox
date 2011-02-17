@@ -62,7 +62,7 @@
 	date = [aDate copy];
 	
 	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-	[dateFormatter setDateFormat:@"EEEE, MMMM dd, yyyy hh:mm aaa"];
+	[dateFormatter setDateFormat:@"EEEE, MMMM dd, yyyy h:mm aaa"];
 	NSString *aDateString = [dateFormatter stringFromDate:date];
     
     NSString *aShortDateString;
