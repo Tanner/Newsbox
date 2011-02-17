@@ -133,14 +133,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *BuildInfoCellIdentifier = @"BuildInfoCell";
+    static NSString *CommitCellIdentifier = @"CommitCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell *cell;
     
     switch (indexPath.section) {
         case 0: {
+            cell = [tableView dequeueReusableCellWithIdentifier:BuildInfoCellIdentifier];
+
             if (cell == nil) {
-                cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
+                cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:BuildInfoCellIdentifier] autorelease];
             }
             
             switch (indexPath.row) {
@@ -173,8 +176,10 @@
             break;
         }
         case 1: {
+            cell = [tableView dequeueReusableCellWithIdentifier:CommitCellIdentifier];
+            
             if (cell == nil) {
-                cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+                cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CommitCellIdentifier] autorelease];
             }
             
             [[cell textLabel] setFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
