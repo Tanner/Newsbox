@@ -1,9 +1,0 @@
-* load all unread items (no limit)
-* unread status indicators
-* unread/star/thumbs up/thumbs down/share buttons in item toolbar
-* unread/star labels get pushed back to Google
-* webview for links
-
-* topics view
-
-* cache images
