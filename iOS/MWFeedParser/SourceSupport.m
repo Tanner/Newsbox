@@ -66,7 +66,9 @@
 }
 
 - (void)setTitle:(NSString *)aTitle {
-    self.title = [[NSString alloc] initWithString:[[aTitle stringByConvertingHTMLToPlainText] gtm_stringByUnescapingFromHTML]];
+    [self willChangeValueForKey:@"title"];
+    [self setPrimitiveValue:[[aTitle stringByConvertingHTMLToPlainText] gtm_stringByUnescapingFromHTML] forKey:@"title"];
+    [self didChangeValueForKey:@"title"];
 }
 
 - (void)didTurnIntoFault {

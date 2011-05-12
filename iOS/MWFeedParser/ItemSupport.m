@@ -30,20 +30,28 @@
 }
 
 - (void)setSummary:(NSString *)aSummary {
-	self.summary = [[NSString alloc] initWithString:aSummary];
+    [self willChangeValueForKey:@"summary"];
+	[self setPrimitiveValue:aSummary forKey:@"summary"];
+    [self didChangeValueForKey:@"summary"];
+    
 	NSString *aContentSample = [[NSString alloc] initWithString:[[self.summary stringByConvertingHTMLToPlainText] gtm_stringByUnescapingFromHTML]];
 	
 	// sample only needs max 150 chars
-    self.contentSample = [[NSString alloc] initWithString:[aContentSample substringToIndex:MIN(150, [aContentSample length])]];
-    [aContentSample release];
+    [self willChangeValueForKey:@"contentSample"];
+    [self setPrimitiveValue:[aContentSample substringToIndex:MIN(150, [aContentSample length])] forKey:@"contentSample"];
+    [self didChangeValueForKey:@"contentSample"];
 }
 
 - (void)setTitle:(NSString *)aTitle {
-    self.title = [[NSString alloc] initWithString:[[aTitle stringByConvertingHTMLToPlainText] gtm_stringByUnescapingFromHTML]];
+    [self willChangeValueForKey:@"title"];
+    [self setPrimitiveValue:[[aTitle stringByConvertingHTMLToPlainText] gtm_stringByUnescapingFromHTML] forKey:@"title"];
+    [self didChangeValueForKey:@"title"];
 }
 
 - (void)setDate:(NSDate *)aDate {
-	self.date = [aDate copy];
+	[self willChangeValueForKey:@"date"];
+    [self setPrimitiveValue:aDate forKey:@"date"];
+    [self didChangeValueForKey:@"date"];
 	
 	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
 	[dateFormatter setDateFormat:@"EEEE, MMMM dd, yyyy h:mm aaa"];
@@ -59,9 +67,14 @@
         aShortDateString = [dateFormatter stringFromDate:self.date];
         [dateFormatter release];
     }
-	
-	self.dateString = aDateString;
-    self.shortDateString = aShortDateString;
+
+    [self willChangeValueForKey:@"dateString"];
+	[self setPrimitiveValue:aDateString forKey:@"dateString"];
+    [self didChangeValueForKey:@"dateString"];
+    
+    [self willChangeValueForKey:@"shortDateString"];
+	[self setPrimitiveValue:aShortDateString forKey:@"shortDateString"];
+    [self didChangeValueForKey:@"shortDateString"];
 }
 
 #pragma mark NSObject

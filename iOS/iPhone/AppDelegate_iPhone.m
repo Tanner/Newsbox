@@ -116,8 +116,6 @@
         [refreshInfoView animateDownload];
         
         [feedLoader getItemsOfType:[feedLoader currentItemType]];
-            
-        [refreshInfoView animateDownload];
         
         refreshing = YES;
 	} else {
