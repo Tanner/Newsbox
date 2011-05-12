@@ -127,14 +127,19 @@
 
 - (void)didGetSources:(NSArray *)sourcesArr ofType:(ItemType)type {
     // sources array
+    [sources removeAllObjects];
     [sources addObjectsFromArray:sourcesArr];
     
     // all items
+    [allItems removeAllObjects];
     for (Source *source in sources) {
         [allItems addObjectsFromArray:[source.items allObjects]];
     }
     
     // last updated date
+    if (lastUpdatedDate) {
+        [lastUpdatedDate release];
+    }
     lastUpdatedDate = [[NSDate date] retain];
     [[NSUserDefaults standardUserDefaults] setObject:lastUpdatedDate forKey:@"LastRefresh"];
     [[NSUserDefaults standardUserDefaults] synchronize];
@@ -142,6 +147,8 @@
     // refresh info view
     [refreshInfoView stopAnimating];
     refreshing = NO;
+    
+    [self saveContext];
     
     // TODO
     if ([[navController viewControllers] containsObject:stvc]) {
