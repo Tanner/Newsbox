@@ -28,10 +28,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
-@class MWFeedItem;
+@class Item;
 
-@interface MWFeedInfo : NSObject <NSCoding> {
+@interface Source : NSManagedObject <NSCoding> {
 	
 	NSString *title; // Feed title
 	NSString *link; // Feed link
@@ -41,8 +42,8 @@
     NSMutableArray *items;
 }
 
-- (NSComparisonResult)compare:(MWFeedInfo *)feedInfo;
-- (void)addItem:(MWFeedItem *)item;
+- (NSComparisonResult)compare:(Source *)feedInfo;
+- (void)addItem:(Item *)item;
 
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *link;

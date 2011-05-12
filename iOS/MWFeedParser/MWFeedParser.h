@@ -28,8 +28,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MWFeedInfo.h"
-#import "MWFeedItem.h"
+#import "Source.h"
+#import "Item.h"
 
 // Debug Logging
 #if 0 // Set to 1 to enable debug logging
@@ -58,8 +58,8 @@ typedef enum { FeedTypeUnknown, FeedTypeRSS, FeedTypeRSS1, FeedTypeAtom } FeedTy
 @protocol MWFeedParserDelegate <NSObject>
 @required
 - (void)feedParserDidStart:(MWFeedParser *)parser;
-- (void)feedParser:(MWFeedParser *)parser didParseFeedInfo:(MWFeedInfo *)info;
-- (void)feedParser:(MWFeedParser *)parser didParseFeedItem:(MWFeedItem *)item;
+- (void)feedParser:(MWFeedParser *)parser didParseFeedInfo:(Source *)info;
+- (void)feedParser:(MWFeedParser *)parser didParseFeedItem:(Item *)item;
 - (void)feedParserDidFinish:(MWFeedParser *)parser;
 - (void)feedParser:(MWFeedParser *)parser didFailWithError:(NSError *)error;
 @end
@@ -101,8 +101,8 @@ typedef enum { FeedTypeUnknown, FeedTypeRSS, FeedTypeRSS1, FeedTypeAtom } FeedTy
 	NSString *currentPath;
 	NSMutableString *currentText;
 	NSDictionary *currentElementAttributes;
-	MWFeedItem *item;
-	MWFeedInfo *info;
+	Item *item;
+	Source *info;
 	
 }
 

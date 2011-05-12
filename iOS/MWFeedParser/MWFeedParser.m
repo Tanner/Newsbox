@@ -216,7 +216,7 @@
 	if (data && !feedParser) {
 		
 		// Create feed info
-		MWFeedInfo *i = [[MWFeedInfo alloc] init];
+		Source *i = [[Source alloc] init];
 		self.info = i;
 		[i release];
 		
@@ -552,7 +552,7 @@
 		}
 		
 		// New item
-		MWFeedItem *newItem = [[MWFeedItem alloc] init];
+		Item *newItem = [[Item alloc] init];
 		self.item = newItem;
 		[newItem release];
 		
@@ -883,7 +883,7 @@
 #pragma mark Misc
 
 // Create an enclosure NSDictionary from enclosure (or link) attributes
-- (BOOL)createEnclosureFromAttributes:(NSDictionary *)attributes andAddToItem:(MWFeedItem *)currentItem {
+- (BOOL)createEnclosureFromAttributes:(NSDictionary *)attributes andAddToItem:(Item *)currentItem {
 	
 	// Create enclosure
 	NSDictionary *enclosure = nil;
@@ -952,8 +952,8 @@
 		
 		// Use as enclosure if rel == enclosure
 		if ([[attributes objectForKey:@"rel"] isEqualToString:@"enclosure"]) {
-			if ([MWObject isMemberOfClass:[MWFeedItem class]]) { // Enclosures can only be added to MWFeedItem
-				[self createEnclosureFromAttributes:attributes andAddToItem:(MWFeedItem *)MWObject];
+			if ([MWObject isMemberOfClass:[Item class]]) { // Enclosures can only be added to MWFeedItem
+				[self createEnclosureFromAttributes:attributes andAddToItem:(Item *)MWObject];
 				return YES;
 			}
 		}

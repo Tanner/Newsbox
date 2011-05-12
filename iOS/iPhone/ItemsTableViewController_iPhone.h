@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "RefreshInfoView.h"
-#import "MWFeedItem.h"
+#import "Item.h"
 
 @protocol ItemsTableViewControllerDelegate
-- (void)showItem:(MWFeedItem *)anItem withArray:(NSMutableArray *)anArray;
+- (void)showItem:(Item *)anItem withArray:(NSMutableArray *)anArray;
 @end
 
 @interface ItemsTableViewController_iPhone : UITableViewController {
@@ -19,7 +19,7 @@
     
     NSMutableArray *items;
     
-    MWFeedItem *currentItem;
+    Item *currentItem;
 }
 
 - (void)setItems:(NSMutableArray *)someItems withType:(ItemType)type;
@@ -27,6 +27,6 @@
 - (void)reformatCellLabelsWithOrientation:(UIInterfaceOrientation)orientation;
 
 @property (nonatomic, assign) id<ItemsTableViewControllerDelegate, RefreshInfoViewDelegate> delegate;
-@property (nonatomic, assign) MWFeedItem *currentItem;
+@property (nonatomic, assign) Item *currentItem;
 
 @end

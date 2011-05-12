@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "RefreshInfoView.h"
-#import "MWFeedInfo.h"
-#import "MWFeedItem.h"
+#import "Source.h"
+#import "Item.h"
 
 @protocol SourcesTableViewControllerDelegate
-- (void)showItemsTableViewWithSource:(MWFeedInfo *)source;
+- (void)showItemsTableViewWithSource:(Source *)source;
 @end
 
 @interface SourcesTableViewController_iPhone : UITableViewController {

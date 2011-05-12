@@ -7,21 +7,21 @@
 //
 
 #import "ItemsTableViewController_iPhone.h"
-#import "MWFeedItem.h"
+#import "Item.h"
 #import "ItemsTableViewCell.h"
 #import "RefreshInfoView.h"
 
 #define CELL_HEIGHT 95.0f
 
 @interface ItemsTableViewController_iPhone (private)
-	- (CGFloat)suggestedHeightForItem:(MWFeedItem *)anItem;
+	- (CGFloat)suggestedHeightForItem:(Item *)anItem;
 @end
 
 @implementation ItemsTableViewController_iPhone
 
 @synthesize delegate, currentItem;
 
-- (void)setCurrentItem:(MWFeedItem *)aCurrentItem {
+- (void)setCurrentItem:(Item *)aCurrentItem {
     if ([items count] > 0) {
         [[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:[items indexOfObject:currentItem] inSection:0]] setSelected:NO animated:NO];
 
@@ -129,10 +129,10 @@
         cell = [[[ItemsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-    [(ItemsTableViewCell *)cell setSourceLabelText:[[(MWFeedItem *)[items objectAtIndex:indexPath.row] source] title]
-                                  andDateLabelText:[(MWFeedItem *)[items objectAtIndex:indexPath.row] shortDateString]
-									andTitleLabelText:[(MWFeedItem *)[items objectAtIndex:indexPath.row] title]
-								  andContentLabelText:[(MWFeedItem *)[items objectAtIndex:indexPath.row] contentSample]
+    [(ItemsTableViewCell *)cell setSourceLabelText:[[(Item *)[items objectAtIndex:indexPath.row] source] title]
+                                  andDateLabelText:[(Item *)[items objectAtIndex:indexPath.row] shortDateString]
+									andTitleLabelText:[(Item *)[items objectAtIndex:indexPath.row] title]
+								  andContentLabelText:[(Item *)[items objectAtIndex:indexPath.row] contentSample]
 										  andCellSize:CGSizeMake(self.view.bounds.size.width, CELL_HEIGHT)
 	 ];
     

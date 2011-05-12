@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MWFeedItem.h"
+#import "Item.h"
 
 @protocol ItemViewControllerDelegate;
 
@@ -15,14 +15,14 @@
 	id<ItemViewControllerDelegate> delegate;
     
     NSMutableArray *array;
-    MWFeedItem *currentItem;
+    Item *currentItem;
     
 	UIWebView *wv;
     UISegmentedControl *prevNextControl;
 }
 
 - (void)displayCurrentItem;
-- (void)setItem:(MWFeedItem *)anItem withArray:(NSMutableArray *)anArray;
+- (void)setItem:(Item *)anItem withArray:(NSMutableArray *)anArray;
 - (void)setIsPrevItemAvailable:(BOOL)prevItemAvailable andIsNextItemAvailable:(BOOL)nextItemAvailable;
 
 @property (nonatomic, assign) id<ItemViewControllerDelegate> delegate;
@@ -30,5 +30,5 @@
 @end
 
 @protocol ItemViewControllerDelegate
-- (void)didChangeCurrentItemTo:(MWFeedItem *)item;
+- (void)didChangeCurrentItemTo:(Item *)item;
 @end

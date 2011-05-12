@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "ASIHTTPRequestDelegate.h"
-#import "MWFeedItem.h"
+#import "Item.h"
 #import "MWFeedParser.h"
 
 @protocol ItemLoaderDelegate;

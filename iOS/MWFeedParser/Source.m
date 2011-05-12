@@ -27,13 +27,13 @@
 //  THE SOFTWARE.
 //
 
-#import "MWFeedInfo.h"
+#import "Source.h"
 #import "NSString+HTML.h"
 #import "GTMNSString+HTML.h"
 
 #define EXCERPT(str, len) (([str length] > len) ? [[str substringToIndex:len-1] stringByAppendingString:@"…"] : str)
 
-@implementation MWFeedInfo
+@implementation Source
 
 @synthesize title, link, summary, items;
 
@@ -45,15 +45,15 @@
     return self;
 }
 
-- (NSComparisonResult)compare:(MWFeedInfo *)otherSource {    
+- (NSComparisonResult)compare:(Source *)otherSource {    
     return [link compare:otherSource.link];
 }
 
-- (NSComparisonResult)compareByName:(MWFeedInfo *)otherSource {
+- (NSComparisonResult)compareByName:(Source *)otherSource {
     return [title compare:otherSource.title options:NSCaseInsensitiveSearch];
 }
 
-- (void)addItem:(MWFeedItem *)item {
+- (void)addItem:(Item *)item {
     [items addObject:item];
 }
 

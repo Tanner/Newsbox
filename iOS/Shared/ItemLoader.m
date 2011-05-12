@@ -155,14 +155,14 @@
 }
 
 
-- (void)feedParser:(MWFeedParser *)parser didParseFeedInfo:(MWFeedInfo *)info {
+- (void)feedParser:(MWFeedParser *)parser didParseFeedInfo:(Source *)info {
     // necessary?
 }
 
 
-- (void)feedParser:(MWFeedParser *)parser didParseFeedItem:(MWFeedItem *)item {    
+- (void)feedParser:(MWFeedParser *)parser didParseFeedItem:(Item *)item {    
     // make array of sources
-    for (MWFeedInfo *source in sources) {
+    for (Source *source in sources) {
         if ([source compare:item.source] == NSOrderedSame) {
             [[source items] addObject:item];
             

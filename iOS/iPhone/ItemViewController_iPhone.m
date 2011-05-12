@@ -9,7 +9,7 @@
 #import "ItemViewController_iPhone.h"
 
 @interface ItemViewController_iPhone (private) 
-- (NSString *)stylizedHTMLWithItem:(MWFeedItem *)anItem;
+- (NSString *)stylizedHTMLWithItem:(Item *)anItem;
 @end
 
 @implementation ItemViewController_iPhone
@@ -56,7 +56,7 @@
 
 #pragma mark -
 
-- (NSString *)stylizedHTMLWithItem:(MWFeedItem *)anItem {
+- (NSString *)stylizedHTMLWithItem:(Item *)anItem {
 	NSMutableString *html = [[NSMutableString alloc] init];
 		
 	[html appendString:@"<html>"];
@@ -142,7 +142,7 @@
 	return stylizedHTML;
 }
 
-- (void)setItem:(MWFeedItem *)anItem withArray:(NSMutableArray *)anArray {
+- (void)setItem:(Item *)anItem withArray:(NSMutableArray *)anArray {
     currentItem = anItem;
     array = anArray;
 

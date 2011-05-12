@@ -27,25 +27,25 @@
 //  THE SOFTWARE.
 //
 
-#import "MWFeedItem.h"
+#import "Item.h"
 #import "NSString+HTML.h"
 #import "GTMNSString+HTML.h"
 
 #define EXCERPT(str, len) (([str length] > len) ? [[str substringToIndex:len-1] stringByAppendingString:@"…"] : str)
 
-@implementation MWFeedItem
+@implementation Item
 
 @synthesize identifier, title, link, date, dateString, shortDateString, updated, summary, content, contentSample, enclosures, source;
 
 - (id)init {
     if ((self = [super init])) {
-        source = [[MWFeedInfo alloc] init];
+        source = [[Source alloc] init];
     }
     
     return self;
 }
 
-- (NSComparisonResult)compareByDate:(MWFeedItem *)otherItem {    
+- (NSComparisonResult)compareByDate:(Item *)otherItem {    
     // reverse sort
     return [otherItem.date compare:date];
 }

@@ -8,7 +8,7 @@
 
 #import "AppDelegate_iPhone.h"
 #import "ItemLoader.h"
-#import "MWFeedItem.h"
+#import "Item.h"
 #import "ItemsTableViewController_iPhone.h"
 #import "SettingsTableViewController_iPhone.h"
 #import "SFHFKeychainUtils.h"
@@ -53,7 +53,7 @@
     }
     
     // TODO
-    for (MWFeedInfo *source in sources) {
+    for (Source *source in sources) {
         [source.items removeAllObjects];
     }
     [sources removeAllObjects];
@@ -98,7 +98,7 @@
 #pragma mark -
 #pragma mark SourcesTableViewControllerDelegate Methods
 
-- (void)showItemsTableViewWithSource:(MWFeedInfo *)source {
+- (void)showItemsTableViewWithSource:(Source *)source {
     if (source == nil) {
         [itvc setItems:allItems withType:ItemTypeUnread];
     } else {
@@ -133,7 +133,7 @@
     [sources sortUsingSelector:@selector(compareByName:)];
     
     // all items
-    for (MWFeedInfo *source in sources) {
+    for (Source *source in sources) {
         [source.items sortUsingSelector:@selector(compareByDate:)];
         [allItems addObjectsFromArray:source.items];
     }
@@ -185,7 +185,7 @@
 #pragma mark -
 #pragma mark ItemsTableViewControllerDelegate Methods
 
-- (void)showItem:(MWFeedItem *)anItem withArray:(NSMutableArray *)anArray {
+- (void)showItem:(Item *)anItem withArray:(NSMutableArray *)anArray {
 	[ivc setItem:anItem withArray:anArray];
 	[navController pushViewController:ivc animated:YES];
 }
@@ -193,7 +193,7 @@
 #pragma mark -
 #pragma mark ItemViewControllerDelegate Methods
 
-- (void)didChangeCurrentItemTo:(MWFeedItem *)item {
+- (void)didChangeCurrentItemTo:(Item *)item {
     [itvc setCurrentItem:item];
 }
 

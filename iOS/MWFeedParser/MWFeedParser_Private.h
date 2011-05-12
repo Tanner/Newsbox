@@ -42,8 +42,8 @@
 @property (nonatomic, retain) NSString *currentPath;
 @property (nonatomic, retain) NSMutableString *currentText;
 @property (nonatomic, retain) NSDictionary *currentElementAttributes;
-@property (nonatomic, retain) MWFeedItem *item;
-@property (nonatomic, retain) MWFeedInfo *info;
+@property (nonatomic, retain) Item *item;
+@property (nonatomic, retain) Source *info;
 @property (nonatomic, copy) NSString *pathOfElementWithXHTMLType;
 
 #pragma mark Private Methods
@@ -61,7 +61,7 @@
 // Error Handling
 
 // Misc
-- (BOOL)createEnclosureFromAttributes:(NSDictionary *)attributes andAddToItem:(MWFeedItem *)currentItem;
+- (BOOL)createEnclosureFromAttributes:(NSDictionary *)attributes andAddToItem:(Item *)currentItem;
 - (BOOL)processAtomLink:(NSDictionary *)attributes andAddToMWObject:(id)MWObject;
 
 - (void)startParsingData:(NSData *)data textEncodingName:(NSString *)textEncodingName;

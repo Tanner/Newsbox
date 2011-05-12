@@ -28,14 +28,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MWFeedInfo.h"
+#import <CoreData/CoreData.h>
+#import "Source.h"
 
 typedef enum {
 	ItemTypeUnread,
     ItemTypeStarred
 } ItemType;
 
-@interface MWFeedItem : NSObject <NSCoding> {
+@interface Item : NSManagedObject <NSCoding> {
 	
 	NSString *identifier; // Item identifier
 	NSString *title; // Item title
@@ -56,7 +57,7 @@ typedef enum {
 	//     type: what its type is, a standard MIME type  (NSString)
 	NSArray *enclosures;
 
-    MWFeedInfo *source;
+    Source *source;
 }
 
 @property (nonatomic, copy) NSString *identifier;
@@ -71,6 +72,6 @@ typedef enum {
 @property (nonatomic, retain) NSString *contentSample;
 @property (nonatomic, copy) NSArray *enclosures;
 
-@property (nonatomic, copy) MWFeedInfo *source;
+@property (nonatomic, copy) Source *source;
 
 @end
