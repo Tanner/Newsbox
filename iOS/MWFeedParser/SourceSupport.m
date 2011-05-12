@@ -1,20 +1,23 @@
 //
-//  Source.m
+//  SourceSupport.m
 //  Newsbox
 //
 //  Created by Ryan Ashcraft on 5/12/11.
-//  Copyright (c) 2011 Ashcraft Media. All rights reserved.
+//  Copyright 2011 Ashcraft Media. All rights reserved.
 //
 
-#import "Source.h"
-#import "Item.h"
+#import "SourceSupport.h"
+#import "NSString+HTML.h"
+#import "GTMNSString+HTML.h"
 
+#define EXCERPT(str, len) (([str length] > len) ? [[str substringToIndex:len-1] stringByAppendingString:@"…"] : str)
 
-@implementation Source
-@dynamic link;
-@dynamic title;
-@dynamic summary;
-@dynamic items;
+@implementation Source (Support)
+
++ (id)newSource:(NSManagedObjectContext *)managedObjectContext {
+    Source *result = (Source *)[NSEntityDescription insertNewObjectForEntityForName:@"Source" inManagedObjectContext:managedObjectContext];
+    return [result retain];
+}
 
 - (void)addItemsObject:(Item *)value {    
     NSSet *changedObjects = [[NSSet alloc] initWithObjects:&value count:1];
@@ -44,5 +47,30 @@
     [self didChangeValueForKey:@"items" withSetMutation:NSKeyValueMinusSetMutation usingObjects:value];
 }
 
+- (NSComparisonResult)compare:(Source *)otherSource {    
+    return [self.link compare:otherSource.link];
+}
+
+- (NSComparisonResult)compareByName:(Source *)otherSource {
+    return [self.title compare:otherSource.title options:NSCaseInsensitiveSearch];
+}
+
+#pragma mark NSObject
+
+- (NSString *)description {
+	NSMutableString *string = [[NSMutableString alloc] initWithString:@"MWFeedInfo: "];
+	if (self.title)   [string appendFormat:@"“%@”", EXCERPT(self.title, 50)];
+	//if (link)    [string appendFormat:@" (%@)", link];
+	//if (summary) [string appendFormat:@", %@", MWExcerpt(summary, 50)];
+	return [string autorelease];
+}
+
+- (void)setTitle:(NSString *)aTitle {
+    self.title = [[NSString alloc] initWithString:[[aTitle stringByConvertingHTMLToPlainText] gtm_stringByUnescapingFromHTML]];
+}
+
+- (void)didTurnIntoFault {
+	[super didTurnIntoFault];
+}
 
 @end

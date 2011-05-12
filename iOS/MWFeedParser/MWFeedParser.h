@@ -29,7 +29,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Source.h"
-#import "Item.h"
+#import "ItemSupport.h"
 
 // Debug Logging
 #if 0 // Set to 1 to enable debug logging
@@ -100,7 +100,7 @@ typedef enum { FeedTypeUnknown, FeedTypeRSS, FeedTypeRSS1, FeedTypeAtom } FeedTy
 	// Parsing Data
 	NSString *currentPath;
 	NSMutableString *currentText;
-	NSDictionary *currentElementAttributes;
+//	NSDictionary *currentElementAttributes;
 	Item *item;
 	Source *info;
 	

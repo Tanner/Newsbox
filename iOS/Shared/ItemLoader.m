@@ -9,6 +9,7 @@
 #import "ItemLoader.h"
 #import "ASIHTTPRequest.h"
 #import "ASIFormDataRequest.h"
+#import "SourceSupport.h"
 
 @interface ItemLoader()
 - (NSString *)sidHeader;

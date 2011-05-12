@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Item.h"
+#import "ItemSupport.h"
 
 @protocol ItemViewControllerDelegate;
 

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Item.h"
+#import "ItemSupport.h"
 #import "RefreshInfoView.h"
 
 @protocol RootTableViewControllerDelegate

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "RefreshInfoView.h"
-#import "Item.h"
+#import "ItemSupport.h"
 
 @protocol ItemsTableViewControllerDelegate
 - (void)showItem:(Item *)anItem withArray:(NSArray *)anArray;

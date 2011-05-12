@@ -7,7 +7,7 @@
 //
 
 #import "ItemsTableViewController_iPhone.h"
-#import "Item.h"
+#import "ItemSupport.h"
 #import "ItemsTableViewCell.h"
 #import "RefreshInfoView.h"
 

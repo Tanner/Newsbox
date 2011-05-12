@@ -8,7 +8,7 @@
 
 #import "AppDelegate_iPhone.h"
 #import "ItemLoader.h"
-#import "Item.h"
+#import "ItemSupport.h"
 #import "ItemsTableViewController_iPhone.h"
 #import "SettingsTableViewController_iPhone.h"
 #import "SFHFKeychainUtils.h"

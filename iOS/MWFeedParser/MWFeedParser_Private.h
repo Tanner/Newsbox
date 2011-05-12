@@ -61,7 +61,7 @@
 // Error Handling
 
 // Misc
-- (BOOL)createEnclosureFromAttributes:(NSDictionary *)attributes andAddToItem:(Item *)currentItem;
+//- (BOOL)createEnclosureFromAttributes:(NSDictionary *)attributes andAddToItem:(Item *)currentItem;
 - (BOOL)processAtomLink:(NSDictionary *)attributes andAddToMWObject:(id)MWObject;
 
 - (void)startParsingData:(NSData *)data textEncodingName:(NSString *)textEncodingName;

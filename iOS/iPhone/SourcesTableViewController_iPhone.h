@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "RefreshInfoView.h"
 #import "Source.h"
-#import "Item.h"
+#import "ItemSupport.h"
 
 @protocol SourcesTableViewControllerDelegate
 - (void)showItemsTableViewWithSource:(Source *)source;
