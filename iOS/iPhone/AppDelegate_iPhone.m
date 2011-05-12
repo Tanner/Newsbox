@@ -86,7 +86,7 @@
 }
 
 - (void)showSourcesTableViewWithType:(ItemType)type {
-    [stvc setSources:sources withType:ItemTypeUnread];
+    [stvc setSources:[sources mutableCopy]];
     
     [navController pushViewController:stvc animated:YES];
 }
@@ -100,9 +100,9 @@
 
 - (void)showItemsTableViewWithSource:(Source *)source {
     if (source == nil) {
-        [itvc setItems:allItems withType:ItemTypeUnread];
+        [itvc setItems:allItems];
     } else {
-        [itvc setItems:[source.items allObjects] withType:ItemTypeUnread];
+        [itvc setItems:[[source.items allObjects] mutableCopy]];
     }
     
     [navController pushViewController:itvc animated:YES];
@@ -128,16 +128,12 @@
 - (void)didGetSources:(NSArray *)sourcesArr ofType:(ItemType)type {
     // sources array
     [sources addObjectsFromArray:sourcesArr];
-    [sources sortUsingSelector:@selector(compareByName:)];
     
     // all items
     for (Source *source in sources) {
-//        [source.items sortUsingSelector:@selector(compareByDate:)];
         [allItems addObjectsFromArray:[source.items allObjects]];
     }
     
-    [allItems sortUsingSelector:@selector(compareByDate:)];
-
     // last updated date
     lastUpdatedDate = [[NSDate date] retain];
     [[NSUserDefaults standardUserDefaults] setObject:lastUpdatedDate forKey:@"LastRefresh"];

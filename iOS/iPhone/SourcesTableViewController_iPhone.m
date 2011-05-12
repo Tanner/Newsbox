@@ -11,13 +11,18 @@
 
 @implementation SourcesTableViewController_iPhone
 
-@synthesize delegate, sources;
+@synthesize delegate;
+@dynamic sources;
 
 #pragma mark -
 #pragma mark Data Source Loading / Reloading Methods
 
-- (void)setSources:(NSMutableArray *)someSources withType:(ItemType)type {
-    sources = someSources;
+- (void)setSources:(NSMutableArray *)array {
+    if (sources != array) {
+        [sources release];
+        sources = [array retain];
+        [sources sortUsingSelector:@selector(compareByName:)];
+    }
     
     [self.tableView reloadData];
 }

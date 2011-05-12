@@ -17,16 +17,16 @@
 @interface ItemsTableViewController_iPhone : UITableViewController {
 	id<ItemsTableViewControllerDelegate, RefreshInfoViewDelegate> delegate;
     
-    NSArray *items;
+    NSMutableArray *items;
     
     Item *currentItem;
 }
 
-- (void)setItems:(NSArray *)someItems withType:(ItemType)type;
 - (void)reloadData;
 - (void)reformatCellLabelsWithOrientation:(UIInterfaceOrientation)orientation;
 
 @property (nonatomic, assign) id<ItemsTableViewControllerDelegate, RefreshInfoViewDelegate> delegate;
+@property (nonatomic, retain) NSMutableArray *items;
 @property (nonatomic, assign) Item *currentItem;
 
 @end

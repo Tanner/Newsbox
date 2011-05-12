@@ -19,7 +19,9 @@
 
 @implementation ItemsTableViewController_iPhone
 
-@synthesize delegate, currentItem;
+@synthesize delegate;
+@dynamic items;
+@synthesize currentItem;
 
 - (void)setCurrentItem:(Item *)aCurrentItem {
     if ([items count] > 0) {
@@ -33,8 +35,16 @@
     }
 }
 
-- (void)setItems:(NSArray *)someItems withType:(ItemType)type {	
-	items = someItems;
+- (NSArray *)items {
+    return items;
+}
+
+- (void)setItems:(NSMutableArray *)array {
+    if (items != array) {
+        [items release];
+        items = [array retain];
+        [items sortUsingSelector:@selector(compareByDate:)];
+    }
 	
 	[self.tableView reloadData];
 }
