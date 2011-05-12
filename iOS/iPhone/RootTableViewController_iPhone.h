@@ -13,6 +13,7 @@
 @protocol RootTableViewControllerDelegate
 - (void)showSourcesTableViewWithType:(ItemType)type;
 - (void)showSettingsView;
+- (void)rootViewDidAppear;
 @end
 
 

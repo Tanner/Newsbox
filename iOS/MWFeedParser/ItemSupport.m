@@ -18,9 +18,6 @@
 
 + (id)newItem:(NSManagedObjectContext *)managedObjectContext {
     Item *result = (Item *)[NSEntityDescription insertNewObjectForEntityForName:@"Item" inManagedObjectContext:managedObjectContext];
-    
-//    result.source = [Source newSource:[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] managedObjectContext]];
-    
     return [result retain];
 }
 

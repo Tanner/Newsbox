@@ -550,7 +550,7 @@
 		}
 		
 		// New item
-		Item *newItem = [Item newItem:[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] managedObjectContext]];
+		Item *newItem = [Item newItem:[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] parsingManagedObjectContext]];
 		self.item = newItem;
 		
 		// Return
@@ -707,10 +707,14 @@
                                         fetchRequestFromTemplateWithName:@"sourceWithLink"
                                         substitutionVariables:[NSDictionary dictionaryWithObject:sourceLink forKey:@"link"]];
 
-        NSArray *executedRequest = [[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] managedObjectContext] executeFetchRequest:fetchRequest error:nil];
+        NSError *error = nil;
+        NSArray *executedRequest = [[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] parsingManagedObjectContext] executeFetchRequest:fetchRequest error:&error];
+        if (error) {
+            NSLog(@"%@", error);
+        }
                 
         if (!executedRequest || [executedRequest count] == 0) {
-            Source *source = [Source newSource:[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] managedObjectContext]];
+            Source *source = [Source newSource:[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] parsingManagedObjectContext]];
             [source setTitle:sourceTitle];
             [source setSummary:sourceSummary];
             [source setLink:sourceLink];
@@ -720,7 +724,7 @@
             sourceSummary = nil;
             sourceLink = nil;
             
-            [item setSource:source];
+            [item setSource:(Source *)[[source managedObjectContext] objectWithID:[source objectID]]];
         } else {
             Source *source = [executedRequest objectAtIndex:0];
             [item setSource:(Source *)[[source managedObjectContext] objectWithID:[source objectID]]];

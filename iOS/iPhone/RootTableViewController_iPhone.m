@@ -87,6 +87,8 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    [delegate rootViewDidAppear];
+    
     [super viewDidAppear:animated];
 }
 

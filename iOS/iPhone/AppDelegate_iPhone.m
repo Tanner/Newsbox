@@ -76,9 +76,7 @@
     if (refreshing) {
         return;
     }
-    
-    [self purgeSourcesAndItems];
-    
+        
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     NSString *username = [prefs objectForKey:@"GoogleUsername"];
     
@@ -102,6 +100,10 @@
 
 - (void)showSettingsView {
     [navController presentModalViewController:settingsNavController animated:YES];
+}
+
+- (void)rootViewDidAppear {
+    [self purgeSourcesAndItems];
 }
 
 #pragma mark -
@@ -142,6 +144,17 @@
     // refresh info view
     [refreshInfoView stopAnimating];
     refreshing = NO;
+    
+    // swap contexts
+    if (managedObjectContext_) {
+        [managedObjectContext_ release];
+        managedObjectContext_ = nil;
+    }
+    if (parsingManagedObjectContext_) {
+        managedObjectContext_ = [parsingManagedObjectContext_ retain];
+        [parsingManagedObjectContext_ release];
+        parsingManagedObjectContext_ = nil;
+    }
     
     [self saveContext];
     
@@ -295,9 +308,9 @@
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
 	    
-//    if (abs(floor([lastUpdatedDate timeIntervalSinceNow]/60)) > MIN_TIME_TO_REFRESH_ON_BECOME_ACTIVE) {
-//        [self loginAndDownloadItems];
-//    }
+    if (abs(floor([lastUpdatedDate timeIntervalSinceNow]/60)) > MIN_TIME_TO_REFRESH_ON_BECOME_ACTIVE) {
+        [self loginAndDownloadItems];
+    }
 }
 
 /**
