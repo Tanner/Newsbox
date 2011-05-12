@@ -8,6 +8,7 @@
 
 #import "SourcesTableViewController_iPhone.h"
 #import "OBGradientView.h"
+#import "AppDelegate_Shared.h"
 
 @implementation SourcesTableViewController_iPhone
 
@@ -28,6 +29,19 @@
 }
 
 - (void)reloadData {
+    [sources removeAllObjects];
+    
+    NSFetchRequest *fetchRequest = [[(AppDelegate_Shared *)delegate managedObjectModel]
+                                        fetchRequestFromTemplateWithName:@"allSources"
+                                        substitutionVariables:nil];
+    NSArray *executedRequest = [[(AppDelegate_Shared *)delegate managedObjectContext] executeFetchRequest:fetchRequest error:nil];
+    
+    if (executedRequest) {
+        [sources addObjectsFromArray:executedRequest];
+    }
+    
+    [sources sortUsingSelector:@selector(compareByName:)];
+
     [self.tableView reloadData];
 }
 
@@ -51,6 +65,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    sources = [[NSMutableArray alloc] init];
     
     [self.navigationItem setTitle:@"Unread"];
     
@@ -87,6 +103,8 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    [self reloadData];
+    
     [super viewWillAppear:animated];
 }
 

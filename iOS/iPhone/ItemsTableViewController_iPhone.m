@@ -7,9 +7,11 @@
 //
 
 #import "ItemsTableViewController_iPhone.h"
+#import "SourceSupport.h"
 #import "ItemSupport.h"
 #import "ItemsTableViewCell.h"
 #import "RefreshInfoView.h"
+#import "AppDelegate_Shared.h"
 
 #define CELL_HEIGHT 95.0f
 
@@ -20,7 +22,7 @@
 @implementation ItemsTableViewController_iPhone
 
 @synthesize delegate;
-@dynamic items;
+@synthesize sourceTitle;
 @synthesize currentItem;
 
 - (void)setCurrentItem:(Item *)aCurrentItem {
@@ -35,21 +37,28 @@
     }
 }
 
-- (NSArray *)items {
-    return items;
-}
-
-- (void)setItems:(NSMutableArray *)array {
-    if (items != array) {
-        [items release];
-        items = [array retain];
-        [items sortUsingSelector:@selector(compareByDate:)];
-    }
-	
-	[self.tableView reloadData];
-}
-
 - (void)reloadData {
+    [items removeAllObjects];
+    
+    NSArray *executedRequest;
+    if (sourceTitle) {
+        NSFetchRequest *fetchRequest = [[(AppDelegate_Shared *)delegate managedObjectModel]
+                                        fetchRequestFromTemplateWithName:@"itemsFromSourceTitle"
+                                        substitutionVariables:[NSDictionary dictionaryWithObject:sourceTitle forKey:@"sourceTitle"]];
+        executedRequest = [[(AppDelegate_Shared *)delegate managedObjectContext] executeFetchRequest:fetchRequest error:nil];
+    } else {
+        NSFetchRequest *fetchRequest = [[(AppDelegate_Shared *)delegate managedObjectModel]
+                                        fetchRequestFromTemplateWithName:@"allItems"
+                                        substitutionVariables:nil];
+        executedRequest = [[(AppDelegate_Shared *)delegate managedObjectContext] executeFetchRequest:fetchRequest error:nil];
+    }
+    
+    if (executedRequest) {
+        [items addObjectsFromArray:executedRequest];
+    }
+ 
+    [items sortUsingSelector:@selector(compareByDate:)];
+    
     [self.tableView reloadData];
 }
 
@@ -82,15 +91,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    items = [[NSMutableArray alloc] init];
+    
     NSMutableArray *toolbarItems = [[NSMutableArray alloc] init];
-    
     [self setToolbarItems:toolbarItems animated:NO];
-    
     [toolbarItems release];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    [self reloadData];
     
     if ([items count] > 0) {    
         [self reformatCellLabelsWithOrientation:[self interfaceOrientation]];

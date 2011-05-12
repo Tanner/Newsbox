@@ -17,6 +17,7 @@
 
 @interface AppDelegate_iPhone (private)
 - (void)loginAndDownloadItems;
+- (void)purgeSourcesAndItems;
 @end
 
 @implementation AppDelegate_iPhone
@@ -44,6 +45,32 @@
     return refreshInfoViewButtonItem;
 }
 
+#pragma mark - 
+
+- (void)purgeSourcesAndItems {
+    NSFetchRequest *fetchRequest = [[self managedObjectModel]
+                                    fetchRequestFromTemplateWithName:@"allItems"
+                                    substitutionVariables:nil];
+    NSArray *executedRequest = [[self managedObjectContext] executeFetchRequest:fetchRequest error:nil];
+    
+    if (executedRequest) {
+        for (id i in executedRequest) {
+            [[self managedObjectContext] deleteObject:i];
+        }
+    }
+    
+    fetchRequest = [[self managedObjectModel]
+                    fetchRequestFromTemplateWithName:@"allSources"
+                    substitutionVariables:nil];
+    executedRequest = [[self managedObjectContext] executeFetchRequest:fetchRequest error:nil];
+    
+    if (executedRequest) {
+        for (id i in executedRequest) {
+            [[self managedObjectContext] deleteObject:i];
+        }
+    }
+}
+
 #pragma mark -
 #pragma mark RootTableViewControllerDelegate Methods
 
@@ -52,21 +79,7 @@
         return;
     }
     
-//    // TODO
-//    for (Source *source in sources) {
-//        [source.items removeAllObjects];
-//    }
-//    [sources removeAllObjects];
-//    [allItems removeAllObjects];
-//    
-//    // TODO
-//    if ([[navController viewControllers] containsObject:stvc]) {
-//        [stvc reloadData];
-//    }
-//    
-//    if ([[navController viewControllers] containsObject:itvc]) {
-//        [itvc reloadData];
-//    }
+    [self purgeSourcesAndItems];
     
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     NSString *username = [prefs objectForKey:@"GoogleUsername"];
@@ -85,9 +98,7 @@
     refreshing = YES;
 }
 
-- (void)showSourcesTableViewWithType:(ItemType)type {
-    [stvc setSources:[sources mutableCopy]];
-    
+- (void)showSourcesTableViewWithType:(ItemType)type {    
     [navController pushViewController:stvc animated:YES];
 }
 
@@ -99,11 +110,7 @@
 #pragma mark SourcesTableViewControllerDelegate Methods
 
 - (void)showItemsTableViewWithSource:(Source *)source {
-    if (source == nil) {
-        [itvc setItems:allItems];
-    } else {
-        [itvc setItems:[[source.items allObjects] mutableCopy]];
-    }
+    [itvc setSourceTitle:source.title];
     
     [navController pushViewController:itvc animated:YES];
 }
@@ -126,16 +133,6 @@
 }
 
 - (void)didGetSources:(NSArray *)sourcesArr ofType:(ItemType)type {
-    // sources array
-    [sources removeAllObjects];
-    [sources addObjectsFromArray:sourcesArr];
-    
-    // all items
-    [allItems removeAllObjects];
-    for (Source *source in sources) {
-        [allItems addObjectsFromArray:[source.items allObjects]];
-    }
-    
     // last updated date
     if (lastUpdatedDate) {
         [lastUpdatedDate release];
@@ -225,8 +222,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 	feedLoader = [[ItemLoader alloc] initWithDelegate:self];
-    sources = [[NSMutableArray alloc] init];
-    allItems = [[NSMutableArray alloc] init];
     
     rtvc = [[RootTableViewController_iPhone alloc] initWithNibName:@"RootTableViewController_iPhone" bundle:nil];
     [rtvc setDelegate:self];
@@ -268,8 +263,8 @@
 	[self.window addSubview:navController.view];
     [self.window makeKeyAndVisible];
     
-    [self loginAndDownloadItems];
-    
+//    [self loginAndDownloadItems];
+        
     return YES;
 }
 
@@ -302,9 +297,9 @@
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
 	    
-    if (abs(floor([lastUpdatedDate timeIntervalSinceNow]/60)) > MIN_TIME_TO_REFRESH_ON_BECOME_ACTIVE) {
-        [self loginAndDownloadItems];
-    }
+//    if (abs(floor([lastUpdatedDate timeIntervalSinceNow]/60)) > MIN_TIME_TO_REFRESH_ON_BECOME_ACTIVE) {
+//        [self loginAndDownloadItems];
+//    }
 }
 
 /**
@@ -325,9 +320,6 @@
 }
 
 - (void)dealloc {
-    [sources release];
-    [allItems release];
-	
 	[super dealloc];
 }
 

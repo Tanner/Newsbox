@@ -217,11 +217,11 @@
 // Begin XML parsing
 - (void)startParsingData:(NSData *)data textEncodingName:(NSString *)textEncodingName {
 	if (data && !feedParser) {
-		
-		// Create feed info
-		Source *i = [Source newSource:[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] managedObjectContext]];
-		self.info = i;
-		[i release];
+//		
+//		// Create feed info
+//		Source *i = [Source newSource:[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] managedObjectContext]];
+//		self.info = i;
+//		[i release];
 		
 		// Check whether it's UTF-8
 		if (![[textEncodingName lowercaseString] isEqualToString:@"utf-8"]) {
