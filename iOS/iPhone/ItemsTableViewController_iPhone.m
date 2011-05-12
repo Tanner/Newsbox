@@ -48,8 +48,7 @@
         executedRequest = [[(AppDelegate_Shared *)delegate managedObjectContext] executeFetchRequest:fetchRequest error:nil];
     } else {
         NSFetchRequest *fetchRequest = [[(AppDelegate_Shared *)delegate managedObjectModel]
-                                        fetchRequestFromTemplateWithName:@"allItems"
-                                        substitutionVariables:nil];
+                                        fetchRequestTemplateForName:@"allItems"];
         executedRequest = [[(AppDelegate_Shared *)delegate managedObjectContext] executeFetchRequest:fetchRequest error:nil];
     }
     

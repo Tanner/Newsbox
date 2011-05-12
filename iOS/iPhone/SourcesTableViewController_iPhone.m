@@ -32,8 +32,7 @@
     [sources removeAllObjects];
     
     NSFetchRequest *fetchRequest = [[(AppDelegate_Shared *)delegate managedObjectModel]
-                                        fetchRequestFromTemplateWithName:@"allSources"
-                                        substitutionVariables:nil];
+                                    fetchRequestTemplateForName:@"allSources"];
     NSArray *executedRequest = [[(AppDelegate_Shared *)delegate managedObjectContext] executeFetchRequest:fetchRequest error:nil];
     
     if (executedRequest) {

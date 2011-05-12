@@ -49,8 +49,7 @@
 
 - (void)purgeSourcesAndItems {
     NSFetchRequest *fetchRequest = [[self managedObjectModel]
-                                    fetchRequestFromTemplateWithName:@"allItems"
-                                    substitutionVariables:nil];
+                                    fetchRequestTemplateForName:@"allItems"];
     NSArray *executedRequest = [[self managedObjectContext] executeFetchRequest:fetchRequest error:nil];
     
     if (executedRequest) {
@@ -60,8 +59,7 @@
     }
     
     fetchRequest = [[self managedObjectModel]
-                    fetchRequestFromTemplateWithName:@"allSources"
-                    substitutionVariables:nil];
+                                    fetchRequestTemplateForName:@"allSources"];
     executedRequest = [[self managedObjectContext] executeFetchRequest:fetchRequest error:nil];
     
     if (executedRequest) {

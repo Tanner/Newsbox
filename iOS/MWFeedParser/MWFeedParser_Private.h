@@ -62,7 +62,7 @@
 
 // Misc
 //- (BOOL)createEnclosureFromAttributes:(NSDictionary *)attributes andAddToItem:(Item *)currentItem;
-- (BOOL)processAtomLink:(NSDictionary *)attributes andAddToMWObject:(id)MWObject;
+- (NSString *)processAtomLink:(NSDictionary *)attributes;
 
 - (void)startParsingData:(NSData *)data textEncodingName:(NSString *)textEncodingName;
 

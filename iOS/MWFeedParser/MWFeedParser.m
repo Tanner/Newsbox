@@ -79,8 +79,6 @@
         [dateFormatterRFC3339 setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
 		[en_US_POSIX release];
         
-        sources = [[NSMutableArray alloc] init];
-		
 	}
 	return self;
 }
@@ -219,9 +217,7 @@
 // Begin XML parsing
 - (void)startParsingData:(NSData *)data textEncodingName:(NSString *)textEncodingName {
 	if (data && !feedParser) {
-		
-        [sources removeAllObjects];
-        
+		        
 		// Check whether it's UTF-8
 		if (![[textEncodingName lowercaseString] isEqualToString:@"utf-8"]) {
 			
@@ -556,10 +552,6 @@
 		// New item
 		Item *newItem = [Item newItem:[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] managedObjectContext]];
 		self.item = newItem;
-        
-        // New source
-		Source *i = [Source newSource:[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] managedObjectContext]];
-		self.info = i;
 		
 		// Return
 		[pool drain];
@@ -685,7 +677,7 @@
 				// Item
 				if (!processed) {
 					if ([currentPath isEqualToString:@"/feed/entry/title"]) { if (processedText.length > 0) item.title = processedText; processed = YES; }
-					else if ([currentPath isEqualToString:@"/feed/entry/link"]) { [self processAtomLink:currentElementAttributes andAddToMWObject:item]; processed = YES; }
+					else if ([currentPath isEqualToString:@"/feed/entry/link"]) { item.link = [self processAtomLink:currentElementAttributes]; processed = YES; }
 					else if ([currentPath isEqualToString:@"/feed/entry/id"]) { if (processedText.length > 0) item.identifier = processedText; processed = YES; }
 					else if ([currentPath isEqualToString:@"/feed/entry/summary"]) { if (processedText.length > 0) item.summary = processedText; processed = YES; }
 					else if ([currentPath isEqualToString:@"/feed/entry/content"]) { if (processedText.length > 0) item.content = processedText; processed = YES; }
@@ -699,9 +691,9 @@
 				
 				// Info
 				if (!processed && feedParseType != ParseTypeItemsOnly) {
-					if ([currentPath isEqualToString:@"/feed/entry/source/title"]) { if (processedText.length > 0) info.title = processedText; processed = YES; }
-					else if ([currentPath isEqualToString:@"/feed/entry/source/description"]) { if (processedText.length > 0) info.summary = processedText; processed = YES; }
-					else if ([currentPath isEqualToString:@"/feed/entry/source/link"]) { [self processAtomLink:currentElementAttributes andAddToMWObject:info]; processed = YES;}
+					if ([currentPath isEqualToString:@"/feed/entry/source/title"]) { if (processedText.length > 0) sourceTitle = [processedText copy]; processed = YES; }
+					else if ([currentPath isEqualToString:@"/feed/entry/source/description"]) { if (processedText.length > 0) sourceSummary = [processedText copy]; processed = YES; }
+					else if ([currentPath isEqualToString:@"/feed/entry/source/link"]) { sourceLink = [[self processAtomLink:currentElementAttributes] copy]; processed = YES;}
 				}
 		}
 	}
@@ -710,22 +702,29 @@
 	self.currentPath = [currentPath stringByDeletingLastPathComponent];
 	
     // Add info to item
-    if (item && info) {
-        BOOL newSource = YES;
-        Source *source = info;
-        for (Source *s in sources) {
-            // Must check if "new" source and "old" source aren't referencing the same object
-            if (source != s && [source.link isEqualToString:s.link]) {
-                [[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] managedObjectContext] deleteObject:source];
-                source = s;
-                newSource = NO;
-                break;
-            }
+    if (item && sourceLink) {
+        NSFetchRequest *fetchRequest = [[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] managedObjectModel]
+                                        fetchRequestFromTemplateWithName:@"sourceWithLink"
+                                        substitutionVariables:[NSDictionary dictionaryWithObject:sourceLink forKey:@"link"]];
+
+        NSArray *executedRequest = [[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] managedObjectContext] executeFetchRequest:fetchRequest error:nil];
+                
+        if (!executedRequest || [executedRequest count] == 0) {
+            Source *source = [Source newSource:[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] managedObjectContext]];
+            [source setTitle:sourceTitle];
+            [source setSummary:sourceSummary];
+            [source setLink:sourceLink];
+            
+            // release?
+            sourceTitle = nil;
+            sourceSummary = nil;
+            sourceLink = nil;
+            
+            [item setSource:source];
+        } else {
+            Source *source = [executedRequest objectAtIndex:0];
+            [item setSource:(Source *)[[source managedObjectContext] objectWithID:[source objectID]]];
         }
-        if (newSource == YES) {
-            [sources addObject:source];
-        }
-        [item setSource:source];
     }
     
 	// If end of an item then tell delegate
@@ -961,13 +960,12 @@
 
 // Process ATOM link and determine whether to ignore it, add it as the link element or add as enclosure
 // Links can be added to MWObject (info or item)
-- (BOOL)processAtomLink:(NSDictionary *)attributes andAddToMWObject:(id)MWObject {
+- (NSString *)processAtomLink:(NSDictionary *)attributes {
 	if (attributes && [attributes objectForKey:@"rel"]) {
 		
 		// Use as link if rel == alternate
 		if ([[attributes objectForKey:@"rel"] isEqualToString:@"alternate"]) {
-			[MWObject setLink:[attributes objectForKey:@"href"]]; // Can be added to MWFeedItem or MWFeedInfo
-			return YES;
+			return [attributes objectForKey:@"href"]; // Can be added to MWFeedItem or MWFeedInfo
 		}
 		
 		// Use as enclosure if rel == enclosure
@@ -979,7 +977,7 @@
 //		}
 		
 	}
-	return NO;
+	return @"";
 }
 
 @end
