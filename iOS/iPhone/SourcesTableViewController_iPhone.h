@@ -18,13 +18,13 @@
 @interface SourcesTableViewController_iPhone : UITableViewController {
     id<SourcesTableViewControllerDelegate, RefreshInfoViewDelegate> delegate;
     
-    NSMutableArray *sources;
+    NSArray *sources;
 }
 
 - (void)reloadData;
 - (void)setSources:(NSMutableArray *)someSources withType:(ItemType)type;
 
 @property (nonatomic, assign) id<SourcesTableViewControllerDelegate, RefreshInfoViewDelegate> delegate;
-@property (nonatomic, assign) NSMutableArray *sources;
+@property (nonatomic, assign) NSArray *sources;
 
 @end

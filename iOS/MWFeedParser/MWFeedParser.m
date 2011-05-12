@@ -31,6 +31,7 @@
 #import "MWFeedParser_Private.h"
 #import "NSString+HTML.h"
 #import "NSDate+InternetDateTime.h"
+#import "AppDelegate_Shared.h"
 
 // NSXMLParser Logging
 #if 0 // Set to 1 to enable XML parsing logs
@@ -216,7 +217,7 @@
 	if (data && !feedParser) {
 		
 		// Create feed info
-		Source *i = [[Source alloc] init];
+		Source *i = [Source newSource:[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] managedObjectContext]];
 		self.info = i;
 		[i release];
 		

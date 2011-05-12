@@ -33,7 +33,7 @@
     }
 }
 
-- (void)setItems:(NSMutableArray *)someItems withType:(ItemType)type {	
+- (void)setItems:(NSArray *)someItems withType:(ItemType)type {	
 	items = someItems;
 	
 	[self.tableView reloadData];

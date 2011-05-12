@@ -32,23 +32,23 @@
 
 @class Item;
 
-@interface Source : NSManagedObject <NSCoding> {
-	
-	NSString *title; // Feed title
-	NSString *link; // Feed link
-	NSString *summary; // Feed summary / description
-	
-    @private
-    NSMutableArray *items;
+@interface Source : NSManagedObject {
+@private
 }
 
++ (id)newSource:(NSManagedObjectContext *)managedObjectContext;
+
 - (NSComparisonResult)compare:(Source *)feedInfo;
-- (void)addItem:(Item *)item;
 
-@property (nonatomic, copy) NSString *title;
-@property (nonatomic, copy) NSString *link;
-@property (nonatomic, copy) NSString *summary;
+- (void)addItemsObject:(Item *)value;
+- (void)removeItemsObject:(Item *)value;
+- (void)addItems:(NSSet *)value;
+- (void)removeItems:(NSSet *)value;
 
-@property (nonatomic, retain) NSMutableArray *items;
+
+@property (nonatomic, retain) NSString *title;
+@property (nonatomic, retain) NSString *link;
+@property (nonatomic, retain) NSString *summary;
+@property (nonatomic, retain) NSSet *items;
 
 @end

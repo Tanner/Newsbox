@@ -164,14 +164,14 @@
     // make array of sources
     for (Source *source in sources) {
         if ([source compare:item.source] == NSOrderedSame) {
-            [[source items] addObject:item];
+            [source addItemsObject:item];
             
             return;
         }
     }
     
     [sources addObject:item.source];
-    [[sources lastObject] addItem:item];
+    [[sources lastObject] addItemsObject:item];
 }
 
 

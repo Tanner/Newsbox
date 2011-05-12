@@ -34,65 +34,68 @@
 #define EXCERPT(str, len) (([str length] > len) ? [[str substringToIndex:len-1] stringByAppendingString:@"…"] : str)
 
 @implementation Source
+@dynamic title;
+@dynamic link;
+@dynamic summary;
+@dynamic items;
 
-@synthesize title, link, summary, items;
++ (id)newSource:(NSManagedObjectContext *)managedObjectContext {
+    Source *result = (Source *)[NSEntityDescription insertNewObjectForEntityForName:@"Source" inManagedObjectContext:managedObjectContext];
+    return [result retain];
+}
 
-- (id)init {
-    if ((self = [super init])) {
-        items = [[NSMutableArray alloc] init];
-    }
-        
-    return self;
+- (void)addItemsObject:(Item *)value {    
+    NSSet *changedObjects = [[NSSet alloc] initWithObjects:&value count:1];
+    [self willChangeValueForKey:@"items" withSetMutation:NSKeyValueUnionSetMutation usingObjects:changedObjects];
+    [[self primitiveValueForKey:@"items"] addObject:value];
+    [self didChangeValueForKey:@"items" withSetMutation:NSKeyValueUnionSetMutation usingObjects:changedObjects];
+    [changedObjects release];
+}
+
+- (void)removeItemsObject:(Item *)value {
+    NSSet *changedObjects = [[NSSet alloc] initWithObjects:&value count:1];
+    [self willChangeValueForKey:@"items" withSetMutation:NSKeyValueMinusSetMutation usingObjects:changedObjects];
+    [[self primitiveValueForKey:@"items"] removeObject:value];
+    [self didChangeValueForKey:@"items" withSetMutation:NSKeyValueMinusSetMutation usingObjects:changedObjects];
+    [changedObjects release];
+}
+
+- (void)addItems:(NSSet *)value {    
+    [self willChangeValueForKey:@"items" withSetMutation:NSKeyValueUnionSetMutation usingObjects:value];
+    [[self primitiveValueForKey:@"items"] unionSet:value];
+    [self didChangeValueForKey:@"items" withSetMutation:NSKeyValueUnionSetMutation usingObjects:value];
+}
+
+- (void)removeItems:(NSSet *)value {
+    [self willChangeValueForKey:@"items" withSetMutation:NSKeyValueMinusSetMutation usingObjects:value];
+    [[self primitiveValueForKey:@"items"] minusSet:value];
+    [self didChangeValueForKey:@"items" withSetMutation:NSKeyValueMinusSetMutation usingObjects:value];
 }
 
 - (NSComparisonResult)compare:(Source *)otherSource {    
-    return [link compare:otherSource.link];
+    return [self.link compare:otherSource.link];
 }
 
 - (NSComparisonResult)compareByName:(Source *)otherSource {
-    return [title compare:otherSource.title options:NSCaseInsensitiveSearch];
-}
-
-- (void)addItem:(Item *)item {
-    [items addObject:item];
+    return [self.title compare:otherSource.title options:NSCaseInsensitiveSearch];
 }
 
 #pragma mark NSObject
 
 - (NSString *)description {
 	NSMutableString *string = [[NSMutableString alloc] initWithString:@"MWFeedInfo: "];
-	if (title)   [string appendFormat:@"“%@”", EXCERPT(title, 50)];
+	if (self.title)   [string appendFormat:@"“%@”", EXCERPT(self.title, 50)];
 	//if (link)    [string appendFormat:@" (%@)", link];
 	//if (summary) [string appendFormat:@", %@", MWExcerpt(summary, 50)];
 	return [string autorelease];
 }
 
 - (void)setTitle:(NSString *)aTitle {
-    title = [[NSString alloc] initWithString:[[aTitle stringByConvertingHTMLToPlainText] gtm_stringByUnescapingFromHTML]];
+    self.title = [[NSString alloc] initWithString:[[aTitle stringByConvertingHTMLToPlainText] gtm_stringByUnescapingFromHTML]];
 }
 
-- (void)dealloc {
-	[title release];
-	[link release];
-	[summary release];
-	[super dealloc];
-}
-
-#pragma mark NSCoding
-
-- (id)initWithCoder:(NSCoder *)decoder {
-	if ((self = [super init])) {
-		title = [[decoder decodeObjectForKey:@"title"] retain];
-		link = [[decoder decodeObjectForKey:@"link"] retain];
-		summary = [[decoder decodeObjectForKey:@"summary"] retain];
-	}
-	return self;
-}
-
-- (void)encodeWithCoder:(NSCoder *)encoder {
-	if (title) [encoder encodeObject:title forKey:@"title"];
-	if (link) [encoder encodeObject:link forKey:@"link"];
-	if (summary) [encoder encodeObject:summary forKey:@"summary"];
+- (void)didTurnIntoFault {
+	[super didTurnIntoFault];
 }
 
 @end

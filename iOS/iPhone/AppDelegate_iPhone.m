@@ -52,21 +52,21 @@
         return;
     }
     
-    // TODO
-    for (Source *source in sources) {
-        [source.items removeAllObjects];
-    }
-    [sources removeAllObjects];
-    [allItems removeAllObjects];
-    
-    // TODO
-    if ([[navController viewControllers] containsObject:stvc]) {
-        [stvc reloadData];
-    }
-    
-    if ([[navController viewControllers] containsObject:itvc]) {
-        [itvc reloadData];
-    }
+//    // TODO
+//    for (Source *source in sources) {
+//        [source.items removeAllObjects];
+//    }
+//    [sources removeAllObjects];
+//    [allItems removeAllObjects];
+//    
+//    // TODO
+//    if ([[navController viewControllers] containsObject:stvc]) {
+//        [stvc reloadData];
+//    }
+//    
+//    if ([[navController viewControllers] containsObject:itvc]) {
+//        [itvc reloadData];
+//    }
     
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     NSString *username = [prefs objectForKey:@"GoogleUsername"];
@@ -102,7 +102,7 @@
     if (source == nil) {
         [itvc setItems:allItems withType:ItemTypeUnread];
     } else {
-        [itvc setItems:source.items withType:ItemTypeUnread];
+        [itvc setItems:[source.items allObjects] withType:ItemTypeUnread];
     }
     
     [navController pushViewController:itvc animated:YES];
@@ -134,8 +134,8 @@
     
     // all items
     for (Source *source in sources) {
-        [source.items sortUsingSelector:@selector(compareByDate:)];
-        [allItems addObjectsFromArray:source.items];
+//        [source.items sortUsingSelector:@selector(compareByDate:)];
+        [allItems addObjectsFromArray:[source.items allObjects]];
     }
     
     [allItems sortUsingSelector:@selector(compareByDate:)];

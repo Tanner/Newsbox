@@ -242,7 +242,6 @@
 		ED0581C2130B30930055703C /* up_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up_arrow.png; sourceTree = "<group>"; };
 		ED0D9A0F13039B4000961E0D /* ItemsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsTableViewCell.h; sourceTree = "<group>"; };
 		ED0D9A1013039B4000961E0D /* ItemsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsTableViewCell.m; sourceTree = "<group>"; };
-		ED10E68F137C245900D2FD6C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		ED2E91C41301D23600983CC3 /* ItemLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ItemLoader.m; path = Shared/ItemLoader.m; sourceTree = "<group>"; };
 		ED2E91C51301D23600983CC3 /* ItemLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ItemLoader.h; path = Shared/ItemLoader.h; sourceTree = "<group>"; };
 		ED2E91CB1301D26F00983CC3 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
@@ -465,7 +464,6 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				ED10E68F137C245900D2FD6C /* CoreData.framework */,
 				ED2E92511301D2B400983CC3 /* CFNetwork.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,

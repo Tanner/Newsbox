@@ -30,6 +30,8 @@
 #import "Item.h"
 #import "NSString+HTML.h"
 #import "GTMNSString+HTML.h"
+#import "AppDelegate_Shared.h"
+
 
 #define EXCERPT(str, len) (([str length] > len) ? [[str substringToIndex:len-1] stringByAppendingString:@"…"] : str)
 
@@ -39,7 +41,7 @@
 
 - (id)init {
     if ((self = [super init])) {
-        source = [[Source alloc] init];
+        source = [Source newSource:[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] managedObjectContext]];
     }
     
     return self;

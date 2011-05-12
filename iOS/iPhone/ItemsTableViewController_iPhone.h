@@ -11,18 +11,18 @@
 #import "Item.h"
 
 @protocol ItemsTableViewControllerDelegate
-- (void)showItem:(Item *)anItem withArray:(NSMutableArray *)anArray;
+- (void)showItem:(Item *)anItem withArray:(NSArray *)anArray;
 @end
 
 @interface ItemsTableViewController_iPhone : UITableViewController {
 	id<ItemsTableViewControllerDelegate, RefreshInfoViewDelegate> delegate;
     
-    NSMutableArray *items;
+    NSArray *items;
     
     Item *currentItem;
 }
 
-- (void)setItems:(NSMutableArray *)someItems withType:(ItemType)type;
+- (void)setItems:(NSArray *)someItems withType:(ItemType)type;
 - (void)reloadData;
 - (void)reformatCellLabelsWithOrientation:(UIInterfaceOrientation)orientation;
 
