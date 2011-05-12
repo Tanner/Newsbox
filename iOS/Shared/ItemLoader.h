@@ -23,8 +23,6 @@
 	BOOL authenticated;
 	
 	MWFeedParser *parser;
-	
-    NSMutableArray *sources;
 }
 
 - (id)initWithDelegate:(id)aDelegate;
@@ -41,6 +39,6 @@
 
 @protocol ItemLoaderDelegate
 - (void)didLogin:(BOOL)login;
-- (void)didGetSources:(NSArray *)sources ofType:(ItemType)type;
+- (void)didLoadSourcesAndItems;
 - (void)showError:(NSString *)errorTitle withMessage:(NSString *)errorMessage withSettingsButton:(BOOL)settingsButton;
 @end

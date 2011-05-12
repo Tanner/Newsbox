@@ -78,6 +78,8 @@
         [dateFormatterRFC822 setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
         [dateFormatterRFC3339 setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
 		[en_US_POSIX release];
+        
+        sources = [[NSMutableArray alloc] init];
 		
 	}
 	return self;
@@ -217,12 +219,9 @@
 // Begin XML parsing
 - (void)startParsingData:(NSData *)data textEncodingName:(NSString *)textEncodingName {
 	if (data && !feedParser) {
-//		
-//		// Create feed info
-//		Source *i = [Source newSource:[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] managedObjectContext]];
-//		self.info = i;
-//		[i release];
 		
+        [sources removeAllObjects];
+        
 		// Check whether it's UTF-8
 		if (![[textEncodingName lowercaseString] isEqualToString:@"utf-8"]) {
 			
@@ -557,7 +556,10 @@
 		// New item
 		Item *newItem = [Item newItem:[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] managedObjectContext]];
 		self.item = newItem;
-		[newItem release];
+        
+        // New source
+		Source *i = [Source newSource:[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] managedObjectContext]];
+		self.info = i;
 		
 		// Return
 		[pool drain];
@@ -697,9 +699,9 @@
 				
 				// Info
 				if (!processed && feedParseType != ParseTypeItemsOnly) {
-					if ([currentPath isEqualToString:@"/feed/entry/source/title"]) { if (processedText.length > 0) item.source.title = processedText; processed = YES; }
-					else if ([currentPath isEqualToString:@"/feed/entry/source/description"]) { if (processedText.length > 0) item.source.summary = processedText; processed = YES; }
-					else if ([currentPath isEqualToString:@"/feed/entry/source/link"]) { [self processAtomLink:currentElementAttributes andAddToMWObject:item.source]; processed = YES;}
+					if ([currentPath isEqualToString:@"/feed/entry/source/title"]) { if (processedText.length > 0) info.title = processedText; processed = YES; }
+					else if ([currentPath isEqualToString:@"/feed/entry/source/description"]) { if (processedText.length > 0) info.summary = processedText; processed = YES; }
+					else if ([currentPath isEqualToString:@"/feed/entry/source/link"]) { [self processAtomLink:currentElementAttributes andAddToMWObject:info]; processed = YES;}
 				}
 		}
 	}
@@ -707,6 +709,25 @@
 	// Adjust path
 	self.currentPath = [currentPath stringByDeletingLastPathComponent];
 	
+    // Add info to item
+    if (item && info) {
+        BOOL newSource = YES;
+        Source *source = info;
+        for (Source *s in sources) {
+            // Must check if "new" source and "old" source aren't referencing the same object
+            if (source != s && [source.link isEqualToString:s.link]) {
+                [[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] managedObjectContext] deleteObject:source];
+                source = s;
+                newSource = NO;
+                break;
+            }
+        }
+        if (newSource == YES) {
+            [sources addObject:source];
+        }
+        [item setSource:source];
+    }
+    
 	// If end of an item then tell delegate
 	if (!processed) {
 		if (((feedType == FeedTypeRSS || feedType == FeedTypeRSS1) && [qName isEqualToString:@"item"]) ||
@@ -859,7 +880,6 @@
 		
 		// Finish
 		self.item = nil;
-		
 	}
 }
 

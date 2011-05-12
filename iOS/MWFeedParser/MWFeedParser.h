@@ -103,7 +103,7 @@ typedef enum { FeedTypeUnknown, FeedTypeRSS, FeedTypeRSS1, FeedTypeAtom } FeedTy
 //	NSDictionary *currentElementAttributes;
 	Item *item;
 	Source *info;
-	
+	NSMutableArray *sources;
 }
 
 #pragma mark Public Properties

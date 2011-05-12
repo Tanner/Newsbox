@@ -19,7 +19,7 @@
 + (id)newItem:(NSManagedObjectContext *)managedObjectContext {
     Item *result = (Item *)[NSEntityDescription insertNewObjectForEntityForName:@"Item" inManagedObjectContext:managedObjectContext];
     
-    result.source = [Source newSource:[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] managedObjectContext]];
+//    result.source = [Source newSource:[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] managedObjectContext]];
     
     return [result retain];
 }
@@ -50,7 +50,7 @@
 
 - (void)setDate:(NSDate *)aDate {
 	[self willChangeValueForKey:@"date"];
-    [self setPrimitiveValue:aDate forKey:@"date"];
+    [self setPrimitiveValue:aDate forKey:@"DATE"];
     [self didChangeValueForKey:@"date"];
 	
 	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];

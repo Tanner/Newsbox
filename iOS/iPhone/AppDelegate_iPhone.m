@@ -132,7 +132,7 @@
     }
 }
 
-- (void)didGetSources:(NSArray *)sourcesArr ofType:(ItemType)type {
+- (void)didLoadSourcesAndItems {
     // last updated date
     if (lastUpdatedDate) {
         [lastUpdatedDate release];

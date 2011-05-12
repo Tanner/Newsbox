@@ -10,6 +10,7 @@
 #import "ASIHTTPRequest.h"
 #import "ASIFormDataRequest.h"
 #import "SourceSupport.h"
+#import "AppDelegate_Shared.h"
 
 @interface ItemLoader()
 - (NSString *)sidHeader;
@@ -30,9 +31,7 @@
 		
 		parser = [[MWFeedParser alloc] init];
 		[parser setDelegate:self];
-		
-        sources = [[NSMutableArray alloc] init];
-	}
+    }
 	
 	return self;
 }
@@ -157,29 +156,17 @@
 
 
 - (void)feedParser:(MWFeedParser *)parser didParseFeedInfo:(Source *)info {
-    // necessary?
+
 }
 
 
 - (void)feedParser:(MWFeedParser *)parser didParseFeedItem:(Item *)item {    
-    // make array of sources
-    for (Source *source in sources) {
-        if ([source compare:item.source] == NSOrderedSame) {
-            [source addItemsObject:item];
-            
-            return;
-        }
-    }
     
-    [sources addObject:item.source];
-    [[sources lastObject] addItemsObject:item];
 }
 
 
 - (void)feedParserDidFinish:(MWFeedParser *)parser {
-	[delegate didGetSources:sources ofType:currentItemType];
-
-	[sources removeAllObjects];
+	[delegate didLoadSourcesAndItems];
 }
 
 
@@ -189,7 +176,6 @@
 
 - (void)dealloc {
 	[parser release];
-    [sources release];
     
 	[super dealloc];
 }
