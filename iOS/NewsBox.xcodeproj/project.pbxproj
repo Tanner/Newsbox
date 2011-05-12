@@ -432,7 +432,6 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				ED10E68F137C245900D2FD6C /* CoreData.framework */,
 				2860E386111B897F00E27156 /* iPhone */,
 				29B97317FDCFA39411CA2CEA /* iPad */,
 				28EEBF621118D79A00187D67 /* Shared */,
@@ -466,6 +465,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ED10E68F137C245900D2FD6C /* CoreData.framework */,
 				ED2E92511301D2B400983CC3 /* CFNetwork.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
