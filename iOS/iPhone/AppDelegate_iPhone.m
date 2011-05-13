@@ -70,6 +70,8 @@
         }
     }
     
+    [self saveContext];
+    
     if ([[navController viewControllers] containsObject:stvc]) {
         [stvc reloadData];
     }
@@ -169,7 +171,7 @@
 //        parsingManagedObjectContext_ = nil;
 //    }
     
-    [self saveContext];
+    [self saveLoadingContext];
     
     needsPurge = YES;
     
