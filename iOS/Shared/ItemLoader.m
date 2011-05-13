@@ -12,6 +12,8 @@
 #import "SourceSupport.h"
 #import "AppDelegate_Shared.h"
 
+#define NUM_ITEMS_REQUESTED 2500
+
 @interface ItemLoader()
 - (NSString *)sidHeader;
 - (NSString *)authHeader;
@@ -112,7 +114,7 @@
 	currentItemType = type;
 	
 	if (type == ItemTypeUnread) {
-		ASIHTTPRequest *request = [self requestForAPIEndpoint:@"https://www.google.com/reader/atom/user/-/state/com.google/reading-list?xt=user/-/state/com.google/read"];
+		ASIHTTPRequest *request = [self requestForAPIEndpoint:[NSString stringWithFormat:@"https://www.google.com/reader/atom/user/-/state/com.google/reading-list?xt=user/-/state/com.google/read&n=%d", NUM_ITEMS_REQUESTED]];
 		[request setDelegate:self];
 		[request startAsynchronous];
 	}

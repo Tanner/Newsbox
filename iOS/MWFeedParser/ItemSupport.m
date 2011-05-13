@@ -60,7 +60,7 @@
 
 - (void)setDate:(NSDate *)aDate {
 	[self willChangeValueForKey:@"date"];
-    [self setPrimitiveValue:aDate forKey:@"DATE"];
+    [self setPrimitiveValue:aDate forKey:@"date"];
     [self didChangeValueForKey:@"date"];
 	
 	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
@@ -85,6 +85,12 @@
     [self willChangeValueForKey:@"shortDateString"];
 	[self setPrimitiveValue:aShortDateString forKey:@"shortDateString"];
     [self didChangeValueForKey:@"shortDateString"];
+}
+
+- (void)setRead:(NSNumber *)read {
+    [self willChangeValueForKey:@"read"];
+    [self setPrimitiveValue:read forKey:@"read"];
+    [self didChangeValueForKey:@"read"];
 }
 
 #pragma mark NSObject

@@ -8,6 +8,7 @@
 
 #import "ItemsTableViewCell.h"
 #import "OBGradientView.h"
+#import "SourceSupport.h"
 
 #define PADDING 10.0f
 #define DISCLOSURE_ACCESSORY_WIDTH 12.0f
@@ -112,7 +113,7 @@
     
     [sourceLabel setTextColor:darkGrayColor];
     [sourceLabel setFrame:CGRectZero];
-    [sourceLabel setText:item.contentSample];
+    [sourceLabel setText:item.source.title];
     [sourceLabel sizeToFit];
     [sourceLabel setFrame:CGRectMake(PADDING, 
 											PADDING,
