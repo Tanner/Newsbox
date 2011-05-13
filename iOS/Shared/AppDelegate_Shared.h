@@ -19,7 +19,7 @@
     
 @protected
     NSManagedObjectContext *managedObjectContext_;
-    NSManagedObjectContext *parsingManagedObjectContext_;
+    NSManagedObjectContext *loadingManagedObjectContext_;
     NSManagedObjectModel *managedObjectModel_;
     NSPersistentStoreCoordinator *persistentStoreCoordinator_;
 }
@@ -27,7 +27,7 @@
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
-@property (nonatomic, retain, readonly) NSManagedObjectContext *parsingManagedObjectContext;
+@property (nonatomic, retain, readonly) NSManagedObjectContext *loadingManagedObjectContext;
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
 @property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 

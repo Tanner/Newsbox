@@ -1,4 +1,4 @@
-//
+
 //  AppDelegate_Shared.m
 //  Newsbox
 //
@@ -49,7 +49,7 @@
 
 - (void)saveLoadingContext {
     NSError *error = nil;
-	NSManagedObjectContext *managedObjectContext = self.parsingManagedObjectContext;
+	NSManagedObjectContext *managedObjectContext = self.loadingManagedObjectContext;
     if (managedObjectContext != nil) {
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
             /*
@@ -87,19 +87,19 @@
 }
 
 
-- (NSManagedObjectContext *)parsingManagedObjectContext {
+- (NSManagedObjectContext *)loadingManagedObjectContext {
     
-    if (parsingManagedObjectContext_ != nil) {
-        return parsingManagedObjectContext_;
+    if (loadingManagedObjectContext_ != nil) {
+        return loadingManagedObjectContext_;
     }
     
     NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
     if (coordinator != nil) {
-        parsingManagedObjectContext_ = [[NSManagedObjectContext alloc] init];
-        [parsingManagedObjectContext_ setPersistentStoreCoordinator:coordinator];
-        [parsingManagedObjectContext_ setMergePolicy:NSMergeByPropertyObjectTrumpMergePolicy];
+        loadingManagedObjectContext_ = [[NSManagedObjectContext alloc] init];
+        [loadingManagedObjectContext_ setPersistentStoreCoordinator:coordinator];
+        [loadingManagedObjectContext_ setMergePolicy:NSMergeByPropertyObjectTrumpMergePolicy];
     }
-    return parsingManagedObjectContext_;
+    return loadingManagedObjectContext_;
 }
 
 

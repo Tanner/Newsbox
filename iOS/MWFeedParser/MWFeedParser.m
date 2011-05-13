@@ -703,13 +703,13 @@
                                             substitutionVariables:[NSDictionary dictionaryWithObject:[currentItemInfo valueForKey:@"identifier"] forKey:@"identifier"]];
             
             NSError *error = nil;
-            NSArray *executedRequest = [[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] parsingManagedObjectContext] executeFetchRequest:fetchRequest error:&error];
+            NSArray *executedRequest = [[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] loadingManagedObjectContext] executeFetchRequest:fetchRequest error:&error];
             if (error) {
                 NSLog(@"%@", error);
             }
             
             if (!executedRequest || [executedRequest count] == 0) {
-                Item *item = [Item newItem:[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] parsingManagedObjectContext]];
+                Item *item = [Item newItem:[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] loadingManagedObjectContext]];
                 if ([currentItemInfo valueForKey:@"title"])
                     [item setTitle:[currentItemInfo valueForKey:@"title"]];
                 if ([currentItemInfo valueForKey:@"link"])
@@ -735,13 +735,13 @@
                                                     substitutionVariables:[NSDictionary dictionaryWithObject:[currentSourceInfo valueForKey:@"link"] forKey:@"link"]];
                     
                     NSError *error = nil;
-                    NSArray *executedRequest = [[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] parsingManagedObjectContext] executeFetchRequest:fetchRequest error:&error];
+                    NSArray *executedRequest = [[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] loadingManagedObjectContext] executeFetchRequest:fetchRequest error:&error];
                     if (error) {
                         NSLog(@"%@", error);
                     }
                     
                     if (!executedRequest || [executedRequest count] == 0) {
-                        Source *source = [Source newSource:[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] parsingManagedObjectContext]];
+                        Source *source = [Source newSource:[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] loadingManagedObjectContext]];
                         if ([currentSourceInfo valueForKey:@"title"])
                             [source setTitle:[currentSourceInfo valueForKey:@"title"]];
                         if ([currentSourceInfo valueForKey:@"summary"])
