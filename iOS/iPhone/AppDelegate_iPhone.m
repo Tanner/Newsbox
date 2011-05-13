@@ -98,8 +98,11 @@
     [navController pushViewController:stvc animated:YES];
 }
 
-- (void)showSettingsView {
+- (void)showSettingsView {    
     [navController presentModalViewController:settingsNavController animated:YES];
+    
+    // TODO / TEMPORARY - REMOVE
+    [self purgeSourcesAndItems];
 }
 
 - (void)rootViewDidAppear {

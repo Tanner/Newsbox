@@ -31,7 +31,20 @@
 	[self setPrimitiveValue:aSummary forKey:@"summary"];
     [self didChangeValueForKey:@"summary"];
     
-	NSString *aContentSample = [[NSString alloc] initWithString:[[self.summary stringByConvertingHTMLToPlainText] gtm_stringByUnescapingFromHTML]];
+	NSString *aContentSample = [[NSString alloc] initWithString:[[[self.summary stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] stringByConvertingHTMLToPlainText] gtm_stringByUnescapingFromHTML]];
+	
+	// sample only needs max 150 chars
+    [self willChangeValueForKey:@"contentSample"];
+    [self setPrimitiveValue:[aContentSample substringToIndex:MIN(150, [aContentSample length])] forKey:@"contentSample"];
+    [self didChangeValueForKey:@"contentSample"];
+}
+
+- (void)setContent:(NSString *)aContent {
+    [self willChangeValueForKey:@"content"];
+	[self setPrimitiveValue:aContent forKey:@"content"];
+    [self didChangeValueForKey:@"content"];
+    
+	NSString *aContentSample = [[NSString alloc] initWithString:[[[self.content stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] stringByConvertingHTMLToPlainText] gtm_stringByUnescapingFromHTML]];
 	
 	// sample only needs max 150 chars
     [self willChangeValueForKey:@"contentSample"];
