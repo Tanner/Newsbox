@@ -61,7 +61,7 @@
                                                                     password:@"pack12"
                                                                  persistence:NSURLCredentialPersistenceNone]]; 
     [GitHubServiceSettings setSecureServerAddress:@"https://github.com"];
-    [GitHubCommitServiceFactory requestCommitsOnBranch:@"iOS-coredata" repository:@"Newsbox" user:@"Tanner" delegate:self];
+    [GitHubCommitServiceFactory requestCommitsOnBranch:@"iOS" repository:@"Newsbox" user:@"Tanner" delegate:self];
     
     [self.tableView reloadData];
     
