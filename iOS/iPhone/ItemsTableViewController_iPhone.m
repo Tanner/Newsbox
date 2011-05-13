@@ -34,11 +34,6 @@
         [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:[items indexOfObject:currentItem] inSection:0] atScrollPosition:UITableViewScrollPositionNone animated:NO];
         
         [[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:[items indexOfObject:currentItem] inSection:0]] setSelected:YES animated:NO];
-        
-        NSIndexPath *path = [self.tableView indexPathForSelectedRow];
-        if (path) {
-            NSLog(@"%d", path.row);
-        }
     }
 }
 
