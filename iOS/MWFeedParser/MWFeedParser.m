@@ -700,7 +700,7 @@
 			(feedType == FeedTypeAtom && [qName isEqualToString:@"entry"])) {
             // Check to see if identifier is new or not
             NSFetchRequest *fetchRequest = [[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] managedObjectModel]
-                                            fetchRequestFromTemplateWithName:@"itemWithIdentifier"
+                                            fetchRequestFromTemplateWithName:@"itemsWithIdentifier"
                                             substitutionVariables:[NSDictionary dictionaryWithObject:[currentItemInfo valueForKey:@"identifier"] forKey:@"identifier"]];
             
             NSError *error = nil;
