@@ -111,10 +111,10 @@
 		ED6446E9130A0E1000C197DB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED6446E8130A0E1000C197DB /* QuartzCore.framework */; };
 		ED6446F1130A17E500C197DB /* OBGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6446F0130A17E500C197DB /* OBGradientView.m */; };
 		ED689DBD137CD05300004A03 /* Source.m in Sources */ = {isa = PBXBuildFile; fileRef = ED689DBC137CD05300004A03 /* Source.m */; };
-		ED689DC0137CD05400004A03 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = ED689DBF137CD05400004A03 /* Item.m */; };
 		ED6A677113046C81006F7838 /* itemscript.js in Resources */ = {isa = PBXBuildFile; fileRef = ED6A677013046C81006F7838 /* itemscript.js */; };
 		ED71D1081303266E00C3BE65 /* Icon-57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED71D1071303266E00C3BE65 /* Icon-57@2x.png */; };
 		ED71D10A1303268D00C3BE65 /* Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = ED71D1091303268D00C3BE65 /* Icon-57.png */; };
+		ED9325E2137D762D0041D8C2 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9325E1137D762D0041D8C2 /* Item.m */; };
 		EDAFC7A913074F04009C47D7 /* SettingsTableViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = EDAFC7A713074F04009C47D7 /* SettingsTableViewController_iPhone.m */; };
 		EDAFC7AA13074F04009C47D7 /* SettingsTableViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDAFC7A813074F04009C47D7 /* SettingsTableViewController_iPhone.xib */; };
 		EDDA76171308B167007AB030 /* RefreshInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDA76161308B167007AB030 /* RefreshInfoView.m */; };
@@ -341,11 +341,11 @@
 		ED6446F0130A17E500C197DB /* OBGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBGradientView.m; sourceTree = "<group>"; };
 		ED689DBB137CD05300004A03 /* Source.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Source.h; sourceTree = "<group>"; };
 		ED689DBC137CD05300004A03 /* Source.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Source.m; sourceTree = "<group>"; };
-		ED689DBE137CD05400004A03 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
-		ED689DBF137CD05400004A03 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		ED6A677013046C81006F7838 /* itemscript.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = itemscript.js; sourceTree = "<group>"; };
 		ED71D1071303266E00C3BE65 /* Icon-57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57@2x.png"; sourceTree = "<group>"; };
 		ED71D1091303268D00C3BE65 /* Icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57.png"; sourceTree = "<group>"; };
+		ED9325E0137D762D0041D8C2 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		ED9325E1137D762D0041D8C2 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		EDAFC7A613074F04009C47D7 /* SettingsTableViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController_iPhone.h; sourceTree = "<group>"; };
 		EDAFC7A713074F04009C47D7 /* SettingsTableViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController_iPhone.m; sourceTree = "<group>"; };
 		EDAFC7A813074F04009C47D7 /* SettingsTableViewController_iPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewController_iPhone.xib; sourceTree = "<group>"; };
@@ -760,8 +760,8 @@
 				ED10E69C137C31AA00D2FD6C /* ItemSupport.m */,
 				ED689DBB137CD05300004A03 /* Source.h */,
 				ED689DBC137CD05300004A03 /* Source.m */,
-				ED689DBE137CD05400004A03 /* Item.h */,
-				ED689DBF137CD05400004A03 /* Item.m */,
+				ED9325E0137D762D0041D8C2 /* Item.h */,
+				ED9325E1137D762D0041D8C2 /* Item.m */,
 			);
 			path = MWFeedParser;
 			sourceTree = "<group>";
@@ -1002,7 +1002,7 @@
 				ED10E69A137C2F5F00D2FD6C /* SourceSupport.m in Sources */,
 				ED10E69D137C31AA00D2FD6C /* ItemSupport.m in Sources */,
 				ED689DBD137CD05300004A03 /* Source.m in Sources */,
-				ED689DC0137CD05400004A03 /* Item.m in Sources */,
+				ED9325E2137D762D0041D8C2 /* Item.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,7 +2,7 @@
 //  Item.h
 //  Newsbox
 //
-//  Created by Ryan Ashcraft on 5/12/11.
+//  Created by Ryan Ashcraft on 5/13/11.
 //  Copyright (c) 2011 Ashcraft Media. All rights reserved.
 //
 
@@ -23,7 +23,7 @@
 @property (nonatomic, retain) NSDate * date;
 @property (nonatomic, retain) NSString * contentSample;
 @property (nonatomic, retain) NSString * shortDateString;
-@property (nonatomic, retain) NSNumber * unread;
+@property (nonatomic, retain) NSNumber * read;
 @property (nonatomic, retain) NSString * content;
 @property (nonatomic, retain) Source * source;
 

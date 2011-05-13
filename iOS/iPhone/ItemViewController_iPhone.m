@@ -150,6 +150,9 @@
 }
          
 - (void)displayCurrentItem {
+    // Set Item's read property
+    [[array objectAtIndex:currentItemIndex] setRead:[NSNumber numberWithBool:YES]];
+    
     [self setIsPrevItemAvailable:currentItemIndex > 0
           andIsNextItemAvailable:currentItemIndex < [array count]-1];
     [wv loadHTMLString:[self stylizedHTMLWithItem:[array objectAtIndex:currentItemIndex]] baseURL:nil];

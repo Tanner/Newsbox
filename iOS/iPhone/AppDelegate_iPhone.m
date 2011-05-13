@@ -17,7 +17,7 @@
 
 @interface AppDelegate_iPhone (private)
 - (void)loginAndDownloadItems;
-- (void)purgeSourcesAndItems;
+- (void)purgeReadSourcesAndItems;
 @end
 
 @implementation AppDelegate_iPhone
@@ -47,9 +47,9 @@
 
 #pragma mark - 
 
-- (void)purgeSourcesAndItems {
+- (void)purgeReadSourcesAndItems {
     NSFetchRequest *fetchRequest = [[self managedObjectModel]
-                                    fetchRequestTemplateForName:@"allItems"];
+                                    fetchRequestTemplateForName:@"readItems"];
     NSArray *executedRequest = [[self managedObjectContext] executeFetchRequest:fetchRequest error:nil];
     
     if (executedRequest) {
@@ -63,9 +63,19 @@
     executedRequest = [[self managedObjectContext] executeFetchRequest:fetchRequest error:nil];
     
     if (executedRequest) {
-        for (id i in executedRequest) {
-            [[self managedObjectContext] deleteObject:i];
+        for (Source *source in executedRequest) {
+            if ([source.items count] == 0) {
+                [[self managedObjectContext] deleteObject:source];
+            }
         }
+    }
+    
+    if ([[navController viewControllers] containsObject:stvc]) {
+        [stvc reloadData];
+    }
+    
+    if ([[navController viewControllers] containsObject:itvc]) {
+        [itvc reloadData];
     }
 }
 
@@ -103,7 +113,10 @@
 }
 
 - (void)rootViewDidAppear {
-//    [self purgeSourcesAndItems];
+    if (needsPurge) {
+        [self purgeReadSourcesAndItems];
+        needsPurge = NO;
+    }
 }
 
 #pragma mark -
@@ -158,7 +171,8 @@
     
     [self saveContext];
     
-    // TODO
+    needsPurge = YES;
+    
     if ([[navController viewControllers] containsObject:stvc]) {
         [stvc reloadData];
     }

@@ -42,6 +42,8 @@ UIAlertViewDelegate> {
     
     NSDate *lastUpdatedDate;
     
+    BOOL needsPurge;
+    
 //    NSMutableArray *sources;
 //    NSMutableArray *allItems;
 }

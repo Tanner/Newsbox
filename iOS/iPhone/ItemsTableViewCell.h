@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ItemSupport.h"
 
 @interface ItemsTableViewCell : UITableViewCell {
 	UILabel *sourceLabel;
@@ -16,10 +16,6 @@
 	UILabel *contentLabel;
 }
 
-- (void)setSourceLabelText:(NSString *)sourceText
-             andDateLabelText:(NSString *)dateText
-            andTitleLabelText:(NSString *)titleText
-          andContentLabelText:(NSString *)contentText
-                  andCellSize:(CGSize)size;
+- (void)setItem:(Item *)item andCellSize:(CGSize)size;
 
 @end

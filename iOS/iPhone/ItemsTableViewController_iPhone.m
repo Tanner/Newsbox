@@ -81,11 +81,7 @@
 	// don't reload everything, just visible
 	for (UITableViewCell *cell in [self.tableView visibleCells]) {
 		int index = [self.tableView indexPathForCell:cell].row;
-		[(ItemsTableViewCell *)cell setSourceLabelText:[[[items objectAtIndex:index] source] title]
-                                      andDateLabelText:[[items objectAtIndex:index] shortDateString]
-										andTitleLabelText:[[items objectAtIndex:index] title]
-									  andContentLabelText:[[items objectAtIndex:index] contentSample]
-											  andCellSize:CGSizeMake(width, CELL_HEIGHT)
+		[(ItemsTableViewCell *)cell setItem:[items objectAtIndex:index] andCellSize:CGSizeMake(width, CELL_HEIGHT)
 		 ];
 	}
 }
@@ -162,12 +158,7 @@
         cell = [[[ItemsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-    [(ItemsTableViewCell *)cell setSourceLabelText:[[(Item *)[items objectAtIndex:indexPath.row] source] title]
-                                  andDateLabelText:[(Item *)[items objectAtIndex:indexPath.row] shortDateString]
-									andTitleLabelText:[(Item *)[items objectAtIndex:indexPath.row] title]
-								  andContentLabelText:[(Item *)[items objectAtIndex:indexPath.row] contentSample]
-										  andCellSize:CGSizeMake(self.view.bounds.size.width, CELL_HEIGHT)
-	 ];
+    [(ItemsTableViewCell *)cell setItem:[items objectAtIndex:indexPath.row] andCellSize:CGSizeMake(self.view.bounds.size.width, CELL_HEIGHT)];
     
     return cell;
 }

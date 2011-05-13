@@ -46,34 +46,24 @@
     if (self.selected || self.highlighted) {
         for (UIView *view in self.contentView.subviews) {
             if ([view isKindOfClass:[UILabel class]]) {
-                [(UILabel *)view setTextColor:[UIColor whiteColor]];
                 [(UILabel *)view setOpaque:NO];
                 [(UILabel *)view setBackgroundColor:[UIColor clearColor]];
             }
         }
     }
-    else {
-        for (UIView *view in self.contentView.subviews) {
-            if ([view isKindOfClass:[UILabel class]]) {
-                if (view == titleLabel) {
-                    [(UILabel *)view setTextColor:[UIColor blackColor]];
-                } else if (view == dateLabel) {
-                    [(UILabel *)view setTextColor:[UIColor colorWithRed:0.7 green:0.0 blue:0.0 alpha:1.0]];
-                } else {
-                    [(UILabel *)view setTextColor:[UIColor darkGrayColor]];
-                }
-            }
-        }
-    }
 }
 
-- (void)setSourceLabelText:(NSString *)sourceText
-          andDateLabelText:(NSString *)dateText
-			andTitleLabelText:(NSString *)titleText
-		  andContentLabelText:(NSString *)contentText
-				  andCellSize:(CGSize)size {
-    
+- (void)setItem:(Item *)item andCellSize:(CGSize)size {
 	int const MAX_HEIGHT = 95.0f;
+    UIColor *redColor = [UIColor colorWithRed:0.7 green:0.0 blue:0.0 alpha:1];
+    UIColor *darkGrayColor = [UIColor darkGrayColor];
+    UIColor *blackColor = [UIColor blackColor];
+    
+    if ([item.read boolValue]) {
+        redColor = [redColor colorWithAlphaComponent:0.5];
+        darkGrayColor = [darkGrayColor colorWithAlphaComponent:0.5];
+        blackColor = [blackColor colorWithAlphaComponent:0.5];
+    }
     
     /*
      Date
@@ -89,12 +79,13 @@
         [dateLabel setTextAlignment:UITextAlignmentRight];
         [dateLabel setNumberOfLines:1];
 		[dateLabel setLineBreakMode:UILineBreakModeClip];
-		[dateLabel setTextColor:[UIColor colorWithRed:0.7 green:0.0 blue:0.0 alpha:1.0]];
+        [dateLabel setHighlightedTextColor:[UIColor whiteColor]];
 		[self.contentView addSubview:dateLabel];
 	}
     
+    [dateLabel setTextColor:redColor];
     [dateLabel setFrame:CGRectZero];
-	[dateLabel setText:dateText];
+	[dateLabel setText:item.dateString];
     [dateLabel sizeToFit];
     [dateLabel setFrame:CGRectMake(size.width - DISCLOSURE_ACCESSORY_WIDTH - dateLabel.frame.size.width, 
                                    PADDING,
@@ -115,12 +106,13 @@
 		[sourceLabel setFont:[UIFont systemFontOfSize:12.0f]];
         [sourceLabel setNumberOfLines:1];
 		[sourceLabel setLineBreakMode:UILineBreakModeTailTruncation];
-		[sourceLabel setTextColor:[UIColor darkGrayColor]];
+        [sourceLabel setHighlightedTextColor:[UIColor whiteColor]];
 		[self.contentView addSubview:sourceLabel];
 	}
     
+    [sourceLabel setTextColor:darkGrayColor];
     [sourceLabel setFrame:CGRectZero];
-    [sourceLabel setText:sourceText];
+    [sourceLabel setText:item.contentSample];
     [sourceLabel sizeToFit];
     [sourceLabel setFrame:CGRectMake(PADDING, 
 											PADDING,
@@ -134,7 +126,7 @@
 	CGSize titleLabelConstSize = { size.width - PADDING*2 - DISCLOSURE_ACCESSORY_WIDTH - PADDING, MAX_HEIGHT - PADDING - sourceLabel.frame.origin.y - sourceLabel.frame.size.height };
 	
 	// substring to 50 makes it a max of two lines
-	CGSize titleTextSize = [[titleText substringToIndex:MIN(50, [titleText length])] sizeWithFont:[UIFont systemFontOfSize:16.0f] constrainedToSize:titleLabelConstSize lineBreakMode:UILineBreakModeTailTruncation];
+	CGSize titleTextSize = [[item.title substringToIndex:MIN(50, [item.title length])] sizeWithFont:[UIFont systemFontOfSize:16.0f] constrainedToSize:titleLabelConstSize lineBreakMode:UILineBreakModeTailTruncation];
 	if (!titleLabel) {
 		titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
 		[titleLabel setOpaque:YES];
@@ -142,20 +134,25 @@
 		[titleLabel setFont:[UIFont boldSystemFontOfSize:16.0f]];
 		[titleLabel setNumberOfLines:2];
 		[titleLabel setLineBreakMode:UILineBreakModeTailTruncation];
-        [titleLabel setTextColor:[UIColor blackColor]];
+        [titleLabel setHighlightedTextColor:[UIColor whiteColor]];
 		[self.contentView addSubview:titleLabel];
 	}
 
+    [titleLabel setTextColor:blackColor];
     [titleLabel setFrame:CGRectZero];
-    [titleLabel setText:titleText];
+    [titleLabel setText:item.title];
     [titleLabel sizeToFit];
     [titleLabel setFrame:CGRectMake(sourceLabel.frame.origin.x,
 										sourceLabel.frame.origin.y + sourceLabel.frame.size.height,
 										MIN(titleLabel.frame.size.width, size.width - DISCLOSURE_ACCESSORY_WIDTH - PADDING*3),
 										titleTextSize.height)];
 	
+    /*
+     Content Sample
+     */
+    
 	CGSize contentLabelConstSize = { size.width - PADDING*2 - DISCLOSURE_ACCESSORY_WIDTH - PADDING, MAX_HEIGHT - PADDING - (titleLabel.frame.origin.y + titleLabel.frame.size.height) };
-	CGSize contentTextSize = [contentText sizeWithFont:[UIFont systemFontOfSize:13.0f] constrainedToSize:contentLabelConstSize lineBreakMode:UILineBreakModeTailTruncation];
+	CGSize contentTextSize = [item.contentSample sizeWithFont:[UIFont systemFontOfSize:13.0f] constrainedToSize:contentLabelConstSize lineBreakMode:UILineBreakModeTailTruncation];
 	if (!contentLabel) {
 		contentLabel = [[UILabel alloc] initWithFrame:CGRectZero];
 		[contentLabel setOpaque:YES];
@@ -163,12 +160,13 @@
 		[contentLabel setFont:[UIFont systemFontOfSize:13.0f]];
 		[contentLabel setNumberOfLines:2];
 		[contentLabel setLineBreakMode:UILineBreakModeTailTruncation];
-		[contentLabel setTextColor:[UIColor darkGrayColor]];
+        [contentLabel setHighlightedTextColor:[UIColor whiteColor]];
 		[self.contentView addSubview:contentLabel];
 	}
     
+    [contentLabel setTextColor:darkGrayColor];
     [contentLabel setFrame:CGRectZero];
-    [contentLabel setText:contentText];
+    [contentLabel setText:item.contentSample];
     [contentLabel sizeToFit];
     [contentLabel setFrame:CGRectMake(titleLabel.frame.origin.x,
 										  sourceLabel.frame.origin.y + sourceLabel.frame.size.height + titleLabel.frame.size.height + PADDING/2,
