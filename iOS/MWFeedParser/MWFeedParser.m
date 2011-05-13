@@ -669,11 +669,11 @@
 				
 				// Item
 				if (!processed) {
-					if ([currentPath isEqualToString:@"/feed/entry/title"]) { if (processedText.length > 0) [currentItemInfo setValue:[processedText copy] forKey:@"title"]; processed = YES; }
-					else if ([currentPath isEqualToString:@"/feed/entry/link"]) { [currentItemInfo setValue:[[self processAtomLink:currentElementAttributes] copy] forKey:@"link"]; processed = YES; }
-					else if ([currentPath isEqualToString:@"/feed/entry/id"]) { if (processedText.length > 0) [currentItemInfo setValue:[processedText copy] forKey:@"identifier"]; processed = YES; }
-					else if ([currentPath isEqualToString:@"/feed/entry/summary"]) { if (processedText.length > 0) [currentItemInfo setValue:[processedText copy] forKey:@"summary"]; processed = YES; }
-					else if ([currentPath isEqualToString:@"/feed/entry/content"]) { if (processedText.length > 0) [currentItemInfo setValue:[processedText copy] forKey:@"content"]; processed = YES; }
+					if ([currentPath isEqualToString:@"/feed/entry/title"]) { if (processedText.length > 0) [currentItemInfo setValue:processedText forKey:@"title"]; processed = YES; }
+					else if ([currentPath isEqualToString:@"/feed/entry/link"]) { [currentItemInfo setValue:[self processAtomLink:currentElementAttributes] forKey:@"link"]; processed = YES; }
+					else if ([currentPath isEqualToString:@"/feed/entry/id"]) { if (processedText.length > 0) [currentItemInfo setValue:processedText forKey:@"identifier"]; processed = YES; }
+					else if ([currentPath isEqualToString:@"/feed/entry/summary"]) { if (processedText.length > 0) [currentItemInfo setValue:processedText forKey:@"summary"]; processed = YES; }
+					else if ([currentPath isEqualToString:@"/feed/entry/content"]) { if (processedText.length > 0) [currentItemInfo setValue:processedText forKey:@"content"]; processed = YES; }
 					else if ([currentPath isEqualToString:@"/feed/entry/published"]) { if (processedText.length > 0) [currentItemInfo setValue:[NSDate dateFromInternetDateTimeString:processedText formatHint:DateFormatHintRFC3339] forKey:@"date"]; processed = YES; }
 					else if ([currentPath isEqualToString:@"/feed/entry/updated"]) { if (processedText.length > 0) [currentItemInfo setValue:[NSDate dateFromInternetDateTimeString:processedText formatHint:DateFormatHintRFC3339] forKey:@"updated"]; processed = YES; }
                     /*
@@ -684,9 +684,9 @@
 				
 				// Info
 				if (!processed && feedParseType != ParseTypeItemsOnly) {
-					if ([currentPath isEqualToString:@"/feed/entry/source/title"]) { if (processedText.length > 0) [currentSourceInfo setValue:[processedText copy] forKey:@"title"]; processed = YES; }
-					else if ([currentPath isEqualToString:@"/feed/entry/source/description"]) { if (processedText.length > 0) [currentSourceInfo setValue:[processedText copy] forKey:@"summary"]; processed = YES; }
-					else if ([currentPath isEqualToString:@"/feed/entry/source/link"]) { [currentSourceInfo setValue:[[self processAtomLink:currentElementAttributes] copy] forKey:@"link"]; processed = YES;}
+					if ([currentPath isEqualToString:@"/feed/entry/source/title"]) { if (processedText.length > 0) [currentSourceInfo setValue:processedText forKey:@"title"]; processed = YES; }
+					else if ([currentPath isEqualToString:@"/feed/entry/source/description"]) { if (processedText.length > 0) [currentSourceInfo setValue:processedText forKey:@"summary"]; processed = YES; }
+					else if ([currentPath isEqualToString:@"/feed/entry/source/link"]) { [currentSourceInfo setValue:[self processAtomLink:currentElementAttributes] forKey:@"link"]; processed = YES;}
 				}
 		}
 	}
@@ -750,6 +750,7 @@
                             [source setLink:[currentSourceInfo valueForKey:@"link"]];
                         
                         [item setSource:(Source *)[[source managedObjectContext] objectWithID:[source objectID]]];
+                        [source release];
                     } else {
                         Source *source = [executedRequest objectAtIndex:0];
                         [item setSource:(Source *)[[source managedObjectContext] objectWithID:[source objectID]]];
@@ -757,7 +758,9 @@
                                             
                     [currentSourceInfo release];
                     currentSourceInfo = nil;
+                    
                 }
+                [item release];
             }
         }
     }

@@ -12,15 +12,16 @@
 
 @implementation Item
 @dynamic updated;
-@dynamic summary;
-@dynamic content;
-@dynamic contentSample;
-@dynamic title;
-@dynamic date;
-@dynamic dateString;
 @dynamic link;
+@dynamic dateString;
+@dynamic title;
 @dynamic identifier;
+@dynamic summary;
+@dynamic date;
+@dynamic contentSample;
 @dynamic shortDateString;
+@dynamic unread;
+@dynamic content;
 @dynamic source;
 
 

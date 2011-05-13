@@ -274,7 +274,7 @@
 	[self.window addSubview:navController.view];
     [self.window makeKeyAndVisible];
     
-//    [self loginAndDownloadItems];
+    [self loginAndDownloadItems];
         
     return YES;
 }

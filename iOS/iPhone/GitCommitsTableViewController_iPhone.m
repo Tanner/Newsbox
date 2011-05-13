@@ -136,92 +136,88 @@
 {
     static NSString *BuildInfoCellIdentifier = @"BuildInfoCell";
     static NSString *CommitCellIdentifier = @"CommitCell";
-    
-    UITableViewCell *cell;
-    
-    switch (indexPath.section) {
-        case 0: {
-            cell = [tableView dequeueReusableCellWithIdentifier:BuildInfoCellIdentifier];
+        
+    if (indexPath.section == 0) {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:BuildInfoCellIdentifier];
 
-            if (cell == nil) {
-                cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:BuildInfoCellIdentifier] autorelease];
+        if (cell == nil) {
+            cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:BuildInfoCellIdentifier] autorelease];
+        }
+        
+        switch (indexPath.row) {
+            case 0: {
+                NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+                NSString *build = [infoDictionary objectForKey:@"CFBundleVersion"];
+                [[cell textLabel] setText:@"Build"];
+                [[cell detailTextLabel] setText:build];
+                break;
             }
-            
-            switch (indexPath.row) {
-                case 0: {
-                    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
-                    NSString *build = [infoDictionary objectForKey:@"CFBundleVersion"];
-                    [[cell textLabel] setText:@"Build"];
-                    [[cell detailTextLabel] setText:build];
+            case 1: {
+                if (!commits || [commits count] == 0) {
                     break;
                 }
-                case 1: {
-                    if (!commits || [commits count] == 0) {
-                        break;
+                
+                NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+                NSString *buildDate = [infoDictionary objectForKey:@"BuildDate"];
+                                    
+                NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+                [dateFormatter setDateFormat:@"YYYY-MM-dd HH:mm:ss ZZZ"];
+                [dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"EST"]];
+                NSDate *localBuildDate = [dateFormatter dateFromString:buildDate];
+                [dateFormatter release];
+                NSDate *latestCommitDate = [[commits objectAtIndex:0] committedDate];
+                                    
+                [[cell textLabel] setText:@"Status"];
+                                    
+                if (commits && [commits count] > 0) {
+                    if ([localBuildDate compare:latestCommitDate] == NSOrderedSame) {
+                        [[cell detailTextLabel] setText:@"Up-to-Date"];
+                    } else if ([localBuildDate compare:latestCommitDate] == NSOrderedDescending) {
+                        [[cell detailTextLabel] setText:@"Not Pushed"];
+                    } else if ([localBuildDate compare:latestCommitDate] == NSOrderedAscending) {
+                        [[cell detailTextLabel] setText:@"Out-of-Date"];
                     }
-                    
-                    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
-                    NSString *buildDate = [infoDictionary objectForKey:@"BuildDate"];
-                                        
-                    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-                    [dateFormatter setDateFormat:@"YYYY-MM-dd HH:mm:ss ZZZ"];
-                    [dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"EST"]];
-                    NSDate *localBuildDate = [dateFormatter dateFromString:buildDate];
-                                                            
-                    NSDate *latestCommitDate = [[commits objectAtIndex:0] committedDate];
-                                        
-                    [[cell textLabel] setText:@"Status"];
-                                        
-                    if (commits && [commits count] > 0) {
-                        if ([localBuildDate compare:latestCommitDate] == NSOrderedSame) {
-                            [[cell detailTextLabel] setText:@"Up-to-Date"];
-                        } else if ([localBuildDate compare:latestCommitDate] == NSOrderedDescending) {
-                            [[cell detailTextLabel] setText:@"Not Pushed"];
-                        } else if ([localBuildDate compare:latestCommitDate] == NSOrderedAscending) {
-                            [[cell detailTextLabel] setText:@"Out-of-Date"];
-                        }
-                    } else {
-                        [[cell detailTextLabel] setText:@""];
-                    }
-                    break;
+                } else {
+                    [[cell detailTextLabel] setText:@""];
                 }
+                break;
             }
-            break;
         }
-        case 1: {
-            cell = [tableView dequeueReusableCellWithIdentifier:CommitCellIdentifier];
-            
-            if (cell == nil) {
-                cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CommitCellIdentifier] autorelease];
-            }
-            
-            [[cell detailTextLabel] setNumberOfLines:10];
-            
-            if (commits && [commits count] > 1) {
-                [[cell textLabel] setText:[NSString stringWithFormat:@"%d. %@", indexPath.row+1, [[[commits objectAtIndex:indexPath.row] sha] substringToIndex:7]]];
-                [[cell detailTextLabel] setText:[[commits objectAtIndex:indexPath.row] message]];
-            }
-            
-            [[cell textLabel] setFont:[UIFont boldSystemFontOfSize:16.0f]];
-            [[cell detailTextLabel] setFont:[UIFont systemFontOfSize:14.0f]];
-            
-            NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
-            NSString *build = [infoDictionary objectForKey:@"CFBundleVersion"];
-            
-            NSString *latestShortGitSHA = [[[commits objectAtIndex:indexPath.row] sha] substringToIndex:7];
-            if ([latestShortGitSHA isEqualToString:build]) {
-                [cell setBackgroundColor:[UIColor colorWithWhite:0.9 alpha:1.0]];
-            } else {
-                [cell setBackgroundColor:[UIColor whiteColor]];
-            }
-            
-            break;
+        
+        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+        
+        return cell;
+    } else {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CommitCellIdentifier];
+        
+        if (cell == nil) {
+            cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CommitCellIdentifier] autorelease];
         }
+        
+        [[cell detailTextLabel] setNumberOfLines:10];
+        
+        if (commits && [commits count] > 1) {
+            [[cell textLabel] setText:[NSString stringWithFormat:@"%d. %@", indexPath.row+1, [[[commits objectAtIndex:indexPath.row] sha] substringToIndex:7]]];
+            [[cell detailTextLabel] setText:[[commits objectAtIndex:indexPath.row] message]];
+        }
+        
+        [[cell textLabel] setFont:[UIFont boldSystemFontOfSize:16.0f]];
+        [[cell detailTextLabel] setFont:[UIFont systemFontOfSize:14.0f]];
+        
+        NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+        NSString *build = [infoDictionary objectForKey:@"CFBundleVersion"];
+        
+        NSString *latestShortGitSHA = [[[commits objectAtIndex:indexPath.row] sha] substringToIndex:7];
+        if ([latestShortGitSHA isEqualToString:build]) {
+            [cell setBackgroundColor:[UIColor colorWithWhite:0.9 alpha:1.0]];
+        } else {
+            [cell setBackgroundColor:[UIColor whiteColor]];
+        }
+        
+        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+        
+        return cell;
     }
-    
-    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-    
-    return cell;
 }
 
 #pragma mark -

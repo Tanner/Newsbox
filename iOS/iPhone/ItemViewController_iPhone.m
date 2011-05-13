@@ -102,6 +102,7 @@
 		scanner = [NSScanner scannerWithString:[anItem summary]];
 		content = [anItem summary];
 	} else {
+        [html release];
 		return @"";
 	}
 	
@@ -137,7 +138,6 @@
 	
 	NSString *stylizedHTML = [NSString stringWithString:html];
 	[html release];
-	
     
 	return stylizedHTML;
 }

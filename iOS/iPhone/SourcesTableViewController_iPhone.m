@@ -73,7 +73,6 @@
     
     UIBarButtonItem *refreshItem = [delegate refreshButtonItem];
     [toolbarItems addObject:refreshItem];
-    [refreshItem release];
     
     UIBarButtonItem *flexibleSpaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     [toolbarItems addObject:flexibleSpaceItem];
