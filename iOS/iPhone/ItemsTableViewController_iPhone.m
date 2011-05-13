@@ -165,7 +165,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     currentItem = [items objectAtIndex:indexPath.row];
     
-	[delegate showItem:currentItem withArray:items];
+	[delegate showItemAtIndex:[items indexOfObject:currentItem] fromArray:items];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -18,12 +18,12 @@
 
 - (void)prevNextControlValueChanged:(id)sender {
 	if ([sender selectedSegmentIndex] == 0) {
-		currentItem = [array objectAtIndex:[array indexOfObject:currentItem]-1];
+		currentItemIndex--;
 	} else {
-		currentItem = [array objectAtIndex:[array indexOfObject:currentItem]+1];
+		currentItemIndex++;
 	}
     
-    [delegate didChangeCurrentItemTo:currentItem];
+    [delegate didChangeCurrentItemTo:[array objectAtIndex:currentItemIndex]];
     
     [self displayCurrentItem];
 }
@@ -142,17 +142,17 @@
 	return stylizedHTML;
 }
 
-- (void)setItem:(Item *)anItem withArray:(NSMutableArray *)anArray {
-    currentItem = anItem;
+- (void)setItemAtIndex:(int)index fromArray:(NSMutableArray *)anArray {
+    currentItemIndex = index;
     array = anArray;
 
     [self displayCurrentItem];
 }
          
 - (void)displayCurrentItem {
-    [self setIsPrevItemAvailable:([array indexOfObject:currentItem] > 0)
-          andIsNextItemAvailable:([array indexOfObject:currentItem] < [array count]-1)];
-    [wv loadHTMLString:[self stylizedHTMLWithItem:currentItem] baseURL:nil];
+    [self setIsPrevItemAvailable:currentItemIndex > 0
+          andIsNextItemAvailable:currentItemIndex < [array count]-1];
+    [wv loadHTMLString:[self stylizedHTMLWithItem:[array objectAtIndex:currentItemIndex]] baseURL:nil];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {

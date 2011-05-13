@@ -15,14 +15,14 @@
 	id<ItemViewControllerDelegate> delegate;
     
     NSMutableArray *array;
-    Item *currentItem;
+    int currentItemIndex;
     
 	UIWebView *wv;
     UISegmentedControl *prevNextControl;
 }
 
 - (void)displayCurrentItem;
-- (void)setItem:(Item *)anItem withArray:(NSMutableArray *)anArray;
+- (void)setItemAtIndex:(int)index fromArray:(NSMutableArray *)anArray;
 - (void)setIsPrevItemAvailable:(BOOL)prevItemAvailable andIsNextItemAvailable:(BOOL)nextItemAvailable;
 
 @property (nonatomic, assign) id<ItemViewControllerDelegate> delegate;

@@ -194,8 +194,8 @@
 #pragma mark -
 #pragma mark ItemsTableViewControllerDelegate Methods
 
-- (void)showItem:(Item *)anItem withArray:(NSMutableArray *)anArray {
-	[ivc setItem:anItem withArray:anArray];
+- (void)showItemAtIndex:(int)index fromArray:(NSMutableArray *)anArray {
+	[ivc setItemAtIndex:index fromArray:anArray];
 	[navController pushViewController:ivc animated:YES];
 }
 
