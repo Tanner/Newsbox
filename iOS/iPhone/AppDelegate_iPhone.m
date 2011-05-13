@@ -159,15 +159,15 @@
     refreshing = NO;
     
     // swap contexts
-    if (managedObjectContext_) {
-        [managedObjectContext_ release];
-        managedObjectContext_ = nil;
-    }
-    if (parsingManagedObjectContext_) {
-        managedObjectContext_ = [parsingManagedObjectContext_ retain];
-        [parsingManagedObjectContext_ release];
-        parsingManagedObjectContext_ = nil;
-    }
+//    if (managedObjectContext_) {
+//        [managedObjectContext_ release];
+//        managedObjectContext_ = nil;
+//    }
+//    if (parsingManagedObjectContext_) {
+//        managedObjectContext_ = [parsingManagedObjectContext_ retain];
+//        [parsingManagedObjectContext_ release];
+//        parsingManagedObjectContext_ = nil;
+//    }
     
     [self saveContext];
     

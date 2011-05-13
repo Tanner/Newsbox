@@ -62,7 +62,7 @@
 }
 
 - (void)setSourceLink:(NSString *)sl {
-    sourceLink = sl;
+    sourceLink = [sl copy];
     
     [self reloadData];
 }
@@ -81,8 +81,7 @@
 	// don't reload everything, just visible
 	for (UITableViewCell *cell in [self.tableView visibleCells]) {
 		int index = [self.tableView indexPathForCell:cell].row;
-		[(ItemsTableViewCell *)cell setItem:[items objectAtIndex:index] andCellSize:CGSizeMake(width, CELL_HEIGHT)
-		 ];
+		[(ItemsTableViewCell *)cell setItem:[items objectAtIndex:index] andCellSize:CGSizeMake(width, CELL_HEIGHT)];
 	}
 }
 
@@ -189,6 +188,8 @@
 
 - (void)dealloc {
 	[items release];
+    
+    [sourceLink release];
 	
     [super dealloc];
 }
