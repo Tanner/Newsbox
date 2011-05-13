@@ -88,7 +88,7 @@
     if (refreshing) {
         return;
     }
-        
+    
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     NSString *username = [prefs objectForKey:@"GoogleUsername"];
     
@@ -173,7 +173,11 @@
     
     [self saveLoadingContext];
     
-    needsPurge = YES;
+    if ([navController visibleViewController] == rtvc) {
+        [self purgeReadSourcesAndItems];
+    } else {
+        needsPurge = YES;
+    }
     
     if ([[navController viewControllers] containsObject:stvc]) {
         [stvc reloadData];
