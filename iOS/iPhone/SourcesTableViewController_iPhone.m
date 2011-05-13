@@ -178,12 +178,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     switch (indexPath.section) {
         case 0: {
-            [delegate showItemsTableViewWithSource:nil];
+            [delegate showItemsTableViewWithSourceLink:nil];
             
             break;
         }
         case 1: {
-            [delegate showItemsTableViewWithSource:[sources objectAtIndex:indexPath.row]];
+            [delegate showItemsTableViewWithSourceLink:[[sources objectAtIndex:indexPath.row] link]];
             
             break;
         }

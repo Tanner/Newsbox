@@ -17,7 +17,7 @@
 @interface ItemsTableViewController_iPhone : UITableViewController {
 	id<ItemsTableViewControllerDelegate, RefreshInfoViewDelegate> delegate;
     
-    NSString *sourceTitle;
+    NSString *sourceLink;
     
     Item *currentItem;
     
@@ -29,7 +29,7 @@
 - (void)reformatCellLabelsWithOrientation:(UIInterfaceOrientation)orientation;
 
 @property (nonatomic, assign) id<ItemsTableViewControllerDelegate, RefreshInfoViewDelegate> delegate;
-@property (nonatomic, assign) NSString *sourceTitle;
+@property (nonatomic, assign) NSString *sourceLink;
 @property (nonatomic, assign) Item *currentItem;
 
 @end

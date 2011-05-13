@@ -109,8 +109,8 @@
 #pragma mark -
 #pragma mark SourcesTableViewControllerDelegate Methods
 
-- (void)showItemsTableViewWithSource:(Source *)source {
-    [itvc setSourceTitle:source.title];
+- (void)showItemsTableViewWithSourceLink:(NSString *)sourceLink {
+    [itvc setSourceLink:sourceLink];
     
     [navController pushViewController:itvc animated:YES];
 }

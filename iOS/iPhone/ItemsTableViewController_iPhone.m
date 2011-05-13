@@ -22,7 +22,7 @@
 @implementation ItemsTableViewController_iPhone
 
 @synthesize delegate;
-@synthesize sourceTitle;
+@synthesize sourceLink;
 @synthesize currentItem;
 
 - (void)setCurrentItem:(Item *)aCurrentItem {
@@ -34,6 +34,11 @@
         [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:[items indexOfObject:currentItem] inSection:0] atScrollPosition:UITableViewScrollPositionNone animated:NO];
         
         [[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:[items indexOfObject:currentItem] inSection:0]] setSelected:YES animated:NO];
+        
+        NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+        if (path) {
+            NSLog(@"%d", path.row);
+        }
     }
 }
 
@@ -41,10 +46,10 @@
     [items removeAllObjects];
     
     NSArray *executedRequest;
-    if (sourceTitle) {
+    if (sourceLink) {
         NSFetchRequest *fetchRequest = [[(AppDelegate_Shared *)delegate managedObjectModel]
-                                        fetchRequestFromTemplateWithName:@"itemsFromSourceWithTitle"
-                                        substitutionVariables:[NSDictionary dictionaryWithObject:sourceTitle forKey:@"sourceTitle"]];
+                                        fetchRequestFromTemplateWithName:@"itemsFromSourceWithLink"
+                                        substitutionVariables:[NSDictionary dictionaryWithObject:sourceLink forKey:@"sourceLink"]];
         executedRequest = [[(AppDelegate_Shared *)delegate managedObjectContext] executeFetchRequest:fetchRequest error:nil];
     } else {
         NSFetchRequest *fetchRequest = [[(AppDelegate_Shared *)delegate managedObjectModel]
@@ -59,6 +64,12 @@
     [items sortUsingSelector:@selector(compareByDate:)];
     
     [self.tableView reloadData];
+}
+
+- (void)setSourceLink:(NSString *)sl {
+    sourceLink = sl;
+    
+    [self reloadData];
 }
 
 #pragma mark -
@@ -85,12 +96,21 @@
 }
 
 #pragma mark -
+#pragma mark Init
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
+        items = [[NSMutableArray alloc] init];
+    }
+    
+    return self;
+}
+
+#pragma mark -
 #pragma mark View lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    items = [[NSMutableArray alloc] init];
     
     NSMutableArray *toolbarItems = [[NSMutableArray alloc] init];
     [self setToolbarItems:toolbarItems animated:NO];
@@ -99,9 +119,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
-    [self reloadData];
-    
+        
     if ([items count] > 0) {    
         [self reformatCellLabelsWithOrientation:[self interfaceOrientation]];
         [[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:[items indexOfObject:currentItem] inSection:0]] setSelected:NO animated:YES];

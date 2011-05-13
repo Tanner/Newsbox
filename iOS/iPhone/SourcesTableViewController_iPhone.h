@@ -12,7 +12,7 @@
 #import "ItemSupport.h"
 
 @protocol SourcesTableViewControllerDelegate
-- (void)showItemsTableViewWithSource:(Source *)source;
+- (void)showItemsTableViewWithSourceLink:(NSString *)sourceLink;
 @end
 
 @interface SourcesTableViewController_iPhone : UITableViewController {
