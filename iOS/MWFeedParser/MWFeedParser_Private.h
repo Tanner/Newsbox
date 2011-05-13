@@ -57,6 +57,7 @@
 // Misc
 //- (BOOL)createEnclosureFromAttributes:(NSDictionary *)attributes andAddToItem:(Item *)currentItem;
 - (NSString *)processAtomLink:(NSDictionary *)attributes;
+- (NSString *)processAtomXML:(NSString *)s;
 
 - (void)startParsingData:(NSData *)data textEncodingName:(NSString *)textEncodingName;
 

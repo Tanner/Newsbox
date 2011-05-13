@@ -15,7 +15,7 @@
     UIWindow *window;
 	
 @protected
-	ItemLoader *feedLoader;
+	ItemLoader *itemLoader;
     
 @protected
     NSManagedObjectContext *managedObjectContext_;
@@ -34,6 +34,7 @@
 - (NSURL *)applicationDocumentsDirectory;
 - (void)saveLoadingContext;
 - (void)saveContext;
+- (void)markItemAsRead:(Item *)item;
 
 @end
 

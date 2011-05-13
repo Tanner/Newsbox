@@ -110,7 +110,6 @@
 		ED639916130342810024D3ED /* ItemViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED639914130342810024D3ED /* ItemViewController_iPhone.xib */; };
 		ED6446E9130A0E1000C197DB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED6446E8130A0E1000C197DB /* QuartzCore.framework */; };
 		ED6446F1130A17E500C197DB /* OBGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6446F0130A17E500C197DB /* OBGradientView.m */; };
-		ED689DBD137CD05300004A03 /* Source.m in Sources */ = {isa = PBXBuildFile; fileRef = ED689DBC137CD05300004A03 /* Source.m */; };
 		ED6A677113046C81006F7838 /* itemscript.js in Resources */ = {isa = PBXBuildFile; fileRef = ED6A677013046C81006F7838 /* itemscript.js */; };
 		ED71D1081303266E00C3BE65 /* Icon-57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED71D1071303266E00C3BE65 /* Icon-57@2x.png */; };
 		ED71D10A1303268D00C3BE65 /* Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = ED71D1091303268D00C3BE65 /* Icon-57.png */; };
@@ -120,6 +119,7 @@
 		EDDA76171308B167007AB030 /* RefreshInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDA76161308B167007AB030 /* RefreshInfoView.m */; };
 		EDDA761B1308D24B007AB030 /* RootTableViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDA76191308D249007AB030 /* RootTableViewController_iPhone.m */; };
 		EDDA761C1308D24B007AB030 /* RootTableViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDDA761A1308D24A007AB030 /* RootTableViewController_iPhone.xib */; };
+		EDE10DF5137DC12F008F7C04 /* Source.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE10DF4137DC12F008F7C04 /* Source.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -339,8 +339,6 @@
 		ED6446E8130A0E1000C197DB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		ED6446EF130A17E500C197DB /* OBGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBGradientView.h; sourceTree = "<group>"; };
 		ED6446F0130A17E500C197DB /* OBGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBGradientView.m; sourceTree = "<group>"; };
-		ED689DBB137CD05300004A03 /* Source.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Source.h; sourceTree = "<group>"; };
-		ED689DBC137CD05300004A03 /* Source.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Source.m; sourceTree = "<group>"; };
 		ED6A677013046C81006F7838 /* itemscript.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = itemscript.js; sourceTree = "<group>"; };
 		ED71D1071303266E00C3BE65 /* Icon-57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57@2x.png"; sourceTree = "<group>"; };
 		ED71D1091303268D00C3BE65 /* Icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57.png"; sourceTree = "<group>"; };
@@ -354,6 +352,8 @@
 		EDDA76181308D249007AB030 /* RootTableViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTableViewController_iPhone.h; sourceTree = "<group>"; };
 		EDDA76191308D249007AB030 /* RootTableViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTableViewController_iPhone.m; sourceTree = "<group>"; };
 		EDDA761A1308D24A007AB030 /* RootTableViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootTableViewController_iPhone.xib; sourceTree = "<group>"; };
+		EDE10DF3137DC12F008F7C04 /* Source.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Source.h; sourceTree = "<group>"; };
+		EDE10DF4137DC12F008F7C04 /* Source.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Source.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -758,10 +758,10 @@
 				ED10E699137C2F5F00D2FD6C /* SourceSupport.m */,
 				ED10E69B137C31AA00D2FD6C /* ItemSupport.h */,
 				ED10E69C137C31AA00D2FD6C /* ItemSupport.m */,
-				ED689DBB137CD05300004A03 /* Source.h */,
-				ED689DBC137CD05300004A03 /* Source.m */,
 				ED9325E0137D762D0041D8C2 /* Item.h */,
 				ED9325E1137D762D0041D8C2 /* Item.m */,
+				EDE10DF3137DC12F008F7C04 /* Source.h */,
+				EDE10DF4137DC12F008F7C04 /* Source.m */,
 			);
 			path = MWFeedParser;
 			sourceTree = "<group>";
@@ -1001,8 +1001,8 @@
 				ED3EEB47130DA81700C52E22 /* SourcesTableViewController_iPhone.m in Sources */,
 				ED10E69A137C2F5F00D2FD6C /* SourceSupport.m in Sources */,
 				ED10E69D137C31AA00D2FD6C /* ItemSupport.m in Sources */,
-				ED689DBD137CD05300004A03 /* Source.m in Sources */,
 				ED9325E2137D762D0041D8C2 /* Item.m in Sources */,
+				EDE10DF5137DC12F008F7C04 /* Source.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

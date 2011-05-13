@@ -100,7 +100,7 @@
     NSError *error = nil;
     NSString *password = [SFHFKeychainUtils getPasswordForUsername:username andServiceName:@"Google" error:&error];
     
-    [feedLoader authenticateWithGoogleUser:username andPassword:password];
+    [itemLoader authenticateWithGoogleUser:username andPassword:password];
     
     [refreshInfoView animateLogin];
     refreshing = YES;
@@ -137,7 +137,7 @@
 	if (login) {
         [refreshInfoView animateDownload];
         
-        [feedLoader getItemsOfType:[feedLoader currentItemType]];
+        [itemLoader getItemsOfType:[itemLoader currentItemType]];
         
         refreshing = YES;
 	} else {
@@ -252,7 +252,7 @@
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-	feedLoader = [[ItemLoader alloc] initWithDelegate:self];
+	itemLoader = [[ItemLoader alloc] initWithDelegate:self];
     
     rtvc = [[RootTableViewController_iPhone alloc] initWithNibName:@"RootTableViewController_iPhone" bundle:nil];
     [rtvc setDelegate:self];

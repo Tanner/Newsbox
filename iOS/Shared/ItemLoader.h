@@ -19,6 +19,7 @@
 		
 	NSString *sid;
 	NSString *auth;
+    NSString *token;
 	
 	BOOL authenticated;
 	
@@ -28,11 +29,13 @@
 - (id)initWithDelegate:(id)aDelegate;
 - (void)authenticateWithGoogleUser:(NSString *)username andPassword:(NSString *)password;
 - (void)getItemsOfType:(ItemType)type;
+- (void)markItemAsRead:(Item *)item;
 
 @property (nonatomic, assign) id<ItemLoaderDelegate> delegate;
 @property (nonatomic, assign) ItemType currentItemType;
-@property (nonatomic, retain) NSString *sid;
-@property (nonatomic, retain) NSString *auth;
+@property (nonatomic, copy) NSString *sid;
+@property (nonatomic, copy) NSString *auth;
+@property (nonatomic, copy) NSString *token;
 @property (nonatomic, assign) BOOL authenticated;
 
 @end

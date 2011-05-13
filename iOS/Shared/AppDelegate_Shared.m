@@ -196,5 +196,14 @@
 }
 
 
+#pragma mark -
+#pragma mark Item Loading
+
+
+- (void)markItemAsRead:(Item *)item {
+    [itemLoader markItemAsRead:item];
+}
+
+
 @end
 

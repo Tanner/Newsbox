@@ -18,13 +18,16 @@
 - (NSString *)sidHeader;
 - (NSString *)authHeader;
 - (ASIHTTPRequest *)requestForAPIEndpoint:(NSString *)apiEndpoint;
+- (void)getToken;
 @end
 
 @implementation ItemLoader
 
 @synthesize delegate;
 @synthesize currentItemType;
-@synthesize sid, auth;
+@synthesize sid;
+@synthesize auth;
+@synthesize token;
 @synthesize authenticated;
 
 - (id)initWithDelegate:(id)aDelegate {
@@ -82,7 +85,7 @@
         
         return;
     }
-		
+    
     //extract SID + auth
     NSArray *respArray = [responseString componentsSeparatedByCharactersInSet: [NSCharacterSet newlineCharacterSet]];
 	
@@ -93,6 +96,8 @@
 	NSString *authString = [respArray objectAtIndex:2];
 	authString = [authString stringByReplacingOccurrencesOfString: @"Auth=" withString:@""];
 	self.auth = authString;
+    
+    [self getToken];
 	
 	authenticated = YES;
 	[delegate didLogin:YES];
@@ -125,7 +130,6 @@
 }
 
 - (void)requestFailed:(ASIHTTPRequest *)request {
-	NSLog(@"%@", @"failed to get feeds");
     [delegate showError:@"Failed to Download Items" withMessage:@"An error occurred when downloading your items. Try again." withSettingsButton:NO];
     
     authenticated = NO;
@@ -145,6 +149,51 @@
 
 - (NSString *)authHeader {
     return [NSString stringWithFormat:@"GoogleLogin auth=%@",[self auth]];
+}
+
+- (void)getToken {
+    ASIHTTPRequest *request = [self requestForAPIEndpoint:@"https://www.google.com/reader/api/0/token"];
+    
+    [request setDelegate:self];
+    [request setDidFailSelector:@selector(tokenRequestFailed:)];
+    [request setDidFinishSelector:@selector(tokenRequestFinished:)];
+    
+    [request start];
+}
+
+- (void)tokenRequestFinished:(ASIHTTPRequest *)request {
+    self.token = [request responseString];
+}
+
+- (void)tokenRequestFailed:(ASIHTTPRequest *)request {
+    NSLog(@"Failed to get token: %@", [request responseString]);
+}
+
+- (void)markItemAsRead:(Item *)item {
+    NSURL *url = [NSURL URLWithString:@"http://www.google.com/reader/api/0/edit-tag"];
+	ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+//    [request setPostValue:@"newsbox" forKey:@"client"];
+    
+    [request addRequestHeader:@"Authorization" value:[self authHeader]];
+    
+    [request setPostValue:@"user/-/state/com.google/read" forKey:@"a"];
+    [request setPostValue:[NSString stringWithFormat:@"feed/%@", item.source.xml] forKey:@"s"];
+	[request setPostValue:[NSString stringWithFormat:@"%@", item.identifier] forKey:@"i"];
+    [request setPostValue:[self token] forKey:@"T"];
+	
+    [request setDelegate:self];
+    [request setDidFailSelector:@selector(markItemFailed:)];
+    [request setDidFinishSelector:@selector(markItemFinished:)];
+	
+    [request start];
+}
+
+- (void)markItemFinished:(ASIHTTPRequest *)request {
+//    NSLog(@"%@", [request responseString]);
+}
+
+- (void)markItemFailed:(ASIHTTPRequest *)request {
+    NSLog(@"Failed to mark item as read: %d", [request responseStatusCode]);
 }
 
 

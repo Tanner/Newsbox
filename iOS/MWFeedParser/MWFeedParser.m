@@ -448,7 +448,7 @@
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI 
 									   qualifiedName:(NSString *)qualifiedName attributes:(NSDictionary *)attributeDict {
 	MWXMLLog(@"NSXMLParser: didStartElement: %@", qualifiedName);
-	
+    
 	// Pool
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	
@@ -686,7 +686,8 @@
 				if (!processed && feedParseType != ParseTypeItemsOnly) {
 					if ([currentPath isEqualToString:@"/feed/entry/source/title"]) { if (processedText.length > 0) [currentSourceInfo setValue:processedText forKey:@"title"]; processed = YES; }
 					else if ([currentPath isEqualToString:@"/feed/entry/source/description"]) { if (processedText.length > 0) [currentSourceInfo setValue:processedText forKey:@"summary"]; processed = YES; }
-					else if ([currentPath isEqualToString:@"/feed/entry/source/link"]) { [currentSourceInfo setValue:[self processAtomLink:currentElementAttributes] forKey:@"link"]; processed = YES;}
+					else if ([currentPath isEqualToString:@"/feed/entry/source/id"]) { [currentSourceInfo setValue:[self processAtomXML:processedText] forKey:@"xml"]; processed = YES; }
+					else if ([currentPath isEqualToString:@"/feed/entry/source/link"]) { [currentSourceInfo setValue:[self processAtomLink:currentElementAttributes] forKey:@"link"]; processed = YES; }
 				}
 		}
 	}
@@ -746,6 +747,8 @@
                             [source setTitle:[currentSourceInfo valueForKey:@"title"]];
                         if ([currentSourceInfo valueForKey:@"summary"])
                             [source setSummary:[currentSourceInfo valueForKey:@"summary"]];
+                        if ([currentSourceInfo valueForKey:@"xml"])
+                            [source setXml:[currentSourceInfo valueForKey:@"xml"]];
                         if ([currentSourceInfo valueForKey:@"link"])
                             [source setLink:[currentSourceInfo valueForKey:@"link"]];
                         
@@ -1015,7 +1018,12 @@
 //		}
 		
 	}
+    
 	return @"";
+}
+
+- (NSString *)processAtomXML:(NSString *)s {
+	return [s stringByReplacingOccurrencesOfString:@"tag:google.com,2005:reader/feed/" withString:@""];
 }
 
 @end
