@@ -42,8 +42,6 @@
 @property (nonatomic, retain) NSString *currentPath;
 @property (nonatomic, retain) NSMutableString *currentText;
 @property (nonatomic, retain) NSDictionary *currentElementAttributes;
-@property (nonatomic, retain) Item *item;
-@property (nonatomic, retain) Source *info;
 @property (nonatomic, copy) NSString *pathOfElementWithXHTMLType;
 
 #pragma mark Private Methods
@@ -53,10 +51,6 @@
 - (void)abortParsingEarly;
 - (void)parsingFinished;
 - (void)parsingFailedWithErrorCode:(int)code andDescription:(NSString *)description;
-
-// Dispatching to Delegate
-- (void)dispatchFeedInfoToDelegate;
-- (void)dispatchFeedItemToDelegate;
 
 // Error Handling
 

@@ -103,7 +103,7 @@
 }
 
 - (void)rootViewDidAppear {
-    [self purgeSourcesAndItems];
+//    [self purgeSourcesAndItems];
 }
 
 #pragma mark -

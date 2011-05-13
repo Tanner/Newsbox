@@ -43,7 +43,7 @@
     NSArray *executedRequest;
     if (sourceTitle) {
         NSFetchRequest *fetchRequest = [[(AppDelegate_Shared *)delegate managedObjectModel]
-                                        fetchRequestFromTemplateWithName:@"itemsFromSourceTitle"
+                                        fetchRequestFromTemplateWithName:@"itemsFromSourceWithTitle"
                                         substitutionVariables:[NSDictionary dictionaryWithObject:sourceTitle forKey:@"sourceTitle"]];
         executedRequest = [[(AppDelegate_Shared *)delegate managedObjectContext] executeFetchRequest:fetchRequest error:nil];
     } else {

@@ -54,7 +54,7 @@
 // Properties
 @synthesize url, delegate;
 @synthesize urlConnection, asyncData, asyncTextEncodingName, connectionType;
-@synthesize feedParseType, feedParser, currentPath, currentText, currentElementAttributes, item, info;
+@synthesize feedParseType, feedParser, currentPath, currentText, currentElementAttributes;
 @synthesize pathOfElementWithXHTMLType;
 @synthesize stopped, failed, parsing;
 
@@ -104,8 +104,6 @@
 	[currentPath release];
 	[currentText release];
 	[currentElementAttributes release];
-	[item release];
-	[info release];
 	[pathOfElementWithXHTMLType release];
 	[super dealloc];
 }
@@ -122,8 +120,6 @@
 	feedType = FeedTypeUnknown;
 	self.currentPath = @"/";
 	self.currentText = [[[NSMutableString alloc] init] autorelease];
-	self.item = nil;
-	self.info = nil;
 	self.currentElementAttributes = nil;
 	parseStructureAsContent = NO;
 	self.pathOfElementWithXHTMLType = nil;
@@ -524,9 +520,6 @@
 		if (!hasEncounteredItems) {
 			hasEncounteredItems = YES;
 			if (feedParseType != ParseTypeItemsOnly) { // Check whether to ignore feed info
-				
-				// Dispatch feed info to delegate
-				[self dispatchFeedInfoToDelegate];
 
 				// Stop parsing if only requiring meta data
 				if (feedParseType == ParseTypeInfoOnly) {
@@ -550,8 +543,8 @@
 		}
 		
 		// New item
-		Item *newItem = [Item newItem:[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] parsingManagedObjectContext]];
-		self.item = newItem;
+		currentItemInfo = [[NSMutableDictionary alloc] init];
+        currentSourceInfo = [[NSMutableDictionary alloc] init];
 		
 		// Return
 		[pool drain];
@@ -676,13 +669,13 @@
 				
 				// Item
 				if (!processed) {
-					if ([currentPath isEqualToString:@"/feed/entry/title"]) { if (processedText.length > 0) item.title = processedText; processed = YES; }
-					else if ([currentPath isEqualToString:@"/feed/entry/link"]) { item.link = [self processAtomLink:currentElementAttributes]; processed = YES; }
-					else if ([currentPath isEqualToString:@"/feed/entry/id"]) { if (processedText.length > 0) item.identifier = processedText; processed = YES; }
-					else if ([currentPath isEqualToString:@"/feed/entry/summary"]) { if (processedText.length > 0) item.summary = processedText; processed = YES; }
-					else if ([currentPath isEqualToString:@"/feed/entry/content"]) { if (processedText.length > 0) item.content = processedText; processed = YES; }
-					else if ([currentPath isEqualToString:@"/feed/entry/published"]) { if (processedText.length > 0) item.date = [NSDate dateFromInternetDateTimeString:processedText formatHint:DateFormatHintRFC3339]; processed = YES; }
-					else if ([currentPath isEqualToString:@"/feed/entry/updated"]) { if (processedText.length > 0) item.updated = [NSDate dateFromInternetDateTimeString:processedText formatHint:DateFormatHintRFC3339]; processed = YES; }
+					if ([currentPath isEqualToString:@"/feed/entry/title"]) { if (processedText.length > 0) [currentItemInfo setValue:[processedText copy] forKey:@"title"]; processed = YES; }
+					else if ([currentPath isEqualToString:@"/feed/entry/link"]) { [currentItemInfo setValue:[[self processAtomLink:currentElementAttributes] copy] forKey:@"link"]; processed = YES; }
+					else if ([currentPath isEqualToString:@"/feed/entry/id"]) { if (processedText.length > 0) [currentItemInfo setValue:[processedText copy] forKey:@"identifier"]; processed = YES; }
+					else if ([currentPath isEqualToString:@"/feed/entry/summary"]) { if (processedText.length > 0) [currentItemInfo setValue:[processedText copy] forKey:@"summary"]; processed = YES; }
+					else if ([currentPath isEqualToString:@"/feed/entry/content"]) { if (processedText.length > 0) [currentItemInfo setValue:[processedText copy] forKey:@"content"]; processed = YES; }
+					else if ([currentPath isEqualToString:@"/feed/entry/published"]) { if (processedText.length > 0) [currentItemInfo setValue:[NSDate dateFromInternetDateTimeString:processedText formatHint:DateFormatHintRFC3339] forKey:@"date"]; processed = YES; }
+					else if ([currentPath isEqualToString:@"/feed/entry/updated"]) { if (processedText.length > 0) [currentItemInfo setValue:[NSDate dateFromInternetDateTimeString:processedText formatHint:DateFormatHintRFC3339] forKey:@"updated"]; processed = YES; }
                     /*
                     else if ([currentPath isEqualToString:@"/feed/entry/source/title"] { if (processedText.length > 0) item.sourceDescription = processedText; processed = YES;
                     else if ([currentPath isEqualToString:@"/feed/entry/source/title/link"] { if (processedText.length > 0) [self processAtomLink:currentElementAttributes andAddToMWObject:item]; processed = YES;
@@ -691,9 +684,9 @@
 				
 				// Info
 				if (!processed && feedParseType != ParseTypeItemsOnly) {
-					if ([currentPath isEqualToString:@"/feed/entry/source/title"]) { if (processedText.length > 0) sourceTitle = [processedText copy]; processed = YES; }
-					else if ([currentPath isEqualToString:@"/feed/entry/source/description"]) { if (processedText.length > 0) sourceSummary = [processedText copy]; processed = YES; }
-					else if ([currentPath isEqualToString:@"/feed/entry/source/link"]) { sourceLink = [[self processAtomLink:currentElementAttributes] copy]; processed = YES;}
+					if ([currentPath isEqualToString:@"/feed/entry/source/title"]) { if (processedText.length > 0) [currentSourceInfo setValue:[processedText copy] forKey:@"title"]; processed = YES; }
+					else if ([currentPath isEqualToString:@"/feed/entry/source/description"]) { if (processedText.length > 0) [currentSourceInfo setValue:[processedText copy] forKey:@"summary"]; processed = YES; }
+					else if ([currentPath isEqualToString:@"/feed/entry/source/link"]) { [currentSourceInfo setValue:[[self processAtomLink:currentElementAttributes] copy] forKey:@"link"]; processed = YES;}
 				}
 		}
 	}
@@ -701,46 +694,84 @@
 	// Adjust path
 	self.currentPath = [currentPath stringByDeletingLastPathComponent];
 	
-    // Add info to item
-    if (item && sourceLink) {
-        NSFetchRequest *fetchRequest = [[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] managedObjectModel]
-                                        fetchRequestFromTemplateWithName:@"sourceWithLink"
-                                        substitutionVariables:[NSDictionary dictionaryWithObject:sourceLink forKey:@"link"]];
-
-        NSError *error = nil;
-        NSArray *executedRequest = [[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] parsingManagedObjectContext] executeFetchRequest:fetchRequest error:&error];
-        if (error) {
-            NSLog(@"%@", error);
-        }
+	if (!processed && currentItemInfo) {
+		if (((feedType == FeedTypeRSS || feedType == FeedTypeRSS1) && [qName isEqualToString:@"item"]) ||
+			(feedType == FeedTypeAtom && [qName isEqualToString:@"entry"])) {
+            // Check to see if identifier is new or not
+            NSFetchRequest *fetchRequest = [[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] managedObjectModel]
+                                            fetchRequestFromTemplateWithName:@"itemWithIdentifier"
+                                            substitutionVariables:[NSDictionary dictionaryWithObject:[currentItemInfo valueForKey:@"identifier"] forKey:@"identifier"]];
+            
+            NSError *error = nil;
+            NSArray *executedRequest = [[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] parsingManagedObjectContext] executeFetchRequest:fetchRequest error:&error];
+            if (error) {
+                NSLog(@"%@", error);
+            }
+            
+            if (!executedRequest || [executedRequest count] == 0) {
+                Item *item = [Item newItem:[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] parsingManagedObjectContext]];
+                if ([currentItemInfo valueForKey:@"title"])
+                    [item setTitle:[currentItemInfo valueForKey:@"title"]];
+                if ([currentItemInfo valueForKey:@"link"])
+                    [item setLink:[currentItemInfo valueForKey:@"link"]];
+                if ([currentItemInfo valueForKey:@"identifier"])
+                    [item setIdentifier:[currentItemInfo valueForKey:@"identifier"]];
+                if ([currentItemInfo valueForKey:@"summary"])
+                    [item setSummary:[currentItemInfo valueForKey:@"summary"]];
+                if ([currentItemInfo valueForKey:@"content"])
+                    [item setContent:[currentItemInfo valueForKey:@"content"]];
+                if ([currentItemInfo valueForKey:@"date"])
+                    [item setDate:[currentItemInfo valueForKey:@"date"]];
+                if ([currentItemInfo valueForKey:@"updated"])
+                    [item setUpdated:[currentItemInfo valueForKey:@"updated"]];
+                                    
+                [currentItemInfo release];
+                currentItemInfo = nil;
                 
-        if (!executedRequest || [executedRequest count] == 0) {
-            Source *source = [Source newSource:[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] parsingManagedObjectContext]];
-            [source setTitle:sourceTitle];
-            [source setSummary:sourceSummary];
-            [source setLink:sourceLink];
-            
-            // release?
-            sourceTitle = nil;
-            sourceSummary = nil;
-            sourceLink = nil;
-            
-            [item setSource:(Source *)[[source managedObjectContext] objectWithID:[source objectID]]];
-        } else {
-            Source *source = [executedRequest objectAtIndex:0];
-            [item setSource:(Source *)[[source managedObjectContext] objectWithID:[source objectID]]];
+                // Add info to item
+                if (currentSourceInfo && [currentSourceInfo valueForKey:@"link"]) {
+                    NSFetchRequest *fetchRequest = [[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] managedObjectModel]
+                                                    fetchRequestFromTemplateWithName:@"sourceWithLink"
+                                                    substitutionVariables:[NSDictionary dictionaryWithObject:[currentSourceInfo valueForKey:@"link"] forKey:@"link"]];
+                    
+                    NSError *error = nil;
+                    NSArray *executedRequest = [[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] parsingManagedObjectContext] executeFetchRequest:fetchRequest error:&error];
+                    if (error) {
+                        NSLog(@"%@", error);
+                    }
+                    
+                    if (!executedRequest || [executedRequest count] == 0) {
+                        Source *source = [Source newSource:[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] parsingManagedObjectContext]];
+                        if ([currentSourceInfo valueForKey:@"title"])
+                            [source setTitle:[currentSourceInfo valueForKey:@"title"]];
+                        if ([currentSourceInfo valueForKey:@"summary"])
+                            [source setSummary:[currentSourceInfo valueForKey:@"summary"]];
+                        if ([currentSourceInfo valueForKey:@"link"])
+                            [source setLink:[currentSourceInfo valueForKey:@"link"]];
+                        
+                        [item setSource:(Source *)[[source managedObjectContext] objectWithID:[source objectID]]];
+                    } else {
+                        Source *source = [executedRequest objectAtIndex:0];
+                        [item setSource:(Source *)[[source managedObjectContext] objectWithID:[source objectID]]];
+                    }
+                                            
+                    [currentSourceInfo release];
+                    currentSourceInfo = nil;
+                }
+            }
         }
     }
     
-	// If end of an item then tell delegate
-	if (!processed) {
-		if (((feedType == FeedTypeRSS || feedType == FeedTypeRSS1) && [qName isEqualToString:@"item"]) ||
-			(feedType == FeedTypeAtom && [qName isEqualToString:@"entry"])) {
-			
-			// Dispatch item to delegate
-			[self dispatchFeedItemToDelegate];
-			
-		}
-	}
+//	// If end of an item then tell delegate
+//	if (!processed) {
+//		if (((feedType == FeedTypeRSS || feedType == FeedTypeRSS1) && [qName isEqualToString:@"item"]) ||
+//			(feedType == FeedTypeAtom && [qName isEqualToString:@"entry"])) {
+//			
+//			// Dispatch item to delegate
+//			[self dispatchFeedItemToDelegate];
+//			
+//		}
+//	}
 	
     /*
 	// Check if the document has finished parsing and send off info if needed (i.e. there were no items)
@@ -848,43 +879,43 @@
 	
 }
 
-#pragma mark -
-#pragma mark Send Items to Delegate
-
-- (void)dispatchFeedInfoToDelegate {
-	if (info) {
-	
-		// Inform delegate
-		if ([delegate respondsToSelector:@selector(feedParser:didParseFeedInfo:)])
-			[delegate feedParser:self didParseFeedInfo:[[info retain] autorelease]];
-		
-		// Debug log
-		MWLog(@"MWFeedParser: Feed info for \"%@\" successfully parsed", info.title);
-		
-		// Finish
-		self.info = nil;
-		
-	}
-}
-
-- (void)dispatchFeedItemToDelegate {
-	if (item) {
-
-		// Process before hand
-		if (!item.summary) { item.summary = item.content; item.content = nil; }
-		if (!item.date && item.updated) { item.date = item.updated; }
-
-		// Debug log
-		MWLog(@"MWFeedParser: Feed item \"%@\" successfully parsed", item.title);
-		
-		// Inform delegate
-		if ([delegate respondsToSelector:@selector(feedParser:didParseFeedItem:)])
-			[delegate feedParser:self didParseFeedItem:[[item retain] autorelease]];
-		
-		// Finish
-		self.item = nil;
-	}
-}
+//#pragma mark -
+//#pragma mark Send Items to Delegate
+//
+//- (void)dispatchFeedInfoToDelegate {
+//	if (info) {
+//	
+//		// Inform delegate
+//		if ([delegate respondsToSelector:@selector(feedParser:didParseFeedInfo:)])
+//			[delegate feedParser:self didParseFeedInfo:[[info retain] autorelease]];
+//		
+//		// Debug log
+//		MWLog(@"MWFeedParser: Feed info for \"%@\" successfully parsed", info.title);
+//		
+//		// Finish
+//		self.info = nil;
+//		
+//	}
+//}
+//
+//- (void)dispatchFeedItemToDelegate {
+//	if (item) {
+//
+//		// Process before hand
+//		if (!item.summary) { item.summary = item.content; item.content = nil; }
+//		if (!item.date && item.updated) { item.date = item.updated; }
+//
+//		// Debug log
+//		MWLog(@"MWFeedParser: Feed item \"%@\" successfully parsed", item.title);
+//		
+//		// Inform delegate
+//		if ([delegate respondsToSelector:@selector(feedParser:didParseFeedItem:)])
+//			[delegate feedParser:self didParseFeedItem:[[item retain] autorelease]];
+//		
+//		// Finish
+//		self.item = nil;
+//	}
+//}
 
 #pragma mark -
 #pragma mark Helpers & Properties
