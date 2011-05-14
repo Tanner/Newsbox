@@ -8,5 +8,3 @@
 # java noise
 *.class
 .metadata/
-/iOS/Newsbox.xcodeproj/
-/iOS/Shared/Newsbox.xcdatamodeld/
