@@ -1,9 +1,6 @@
 # xcode noise
 /iOS/build
-*.pbxuser
-*.mode1v3
-*.mode2v3
-*~.nib
+
 
 # osx noise
 .DS_STORE
