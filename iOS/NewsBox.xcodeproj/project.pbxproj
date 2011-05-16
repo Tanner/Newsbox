@@ -76,6 +76,7 @@
 		C36C480C138166F000AB5303 /* FastLoadFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C47BE138166F000AB5303 /* FastLoadFile.cpp */; };
 		C36C480D138166F000AB5303 /* ports.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C47C6138166F000AB5303 /* ports.cpp */; };
 		C36C480E138166F000AB5303 /* StringFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C47CC138166F000AB5303 /* StringFactory.cpp */; };
+		C36C48121381691600AB5303 /* Algorithm.mm in Sources */ = {isa = PBXBuildFile; fileRef = C36C48111381691600AB5303 /* Algorithm.mm */; };
 		C37C2FBD130C439E00C9AEB3 /* GitCommitsTableViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = C37C2FBB130C439E00C9AEB3 /* GitCommitsTableViewController_iPhone.m */; };
 		C37C2FBE130C439E00C9AEB3 /* GitCommitsTableViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = C37C2FBC130C439E00C9AEB3 /* GitCommitsTableViewController_iPhone.xib */; };
 		C39890441309AAE400647369 /* GitHubCommitFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C3988FE01309AAE400647369 /* GitHubCommitFactory.m */; };
@@ -327,6 +328,8 @@
 		C36C47D1138166F000AB5303 /* TrieFactory.hxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TrieFactory.hxx; sourceTree = "<group>"; };
 		C36C47D2138166F000AB5303 /* TrieNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrieNode.h; sourceTree = "<group>"; };
 		C36C47D3138166F000AB5303 /* TrieNode.hxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TrieNode.hxx; sourceTree = "<group>"; };
+		C36C48101381691600AB5303 /* Algorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algorithm.h; sourceTree = "<group>"; };
+		C36C48111381691600AB5303 /* Algorithm.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Algorithm.mm; sourceTree = "<group>"; };
 		C37C2FBA130C439E00C9AEB3 /* GitCommitsTableViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitCommitsTableViewController_iPhone.h; sourceTree = "<group>"; };
 		C37C2FBB130C439E00C9AEB3 /* GitCommitsTableViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitCommitsTableViewController_iPhone.m; sourceTree = "<group>"; };
 		C37C2FBC130C439E00C9AEB3 /* GitCommitsTableViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GitCommitsTableViewController_iPhone.xib; sourceTree = "<group>"; };
@@ -615,6 +618,8 @@
 				28EEC04A1118E28000187D67 /* AppDelegate_Shared.m */,
 				ED2E91C51301D23600983CC3 /* ItemLoader.h */,
 				ED2E91C41301D23600983CC3 /* ItemLoader.m */,
+				C36C48101381691600AB5303 /* Algorithm.h */,
+				C36C48111381691600AB5303 /* Algorithm.mm */,
 				ED6446EE130A17E400C197DB /* OBGradientView */,
 				ED59CD961307734900595B0A /* SFHFKeychainUtils */,
 				ED473C0A1307176D006CE75A /* MWFeedParser */,
@@ -1427,6 +1432,7 @@
 				C36C480C138166F000AB5303 /* FastLoadFile.cpp in Sources */,
 				C36C480D138166F000AB5303 /* ports.cpp in Sources */,
 				C36C480E138166F000AB5303 /* StringFactory.cpp in Sources */,
+				C36C48121381691600AB5303 /* Algorithm.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
