@@ -16,6 +16,7 @@
 #define MIN_TIME_TO_REFRESH_ON_BECOME_ACTIVE 1
 
 @interface AppDelegate_iPhone (private)
+- (void)reloadViewControllers;
 - (void)loginAndDownloadItems;
 - (void)purgeReadSourcesAndItems;
 @end
@@ -46,6 +47,7 @@
 }
 
 #pragma mark - 
+#pragma mark Purging
 
 - (void)purgeReadSourcesAndItems {
     // Git rid of items that are not to be kept
@@ -88,12 +90,7 @@
     [self saveContext];
     
     // Update GUI
-    if ([[navController viewControllers] containsObject:stvc]) {
-        [stvc reloadData];
-    }
-    if ([[navController viewControllers] containsObject:itvc]) {
-        [itvc reloadData];
-    }
+    [self reloadViewControllers];
 }
 
 #pragma mark -
@@ -183,13 +180,7 @@
         needsPurge = YES;
     }
     
-    if ([[navController viewControllers] containsObject:stvc]) {
-        [stvc reloadData];
-    }
-    
-    if ([[navController viewControllers] containsObject:itvc]) {
-        [itvc reloadData];
-    }
+    [self reloadViewControllers];
 }
 
 - (void)showError:(NSString *)errorTitle withMessage:(NSString *)errorMessage withSettingsButton:(BOOL)settingsButton {
@@ -220,10 +211,27 @@
 }
 
 #pragma mark -
+#pragma mark ViewController Methods
+
+- (void)reloadViewControllers {
+    if ([[navController viewControllers] containsObject:stvc]) {
+        [stvc reloadData];
+    }
+    if ([[navController viewControllers] containsObject:itvc]) {
+        [itvc reloadData];
+    }
+    if ([[navController viewControllers] containsObject:ivc]) {
+        [ivc reloadData];
+    }
+}
+
+#pragma mark -
 #pragma mark ItemsTableViewControllerDelegate Methods
 
-- (void)showItemAtIndex:(int)index fromArray:(NSMutableArray *)anArray {
-	[ivc setItemAtIndex:index fromArray:anArray];
+- (void)showItemWithIdentifier:(NSString *)itemIdentifier fromSource:(NSString *)sourceLink {
+	[ivc setItemIdentifier:itemIdentifier];
+    [ivc setSourceLink:sourceLink];
+    
 	[navController pushViewController:ivc animated:YES];
 }
 

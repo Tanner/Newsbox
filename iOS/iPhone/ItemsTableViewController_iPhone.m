@@ -64,6 +64,8 @@
 - (void)setSourceLink:(NSString *)sl {
     sourceLink = [sl copy];
     
+    currentItem = nil;
+    
     [self reloadData];
 }
 
@@ -109,7 +111,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-        
+    
     if ([items count] > 0) {    
         [self reformatCellLabelsWithOrientation:[self interfaceOrientation]];
         [[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:[items indexOfObject:currentItem] inSection:0]] setSelected:NO animated:YES];
@@ -168,7 +170,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     currentItem = [items objectAtIndex:indexPath.row];
     
-	[delegate showItemAtIndex:[items indexOfObject:currentItem] fromArray:items];
+	[delegate showItemWithIdentifier:currentItem.identifier fromSource:sourceLink];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -188,7 +190,6 @@
 
 - (void)dealloc {
 	[items release];
-    
     [sourceLink release];
 	
     [super dealloc];

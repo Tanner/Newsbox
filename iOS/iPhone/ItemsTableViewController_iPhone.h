@@ -11,7 +11,7 @@
 #import "ItemSupport.h"
 
 @protocol ItemsTableViewControllerDelegate
-- (void)showItemAtIndex:(int)index fromArray:(NSArray *)anArray;
+- (void)showItemWithIdentifier:(NSString *)iId fromSource:(NSString *)sLink;
 @end
 
 @interface ItemsTableViewController_iPhone : UITableViewController {

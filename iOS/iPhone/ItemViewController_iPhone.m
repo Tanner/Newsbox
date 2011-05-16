@@ -7,6 +7,7 @@
 //
 
 #import "ItemViewController_iPhone.h"
+#import "AppDelegate_Shared.h"
 
 @interface ItemViewController_iPhone (private) 
 - (NSString *)stylizedHTMLWithItem:(Item *)anItem;
@@ -15,15 +16,87 @@
 @implementation ItemViewController_iPhone
 
 @synthesize delegate;
+@synthesize itemIdentifier;
+@synthesize sourceLink;
+
+#pragma mark -
+#pragma mark Init
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
+        items = [[NSMutableArray alloc] init];
+        
+        wv = [[UIWebView alloc] initWithFrame:self.view.bounds];
+		[wv setDelegate:self];
+		[wv setBackgroundColor:[UIColor whiteColor]];
+		[wv setScalesPageToFit:NO];
+		[wv setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
+		
+		for (UIView *aView in [[[wv subviews] objectAtIndex:0] subviews]) { 
+			if ([aView isKindOfClass:[UIImageView class]]) {
+				aView.hidden = YES;
+			}
+		}
+		
+		[self.view addSubview:wv];
+        
+        NSArray *prevNextControlItems = [NSArray arrayWithObjects:[UIImage imageNamed:@"up_arrow.png"],[UIImage imageNamed:@"down_arrow.png"],nil];
+        prevNextControl = [[UISegmentedControl alloc] initWithItems:prevNextControlItems];
+        [prevNextControl setSegmentedControlStyle:UISegmentedControlStyleBar];
+        [prevNextControl setMomentary:YES];
+        [prevNextControl setWidth:42.0f forSegmentAtIndex:0];
+        [prevNextControl setWidth:42.0f forSegmentAtIndex:1];
+        [prevNextControl addTarget:self action:@selector(prevNextControlValueChanged:) forControlEvents:UIControlEventValueChanged];
+        
+        [self.navigationItem setRightBarButtonItem:[[[UIBarButtonItem alloc] initWithCustomView:prevNextControl] autorelease]];
+    }
+    
+    return self;
+}
+
+#pragma mark -
+#pragma mark Data
+
+- (void)reloadData {
+    [items removeAllObjects];
+    
+    // Fill array of items
+    NSArray *executedRequest;
+    if (sourceLink) {
+        NSFetchRequest *fetchRequest = [[(AppDelegate_Shared *)delegate managedObjectModel]
+                                        fetchRequestFromTemplateWithName:@"itemsFromSourceWithLink"
+                                        substitutionVariables:[NSDictionary dictionaryWithObject:sourceLink forKey:@"sourceLink"]];
+        executedRequest = [[(AppDelegate_Shared *)delegate managedObjectContext] executeFetchRequest:fetchRequest error:nil];
+    } else {
+        NSFetchRequest *fetchRequest = [[(AppDelegate_Shared *)delegate managedObjectModel]
+                                        fetchRequestTemplateForName:@"allItems"];
+        executedRequest = [[(AppDelegate_Shared *)delegate managedObjectContext] executeFetchRequest:fetchRequest error:nil];
+    }
+    
+    if (executedRequest) {
+        [items addObjectsFromArray:executedRequest];
+    }
+    
+    [items sortUsingSelector:@selector(compareByDate:)];
+    
+    // Set current item
+    for (Item *i in items) {
+        if ([i.identifier isEqualToString:itemIdentifier]) {
+            currentItem = i;
+        }
+    }
+    
+    [self displayCurrentItem];
+}
 
 - (void)prevNextControlValueChanged:(id)sender {
 	if ([sender selectedSegmentIndex] == 0) {
-		currentItemIndex--;
+		currentItem = [items objectAtIndex:[items indexOfObject:currentItem]-1];
 	} else {
-		currentItemIndex++;
+		currentItem = [items objectAtIndex:[items indexOfObject:currentItem]+1];
 	}
     
-    [delegate didChangeCurrentItemTo:[array objectAtIndex:currentItemIndex]];
+    [delegate didChangeCurrentItemTo:currentItem];
     
     [self displayCurrentItem];
 }
@@ -141,51 +214,14 @@
     
 	return stylizedHTML;
 }
-
-- (void)setItemAtIndex:(int)index fromArray:(NSMutableArray *)anArray {
-    currentItemIndex = index;
-    array = anArray;
-
-    [self displayCurrentItem];
-}
          
 - (void)displayCurrentItem {
     // Set Item's read property
-    [[array objectAtIndex:currentItemIndex] setRead:[NSNumber numberWithBool:YES]];
+    [currentItem setRead:[NSNumber numberWithBool:YES]];
     
-    [self setIsPrevItemAvailable:currentItemIndex > 0
-          andIsNextItemAvailable:currentItemIndex < [array count]-1];
-    [wv loadHTMLString:[self stylizedHTMLWithItem:[array objectAtIndex:currentItemIndex]] baseURL:nil];
-}
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-		wv = [[UIWebView alloc] initWithFrame:self.view.bounds];
-		[wv setDelegate:self];
-		[wv setBackgroundColor:[UIColor whiteColor]];
-		[wv setScalesPageToFit:NO];
-		[wv setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
-		
-		for (UIView *aView in [[[wv subviews] objectAtIndex:0] subviews]) { 
-			if ([aView isKindOfClass:[UIImageView class]]) {
-				aView.hidden = YES;
-			}
-		}
-		
-		[self.view addSubview:wv];
-        
-        NSArray *prevNextControlItems = [NSArray arrayWithObjects:[UIImage imageNamed:@"up_arrow.png"],[UIImage imageNamed:@"down_arrow.png"],nil];
-        prevNextControl = [[UISegmentedControl alloc] initWithItems:prevNextControlItems];
-        [prevNextControl setSegmentedControlStyle:UISegmentedControlStyleBar];
-        [prevNextControl setMomentary:YES];
-        [prevNextControl setWidth:42.0f forSegmentAtIndex:0];
-        [prevNextControl setWidth:42.0f forSegmentAtIndex:1];
-        [prevNextControl addTarget:self action:@selector(prevNextControlValueChanged:) forControlEvents:UIControlEventValueChanged];
-    
-        [self.navigationItem setRightBarButtonItem:[[[UIBarButtonItem alloc] initWithCustomView:prevNextControl] autorelease]];
-	}
-    return self;
+    [self setIsPrevItemAvailable:[items indexOfObject:currentItem] > 0
+          andIsNextItemAvailable:[items indexOfObject:currentItem] < [items count]-1];
+    [wv loadHTMLString:[self stylizedHTMLWithItem:currentItem] baseURL:nil];
 }
 
 - (void)viewDidLoad {
@@ -196,6 +232,8 @@
 
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
+    
+    [self reloadData];
 }
 	 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -222,6 +260,10 @@
 }
 
 - (void)dealloc {
+    [itemIdentifier release];
+    [sourceLink release];
+    [items release];
+    
     [super dealloc];
 }
 
