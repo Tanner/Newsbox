@@ -709,8 +709,10 @@
                 NSLog(@"%@", error);
             }
             
-            if (!executedRequest || [executedRequest count] == 0) {
+            // New Item
+            if ([executedRequest count] == 0) {
                 Item *item = [Item newItem:[(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] loadingManagedObjectContext]];
+                
                 if ([currentItemInfo valueForKey:@"title"])
                     [item setTitle:[currentItemInfo valueForKey:@"title"]];
                 if ([currentItemInfo valueForKey:@"link"])
@@ -725,7 +727,9 @@
                     [item setDate:[currentItemInfo valueForKey:@"date"]];
                 if ([currentItemInfo valueForKey:@"updated"])
                     [item setUpdated:[currentItemInfo valueForKey:@"updated"]];
-                                    
+                                 
+                [item setKeep:[NSNumber numberWithBool:YES]];
+                
                 [currentItemInfo release];
                 currentItemInfo = nil;
                 
@@ -764,6 +768,11 @@
                     
                 }
                 [item release];
+            }
+            
+            // Item already is in database
+            else {
+                [[executedRequest objectAtIndex:0] setKeep:[NSNumber numberWithBool:YES]];
             }
         }
     }
