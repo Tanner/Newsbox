@@ -12,6 +12,7 @@
 #import "ItemsTableViewController_iPhone.h"
 #import "SettingsTableViewController_iPhone.h"
 #import "SFHFKeychainUtils.h"
+#import "Algorithm.h"
 
 #define MIN_TIME_TO_REFRESH_ON_BECOME_ACTIVE 1
 
@@ -182,6 +183,9 @@
     } else {
         needsPurge = YES;
     }
+    
+    // create topics
+    [Algorithm clusterItems];
     
     if ([[navController viewControllers] containsObject:stvc]) {
         [stvc reloadData];
