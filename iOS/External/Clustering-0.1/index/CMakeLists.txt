@@ -1,0 +1,39 @@
+INCLUDE_DIRECTORIES(
+	${WIKICLUST_SOURCE_DIR}
+)
+
+ADD_LIBRARY(index
+	DiskIndexString.cpp
+	DiskIndexString.h
+	DiskIndexUnsignedData.cpp
+	DiskIndexUnsignedData.h
+	DiskIndexUnsignedInstance.cpp
+	DiskIndexUnsignedInstance.h
+	FillRandomUnsignedIndex.cpp
+	FillRandomUnsignedIndex.h
+	IndexIo.h
+	IndexIo.cpp
+	IndexString.h
+	IndexString.cpp
+	IndexUnsignedData.cpp
+	IndexUnsignedData.h
+	IndexUnsignedInstance.cpp
+	IndexUnsignedInstance.h
+	IndexUnsignedIterator.cpp
+	IndexUnsignedIterator.h
+	InvertDiskUnsignedIndex.h
+	InvertDiskUnsignedIndex.hxx
+	MemoryIndexString.cpp
+	MemoryIndexString.h
+	MemoryIndexUnsignedData.cpp
+	MemoryIndexUnsignedData.h
+	MemoryIndexUnsignedInstance.cpp
+	MemoryIndexUnsignedInstance.h
+	SortDiskIndex.h
+	SortDiskIndexBloc.cpp
+	SortDiskIndexBloc.h
+	SortDiskIndexCopy.cpp
+	SortDiskIndexCopy.h
+	SortDiskIndexFileAccess.cpp
+	SortDiskIndexFileAccess.h
+)

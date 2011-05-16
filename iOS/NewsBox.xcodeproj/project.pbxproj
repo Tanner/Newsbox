@@ -17,6 +17,65 @@
 		28AD733F0D9D9553002E5188 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow_iPad.xib */; };
 		28EEBFDD1118E19E00187D67 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28EEBFDC1118E19E00187D67 /* CoreData.framework */; };
 		28EEC04B1118E28000187D67 /* AppDelegate_Shared.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EEC04A1118E28000187D67 /* AppDelegate_Shared.m */; };
+		C36C47D4138166F000AB5303 /* Cluster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C474F138166F000AB5303 /* Cluster.cpp */; };
+		C36C47D5138166F000AB5303 /* ClusteringAlgorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C4752138166F000AB5303 /* ClusteringAlgorithm.cpp */; };
+		C36C47D6138166F000AB5303 /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = C36C4754138166F000AB5303 /* CMakeLists.txt */; };
+		C36C47D7138166F000AB5303 /* DiceSimilarityMeasure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C4755138166F000AB5303 /* DiceSimilarityMeasure.cpp */; };
+		C36C47D8138166F000AB5303 /* DiskPairsComputationThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C4757138166F000AB5303 /* DiskPairsComputationThread.cpp */; };
+		C36C47D9138166F000AB5303 /* DiskPairsIterator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C4759138166F000AB5303 /* DiskPairsIterator.cpp */; };
+		C36C47DA138166F000AB5303 /* JaccardSimilarityMeasure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C475B138166F000AB5303 /* JaccardSimilarityMeasure.cpp */; };
+		C36C47DB138166F000AB5303 /* K2SimilarityMeasure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C475D138166F000AB5303 /* K2SimilarityMeasure.cpp */; };
+		C36C47DC138166F000AB5303 /* MemoryPairsComputationThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C475F138166F000AB5303 /* MemoryPairsComputationThread.cpp */; };
+		C36C47DD138166F000AB5303 /* MemoryPairsIterator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C4761138166F000AB5303 /* MemoryPairsIterator.cpp */; };
+		C36C47DE138166F000AB5303 /* PairArticles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C4763138166F000AB5303 /* PairArticles.cpp */; };
+		C36C47DF138166F000AB5303 /* PairsComputation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C4765138166F000AB5303 /* PairsComputation.cpp */; };
+		C36C47E0138166F000AB5303 /* PairsComputationData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C4767138166F000AB5303 /* PairsComputationData.cpp */; };
+		C36C47E1138166F000AB5303 /* PairsComputationDisk.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C4769138166F000AB5303 /* PairsComputationDisk.cpp */; };
+		C36C47E2138166F000AB5303 /* PairsComputationMemory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C476B138166F000AB5303 /* PairsComputationMemory.cpp */; };
+		C36C47E3138166F000AB5303 /* PairsComputationThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C476D138166F000AB5303 /* PairsComputationThread.cpp */; };
+		C36C47E4138166F000AB5303 /* PairsIterator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C476F138166F000AB5303 /* PairsIterator.cpp */; };
+		C36C47E5138166F000AB5303 /* RTSimilarityMeasure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C4771138166F000AB5303 /* RTSimilarityMeasure.cpp */; };
+		C36C47E6138166F000AB5303 /* RusselAndRaoSimilarityMeasure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C4773138166F000AB5303 /* RusselAndRaoSimilarityMeasure.cpp */; };
+		C36C47E7138166F000AB5303 /* SimilarityMeasure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C4775138166F000AB5303 /* SimilarityMeasure.cpp */; };
+		C36C47E8138166F000AB5303 /* SimpleMatchingSimilarityMeasure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C4777138166F000AB5303 /* SimpleMatchingSimilarityMeasure.cpp */; };
+		C36C47E9138166F000AB5303 /* SS1SimilarityMeasure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C4779138166F000AB5303 /* SS1SimilarityMeasure.cpp */; };
+		C36C47EA138166F000AB5303 /* SS2SimilarityMeasure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C477B138166F000AB5303 /* SS2SimilarityMeasure.cpp */; };
+		C36C47EB138166F000AB5303 /* Word.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C477D138166F000AB5303 /* Word.cpp */; };
+		C36C47EC138166F000AB5303 /* AlgorithmData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C4780138166F000AB5303 /* AlgorithmData.cpp */; };
+		C36C47ED138166F000AB5303 /* API.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C4782138166F000AB5303 /* API.cpp */; };
+		C36C47EE138166F000AB5303 /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = C36C4784138166F000AB5303 /* CMakeLists.txt */; };
+		C36C47EF138166F000AB5303 /* DescId.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C4785138166F000AB5303 /* DescId.cpp */; };
+		C36C47F0138166F000AB5303 /* DocCluster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C4787138166F000AB5303 /* DocCluster.cpp */; };
+		C36C47F1138166F000AB5303 /* DocId.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C4789138166F000AB5303 /* DocId.cpp */; };
+		C36C47F2138166F000AB5303 /* Parameters.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C478B138166F000AB5303 /* Parameters.cpp */; };
+		C36C47F3138166F000AB5303 /* Results.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C478D138166F000AB5303 /* Results.cpp */; };
+		C36C47F4138166F000AB5303 /* AUTHORS in Resources */ = {isa = PBXBuildFile; fileRef = C36C478F138166F000AB5303 /* AUTHORS */; };
+		C36C47F5138166F000AB5303 /* CHANGELOG in Resources */ = {isa = PBXBuildFile; fileRef = C36C4790138166F000AB5303 /* CHANGELOG */; };
+		C36C47F6138166F000AB5303 /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = C36C4791138166F000AB5303 /* CMakeLists.txt */; };
+		C36C47F7138166F000AB5303 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = C36C4792138166F000AB5303 /* COPYING */; };
+		C36C47F8138166F000AB5303 /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = C36C4794138166F000AB5303 /* CMakeLists.txt */; };
+		C36C47F9138166F000AB5303 /* DiskIndexString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C4795138166F000AB5303 /* DiskIndexString.cpp */; };
+		C36C47FA138166F000AB5303 /* DiskIndexUnsignedData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C4797138166F000AB5303 /* DiskIndexUnsignedData.cpp */; };
+		C36C47FB138166F000AB5303 /* DiskIndexUnsignedInstance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C4799138166F000AB5303 /* DiskIndexUnsignedInstance.cpp */; };
+		C36C47FC138166F000AB5303 /* FillRandomUnsignedIndex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C479B138166F000AB5303 /* FillRandomUnsignedIndex.cpp */; };
+		C36C47FD138166F000AB5303 /* IndexIo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C479D138166F000AB5303 /* IndexIo.cpp */; };
+		C36C47FE138166F000AB5303 /* IndexString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C479F138166F000AB5303 /* IndexString.cpp */; };
+		C36C47FF138166F000AB5303 /* IndexUnsignedData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C47A1138166F000AB5303 /* IndexUnsignedData.cpp */; };
+		C36C4800138166F000AB5303 /* IndexUnsignedInstance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C47A3138166F000AB5303 /* IndexUnsignedInstance.cpp */; };
+		C36C4801138166F000AB5303 /* IndexUnsignedIterator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C47A5138166F000AB5303 /* IndexUnsignedIterator.cpp */; };
+		C36C4802138166F000AB5303 /* MemoryIndexString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C47A9138166F000AB5303 /* MemoryIndexString.cpp */; };
+		C36C4803138166F000AB5303 /* MemoryIndexUnsignedData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C47AB138166F000AB5303 /* MemoryIndexUnsignedData.cpp */; };
+		C36C4804138166F000AB5303 /* MemoryIndexUnsignedInstance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C47AD138166F000AB5303 /* MemoryIndexUnsignedInstance.cpp */; };
+		C36C4805138166F000AB5303 /* SortDiskIndexBloc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C47B0138166F000AB5303 /* SortDiskIndexBloc.cpp */; };
+		C36C4806138166F000AB5303 /* SortDiskIndexCopy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C47B2138166F000AB5303 /* SortDiskIndexCopy.cpp */; };
+		C36C4807138166F000AB5303 /* SortDiskIndexFileAccess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C47B4138166F000AB5303 /* SortDiskIndexFileAccess.cpp */; };
+		C36C4808138166F000AB5303 /* INSTALL in Resources */ = {isa = PBXBuildFile; fileRef = C36C47B6138166F000AB5303 /* INSTALL */; };
+		C36C4809138166F000AB5303 /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = C36C47B9138166F000AB5303 /* CMakeLists.txt */; };
+		C36C480A138166F000AB5303 /* Exception.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C47BA138166F000AB5303 /* Exception.cpp */; };
+		C36C480B138166F000AB5303 /* FastGetLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C47BC138166F000AB5303 /* FastGetLine.cpp */; };
+		C36C480C138166F000AB5303 /* FastLoadFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C47BE138166F000AB5303 /* FastLoadFile.cpp */; };
+		C36C480D138166F000AB5303 /* ports.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C47C6138166F000AB5303 /* ports.cpp */; };
+		C36C480E138166F000AB5303 /* StringFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36C47CC138166F000AB5303 /* StringFactory.cpp */; };
 		C37C2FBD130C439E00C9AEB3 /* GitCommitsTableViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = C37C2FBB130C439E00C9AEB3 /* GitCommitsTableViewController_iPhone.m */; };
 		C37C2FBE130C439E00C9AEB3 /* GitCommitsTableViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = C37C2FBC130C439E00C9AEB3 /* GitCommitsTableViewController_iPhone.xib */; };
 		C39890441309AAE400647369 /* GitHubCommitFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C3988FE01309AAE400647369 /* GitHubCommitFactory.m */; };
@@ -139,6 +198,135 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Shared/main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Newsbox_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Newsbox_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Newsbox-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Newsbox-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		C36C474F138166F000AB5303 /* Cluster.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cluster.cpp; sourceTree = "<group>"; };
+		C36C4750138166F000AB5303 /* Cluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cluster.h; sourceTree = "<group>"; };
+		C36C4751138166F000AB5303 /* Cluster.hxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Cluster.hxx; sourceTree = "<group>"; };
+		C36C4752138166F000AB5303 /* ClusteringAlgorithm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ClusteringAlgorithm.cpp; sourceTree = "<group>"; };
+		C36C4753138166F000AB5303 /* ClusteringAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClusteringAlgorithm.h; sourceTree = "<group>"; };
+		C36C4754138166F000AB5303 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		C36C4755138166F000AB5303 /* DiceSimilarityMeasure.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DiceSimilarityMeasure.cpp; sourceTree = "<group>"; };
+		C36C4756138166F000AB5303 /* DiceSimilarityMeasure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiceSimilarityMeasure.h; sourceTree = "<group>"; };
+		C36C4757138166F000AB5303 /* DiskPairsComputationThread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DiskPairsComputationThread.cpp; sourceTree = "<group>"; };
+		C36C4758138166F000AB5303 /* DiskPairsComputationThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiskPairsComputationThread.h; sourceTree = "<group>"; };
+		C36C4759138166F000AB5303 /* DiskPairsIterator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DiskPairsIterator.cpp; sourceTree = "<group>"; };
+		C36C475A138166F000AB5303 /* DiskPairsIterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiskPairsIterator.h; sourceTree = "<group>"; };
+		C36C475B138166F000AB5303 /* JaccardSimilarityMeasure.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JaccardSimilarityMeasure.cpp; sourceTree = "<group>"; };
+		C36C475C138166F000AB5303 /* JaccardSimilarityMeasure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JaccardSimilarityMeasure.h; sourceTree = "<group>"; };
+		C36C475D138166F000AB5303 /* K2SimilarityMeasure.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = K2SimilarityMeasure.cpp; sourceTree = "<group>"; };
+		C36C475E138166F000AB5303 /* K2SimilarityMeasure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = K2SimilarityMeasure.h; sourceTree = "<group>"; };
+		C36C475F138166F000AB5303 /* MemoryPairsComputationThread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MemoryPairsComputationThread.cpp; sourceTree = "<group>"; };
+		C36C4760138166F000AB5303 /* MemoryPairsComputationThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryPairsComputationThread.h; sourceTree = "<group>"; };
+		C36C4761138166F000AB5303 /* MemoryPairsIterator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MemoryPairsIterator.cpp; sourceTree = "<group>"; };
+		C36C4762138166F000AB5303 /* MemoryPairsIterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryPairsIterator.h; sourceTree = "<group>"; };
+		C36C4763138166F000AB5303 /* PairArticles.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PairArticles.cpp; sourceTree = "<group>"; };
+		C36C4764138166F000AB5303 /* PairArticles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PairArticles.h; sourceTree = "<group>"; };
+		C36C4765138166F000AB5303 /* PairsComputation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PairsComputation.cpp; sourceTree = "<group>"; };
+		C36C4766138166F000AB5303 /* PairsComputation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PairsComputation.h; sourceTree = "<group>"; };
+		C36C4767138166F000AB5303 /* PairsComputationData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PairsComputationData.cpp; sourceTree = "<group>"; };
+		C36C4768138166F000AB5303 /* PairsComputationData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PairsComputationData.h; sourceTree = "<group>"; };
+		C36C4769138166F000AB5303 /* PairsComputationDisk.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PairsComputationDisk.cpp; sourceTree = "<group>"; };
+		C36C476A138166F000AB5303 /* PairsComputationDisk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PairsComputationDisk.h; sourceTree = "<group>"; };
+		C36C476B138166F000AB5303 /* PairsComputationMemory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PairsComputationMemory.cpp; sourceTree = "<group>"; };
+		C36C476C138166F000AB5303 /* PairsComputationMemory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PairsComputationMemory.h; sourceTree = "<group>"; };
+		C36C476D138166F000AB5303 /* PairsComputationThread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PairsComputationThread.cpp; sourceTree = "<group>"; };
+		C36C476E138166F000AB5303 /* PairsComputationThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PairsComputationThread.h; sourceTree = "<group>"; };
+		C36C476F138166F000AB5303 /* PairsIterator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PairsIterator.cpp; sourceTree = "<group>"; };
+		C36C4770138166F000AB5303 /* PairsIterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PairsIterator.h; sourceTree = "<group>"; };
+		C36C4771138166F000AB5303 /* RTSimilarityMeasure.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RTSimilarityMeasure.cpp; sourceTree = "<group>"; };
+		C36C4772138166F000AB5303 /* RTSimilarityMeasure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTSimilarityMeasure.h; sourceTree = "<group>"; };
+		C36C4773138166F000AB5303 /* RusselAndRaoSimilarityMeasure.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RusselAndRaoSimilarityMeasure.cpp; sourceTree = "<group>"; };
+		C36C4774138166F000AB5303 /* RusselAndRaoSimilarityMeasure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RusselAndRaoSimilarityMeasure.h; sourceTree = "<group>"; };
+		C36C4775138166F000AB5303 /* SimilarityMeasure.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimilarityMeasure.cpp; sourceTree = "<group>"; };
+		C36C4776138166F000AB5303 /* SimilarityMeasure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimilarityMeasure.h; sourceTree = "<group>"; };
+		C36C4777138166F000AB5303 /* SimpleMatchingSimilarityMeasure.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleMatchingSimilarityMeasure.cpp; sourceTree = "<group>"; };
+		C36C4778138166F000AB5303 /* SimpleMatchingSimilarityMeasure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleMatchingSimilarityMeasure.h; sourceTree = "<group>"; };
+		C36C4779138166F000AB5303 /* SS1SimilarityMeasure.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SS1SimilarityMeasure.cpp; sourceTree = "<group>"; };
+		C36C477A138166F000AB5303 /* SS1SimilarityMeasure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SS1SimilarityMeasure.h; sourceTree = "<group>"; };
+		C36C477B138166F000AB5303 /* SS2SimilarityMeasure.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SS2SimilarityMeasure.cpp; sourceTree = "<group>"; };
+		C36C477C138166F000AB5303 /* SS2SimilarityMeasure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SS2SimilarityMeasure.h; sourceTree = "<group>"; };
+		C36C477D138166F000AB5303 /* Word.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Word.cpp; sourceTree = "<group>"; };
+		C36C477E138166F000AB5303 /* Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Word.h; sourceTree = "<group>"; };
+		C36C4780138166F000AB5303 /* AlgorithmData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AlgorithmData.cpp; sourceTree = "<group>"; };
+		C36C4781138166F000AB5303 /* AlgorithmData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlgorithmData.h; sourceTree = "<group>"; };
+		C36C4782138166F000AB5303 /* API.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = API.cpp; sourceTree = "<group>"; };
+		C36C4783138166F000AB5303 /* API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
+		C36C4784138166F000AB5303 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		C36C4785138166F000AB5303 /* DescId.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DescId.cpp; sourceTree = "<group>"; };
+		C36C4786138166F000AB5303 /* DescId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescId.h; sourceTree = "<group>"; };
+		C36C4787138166F000AB5303 /* DocCluster.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DocCluster.cpp; sourceTree = "<group>"; };
+		C36C4788138166F000AB5303 /* DocCluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocCluster.h; sourceTree = "<group>"; };
+		C36C4789138166F000AB5303 /* DocId.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DocId.cpp; sourceTree = "<group>"; };
+		C36C478A138166F000AB5303 /* DocId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocId.h; sourceTree = "<group>"; };
+		C36C478B138166F000AB5303 /* Parameters.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Parameters.cpp; sourceTree = "<group>"; };
+		C36C478C138166F000AB5303 /* Parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parameters.h; sourceTree = "<group>"; };
+		C36C478D138166F000AB5303 /* Results.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Results.cpp; sourceTree = "<group>"; };
+		C36C478E138166F000AB5303 /* Results.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Results.h; sourceTree = "<group>"; };
+		C36C478F138166F000AB5303 /* AUTHORS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AUTHORS; sourceTree = "<group>"; };
+		C36C4790138166F000AB5303 /* CHANGELOG */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG; sourceTree = "<group>"; };
+		C36C4791138166F000AB5303 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		C36C4792138166F000AB5303 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
+		C36C4794138166F000AB5303 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		C36C4795138166F000AB5303 /* DiskIndexString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DiskIndexString.cpp; sourceTree = "<group>"; };
+		C36C4796138166F000AB5303 /* DiskIndexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiskIndexString.h; sourceTree = "<group>"; };
+		C36C4797138166F000AB5303 /* DiskIndexUnsignedData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DiskIndexUnsignedData.cpp; sourceTree = "<group>"; };
+		C36C4798138166F000AB5303 /* DiskIndexUnsignedData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiskIndexUnsignedData.h; sourceTree = "<group>"; };
+		C36C4799138166F000AB5303 /* DiskIndexUnsignedInstance.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DiskIndexUnsignedInstance.cpp; sourceTree = "<group>"; };
+		C36C479A138166F000AB5303 /* DiskIndexUnsignedInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiskIndexUnsignedInstance.h; sourceTree = "<group>"; };
+		C36C479B138166F000AB5303 /* FillRandomUnsignedIndex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FillRandomUnsignedIndex.cpp; sourceTree = "<group>"; };
+		C36C479C138166F000AB5303 /* FillRandomUnsignedIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FillRandomUnsignedIndex.h; sourceTree = "<group>"; };
+		C36C479D138166F000AB5303 /* IndexIo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IndexIo.cpp; sourceTree = "<group>"; };
+		C36C479E138166F000AB5303 /* IndexIo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexIo.h; sourceTree = "<group>"; };
+		C36C479F138166F000AB5303 /* IndexString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IndexString.cpp; sourceTree = "<group>"; };
+		C36C47A0138166F000AB5303 /* IndexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexString.h; sourceTree = "<group>"; };
+		C36C47A1138166F000AB5303 /* IndexUnsignedData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IndexUnsignedData.cpp; sourceTree = "<group>"; };
+		C36C47A2138166F000AB5303 /* IndexUnsignedData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexUnsignedData.h; sourceTree = "<group>"; };
+		C36C47A3138166F000AB5303 /* IndexUnsignedInstance.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IndexUnsignedInstance.cpp; sourceTree = "<group>"; };
+		C36C47A4138166F000AB5303 /* IndexUnsignedInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexUnsignedInstance.h; sourceTree = "<group>"; };
+		C36C47A5138166F000AB5303 /* IndexUnsignedIterator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IndexUnsignedIterator.cpp; sourceTree = "<group>"; };
+		C36C47A6138166F000AB5303 /* IndexUnsignedIterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexUnsignedIterator.h; sourceTree = "<group>"; };
+		C36C47A7138166F000AB5303 /* InvertDiskUnsignedIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvertDiskUnsignedIndex.h; sourceTree = "<group>"; };
+		C36C47A8138166F000AB5303 /* InvertDiskUnsignedIndex.hxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = InvertDiskUnsignedIndex.hxx; sourceTree = "<group>"; };
+		C36C47A9138166F000AB5303 /* MemoryIndexString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MemoryIndexString.cpp; sourceTree = "<group>"; };
+		C36C47AA138166F000AB5303 /* MemoryIndexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryIndexString.h; sourceTree = "<group>"; };
+		C36C47AB138166F000AB5303 /* MemoryIndexUnsignedData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MemoryIndexUnsignedData.cpp; sourceTree = "<group>"; };
+		C36C47AC138166F000AB5303 /* MemoryIndexUnsignedData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryIndexUnsignedData.h; sourceTree = "<group>"; };
+		C36C47AD138166F000AB5303 /* MemoryIndexUnsignedInstance.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MemoryIndexUnsignedInstance.cpp; sourceTree = "<group>"; };
+		C36C47AE138166F000AB5303 /* MemoryIndexUnsignedInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryIndexUnsignedInstance.h; sourceTree = "<group>"; };
+		C36C47AF138166F000AB5303 /* SortDiskIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortDiskIndex.h; sourceTree = "<group>"; };
+		C36C47B0138166F000AB5303 /* SortDiskIndexBloc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SortDiskIndexBloc.cpp; sourceTree = "<group>"; };
+		C36C47B1138166F000AB5303 /* SortDiskIndexBloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortDiskIndexBloc.h; sourceTree = "<group>"; };
+		C36C47B2138166F000AB5303 /* SortDiskIndexCopy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SortDiskIndexCopy.cpp; sourceTree = "<group>"; };
+		C36C47B3138166F000AB5303 /* SortDiskIndexCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortDiskIndexCopy.h; sourceTree = "<group>"; };
+		C36C47B4138166F000AB5303 /* SortDiskIndexFileAccess.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SortDiskIndexFileAccess.cpp; sourceTree = "<group>"; };
+		C36C47B5138166F000AB5303 /* SortDiskIndexFileAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortDiskIndexFileAccess.h; sourceTree = "<group>"; };
+		C36C47B6138166F000AB5303 /* INSTALL */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = INSTALL; sourceTree = "<group>"; };
+		C36C47B9138166F000AB5303 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		C36C47BA138166F000AB5303 /* Exception.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Exception.cpp; sourceTree = "<group>"; };
+		C36C47BB138166F000AB5303 /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
+		C36C47BC138166F000AB5303 /* FastGetLine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FastGetLine.cpp; sourceTree = "<group>"; };
+		C36C47BD138166F000AB5303 /* FastGetLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastGetLine.h; sourceTree = "<group>"; };
+		C36C47BE138166F000AB5303 /* FastLoadFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FastLoadFile.cpp; sourceTree = "<group>"; };
+		C36C47BF138166F000AB5303 /* FastLoadFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastLoadFile.h; sourceTree = "<group>"; };
+		C36C47C0138166F000AB5303 /* Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hash.h; sourceTree = "<group>"; };
+		C36C47C1138166F000AB5303 /* Hash.hxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Hash.hxx; sourceTree = "<group>"; };
+		C36C47C2138166F000AB5303 /* HashElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HashElement.h; sourceTree = "<group>"; };
+		C36C47C3138166F000AB5303 /* HashElement.hxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HashElement.hxx; sourceTree = "<group>"; };
+		C36C47C4138166F000AB5303 /* HashElementFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HashElementFactory.h; sourceTree = "<group>"; };
+		C36C47C5138166F000AB5303 /* HashElementFactory.hxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HashElementFactory.hxx; sourceTree = "<group>"; };
+		C36C47C6138166F000AB5303 /* ports.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ports.cpp; sourceTree = "<group>"; };
+		C36C47C7138166F000AB5303 /* ports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ports.h; sourceTree = "<group>"; };
+		C36C47C8138166F000AB5303 /* SortFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortFile.h; sourceTree = "<group>"; };
+		C36C47C9138166F000AB5303 /* SortFile.hxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SortFile.hxx; sourceTree = "<group>"; };
+		C36C47CA138166F000AB5303 /* SortFileThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortFileThread.h; sourceTree = "<group>"; };
+		C36C47CB138166F000AB5303 /* SortFileThread.hxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SortFileThread.hxx; sourceTree = "<group>"; };
+		C36C47CC138166F000AB5303 /* StringFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StringFactory.cpp; sourceTree = "<group>"; };
+		C36C47CD138166F000AB5303 /* StringFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringFactory.h; sourceTree = "<group>"; };
+		C36C47CE138166F000AB5303 /* Trie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trie.h; sourceTree = "<group>"; };
+		C36C47CF138166F000AB5303 /* Trie.hxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Trie.hxx; sourceTree = "<group>"; };
+		C36C47D0138166F000AB5303 /* TrieFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrieFactory.h; sourceTree = "<group>"; };
+		C36C47D1138166F000AB5303 /* TrieFactory.hxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TrieFactory.hxx; sourceTree = "<group>"; };
+		C36C47D2138166F000AB5303 /* TrieNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrieNode.h; sourceTree = "<group>"; };
+		C36C47D3138166F000AB5303 /* TrieNode.hxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TrieNode.hxx; sourceTree = "<group>"; };
 		C37C2FBA130C439E00C9AEB3 /* GitCommitsTableViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitCommitsTableViewController_iPhone.h; sourceTree = "<group>"; };
 		C37C2FBB130C439E00C9AEB3 /* GitCommitsTableViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitCommitsTableViewController_iPhone.m; sourceTree = "<group>"; };
 		C37C2FBC130C439E00C9AEB3 /* GitCommitsTableViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GitCommitsTableViewController_iPhone.xib; sourceTree = "<group>"; };
@@ -484,6 +672,182 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C36C474D138166F000AB5303 /* Clustering-0.1 */ = {
+			isa = PBXGroup;
+			children = (
+				C36C474E138166F000AB5303 /* algo */,
+				C36C477F138166F000AB5303 /* api */,
+				C36C478F138166F000AB5303 /* AUTHORS */,
+				C36C4790138166F000AB5303 /* CHANGELOG */,
+				C36C4791138166F000AB5303 /* CMakeLists.txt */,
+				C36C4792138166F000AB5303 /* COPYING */,
+				C36C4793138166F000AB5303 /* index */,
+				C36C47B6138166F000AB5303 /* INSTALL */,
+				C36C47B7138166F000AB5303 /* tests */,
+				C36C47B8138166F000AB5303 /* tools */,
+			);
+			path = "Clustering-0.1";
+			sourceTree = "<group>";
+		};
+		C36C474E138166F000AB5303 /* algo */ = {
+			isa = PBXGroup;
+			children = (
+				C36C474F138166F000AB5303 /* Cluster.cpp */,
+				C36C4750138166F000AB5303 /* Cluster.h */,
+				C36C4751138166F000AB5303 /* Cluster.hxx */,
+				C36C4752138166F000AB5303 /* ClusteringAlgorithm.cpp */,
+				C36C4753138166F000AB5303 /* ClusteringAlgorithm.h */,
+				C36C4754138166F000AB5303 /* CMakeLists.txt */,
+				C36C4755138166F000AB5303 /* DiceSimilarityMeasure.cpp */,
+				C36C4756138166F000AB5303 /* DiceSimilarityMeasure.h */,
+				C36C4757138166F000AB5303 /* DiskPairsComputationThread.cpp */,
+				C36C4758138166F000AB5303 /* DiskPairsComputationThread.h */,
+				C36C4759138166F000AB5303 /* DiskPairsIterator.cpp */,
+				C36C475A138166F000AB5303 /* DiskPairsIterator.h */,
+				C36C475B138166F000AB5303 /* JaccardSimilarityMeasure.cpp */,
+				C36C475C138166F000AB5303 /* JaccardSimilarityMeasure.h */,
+				C36C475D138166F000AB5303 /* K2SimilarityMeasure.cpp */,
+				C36C475E138166F000AB5303 /* K2SimilarityMeasure.h */,
+				C36C475F138166F000AB5303 /* MemoryPairsComputationThread.cpp */,
+				C36C4760138166F000AB5303 /* MemoryPairsComputationThread.h */,
+				C36C4761138166F000AB5303 /* MemoryPairsIterator.cpp */,
+				C36C4762138166F000AB5303 /* MemoryPairsIterator.h */,
+				C36C4763138166F000AB5303 /* PairArticles.cpp */,
+				C36C4764138166F000AB5303 /* PairArticles.h */,
+				C36C4765138166F000AB5303 /* PairsComputation.cpp */,
+				C36C4766138166F000AB5303 /* PairsComputation.h */,
+				C36C4767138166F000AB5303 /* PairsComputationData.cpp */,
+				C36C4768138166F000AB5303 /* PairsComputationData.h */,
+				C36C4769138166F000AB5303 /* PairsComputationDisk.cpp */,
+				C36C476A138166F000AB5303 /* PairsComputationDisk.h */,
+				C36C476B138166F000AB5303 /* PairsComputationMemory.cpp */,
+				C36C476C138166F000AB5303 /* PairsComputationMemory.h */,
+				C36C476D138166F000AB5303 /* PairsComputationThread.cpp */,
+				C36C476E138166F000AB5303 /* PairsComputationThread.h */,
+				C36C476F138166F000AB5303 /* PairsIterator.cpp */,
+				C36C4770138166F000AB5303 /* PairsIterator.h */,
+				C36C4771138166F000AB5303 /* RTSimilarityMeasure.cpp */,
+				C36C4772138166F000AB5303 /* RTSimilarityMeasure.h */,
+				C36C4773138166F000AB5303 /* RusselAndRaoSimilarityMeasure.cpp */,
+				C36C4774138166F000AB5303 /* RusselAndRaoSimilarityMeasure.h */,
+				C36C4775138166F000AB5303 /* SimilarityMeasure.cpp */,
+				C36C4776138166F000AB5303 /* SimilarityMeasure.h */,
+				C36C4777138166F000AB5303 /* SimpleMatchingSimilarityMeasure.cpp */,
+				C36C4778138166F000AB5303 /* SimpleMatchingSimilarityMeasure.h */,
+				C36C4779138166F000AB5303 /* SS1SimilarityMeasure.cpp */,
+				C36C477A138166F000AB5303 /* SS1SimilarityMeasure.h */,
+				C36C477B138166F000AB5303 /* SS2SimilarityMeasure.cpp */,
+				C36C477C138166F000AB5303 /* SS2SimilarityMeasure.h */,
+				C36C477D138166F000AB5303 /* Word.cpp */,
+				C36C477E138166F000AB5303 /* Word.h */,
+			);
+			path = algo;
+			sourceTree = "<group>";
+		};
+		C36C477F138166F000AB5303 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				C36C4780138166F000AB5303 /* AlgorithmData.cpp */,
+				C36C4781138166F000AB5303 /* AlgorithmData.h */,
+				C36C4782138166F000AB5303 /* API.cpp */,
+				C36C4783138166F000AB5303 /* API.h */,
+				C36C4784138166F000AB5303 /* CMakeLists.txt */,
+				C36C4785138166F000AB5303 /* DescId.cpp */,
+				C36C4786138166F000AB5303 /* DescId.h */,
+				C36C4787138166F000AB5303 /* DocCluster.cpp */,
+				C36C4788138166F000AB5303 /* DocCluster.h */,
+				C36C4789138166F000AB5303 /* DocId.cpp */,
+				C36C478A138166F000AB5303 /* DocId.h */,
+				C36C478B138166F000AB5303 /* Parameters.cpp */,
+				C36C478C138166F000AB5303 /* Parameters.h */,
+				C36C478D138166F000AB5303 /* Results.cpp */,
+				C36C478E138166F000AB5303 /* Results.h */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		C36C4793138166F000AB5303 /* index */ = {
+			isa = PBXGroup;
+			children = (
+				C36C4794138166F000AB5303 /* CMakeLists.txt */,
+				C36C4795138166F000AB5303 /* DiskIndexString.cpp */,
+				C36C4796138166F000AB5303 /* DiskIndexString.h */,
+				C36C4797138166F000AB5303 /* DiskIndexUnsignedData.cpp */,
+				C36C4798138166F000AB5303 /* DiskIndexUnsignedData.h */,
+				C36C4799138166F000AB5303 /* DiskIndexUnsignedInstance.cpp */,
+				C36C479A138166F000AB5303 /* DiskIndexUnsignedInstance.h */,
+				C36C479B138166F000AB5303 /* FillRandomUnsignedIndex.cpp */,
+				C36C479C138166F000AB5303 /* FillRandomUnsignedIndex.h */,
+				C36C479D138166F000AB5303 /* IndexIo.cpp */,
+				C36C479E138166F000AB5303 /* IndexIo.h */,
+				C36C479F138166F000AB5303 /* IndexString.cpp */,
+				C36C47A0138166F000AB5303 /* IndexString.h */,
+				C36C47A1138166F000AB5303 /* IndexUnsignedData.cpp */,
+				C36C47A2138166F000AB5303 /* IndexUnsignedData.h */,
+				C36C47A3138166F000AB5303 /* IndexUnsignedInstance.cpp */,
+				C36C47A4138166F000AB5303 /* IndexUnsignedInstance.h */,
+				C36C47A5138166F000AB5303 /* IndexUnsignedIterator.cpp */,
+				C36C47A6138166F000AB5303 /* IndexUnsignedIterator.h */,
+				C36C47A7138166F000AB5303 /* InvertDiskUnsignedIndex.h */,
+				C36C47A8138166F000AB5303 /* InvertDiskUnsignedIndex.hxx */,
+				C36C47A9138166F000AB5303 /* MemoryIndexString.cpp */,
+				C36C47AA138166F000AB5303 /* MemoryIndexString.h */,
+				C36C47AB138166F000AB5303 /* MemoryIndexUnsignedData.cpp */,
+				C36C47AC138166F000AB5303 /* MemoryIndexUnsignedData.h */,
+				C36C47AD138166F000AB5303 /* MemoryIndexUnsignedInstance.cpp */,
+				C36C47AE138166F000AB5303 /* MemoryIndexUnsignedInstance.h */,
+				C36C47AF138166F000AB5303 /* SortDiskIndex.h */,
+				C36C47B0138166F000AB5303 /* SortDiskIndexBloc.cpp */,
+				C36C47B1138166F000AB5303 /* SortDiskIndexBloc.h */,
+				C36C47B2138166F000AB5303 /* SortDiskIndexCopy.cpp */,
+				C36C47B3138166F000AB5303 /* SortDiskIndexCopy.h */,
+				C36C47B4138166F000AB5303 /* SortDiskIndexFileAccess.cpp */,
+				C36C47B5138166F000AB5303 /* SortDiskIndexFileAccess.h */,
+			);
+			path = index;
+			sourceTree = "<group>";
+		};
+		C36C47B7138166F000AB5303 /* tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = tests;
+			sourceTree = "<group>";
+		};
+		C36C47B8138166F000AB5303 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				C36C47B9138166F000AB5303 /* CMakeLists.txt */,
+				C36C47BA138166F000AB5303 /* Exception.cpp */,
+				C36C47BB138166F000AB5303 /* Exception.h */,
+				C36C47BC138166F000AB5303 /* FastGetLine.cpp */,
+				C36C47BD138166F000AB5303 /* FastGetLine.h */,
+				C36C47BE138166F000AB5303 /* FastLoadFile.cpp */,
+				C36C47BF138166F000AB5303 /* FastLoadFile.h */,
+				C36C47C0138166F000AB5303 /* Hash.h */,
+				C36C47C1138166F000AB5303 /* Hash.hxx */,
+				C36C47C2138166F000AB5303 /* HashElement.h */,
+				C36C47C3138166F000AB5303 /* HashElement.hxx */,
+				C36C47C4138166F000AB5303 /* HashElementFactory.h */,
+				C36C47C5138166F000AB5303 /* HashElementFactory.hxx */,
+				C36C47C6138166F000AB5303 /* ports.cpp */,
+				C36C47C7138166F000AB5303 /* ports.h */,
+				C36C47C8138166F000AB5303 /* SortFile.h */,
+				C36C47C9138166F000AB5303 /* SortFile.hxx */,
+				C36C47CA138166F000AB5303 /* SortFileThread.h */,
+				C36C47CB138166F000AB5303 /* SortFileThread.hxx */,
+				C36C47CC138166F000AB5303 /* StringFactory.cpp */,
+				C36C47CD138166F000AB5303 /* StringFactory.h */,
+				C36C47CE138166F000AB5303 /* Trie.h */,
+				C36C47CF138166F000AB5303 /* Trie.hxx */,
+				C36C47D0138166F000AB5303 /* TrieFactory.h */,
+				C36C47D1138166F000AB5303 /* TrieFactory.hxx */,
+				C36C47D2138166F000AB5303 /* TrieNode.h */,
+				C36C47D3138166F000AB5303 /* TrieNode.hxx */,
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
 		C3988FDC1309AA8E00647369 /* GitHubLib */ = {
 			isa = PBXGroup;
 			children = (
@@ -653,6 +1017,7 @@
 		ED2E91C71301D26F00983CC3 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				C36C474D138166F000AB5303 /* Clustering-0.1 */,
 				C3988FDC1309AA8E00647369 /* GitHubLib */,
 				ED2E91CF1301D27800983CC3 /* ASIHTTPRequest */,
 				ED2E91CA1301D26F00983CC3 /* Reachability */,
@@ -891,6 +1256,15 @@
 				ED0581C4130B30930055703C /* up_arrow.png in Resources */,
 				C37C2FBE130C439E00C9AEB3 /* GitCommitsTableViewController_iPhone.xib in Resources */,
 				ED3EEB48130DA81700C52E22 /* SourcesTableViewController_iPhone.xib in Resources */,
+				C36C47D6138166F000AB5303 /* CMakeLists.txt in Resources */,
+				C36C47EE138166F000AB5303 /* CMakeLists.txt in Resources */,
+				C36C47F4138166F000AB5303 /* AUTHORS in Resources */,
+				C36C47F5138166F000AB5303 /* CHANGELOG in Resources */,
+				C36C47F6138166F000AB5303 /* CMakeLists.txt in Resources */,
+				C36C47F7138166F000AB5303 /* COPYING in Resources */,
+				C36C47F8138166F000AB5303 /* CMakeLists.txt in Resources */,
+				C36C4808138166F000AB5303 /* INSTALL in Resources */,
+				C36C4809138166F000AB5303 /* CMakeLists.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1003,6 +1377,56 @@
 				ED9325E2137D762D0041D8C2 /* Item.m in Sources */,
 				EDE10DF5137DC12F008F7C04 /* Source.m in Sources */,
 				C3EE0C661380BF0800D86503 /* Newsbox.xcdatamodeld in Sources */,
+				C36C47D4138166F000AB5303 /* Cluster.cpp in Sources */,
+				C36C47D5138166F000AB5303 /* ClusteringAlgorithm.cpp in Sources */,
+				C36C47D7138166F000AB5303 /* DiceSimilarityMeasure.cpp in Sources */,
+				C36C47D8138166F000AB5303 /* DiskPairsComputationThread.cpp in Sources */,
+				C36C47D9138166F000AB5303 /* DiskPairsIterator.cpp in Sources */,
+				C36C47DA138166F000AB5303 /* JaccardSimilarityMeasure.cpp in Sources */,
+				C36C47DB138166F000AB5303 /* K2SimilarityMeasure.cpp in Sources */,
+				C36C47DC138166F000AB5303 /* MemoryPairsComputationThread.cpp in Sources */,
+				C36C47DD138166F000AB5303 /* MemoryPairsIterator.cpp in Sources */,
+				C36C47DE138166F000AB5303 /* PairArticles.cpp in Sources */,
+				C36C47DF138166F000AB5303 /* PairsComputation.cpp in Sources */,
+				C36C47E0138166F000AB5303 /* PairsComputationData.cpp in Sources */,
+				C36C47E1138166F000AB5303 /* PairsComputationDisk.cpp in Sources */,
+				C36C47E2138166F000AB5303 /* PairsComputationMemory.cpp in Sources */,
+				C36C47E3138166F000AB5303 /* PairsComputationThread.cpp in Sources */,
+				C36C47E4138166F000AB5303 /* PairsIterator.cpp in Sources */,
+				C36C47E5138166F000AB5303 /* RTSimilarityMeasure.cpp in Sources */,
+				C36C47E6138166F000AB5303 /* RusselAndRaoSimilarityMeasure.cpp in Sources */,
+				C36C47E7138166F000AB5303 /* SimilarityMeasure.cpp in Sources */,
+				C36C47E8138166F000AB5303 /* SimpleMatchingSimilarityMeasure.cpp in Sources */,
+				C36C47E9138166F000AB5303 /* SS1SimilarityMeasure.cpp in Sources */,
+				C36C47EA138166F000AB5303 /* SS2SimilarityMeasure.cpp in Sources */,
+				C36C47EB138166F000AB5303 /* Word.cpp in Sources */,
+				C36C47EC138166F000AB5303 /* AlgorithmData.cpp in Sources */,
+				C36C47ED138166F000AB5303 /* API.cpp in Sources */,
+				C36C47EF138166F000AB5303 /* DescId.cpp in Sources */,
+				C36C47F0138166F000AB5303 /* DocCluster.cpp in Sources */,
+				C36C47F1138166F000AB5303 /* DocId.cpp in Sources */,
+				C36C47F2138166F000AB5303 /* Parameters.cpp in Sources */,
+				C36C47F3138166F000AB5303 /* Results.cpp in Sources */,
+				C36C47F9138166F000AB5303 /* DiskIndexString.cpp in Sources */,
+				C36C47FA138166F000AB5303 /* DiskIndexUnsignedData.cpp in Sources */,
+				C36C47FB138166F000AB5303 /* DiskIndexUnsignedInstance.cpp in Sources */,
+				C36C47FC138166F000AB5303 /* FillRandomUnsignedIndex.cpp in Sources */,
+				C36C47FD138166F000AB5303 /* IndexIo.cpp in Sources */,
+				C36C47FE138166F000AB5303 /* IndexString.cpp in Sources */,
+				C36C47FF138166F000AB5303 /* IndexUnsignedData.cpp in Sources */,
+				C36C4800138166F000AB5303 /* IndexUnsignedInstance.cpp in Sources */,
+				C36C4801138166F000AB5303 /* IndexUnsignedIterator.cpp in Sources */,
+				C36C4802138166F000AB5303 /* MemoryIndexString.cpp in Sources */,
+				C36C4803138166F000AB5303 /* MemoryIndexUnsignedData.cpp in Sources */,
+				C36C4804138166F000AB5303 /* MemoryIndexUnsignedInstance.cpp in Sources */,
+				C36C4805138166F000AB5303 /* SortDiskIndexBloc.cpp in Sources */,
+				C36C4806138166F000AB5303 /* SortDiskIndexCopy.cpp in Sources */,
+				C36C4807138166F000AB5303 /* SortDiskIndexFileAccess.cpp in Sources */,
+				C36C480A138166F000AB5303 /* Exception.cpp in Sources */,
+				C36C480B138166F000AB5303 /* FastGetLine.cpp in Sources */,
+				C36C480C138166F000AB5303 /* FastLoadFile.cpp in Sources */,
+				C36C480D138166F000AB5303 /* ports.cpp in Sources */,
+				C36C480E138166F000AB5303 /* StringFactory.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

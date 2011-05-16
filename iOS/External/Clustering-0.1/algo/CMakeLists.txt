@@ -1,0 +1,53 @@
+INCLUDE_DIRECTORIES(
+	${WIKICLUST_SOURCE_DIR}
+)
+
+ADD_LIBRARY(algo
+	Cluster.cpp
+	Cluster.h
+	Cluster.hxx
+	ClusteringAlgorithm.cpp
+	ClusteringAlgorithm.h
+	DiceSimilarityMeasure.cpp
+	DiceSimilarityMeasure.h
+	DiskPairsComputationThread.cpp
+	DiskPairsComputationThread.h
+	DiskPairsIterator.cpp
+	DiskPairsIterator.h
+	JaccardSimilarityMeasure.cpp
+	JaccardSimilarityMeasure.h
+	K2SimilarityMeasure.cpp
+	K2SimilarityMeasure.h
+	MemoryPairsComputationThread.cpp
+	MemoryPairsComputationThread.h
+	MemoryPairsIterator.cpp
+	MemoryPairsIterator.h
+	PairArticles.cpp
+	PairArticles.h
+	PairsComputation.cpp
+	PairsComputation.h
+	PairsComputationData.cpp
+	PairsComputationData.h
+	PairsComputationDisk.cpp
+	PairsComputationDisk.h
+	PairsComputationMemory.cpp
+	PairsComputationMemory.h
+	PairsComputationThread.cpp
+	PairsComputationThread.h
+	PairsIterator.cpp
+	PairsIterator.h
+	RTSimilarityMeasure.cpp
+	RTSimilarityMeasure.h
+	RusselAndRaoSimilarityMeasure.cpp
+	RusselAndRaoSimilarityMeasure.h
+	SS1SimilarityMeasure.cpp
+	SS1SimilarityMeasure.h
+	SS2SimilarityMeasure.cpp
+	SS2SimilarityMeasure.h
+	SimilarityMeasure.cpp
+	SimilarityMeasure.h
+	SimpleMatchingSimilarityMeasure.cpp
+	SimpleMatchingSimilarityMeasure.h
+	Word.cpp
+	Word.h
+)
