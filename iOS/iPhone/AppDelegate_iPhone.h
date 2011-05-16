@@ -48,5 +48,7 @@ UIAlertViewDelegate> {
 //    NSMutableArray *allItems;
 }
 
+@property (nonatomic, readonly) BOOL needsPurge;
+
 @end
 

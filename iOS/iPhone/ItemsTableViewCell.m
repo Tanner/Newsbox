@@ -9,6 +9,7 @@
 #import "ItemsTableViewCell.h"
 #import "OBGradientView.h"
 #import "SourceSupport.h"
+#import "AppDelegate_iPhone.h"
 
 #define PADDING 10.0f
 #define DISCLOSURE_ACCESSORY_WIDTH 12.0f
@@ -59,8 +60,8 @@
     UIColor *redColor = [UIColor colorWithRed:0.7 green:0.0 blue:0.0 alpha:1];
     UIColor *darkGrayColor = [UIColor darkGrayColor];
     UIColor *blackColor = [UIColor blackColor];
-    
-    if ([item.read boolValue]) {
+        
+    if ([item.read boolValue] == YES || ([item.keep boolValue] == NO && [(AppDelegate_iPhone *)[[UIApplication sharedApplication] delegate] needsPurge])) {
         redColor = [redColor colorWithAlphaComponent:0.5];
         darkGrayColor = [darkGrayColor colorWithAlphaComponent:0.5];
         blackColor = [blackColor colorWithAlphaComponent:0.5];

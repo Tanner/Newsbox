@@ -91,8 +91,10 @@
     [self willChangeValueForKey:@"read"];
     [self setPrimitiveValue:read forKey:@"read"];
     [self didChangeValueForKey:@"read"];
-    
-    [(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] markItemAsRead:self];
+        
+    if ([read boolValue] == YES) {
+        [(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] markItemAsRead:self];
+    }
 }
 
 #pragma mark NSObject

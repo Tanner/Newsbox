@@ -18,10 +18,13 @@
 @interface AppDelegate_iPhone (private)
 - (void)reloadViewControllers;
 - (void)loginAndDownloadItems;
+- (void)purgeAllSourcesAndItems;
 - (void)purgeReadSourcesAndItems;
 @end
 
 @implementation AppDelegate_iPhone
+
+@synthesize needsPurge;
 
 #pragma mark -
 #pragma mark RefreshInfoViewDelegate Methods
@@ -48,6 +51,26 @@
 
 #pragma mark - 
 #pragma mark Purging
+
+- (void)purgeAllSourcesAndItems {
+    // Remove all sources that have no items
+    NSFetchRequest *fetchRequest = [[self managedObjectModel]
+                    fetchRequestTemplateForName:@"allSources"];
+    NSArray *executedRequest = [[self loadingManagedObjectContext] executeFetchRequest:fetchRequest error:nil];
+    
+    if (executedRequest) {
+        for (Source *source in executedRequest) {
+            [[self loadingManagedObjectContext] deleteObject:source];
+        }
+    }
+    
+    // Save context!
+    [self saveLoadingContext];
+    [self saveContext];
+    
+    // Update GUI
+    [self reloadViewControllers];
+}
 
 - (void)purgeReadSourcesAndItems {
     // Git rid of items that are not to be kept
@@ -171,14 +194,15 @@
     // refresh info view
     [refreshInfoView stopAnimating];
     refreshing = NO;
-    
-    [self saveLoadingContext];
-    
+        
     if ([navController visibleViewController] == rtvc) {
         [self purgeReadSourcesAndItems];
     } else {
         needsPurge = YES;
     }
+    
+    [self saveLoadingContext];
+    [self saveContext];
     
     [self reloadViewControllers];
 }
@@ -256,6 +280,8 @@
     
     NSError *error = nil;
     [SFHFKeychainUtils storeUsername:username andPassword:password forServiceName:@"Google" updateExisting:YES error:&error];
+    
+    [self purgeAllSourcesAndItems];
     
     [self loginAndDownloadItems];
 }
