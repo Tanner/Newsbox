@@ -4,6 +4,9 @@
 *.mode1v3
 *.mode2v3
 *~.nib
+/iOS/Newsbox.xcodeproj/*
+/iOS/Shared/Newsbox.xcdatamodeld/
+*.xcuserstate
 
 # osx noise
 .DS_STORE
@@ -11,5 +14,3 @@
 # java noise
 *.class
 .metadata/
-/iOS/Newsbox.xcodeproj/
-/iOS/Shared/Newsbox.xcdatamodeld/
