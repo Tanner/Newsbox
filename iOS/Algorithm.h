@@ -7,13 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MWFeedItem.h"
-#import "Topic.h"
 
 @interface Algorithm : NSObject {
-	
 }
 
-+ (NSArray *)clusterWithItems:(NSArray *)items;
++ (void)clusterItems;
 
 @end
