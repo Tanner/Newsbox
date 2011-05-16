@@ -34,6 +34,15 @@ CGRect CGRectMakeInt(float x, float y, float width, float height) {
     [self customLayoutSubviews];
 }
 
+- (void)animateParse {
+    [self addSubview:label];
+    [self addSubview:activityIndicator];
+    
+    [label setText:@"Processing Items…"];
+    [activityIndicator startAnimating];
+    [self customLayoutSubviews];
+}
+
 - (void)stopAnimating {
     [activityIndicator stopAnimating];
     [activityIndicator removeFromSuperview];

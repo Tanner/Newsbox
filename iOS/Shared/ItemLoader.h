@@ -44,4 +44,5 @@
 - (void)didLogin:(BOOL)login;
 - (void)didLoadSourcesAndItems;
 - (void)showError:(NSString *)errorTitle withMessage:(NSString *)errorMessage withSettingsButton:(BOOL)settingsButton;
+- (void)showParsing;
 @end

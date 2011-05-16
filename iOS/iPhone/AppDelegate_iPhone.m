@@ -198,6 +198,10 @@
     }
 }
 
+- (void)showParsing  {
+    [refreshInfoView animateParse];
+}
+
 #pragma mark -
 #pragma mark UIAlertViewDelegate Methods
 

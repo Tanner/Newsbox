@@ -126,6 +126,8 @@
 }
 
 - (void)requestFinished:(ASIHTTPRequest *)request {
+    [delegate showParsing];
+    
 	[parser performSelectorInBackground:@selector(startParsingData:) withObject:[[[[request responseString] dataUsingEncoding:NSUTF8StringEncoding] retain] autorelease]];
 }
 

@@ -23,6 +23,7 @@
 
 - (void)animateLogin;
 - (void)animateDownload;
+- (void)animateParse;
 - (void)stopAnimating;
 - (void)refreshLastUpdatedDate;
 
