@@ -112,8 +112,8 @@
     if (managedObjectModel_ != nil) {
         return managedObjectModel_;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Newsbox" withExtension:@"momd"];
-    managedObjectModel_ = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];    
+//    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Newsbox" withExtension:@"momd"];
+    managedObjectModel_ = [NSManagedObjectModel mergedModelFromBundles:nil] ;    
     return managedObjectModel_;
 }
 
@@ -188,6 +188,7 @@
 - (void)dealloc {
     
     [managedObjectContext_ release];
+    [loadingManagedObjectContext_ release];
     [managedObjectModel_ release];
     [persistentStoreCoordinator_ release];
     
