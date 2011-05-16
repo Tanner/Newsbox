@@ -48,34 +48,49 @@
 #pragma mark - 
 
 - (void)purgeReadSourcesAndItems {
+    // Git rid of items that are not to be kept
     NSFetchRequest *fetchRequest = [[self managedObjectModel]
-                                    fetchRequestTemplateForName:@"readItems"];
-    NSArray *executedRequest = [[self managedObjectContext] executeFetchRequest:fetchRequest error:nil];
+                                    fetchRequestTemplateForName:@"itemsToNotKeep"];
+    NSArray *executedRequest = [[self loadingManagedObjectContext] executeFetchRequest:fetchRequest error:nil];
     
     if (executedRequest) {
-        for (id i in executedRequest) {
-            [[self managedObjectContext] deleteObject:i];
+        for (Item *item in executedRequest) {
+            [[self loadingManagedObjectContext] deleteObject:item];
         }
     }
     
+    // Remove all sources that have no items
     fetchRequest = [[self managedObjectModel]
                                     fetchRequestTemplateForName:@"allSources"];
-    executedRequest = [[self managedObjectContext] executeFetchRequest:fetchRequest error:nil];
+    executedRequest = [[self loadingManagedObjectContext] executeFetchRequest:fetchRequest error:nil];
     
     if (executedRequest) {
         for (Source *source in executedRequest) {
             if ([source.items count] == 0) {
-                [[self managedObjectContext] deleteObject:source];
+                [[self loadingManagedObjectContext] deleteObject:source];
             }
         }
     }
     
+    // Set all items to not be kept for next refresh
+    fetchRequest = [[self managedObjectModel]
+                    fetchRequestTemplateForName:@"allItems"];
+    executedRequest = [[self loadingManagedObjectContext] executeFetchRequest:fetchRequest error:nil];
+    
+    if (executedRequest) {
+        for (Item *item in executedRequest) {
+            [item setKeep:[NSNumber numberWithBool:NO]];
+        }
+    }
+    
+    // Save context!
+    [self saveLoadingContext];
     [self saveContext];
     
+    // Update GUI
     if ([[navController viewControllers] containsObject:stvc]) {
         [stvc reloadData];
     }
-    
     if ([[navController viewControllers] containsObject:itvc]) {
         [itvc reloadData];
     }
@@ -159,17 +174,6 @@
     // refresh info view
     [refreshInfoView stopAnimating];
     refreshing = NO;
-    
-    // swap contexts
-//    if (managedObjectContext_) {
-//        [managedObjectContext_ release];
-//        managedObjectContext_ = nil;
-//    }
-//    if (parsingManagedObjectContext_) {
-//        managedObjectContext_ = [parsingManagedObjectContext_ retain];
-//        [parsingManagedObjectContext_ release];
-//        parsingManagedObjectContext_ = nil;
-//    }
     
     [self saveLoadingContext];
     

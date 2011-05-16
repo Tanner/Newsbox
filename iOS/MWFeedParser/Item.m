@@ -2,7 +2,7 @@
 //  Item.m
 //  Newsbox
 //
-//  Created by Ryan Ashcraft on 5/13/11.
+//  Created by Ryan Ashcraft on 5/16/11.
 //  Copyright (c) 2011 Ashcraft Media. All rights reserved.
 //
 
@@ -12,6 +12,7 @@
 
 @implementation Item
 @dynamic updated;
+@dynamic read;
 @dynamic link;
 @dynamic dateString;
 @dynamic title;
@@ -20,8 +21,8 @@
 @dynamic date;
 @dynamic contentSample;
 @dynamic shortDateString;
-@dynamic read;
 @dynamic content;
+@dynamic keep;
 @dynamic source;
 
 
