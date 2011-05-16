@@ -46,10 +46,21 @@
                                         fetchRequestFromTemplateWithName:@"itemsFromSourceWithLink"
                                         substitutionVariables:[NSDictionary dictionaryWithObject:sourceLink forKey:@"sourceLink"]];
         executedRequest = [[(AppDelegate_Shared *)delegate managedObjectContext] executeFetchRequest:fetchRequest error:nil];
+        
+        NSFetchRequest *sourceNameFetchRequest = [[(AppDelegate_Shared *)delegate managedObjectModel]
+                                                  fetchRequestFromTemplateWithName:@"sourceWithLink"
+                                                  substitutionVariables:[NSDictionary dictionaryWithObject:sourceLink forKey:@"link"]];
+        NSArray *sourceNameExecutedRequest = [[(AppDelegate_Shared *)delegate managedObjectContext] executeFetchRequest:sourceNameFetchRequest error:nil];
+        
+        Source *source = [sourceNameExecutedRequest objectAtIndex:0];
+        
+        [[self navigationItem] setTitle:source.title];
     } else {
         NSFetchRequest *fetchRequest = [[(AppDelegate_Shared *)delegate managedObjectModel]
                                         fetchRequestTemplateForName:@"allItems"];
         executedRequest = [[(AppDelegate_Shared *)delegate managedObjectContext] executeFetchRequest:fetchRequest error:nil];
+        
+        [[self navigationItem] setTitle:@"All Unread Items"];
     }
     
     if (executedRequest) {
