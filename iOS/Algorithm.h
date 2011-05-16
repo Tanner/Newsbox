@@ -11,6 +11,8 @@
 @interface Algorithm : NSObject {
 }
 
++ (NSArray *)splitStringIntoWords:(NSString *)string;
++ (BOOL)isStopWord:(NSString *)aString;
 + (void)clusterItems;
 
 @end
