@@ -64,7 +64,8 @@
     [self didChangeValueForKey:@"date"];
 	
 	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-	[dateFormatter setDateFormat:@"EEEE, MMMM dd, yyyy h:mm aaa"];
+//	[dateFormatter setDateFormat:@"EEEE, MMMM dd, yyyy h:mm aaa"];
+    [dateFormatter setDateFormat:@"MMMM dd, yyyy h:mm aaa"];
 	NSString *aDateString = [dateFormatter stringFromDate:self.date];
     
     NSString *aShortDateString;
