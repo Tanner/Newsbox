@@ -10,6 +10,7 @@
 #import "ItemLoader.h"
 #import "ItemSupport.h"
 #import "AppDelegate_Shared.h"
+#import "NSString+HTML.h"
 
 #import "API.h"
 #import "Parameters.h"
@@ -56,7 +57,7 @@ static NSArray *stopWords = [[NSArray alloc] initWithObjects:@"a", @"able", @"ab
             }
         }*/
         
-        NSArray *words = [self splitStringIntoWords:item.content];
+        NSArray *words = [self splitStringIntoWords:[item.content stringByConvertingHTMLToPlainText]];
         
         NSLog(@"Adding \"%@\" - %d / %d -  with %d words", title, articleIterator, [items count], [words count]);
         string name = [title UTF8String];
