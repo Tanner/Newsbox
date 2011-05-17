@@ -148,7 +148,7 @@
     }
     
     if (indexPath.section == 0) {
-        [[cell textLabel] setText:@"All Unread Items"];
+        [[cell textLabel] setText:@"All Sources"];
     } else {
         [[cell textLabel] setText:[[sources objectAtIndex:indexPath.row] title]];
     }

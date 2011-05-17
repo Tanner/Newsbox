@@ -60,7 +60,7 @@
                                         fetchRequestTemplateForName:@"allItems"];
         executedRequest = [[(AppDelegate_Shared *)delegate managedObjectContext] executeFetchRequest:fetchRequest error:nil];
         
-        [[self navigationItem] setTitle:@"All Unread Items"];
+        [[self navigationItem] setTitle:@"All Sources"];
     }
     
     if (executedRequest) {
