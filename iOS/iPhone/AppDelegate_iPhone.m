@@ -238,6 +238,9 @@
 #pragma mark ViewController Methods
 
 - (void)reloadViewControllers {
+    if ([[navController viewControllers] containsObject:rtvc]) {
+        [rtvc reloadData];
+    }
     if ([[navController viewControllers] containsObject:stvc]) {
         [stvc reloadData];
     }

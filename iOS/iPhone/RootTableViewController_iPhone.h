@@ -23,4 +23,6 @@
 
 @property (nonatomic, assign) id<RootTableViewControllerDelegate, RefreshInfoViewDelegate> delegate;
 
+- (void)reloadData;
+
 @end

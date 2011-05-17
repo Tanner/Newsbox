@@ -15,6 +15,10 @@
 
 @synthesize delegate;
 
+- (void)reloadData {
+    [self.tableView reloadData];
+}
+
 - (void)settingsButtonPressed:(id)sender {
     [delegate showSettingsView];
 }
