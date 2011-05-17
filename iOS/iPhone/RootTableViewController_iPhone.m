@@ -77,13 +77,14 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    [self reloadData];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [delegate rootViewDidAppear];
-    
+- (void)viewDidAppear:(BOOL)animated {    
     [super viewDidAppear:animated];
+    
+    [delegate rootViewDidAppear];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
