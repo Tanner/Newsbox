@@ -113,6 +113,8 @@
 		ED6A677113046C81006F7838 /* itemscript.js in Resources */ = {isa = PBXBuildFile; fileRef = ED6A677013046C81006F7838 /* itemscript.js */; };
 		ED71D1081303266E00C3BE65 /* Icon-57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED71D1071303266E00C3BE65 /* Icon-57@2x.png */; };
 		ED71D10A1303268D00C3BE65 /* Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = ED71D1091303268D00C3BE65 /* Icon-57.png */; };
+		ED82D4411382075E00BB98AA /* TDBadgedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED82D4401382075E00BB98AA /* TDBadgedCell.m */; };
+		ED82D4441382079700BB98AA /* SourceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED82D4431382079700BB98AA /* SourceTableViewCell.m */; };
 		ED9325E2137D762D0041D8C2 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9325E1137D762D0041D8C2 /* Item.m */; };
 		EDAFC7A913074F04009C47D7 /* SettingsTableViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = EDAFC7A713074F04009C47D7 /* SettingsTableViewController_iPhone.m */; };
 		EDAFC7AA13074F04009C47D7 /* SettingsTableViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDAFC7A813074F04009C47D7 /* SettingsTableViewController_iPhone.xib */; };
@@ -342,6 +344,10 @@
 		ED6A677013046C81006F7838 /* itemscript.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = itemscript.js; sourceTree = "<group>"; };
 		ED71D1071303266E00C3BE65 /* Icon-57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57@2x.png"; sourceTree = "<group>"; };
 		ED71D1091303268D00C3BE65 /* Icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57.png"; sourceTree = "<group>"; };
+		ED82D43F1382075E00BB98AA /* TDBadgedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDBadgedCell.h; sourceTree = "<group>"; };
+		ED82D4401382075E00BB98AA /* TDBadgedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDBadgedCell.m; sourceTree = "<group>"; };
+		ED82D4421382079700BB98AA /* SourceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SourceTableViewCell.h; path = ../../../Newsbox/iOS/iPhone/SourceTableViewCell.h; sourceTree = "<group>"; };
+		ED82D4431382079700BB98AA /* SourceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SourceTableViewCell.m; path = ../../../Newsbox/iOS/iPhone/SourceTableViewCell.m; sourceTree = "<group>"; };
 		ED9325E0137D762D0041D8C2 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		ED9325E1137D762D0041D8C2 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		EDAFC7A613074F04009C47D7 /* SettingsTableViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController_iPhone.h; sourceTree = "<group>"; };
@@ -398,13 +404,15 @@
 				ED3EEB44130DA81600C52E22 /* SourcesTableViewController_iPhone.h */,
 				ED3EEB45130DA81600C52E22 /* SourcesTableViewController_iPhone.m */,
 				ED3EEB46130DA81600C52E22 /* SourcesTableViewController_iPhone.xib */,
+				ED82D4421382079700BB98AA /* SourceTableViewCell.h */,
+				ED82D4431382079700BB98AA /* SourceTableViewCell.m */,
 				ED2E94F01302555D00983CC3 /* ItemsTableViewController_iPhone.h */,
 				ED2E94F11302555D00983CC3 /* ItemsTableViewController_iPhone.m */,
 				ED2E94F21302555D00983CC3 /* ItemsTableViewController_iPhone.xib */,
-				EDDA76151308B167007AB030 /* RefreshInfoView.h */,
-				EDDA76161308B167007AB030 /* RefreshInfoView.m */,
 				ED0D9A0F13039B4000961E0D /* ItemsTableViewCell.h */,
 				ED0D9A1013039B4000961E0D /* ItemsTableViewCell.m */,
+				EDDA76151308B167007AB030 /* RefreshInfoView.h */,
+				EDDA76161308B167007AB030 /* RefreshInfoView.m */,
 				ED639912130342810024D3ED /* ItemViewController_iPhone.h */,
 				ED639913130342810024D3ED /* ItemViewController_iPhone.m */,
 				ED639914130342810024D3ED /* ItemViewController_iPhone.xib */,
@@ -427,6 +435,7 @@
 				28EEC04A1118E28000187D67 /* AppDelegate_Shared.m */,
 				ED2E91C51301D23600983CC3 /* ItemLoader.h */,
 				ED2E91C41301D23600983CC3 /* ItemLoader.m */,
+				ED82D43E1382075E00BB98AA /* TDBadgedCell */,
 				ED6446EE130A17E400C197DB /* OBGradientView */,
 				ED59CD961307734900595B0A /* SFHFKeychainUtils */,
 				ED473C0A1307176D006CE75A /* MWFeedParser */,
@@ -823,6 +832,15 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		ED82D43E1382075E00BB98AA /* TDBadgedCell */ = {
+			isa = PBXGroup;
+			children = (
+				ED82D43F1382075E00BB98AA /* TDBadgedCell.h */,
+				ED82D4401382075E00BB98AA /* TDBadgedCell.m */,
+			);
+			path = TDBadgedCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1003,6 +1021,8 @@
 				ED9325E2137D762D0041D8C2 /* Item.m in Sources */,
 				EDE10DF5137DC12F008F7C04 /* Source.m in Sources */,
 				C3EE0C661380BF0800D86503 /* Newsbox.xcdatamodeld in Sources */,
+				ED82D4411382075E00BB98AA /* TDBadgedCell.m in Sources */,
+				ED82D4441382079700BB98AA /* SourceTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
