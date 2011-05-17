@@ -40,15 +40,35 @@
 		
 		[self.view addSubview:wv];
         
-        NSArray *prevNextControlItems = [NSArray arrayWithObjects:[UIImage imageNamed:@"up_arrow.png"],[UIImage imageNamed:@"down_arrow.png"],nil];
-        prevNextControl = [[UISegmentedControl alloc] initWithItems:prevNextControlItems];
-        [prevNextControl setSegmentedControlStyle:UISegmentedControlStyleBar];
-        [prevNextControl setMomentary:YES];
-        [prevNextControl setWidth:42.0f forSegmentAtIndex:0];
-        [prevNextControl setWidth:42.0f forSegmentAtIndex:1];
-        [prevNextControl addTarget:self action:@selector(prevNextControlValueChanged:) forControlEvents:UIControlEventValueChanged];
+//        NSArray *prevNextControlItems = [NSArray arrayWithObjects:[UIImage imageNamed:@"up_arrow.png"],[UIImage imageNamed:@"down_arrow.png"],nil];
+//        prevNextControl = [[UISegmentedControl alloc] initWithItems:prevNextControlItems];
+//        [prevNextControl setSegmentedControlStyle:UISegmentedControlStyleBar];
+//        [prevNextControl setMomentary:YES];
+//        [prevNextControl setWidth:42.0f forSegmentAtIndex:0];
+//        [prevNextControl setWidth:42.0f forSegmentAtIndex:1];
+//        [prevNextControl addTarget:self action:@selector(prevNextControlValueChanged:) forControlEvents:UIControlEventValueChanged];
+//        [self.navigationItem setRightBarButtonItem:[[[UIBarButtonItem alloc] initWithCustomView:prevNextControl] autorelease]];
         
-        [self.navigationItem setRightBarButtonItem:[[[UIBarButtonItem alloc] initWithCustomView:prevNextControl] autorelease]];
+        NSMutableArray *toolbarItems = [[NSMutableArray alloc] init];
+        
+        UIBarButtonItem *flexibleSpaceItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil] autorelease];
+        [toolbarItems addObject:flexibleSpaceItem];        
+        
+        upArrowItem = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"up_arrow.png"] style:UIBarButtonItemStylePlain target:self action:@selector(previousItemRequested:)] autorelease];
+        [toolbarItems addObject:upArrowItem];
+        
+        UIBarButtonItem *flexibleSpaceItem2 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+        [toolbarItems addObject:flexibleSpaceItem2];
+        
+        downArrowItem = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"down_arrow.png"] style:UIBarButtonItemStylePlain target:self action:@selector(nextItemRequested:)] autorelease];
+        [toolbarItems addObject:downArrowItem];
+        
+        UIBarButtonItem *flexibleSpaceItem3 = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil] autorelease];
+        [toolbarItems addObject:flexibleSpaceItem3];
+        
+        [self setToolbarItems:toolbarItems animated:NO];
+        
+        [toolbarItems release];
     }
     
     return self;
@@ -89,29 +109,30 @@
     [self displayCurrentItem];
 }
 
-- (void)prevNextControlValueChanged:(id)sender {
-	if ([sender selectedSegmentIndex] == 0) {
-		currentItem = [items objectAtIndex:[items indexOfObject:currentItem]-1];
-	} else {
-		currentItem = [items objectAtIndex:[items indexOfObject:currentItem]+1];
-	}
+- (void)previousItemRequested:(id)sender {
+	currentItem = [items objectAtIndex:[items indexOfObject:currentItem]-1];
     
     [delegate didChangeCurrentItemTo:currentItem];
-    
+    [self displayCurrentItem];
+}
+
+- (void)nextItemRequested:(id)sender {
+    currentItem = [items objectAtIndex:[items indexOfObject:currentItem]+1];
+    [delegate didChangeCurrentItemTo:currentItem];
     [self displayCurrentItem];
 }
 
 - (void)setIsPrevItemAvailable:(BOOL)prevItemAvailable andIsNextItemAvailable:(BOOL)nextItemAvailable {
     if (prevItemAvailable) {
-        [prevNextControl setEnabled:YES forSegmentAtIndex:0];
+        [upArrowItem setEnabled:YES];
     } else {
-        [prevNextControl setEnabled:NO forSegmentAtIndex:0];
+        [upArrowItem setEnabled:NO];
     }
     
     if (nextItemAvailable) {
-        [prevNextControl setEnabled:YES forSegmentAtIndex:1];
+        [downArrowItem setEnabled:YES];
     } else {
-        [prevNextControl setEnabled:NO forSegmentAtIndex:1];
+        [downArrowItem setEnabled:NO];
     }
 }
 

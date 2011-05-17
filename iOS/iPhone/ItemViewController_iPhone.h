@@ -21,7 +21,10 @@
     NSMutableArray *items;
     
 	UIWebView *wv;
-    UISegmentedControl *prevNextControl;
+//    UISegmentedControl *prevNextControl;
+    
+    UIBarButtonItem *upArrowItem;
+    UIBarButtonItem *downArrowItem;
 }
 
 - (void)reloadData;
