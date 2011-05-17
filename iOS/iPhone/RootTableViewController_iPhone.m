@@ -119,7 +119,10 @@
     if (indexPath.row == 0) {
         NSFetchRequest *fetchRequest = [[(AppDelegate_Shared *)delegate managedObjectModel] fetchRequestTemplateForName:@"unreadItems"];
         NSUInteger count = [[(AppDelegate_Shared *)delegate managedObjectContext] countForFetchRequest:fetchRequest error:nil];
-        [(SourceTableViewCell *)cell setBadgeString:[NSString stringWithFormat:@"%d", count]];
+        if (count > 0)
+            [(SourceTableViewCell *)cell setBadgeString:[NSString stringWithFormat:@"%d", count]];
+        else
+            [(SourceTableViewCell *)cell setBadgeString:nil];
         
         [[cell textLabel] setText:@"Unread"];
     }

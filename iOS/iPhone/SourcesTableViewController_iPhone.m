@@ -151,7 +151,10 @@
     if (indexPath.section == 0) {
         NSFetchRequest *fetchRequest = [[(AppDelegate_Shared *)delegate managedObjectModel] fetchRequestTemplateForName:@"unreadItems"];
         NSUInteger count = [[(AppDelegate_Shared *)delegate managedObjectContext] countForFetchRequest:fetchRequest error:nil];
-        [(SourceTableViewCell *)cell setBadgeString:[NSString stringWithFormat:@"%d", count]];
+        if (count > 0)
+            [(SourceTableViewCell *)cell setBadgeString:[NSString stringWithFormat:@"%d", count]];
+        else
+            [(SourceTableViewCell *)cell setBadgeString:nil];
         
         [[cell textLabel] setText:@"All Sources"];
     } else {
@@ -159,7 +162,10 @@
                                         fetchRequestFromTemplateWithName:@"unreadItemsFromSourceWithLink"
                                         substitutionVariables:[NSDictionary dictionaryWithObject:[[sources objectAtIndex:indexPath.row] link] forKey:@"sourceLink"]];
         NSUInteger count = [[(AppDelegate_Shared *)delegate managedObjectContext] countForFetchRequest:fetchRequest error:nil];
-        [(SourceTableViewCell *)cell setBadgeString:[NSString stringWithFormat:@"%d", count]];
+        if (count > 0)
+            [(SourceTableViewCell *)cell setBadgeString:[NSString stringWithFormat:@"%d", count]];
+        else
+            [(SourceTableViewCell *)cell setBadgeString:nil];
         
         [[cell textLabel] setText:[[sources objectAtIndex:indexPath.row] title]];
     }
