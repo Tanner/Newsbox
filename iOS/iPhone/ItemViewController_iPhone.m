@@ -57,7 +57,7 @@
         upArrowItem = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"up_arrow.png"] style:UIBarButtonItemStylePlain target:self action:@selector(previousItemRequested:)] autorelease];
         [toolbarItems addObject:upArrowItem];
         
-        UIBarButtonItem *flexibleSpaceItem2 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+        UIBarButtonItem *flexibleSpaceItem2 = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil] autorelease];
         [toolbarItems addObject:flexibleSpaceItem2];
         
         downArrowItem = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"down_arrow.png"] style:UIBarButtonItemStylePlain target:self action:@selector(nextItemRequested:)] autorelease];

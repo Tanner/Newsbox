@@ -12,6 +12,9 @@
 
 @implementation SettingsTableViewController_iPhone
 
+NSString *testUsername = @"newsbox.test@gmail.com";
+NSString *testPassword = @"FA1w0wxjRTHRyj";
+
 @synthesize delegate;
 
 - (void)cancelButtonPushed:(id)sender {
@@ -73,7 +76,7 @@
 #pragma mark Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return 3;
 }
 
 
@@ -82,6 +85,8 @@
         case 0:
             return 2;
         case 1:
+            return 1;
+        case 2:
             return 1;
         default:
             return 0;
@@ -102,6 +107,11 @@
                 break;
             }
             case 1: {
+                cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+                [[cell textLabel] setTextAlignment:UITextAlignmentCenter];
+                break;
+            }
+            case 2: {
                 cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
                 break;
             }
@@ -142,6 +152,10 @@
             break;
         }
         case 1: {
+            [[cell textLabel] setText:@"Log In With Test Account"];
+            break;
+        }
+        case 2: {
             [[cell textLabel] setText:@"Git Information"];
             [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
             break;
@@ -198,6 +212,16 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     switch(indexPath.section) {
         case 1: {
+            switch (indexPath.row) {
+                case 0: {
+                    [delegate returnFromSettingsTableViewController];
+                    [delegate changedUsername:testUsername andPassword:testPassword];
+                    break;
+                }
+            }
+            break;
+        }
+        case 2: {
             switch (indexPath.row) {
                 case 0: {
                     [delegate showGitCommits];

@@ -64,6 +64,8 @@
         }
     }
     
+//    [itemLoader stop];
+    
     // Save context!
     [self saveLoadingContext];
     [self saveContext];
