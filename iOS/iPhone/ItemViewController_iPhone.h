@@ -12,20 +12,28 @@
 @protocol ItemViewControllerDelegate;
 
 @interface ItemViewController_iPhone : UIViewController <UIWebViewDelegate> {
-	id<ItemViewControllerDelegate> delegate;
+	@private
+    id<ItemViewControllerDelegate> delegate;
     
-    NSMutableArray *array;
-    int currentItemIndex;
+    Item *currentItem;
+    NSString *itemIdentifier;
+    NSString *sourceLink;
+    NSMutableArray *items;
     
 	UIWebView *wv;
-    UISegmentedControl *prevNextControl;
+//    UISegmentedControl *prevNextControl;
+    
+    UIBarButtonItem *upArrowItem;
+    UIBarButtonItem *downArrowItem;
 }
 
+- (void)reloadData;
 - (void)displayCurrentItem;
-- (void)setItemAtIndex:(int)index fromArray:(NSMutableArray *)anArray;
 - (void)setIsPrevItemAvailable:(BOOL)prevItemAvailable andIsNextItemAvailable:(BOOL)nextItemAvailable;
 
 @property (nonatomic, assign) id<ItemViewControllerDelegate> delegate;
+@property (nonatomic, copy) NSString *itemIdentifier;
+@property (nonatomic, copy) NSString *sourceLink;
 
 @end
 

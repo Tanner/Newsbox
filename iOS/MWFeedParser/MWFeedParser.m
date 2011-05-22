@@ -727,7 +727,7 @@
                     [item setDate:[currentItemInfo valueForKey:@"date"]];
                 if ([currentItemInfo valueForKey:@"updated"])
                     [item setUpdated:[currentItemInfo valueForKey:@"updated"]];
-                                 
+                
                 [item setKeep:[NSNumber numberWithBool:YES]];
                 
                 [currentItemInfo release];

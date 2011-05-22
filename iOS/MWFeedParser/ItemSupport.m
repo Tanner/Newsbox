@@ -64,7 +64,8 @@
     [self didChangeValueForKey:@"date"];
 	
 	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-	[dateFormatter setDateFormat:@"EEEE, MMMM dd, yyyy h:mm aaa"];
+//	[dateFormatter setDateFormat:@"EEEE, MMMM dd, yyyy h:mm aaa"];
+    [dateFormatter setDateFormat:@"MMMM dd, yyyy h:mm aaa"];
 	NSString *aDateString = [dateFormatter stringFromDate:self.date];
     
     NSString *aShortDateString;
@@ -91,8 +92,10 @@
     [self willChangeValueForKey:@"read"];
     [self setPrimitiveValue:read forKey:@"read"];
     [self didChangeValueForKey:@"read"];
-    
-    [(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] markItemAsRead:self];
+        
+    if ([read boolValue] == YES) {
+        [(AppDelegate_Shared *)[[UIApplication sharedApplication] delegate] markItemAsRead:self];
+    }
 }
 
 #pragma mark NSObject

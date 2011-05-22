@@ -46,10 +46,21 @@
                                         fetchRequestFromTemplateWithName:@"itemsFromSourceWithLink"
                                         substitutionVariables:[NSDictionary dictionaryWithObject:sourceLink forKey:@"sourceLink"]];
         executedRequest = [[(AppDelegate_Shared *)delegate managedObjectContext] executeFetchRequest:fetchRequest error:nil];
+        
+        NSFetchRequest *sourceNameFetchRequest = [[(AppDelegate_Shared *)delegate managedObjectModel]
+                                                  fetchRequestFromTemplateWithName:@"sourceWithLink"
+                                                  substitutionVariables:[NSDictionary dictionaryWithObject:sourceLink forKey:@"link"]];
+        NSArray *sourceNameExecutedRequest = [[(AppDelegate_Shared *)delegate managedObjectContext] executeFetchRequest:sourceNameFetchRequest error:nil];
+        
+        Source *source = [sourceNameExecutedRequest objectAtIndex:0];
+        
+        [[self navigationItem] setTitle:source.title];
     } else {
         NSFetchRequest *fetchRequest = [[(AppDelegate_Shared *)delegate managedObjectModel]
                                         fetchRequestTemplateForName:@"allItems"];
         executedRequest = [[(AppDelegate_Shared *)delegate managedObjectContext] executeFetchRequest:fetchRequest error:nil];
+        
+        [[self navigationItem] setTitle:@"All Sources"];
     }
     
     if (executedRequest) {
@@ -63,6 +74,8 @@
 
 - (void)setSourceLink:(NSString *)sl {
     sourceLink = [sl copy];
+    
+    currentItem = nil;
     
     [self reloadData];
 }
@@ -109,7 +122,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-        
+    
     if ([items count] > 0) {    
         [self reformatCellLabelsWithOrientation:[self interfaceOrientation]];
         [[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:[items indexOfObject:currentItem] inSection:0]] setSelected:NO animated:YES];
@@ -168,7 +181,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     currentItem = [items objectAtIndex:indexPath.row];
     
-	[delegate showItemAtIndex:[items indexOfObject:currentItem] fromArray:items];
+	[delegate showItemWithIdentifier:currentItem.identifier fromSource:sourceLink];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -188,7 +201,6 @@
 
 - (void)dealloc {
 	[items release];
-    
     [sourceLink release];
 	
     [super dealloc];

@@ -17,11 +17,15 @@
 #define MIN_TIME_TO_REFRESH_ON_BECOME_ACTIVE 1
 
 @interface AppDelegate_iPhone (private)
+- (void)reloadViewControllers;
 - (void)loginAndDownloadItems;
+- (void)purgeAllSourcesAndItems;
 - (void)purgeReadSourcesAndItems;
 @end
 
 @implementation AppDelegate_iPhone
+
+@synthesize needsPurge;
 
 #pragma mark -
 #pragma mark RefreshInfoViewDelegate Methods
@@ -47,6 +51,27 @@
 }
 
 #pragma mark - 
+#pragma mark Purging
+
+- (void)purgeAllSourcesAndItems {
+    // Remove all sources that have no items
+    NSFetchRequest *fetchRequest = [[self managedObjectModel]
+                    fetchRequestTemplateForName:@"allSources"];
+    NSArray *executedRequest = [[self loadingManagedObjectContext] executeFetchRequest:fetchRequest error:nil];
+    
+    if (executedRequest) {
+        for (Source *source in executedRequest) {
+            [[self loadingManagedObjectContext] deleteObject:source];
+        }
+    }
+    
+    // Save context!
+    [self saveLoadingContext];
+    [self saveContext];
+    
+    // Update GUI
+    [self reloadViewControllers];
+}
 
 - (void)purgeReadSourcesAndItems {
     // Git rid of items that are not to be kept
@@ -89,12 +114,7 @@
     [self saveContext];
     
     // Update GUI
-    if ([[navController viewControllers] containsObject:stvc]) {
-        [stvc reloadData];
-    }
-    if ([[navController viewControllers] containsObject:itvc]) {
-        [itvc reloadData];
-    }
+    [self reloadViewControllers];
 }
 
 #pragma mark -
@@ -175,25 +195,20 @@
     // refresh info view
     [refreshInfoView stopAnimating];
     refreshing = NO;
-    
-    [self saveLoadingContext];
-    
+        
     if ([navController visibleViewController] == rtvc) {
         [self purgeReadSourcesAndItems];
     } else {
         needsPurge = YES;
     }
     
-    // create topics
-    [Algorithm clusterItems];
+	// create topics
+	[Algorithm clusterItems];
+
+    [self saveLoadingContext];
+    [self saveContext];
     
-    if ([[navController viewControllers] containsObject:stvc]) {
-        [stvc reloadData];
-    }
-    
-    if ([[navController viewControllers] containsObject:itvc]) {
-        [itvc reloadData];
-    }
+    [self reloadViewControllers];
 }
 
 - (void)showError:(NSString *)errorTitle withMessage:(NSString *)errorMessage withSettingsButton:(BOOL)settingsButton {
@@ -224,10 +239,27 @@
 }
 
 #pragma mark -
+#pragma mark ViewController Methods
+
+- (void)reloadViewControllers {
+    if ([[navController viewControllers] containsObject:stvc]) {
+        [stvc reloadData];
+    }
+    if ([[navController viewControllers] containsObject:itvc]) {
+        [itvc reloadData];
+    }
+    if ([[navController viewControllers] containsObject:ivc]) {
+        [ivc reloadData];
+    }
+}
+
+#pragma mark -
 #pragma mark ItemsTableViewControllerDelegate Methods
 
-- (void)showItemAtIndex:(int)index fromArray:(NSMutableArray *)anArray {
-	[ivc setItemAtIndex:index fromArray:anArray];
+- (void)showItemWithIdentifier:(NSString *)itemIdentifier fromSource:(NSString *)sourceLink {
+	[ivc setItemIdentifier:itemIdentifier];
+    [ivc setSourceLink:sourceLink];
+    
 	[navController pushViewController:ivc animated:YES];
 }
 
@@ -253,6 +285,8 @@
     NSError *error = nil;
     [SFHFKeychainUtils storeUsername:username andPassword:password forServiceName:@"Google" updateExisting:YES error:&error];
     
+    [self purgeAllSourcesAndItems];
+    
     [self loginAndDownloadItems];
 }
 
@@ -266,6 +300,17 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 	itemLoader = [[ItemLoader alloc] initWithDelegate:self];
     
+    // Refresh
+    refreshInfoView = [[RefreshInfoView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 150.0f, 44.0f)];
+    [refreshInfoView setDelegate:self];
+    
+    refreshButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(loginAndDownloadItems)];
+    refreshInfoViewButtonItem = [[UIBarButtonItem alloc] initWithCustomView:refreshInfoView];
+    
+    lastUpdatedDate = [[NSUserDefaults standardUserDefaults] objectForKey:@"LastRefresh"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    // View Controllers
     rtvc = [[RootTableViewController_iPhone alloc] initWithNibName:@"RootTableViewController_iPhone" bundle:nil];
     [rtvc setDelegate:self];
     
@@ -283,16 +328,6 @@
     [navController setToolbarHidden:NO];
     [navController.navigationBar setTintColor:[UIColor colorWithRed:0.7 green:0.0 blue:0.0 alpha:1.0]];
     [navController.toolbar setTintColor:[UIColor colorWithRed:0.7 green:0.0 blue:0.0 alpha:1.0]];
-    
-    // refresh
-    refreshInfoView = [[RefreshInfoView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 150.0f, 44.0f)];
-    [refreshInfoView setDelegate:self];
-    
-    refreshButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(loginAndDownloadItems)];
-    refreshInfoViewButtonItem = [[UIBarButtonItem alloc] initWithCustomView:refreshInfoView];
-    
-    lastUpdatedDate = [[NSUserDefaults standardUserDefaults] objectForKey:@"LastRefresh"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
     
     // settings
     settingsTableViewController = [[SettingsTableViewController_iPhone alloc] initWithNibName:@"SettingsTableViewController_iPhone" bundle:nil];

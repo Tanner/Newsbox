@@ -8,7 +8,8 @@
 
 #import "RootTableViewController_iPhone.h"
 #import "RefreshInfoView.h"
-#import "OBGradientView.h"
+#import "SourceTableViewCell.h"
+#import "AppDelegate_Shared.h"
 
 @implementation RootTableViewController_iPhone
 
@@ -18,17 +19,7 @@
     [delegate showSettingsView];
 }
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)dealloc
-{
+- (void)dealloc {
     [super dealloc];
 }
 
@@ -122,20 +113,18 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[SourceTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-    OBGradientView *gradientView = [[[OBGradientView alloc] initWithFrame:CGRectMake(0, 0, cell.bounds.size.width, cell.bounds.size.height)] autorelease];
-    [gradientView setColors:[NSArray arrayWithObjects:(id)[[UIColor colorWithRed:241.0/255.0 green:22.0/255.0 blue:22.0/255.0 alpha:1.0] CGColor], (id)[[UIColor colorWithRed:207.0/255.0 green:14.0/255.0 blue:14.0/255.0 alpha:1.0] CGColor], nil]];
-    [gradientView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
-    [cell setSelectedBackgroundView:gradientView];
+    if (indexPath.row == 0) {
+        NSFetchRequest *fetchRequest = [[(AppDelegate_Shared *)delegate managedObjectModel] fetchRequestTemplateForName:@"unreadItems"];
+        NSUInteger count = [[(AppDelegate_Shared *)delegate managedObjectContext] countForFetchRequest:fetchRequest error:nil];
+        if (count > 0)
+            [(SourceTableViewCell *)cell setBadgeString:[NSString stringWithFormat:@"%d", count]];
+        else
+            [(SourceTableViewCell *)cell setBadgeString:nil];
         
-    switch (indexPath.row) {
-        case 0: {
-            [[cell textLabel] setText:@"Unread"];
-            [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
-            break;
-        }
+        [[cell textLabel] setText:@"Unread"];
     }
     
     return cell;

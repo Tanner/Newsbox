@@ -9,6 +9,7 @@
 #import "SourcesTableViewController_iPhone.h"
 #import "OBGradientView.h"
 #import "AppDelegate_Shared.h"
+#import "SourceTableViewCell.h"
 
 @implementation SourcesTableViewController_iPhone
 
@@ -144,21 +145,32 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[SourceTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
     if (indexPath.section == 0) {
-        [[cell textLabel] setText:@"All Unread Items"];
+        NSFetchRequest *fetchRequest = [[(AppDelegate_Shared *)delegate managedObjectModel] fetchRequestTemplateForName:@"unreadItems"];
+        NSUInteger count = [[(AppDelegate_Shared *)delegate managedObjectContext] countForFetchRequest:fetchRequest error:nil];
+        if (count > 0)
+            [(SourceTableViewCell *)cell setBadgeString:[NSString stringWithFormat:@"%d", count]];
+        else
+            [(SourceTableViewCell *)cell setBadgeString:nil];
+        
+        [[cell textLabel] setText:@"All Sources"];
     } else {
+        NSFetchRequest *fetchRequest = [[(AppDelegate_Shared *)delegate managedObjectModel]
+                                        fetchRequestFromTemplateWithName:@"unreadItemsFromSourceWithLink"
+                                        substitutionVariables:[NSDictionary dictionaryWithObject:[[sources objectAtIndex:indexPath.row] link] forKey:@"sourceLink"]];
+        NSUInteger count = [[(AppDelegate_Shared *)delegate managedObjectContext] countForFetchRequest:fetchRequest error:nil];
+        if (count > 0)
+            [(SourceTableViewCell *)cell setBadgeString:[NSString stringWithFormat:@"%d", count]];
+        else
+            [(SourceTableViewCell *)cell setBadgeString:nil];
+        
         [[cell textLabel] setText:[[sources objectAtIndex:indexPath.row] title]];
     }
     
-    OBGradientView *gradientView = [[[OBGradientView alloc] initWithFrame:CGRectMake(0, 0, cell.bounds.size.width, cell.bounds.size.height)] autorelease];
-    [gradientView setColors:[NSArray arrayWithObjects:(id)[[UIColor colorWithRed:241.0/255.0 green:22.0/255.0 blue:22.0/255.0 alpha:1.0] CGColor], (id)[[UIColor colorWithRed:207.0/255.0 green:14.0/255.0 blue:14.0/255.0 alpha:1.0] CGColor], nil]];
-    [gradientView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
-    [cell setSelectedBackgroundView:gradientView];
-    
-    [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+
     
     return cell;
 }
